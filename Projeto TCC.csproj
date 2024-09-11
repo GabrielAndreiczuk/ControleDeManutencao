@@ -104,6 +104,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TesteGithub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TesteGithub.Designer.cs">
+      <DependentUpon>TesteGithub.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
