@@ -58,7 +58,7 @@
             this.rjPanel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.rjPanel21.BackgroundImage = global::Projeto_TCC.Properties.Resources.Imagem_tela_cadastro;
             this.rjPanel21.ForeColor = System.Drawing.Color.White;
-            this.rjPanel21.Location = new System.Drawing.Point(100, 100);
+            this.rjPanel21.Location = new System.Drawing.Point(100, 69);
             this.rjPanel21.Name = "rjPanel21";
             this.rjPanel21.Size = new System.Drawing.Size(400, 650);
             this.rjPanel21.TabIndex = 2;
@@ -88,7 +88,7 @@
             this.rjPanel1.Controls.Add(this.rjLabel3);
             this.rjPanel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjPanel1.ForeColor = System.Drawing.Color.White;
-            this.rjPanel1.Location = new System.Drawing.Point(500, 100);
+            this.rjPanel1.Location = new System.Drawing.Point(500, 69);
             this.rjPanel1.Name = "rjPanel1";
             this.rjPanel1.Size = new System.Drawing.Size(400, 650);
             this.rjPanel1.TabIndex = 0;
@@ -292,7 +292,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.ClientSize = new System.Drawing.Size(984, 811);
+            this.ClientSize = new System.Drawing.Size(984, 749);
             this.Controls.Add(this.rjPanel21);
             this.Controls.Add(this.rjPanel1);
             this.Name = "TelaCadastro";
