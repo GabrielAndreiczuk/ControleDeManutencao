@@ -161,13 +161,13 @@ namespace Projeto_TCC
 
                         //EXECUTA O COMANDO PARA INSERIR OS DADOS NO BANCO
                         command.ExecuteNonQuery();  //USADO PARA COMANDOS QUE NÃO RETORNAM RESULTADOS
-                        /*
-                        ComplementoCadastro form = new ComplementoCadastro();
+                        
+                        TelaCadastroComp form = new TelaCadastroComp();
                         this.Hide();
                         form.Closed += (s, args) => this.Close();
                         form.Show();
-                        */
-                        MessageBox.Show("Usuário cadastrado com sucesso!","Parabéns!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+                        //MessageBox.Show("Usuário cadastrado com sucesso!","Parabéns!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         //label9.Text = "Cliente inserido com sucesso!";
                     }
