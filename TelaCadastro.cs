@@ -82,14 +82,10 @@ namespace Projeto_TCC
                 }
             }
         }
-
         //PROGRAMAÇÃO DO BOTÃO DE CADASTRO
         private void rjButton1_Click(object sender, EventArgs e)
         {
-            //VERIFICAR SE AS LABELS ESTÃO PREENCHIDAS
-            bool allTextBoxesFilled = true;
-
-            // VERIFICAR SE AS TEXTBOXES ESTÃO PREENCHIDAS
+            //VERIFICAR SE TODOS OS CAMPOS ESTÃO PREENCHIDOS
             if(textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "")
             {
                 MessageBox.Show("Por favor, preencha todos os campos.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -126,11 +122,8 @@ namespace Projeto_TCC
                     connection.Open();
 
                     string nome = textBox1.Text;
-                    string email = textBox2.Text;
-
-                    //FAZER VERIFICAÇÃO DE SENHA                  
+                    string email = textBox2.Text;                
                     string senha = textBox3.Text;
-
 
                     //DEFINE A CONSULTA SQL PARA INSERIR UM NOVO CLIENTE NA TABELA PASSANDO PARÂMETROS
                     string insertQuery = "INSERT INTO funcionario (Nome, Email, Senha) VALUES (@Nome, @Email, AES_ENCRYPT('@Senha','chave'))";
@@ -145,7 +138,8 @@ namespace Projeto_TCC
 
                         //EXECUTA O COMANDO PARA INSERIR OS DADOS NO BANCO
                         command.ExecuteNonQuery();  //USADO PARA COMANDOS QUE NÃO RETORNAM RESULTADOS
-                        
+
+                        //DIRECIONA PARA A TELA DE COMPLEMENTO DE CADASTRO
                         TelaCadastroComp form = new TelaCadastroComp();
                         form.Closed += (s, args) => this.Close();
                         form.Show();                       
@@ -154,7 +148,6 @@ namespace Projeto_TCC
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Erro: {ex.Message}", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //label9.Text = ($"Erro: {ex.Message}");
                 }
             }
         }
