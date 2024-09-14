@@ -23,6 +23,7 @@ namespace Projeto_TCC
         {
             InitializeComponent();
         }
+        //VALIDAÇÃO NOME DO USUÁRIO
         private void validacaoNome(object sender, KeyPressEventArgs e)
         {          
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && (e.KeyChar != ' '))
@@ -31,6 +32,7 @@ namespace Projeto_TCC
                 MessageBox.Show("Este campo aceita somente letras.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+        //VALIDAÇÃO EMAIL DO USUÁRIO
         private void validacaoEmail(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar == '@') && ((sender as TextBox).Text.IndexOf('@') > -1))
@@ -39,8 +41,7 @@ namespace Projeto_TCC
                 MessageBox.Show("Este campo aceita somente um arroba.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-
-        //EVENTOS DE TRANSFORMAÇÃO DE TEXTO
+        //EVENTOS DE HOOVER LINK PARA LOGIN
         private void label7_MouseHover(object sender, EventArgs e)
         {
             this.label7.Font = new Font(this.label7.Font, FontStyle.Italic | FontStyle.Bold);
@@ -51,7 +52,7 @@ namespace Projeto_TCC
             this.label7.Font = new Font(this.label7.Font, FontStyle.Italic);
             this.label7.ForeColor = Color.White;
         }
-        //LEVA PARA A PÁGINA DE LOGIN
+        //VOLTA PARA A PÁGINA DE LOGIN
         private void label7_Click(object sender, EventArgs e)
         {
             TelaLogin form = new TelaLogin();
@@ -59,23 +60,26 @@ namespace Projeto_TCC
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
-
-        //VERIFICA SE AS SENHAS COINCIDEM
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        //VERIFICAÇÃO DE COMPATIBILIDADE DAS SENHAS
+        bool activePassword = false;
+        private void checkPassword(object sender, EventArgs e)
         {
-            string passowrd = textBox3.Text;
-            if(textBox4.Text != passowrd)
+            if (textBox4.Text != "")
             {
-                label8.Show();
-                label8.ForeColor = Color.Yellow;
-                label8.Text = "As senhas não coincidem!";
-            }
-            else
-            {
-                label8.Show();
-                label8.ForeColor = Color.Lime;
-                label8.Text = "Ótimo! As senhas estão iguais.";
-                
+                string passowrd = textBox3.Text;
+                if (textBox4.Text != passowrd)
+                {
+                    label8.Show();
+                    label8.ForeColor = Color.Yellow;
+                    label8.Text = "As senhas não coincidem!";
+                }
+                else
+                {
+                    label8.Show();
+                    label8.ForeColor = Color.Lime;
+                    label8.Text = "Ótimo! As senhas estão iguais.";
+
+                }
             }
         }
 
@@ -91,26 +95,6 @@ namespace Projeto_TCC
                 MessageBox.Show("Por favor, preencha todos os campos.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return; // Sai do método para impedir a execução de código adicional
             }
-            /*
-            foreach (Control controle in this.Controls)
-            {
-                if (controle is TextBox textBox)
-                {
-                    // Verifica se o TextBox está vazio
-                    if (string.IsNullOrEmpty(textBox.Text))
-                    {
-                        allTextBoxesFilled = false;
-                        break; // Sai do loop ao encontrar a primeira TextBox vazia
-                    }
-                }
-            }
-
-            // Se alguma TextBox estiver vazia, exibe a mensagem de alerta
-            if (!allTextBoxesFilled)
-            {
-                MessageBox.Show("Por favor, preencha todos os campos.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return; // Sai do método para impedir a execução de código adicional
-            }*/
 
             //VERFICAR SE O EMAIL ESTA NO FORMATO CORRETO
             string TesteEmail = textBox2.Text;
@@ -163,13 +147,8 @@ namespace Projeto_TCC
                         command.ExecuteNonQuery();  //USADO PARA COMANDOS QUE NÃO RETORNAM RESULTADOS
                         
                         TelaCadastroComp form = new TelaCadastroComp();
-                        this.Hide();
                         form.Closed += (s, args) => this.Close();
-                        form.Show();
-                        
-                        //MessageBox.Show("Usuário cadastrado com sucesso!","Parabéns!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        //label9.Text = "Cliente inserido com sucesso!";
+                        form.Show();                       
                     }
                 }
                 catch (Exception ex)
@@ -177,23 +156,6 @@ namespace Projeto_TCC
                     MessageBox.Show($"Erro: {ex.Message}", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     //label9.Text = ($"Erro: {ex.Message}");
                 }
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string email = textBox2.Text;
-            string pattern = @"^[^@\s]+@[^@\s]+\.(com)$";
-            Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
-            if(regex.IsMatch(email))
-            {
-                label8.Show();
-                label8.Text = "Email correto";
-            }
-            else
-            {
-                label8.Show();
-                label8.Text = "Email no formato incorreto";
             }
         }
     }

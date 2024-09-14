@@ -190,7 +190,7 @@
             this.textBox4.PasswordChar = '●';
             this.textBox4.Size = new System.Drawing.Size(286, 23);
             this.textBox4.TabIndex = 30;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBox4.TextChanged += new System.EventHandler(this.checkPassword);
             // 
             // label5
             // 
@@ -211,6 +211,7 @@
             this.textBox3.PasswordChar = '●';
             this.textBox3.Size = new System.Drawing.Size(286, 23);
             this.textBox3.TabIndex = 28;
+            this.textBox3.TextChanged += new System.EventHandler(this.checkPassword);
             // 
             // label4
             // 
