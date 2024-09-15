@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rjButton1 = new Projeto_TCC.RJButton();
-            this.rjLabel1 = new Projeto_TCC.RJLabel();
+            this.rjButton1 = new Projeto_TCC.RoundedButton();
+            this.rjLabel1 = new Projeto_TCC.RoundedLabel();
             this.SuspendLayout();
             // 
             // rjButton1
@@ -78,7 +78,7 @@
 
         #endregion
 
-        private RJButton rjButton1;
-        private RJLabel rjLabel1;
+        private RoundedButton rjButton1;
+        private RoundedLabel rjLabel1;
     }
 }

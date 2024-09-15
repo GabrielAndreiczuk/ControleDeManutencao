@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rjPanel21 = new Projeto_TCC.RJPanel2();
-            this.rjPanel1 = new Projeto_TCC.RJPanel();
+            this.rjPanel21 = new Projeto_TCC.RoundedLeftPanel();
+            this.rjPanel1 = new Projeto_TCC.RoundedRightPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.linePanel2 = new Projeto_TCC.LinePanel();
             this.linePanel1 = new Projeto_TCC.LinePanel();
-            this.rjButton1 = new Projeto_TCC.RJButton();
+            this.rjButton1 = new Projeto_TCC.RoundedButton();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,10 +45,10 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.rjLabel1 = new Projeto_TCC.RJLabel();
-            this.rjLabel2 = new Projeto_TCC.RJLabel();
-            this.rjLabel4 = new Projeto_TCC.RJLabel();
-            this.rjLabel3 = new Projeto_TCC.RJLabel();
+            this.rjLabel1 = new Projeto_TCC.RoundedLabel();
+            this.rjLabel2 = new Projeto_TCC.RoundedLabel();
+            this.rjLabel4 = new Projeto_TCC.RoundedLabel();
+            this.rjLabel3 = new Projeto_TCC.RoundedLabel();
             this.rjPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,7 +123,6 @@
             // 
             this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
             this.rjButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
             this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rjButton1.ForeColor = System.Drawing.Color.White;
             this.rjButton1.Location = new System.Drawing.Point(42, 490);
@@ -307,10 +306,10 @@
         }
 
         #endregion
-        private RJPanel rjPanel1;
+        private RoundedRightPanel rjPanel1;
         private LinePanel linePanel2;
         private LinePanel linePanel1;
-        private RJButton rjButton1;
+        private RoundedButton rjButton1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
@@ -322,11 +321,11 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private RJLabel rjLabel1;
-        private RJLabel rjLabel2;
-        private RJLabel rjLabel3;
-        private RJLabel rjLabel4;
-        private RJPanel2 rjPanel21;
+        private RoundedLabel rjLabel1;
+        private RoundedLabel rjLabel2;
+        private RoundedLabel rjLabel3;
+        private RoundedLabel rjLabel4;
+        private RoundedLeftPanel rjPanel21;
         private System.Windows.Forms.Label label8;
     }
 }

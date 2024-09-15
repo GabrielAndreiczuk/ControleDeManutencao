@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rjPanel1 = new Projeto_TCC.RJPanel();
-            this.rjPanel21 = new Projeto_TCC.RJPanel2();
+            this.rjPanel1 = new Projeto_TCC.RoundedRightPanel();
+            this.rjPanel21 = new Projeto_TCC.RoundedLeftPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.linePanel2 = new Projeto_TCC.LinePanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.rjButton2 = new Projeto_TCC.RJButton();
+            this.rjButton2 = new Projeto_TCC.RoundedButton();
             this.linePanel1 = new Projeto_TCC.LinePanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.rjLabel2 = new Projeto_TCC.RJLabel();
-            this.rjLabel1 = new Projeto_TCC.RJLabel();
+            this.rjLabel2 = new Projeto_TCC.RoundedLabel();
+            this.rjLabel1 = new Projeto_TCC.RoundedLabel();
             this.rjPanel21.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -236,15 +236,15 @@
 
         #endregion
 
-        private RJPanel rjPanel1;
-        private RJPanel2 rjPanel21;
+        private RoundedRightPanel rjPanel1;
+        private RoundedLeftPanel rjPanel21;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private RJLabel rjLabel2;
-        private RJLabel rjLabel1;
+        private RoundedLabel rjLabel2;
+        private RoundedLabel rjLabel1;
         private LinePanel linePanel2;
-        private RJButton rjButton2;
+        private RoundedButton rjButton2;
         private LinePanel linePanel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
