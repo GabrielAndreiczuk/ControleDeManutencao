@@ -121,6 +121,7 @@ namespace Projeto_TCC
         public RoundedLabel() : base()
         {
             this.Size = new Size(300, 50);
+            this.BackColor = Color.White;
         }
     }
 

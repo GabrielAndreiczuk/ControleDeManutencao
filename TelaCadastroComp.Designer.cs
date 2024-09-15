@@ -30,6 +30,8 @@
         {
             this.rjButton1 = new Projeto_TCC.RoundedButton();
             this.rjLabel1 = new Projeto_TCC.RoundedLabel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.roundedLabel1 = new Projeto_TCC.RoundedLabel();
             this.SuspendLayout();
             // 
             // rjButton1
@@ -56,12 +58,32 @@
             this.rjLabel1.Size = new System.Drawing.Size(300, 50);
             this.rjLabel1.TabIndex = 25;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(260, 222);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(262, 27);
+            this.comboBox1.TabIndex = 26;
+            // 
+            // roundedLabel1
+            // 
+            this.roundedLabel1.BackColor = System.Drawing.Color.Black;
+            this.roundedLabel1.ForeColor = System.Drawing.Color.White;
+            this.roundedLabel1.Location = new System.Drawing.Point(250, 133);
+            this.roundedLabel1.Name = "roundedLabel1";
+            this.roundedLabel1.Size = new System.Drawing.Size(300, 50);
+            this.roundedLabel1.TabIndex = 27;
+            this.roundedLabel1.Text = "roundedLabel1";
+            // 
             // TelaCadastroComp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(800, 650);
+            this.Controls.Add(this.roundedLabel1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.rjLabel1);
             this.Controls.Add(this.rjButton1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -80,5 +102,7 @@
 
         private RoundedButton rjButton1;
         private RoundedLabel rjLabel1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private RoundedLabel roundedLabel1;
     }
 }
