@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace Projeto_TCC
 {
+    // CLASSE BASE PARA ARREDONDAMENTO
     public class RoundedComponentBase : Control
     {
         protected int borderSize = 0;
@@ -113,19 +114,17 @@ namespace Projeto_TCC
         }
     }
 
-    //CLASSES DERIVADAS DA CLASSE PRINCIPAL
-
-    //LABELS
+    // CLASSES DERIVADAS DA CLASSE PRINCIPAL
+    // LABEL
     public class RoundedLabel : RoundedComponentBase
     {
         public RoundedLabel() : base()
         {
             this.Size = new Size(300, 50);
-            this.borderRadius = 50;
         }
     }
 
-    //PAINEL COM ARREDONDAMENTO DIREITO
+    // PAINEL COM ARREDONDAMENTO DIREITO
     public class RoundedRightPanel : RoundedComponentBase
     {
         public RoundedRightPanel() : base()
@@ -137,7 +136,7 @@ namespace Projeto_TCC
         }
     }
 
-    //PAINEL COM ARREDONDAMENTO ESQUERDO
+    // PAINEL COM ARREDONDAMENTO ESQUERDO
     public class RoundedLeftPanel : RoundedComponentBase
     {
         public RoundedLeftPanel() : base()
@@ -149,7 +148,7 @@ namespace Projeto_TCC
         }
     }
 
-    //LINHA COM BASE EM PAINEL
+    // LINHA COM BASE EM PAINEL
     public class LinePanel : Panel
     {
         protected override void OnPaint(PaintEventArgs e)
