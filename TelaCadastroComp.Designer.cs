@@ -49,9 +49,9 @@
             this.cmbSetor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSetor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbSetor.FormattingEnabled = true;
-            this.cmbSetor.Location = new System.Drawing.Point(256, 217);
+            this.cmbSetor.Location = new System.Drawing.Point(263, 217);
             this.cmbSetor.Name = "cmbSetor";
-            this.cmbSetor.Size = new System.Drawing.Size(288, 27);
+            this.cmbSetor.Size = new System.Drawing.Size(274, 27);
             this.cmbSetor.TabIndex = 26;
             // 
             // rjButton1
@@ -144,9 +144,9 @@
             this.cmbCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCargo.FormattingEnabled = true;
-            this.cmbCargo.Location = new System.Drawing.Point(256, 317);
+            this.cmbCargo.Location = new System.Drawing.Point(262, 317);
             this.cmbCargo.Name = "cmbCargo";
-            this.cmbCargo.Size = new System.Drawing.Size(288, 27);
+            this.cmbCargo.Size = new System.Drawing.Size(274, 27);
             this.cmbCargo.TabIndex = 41;
             // 
             // label4

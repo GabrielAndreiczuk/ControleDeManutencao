@@ -61,7 +61,7 @@ namespace Projeto_TCC
             form.Show();
         }
         //VERIFICAÇÃO DE COMPATIBILIDADE DAS SENHAS
-        bool activePassword = false;
+        //bool activePassword = false;
         private void checkPassword(object sender, EventArgs e)
         {
             if (textBox4.Text != "")

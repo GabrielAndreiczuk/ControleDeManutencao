@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,17 +14,46 @@ namespace Projeto_TCC
 {
     public partial class TelaCadastroComp : Form
     {
+        private string connectionString = "Server=localhost;Uid=root;Database=projeto;Port=3306;";
         private int borderSize = 0;
         private int borderRadius = 50;
         private Color borderColor = Color.AliceBlue;
 
         public TelaCadastroComp()
         {
+            InitializeComponent();
+
             this.FormBorderStyle = FormBorderStyle.None;
             this.BackColor = Color.FromArgb(0, 51, 102);
             this.ForeColor = Color.White;
             this.Size = new System.Drawing.Size(800, 650);
             this.StartPosition = FormStartPosition.CenterScreen;
+
+            PreencherComboBox();
+        }
+
+        private void PreencherComboBox()
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "SELECT Nome FROM setor";
+
+                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(query, connection);
+                    DataTable dataTable = new DataTable();
+                    dataAdapter.Fill(dataTable);
+                    cmbSetor.DataSource = dataTable;
+                    cmbSetor.DisplayMember = "Nome";
+                    //cmbSetor.ValueMember = "ID_Ferramenta";
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Erro ao preencher a ComboBox: " + ex.Message);
+                }
+            }
         }
 
         //MÉTODO QUE REALIZA O ARREDONDAMENTO DA BORDA
