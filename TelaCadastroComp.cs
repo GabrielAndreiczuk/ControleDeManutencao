@@ -17,8 +17,9 @@ namespace Projeto_TCC
         private string connectionString = "Server=localhost;Uid=root;Database=projeto;Port=3306;";
         private int borderSize = 0;
         private int borderRadius = 50;
-        private Color borderColor = Color.AliceBlue;
-
+        private Color borderColor = Color.White;
+        
+        //MÉTODO CONSTRUTOR
         public TelaCadastroComp()
         {
             InitializeComponent();
@@ -30,51 +31,6 @@ namespace Projeto_TCC
             this.StartPosition = FormStartPosition.CenterScreen;
 
             PreencherComboBox();
-        }
-
-        private void PreencherComboBox()
-        {
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-
-                    //PREENCHER COMBOBOX SETOR
-                    string query = "SELECT Nome FROM setor";
-
-                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(query, connection);
-                    DataTable dataTable = new DataTable();
-                    dataAdapter.Fill(dataTable);
-
-                    DataRow row = dataTable.NewRow();
-                    row["Nome"] = "Escolha seu Setor!";
-                    dataTable.Rows.InsertAt(row, 0);
-
-                    cmbSetor.DataSource = dataTable;
-                    cmbSetor.DisplayMember = "Nome";
-                    //cmbSetor.ValueMember = "ID_Ferramenta";
-                    cmbSetor.SelectedIndex = 0;
-
-                    //PREENCHER COMBOBOX CARGO
-                    query = "SELECT Nome FROM cargo";
-
-                    MySqlDataAdapter dataAdapterCargo = new MySqlDataAdapter(query, connection);
-                    DataTable dataTableCargo = new DataTable();
-                    dataAdapterCargo.Fill(dataTableCargo);
-
-                    DataRow rowCargo = dataTableCargo.NewRow();
-                    rowCargo["Nome"] = "Escolha seu Setor!";
-                    dataTableCargo.Rows.InsertAt(rowCargo, 0);
-
-                    cmbCargo.DataSource = dataTableCargo;
-                    cmbCargo.DisplayMember = "Nome";
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show("Erro ao preencher a ComboBox: " + ex.Message);
-                }
-            }
         }
 
         //MÉTODO QUE REALIZA O ARREDONDAMENTO DA BORDA
@@ -90,6 +46,7 @@ namespace Projeto_TCC
 
             return path;
         }
+
         //MÉTODO PARA PREENCHER E RENDERIZAR A FIGURA COM MAIOR QUALIDADE
         protected override void OnPaint(PaintEventArgs pavent)
         {
@@ -136,6 +93,7 @@ namespace Projeto_TCC
             }
 
         }
+
         //REDIMENSIONA A TELA
         protected override void OnResize(EventArgs e)
         {
@@ -143,6 +101,73 @@ namespace Projeto_TCC
             this.Invalidate(); // Redesenha o formulário quando ele for redimensionado
         }
 
+        //MÉTODO PARA PREENCHER AS COMBOBOX SETOR E CARGO
+        private void PreencherComboBox()
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    //PREENCHER COMBOBOX SETOR
+                    string query = "SELECT Nome FROM setor";
+
+                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(query, connection);
+                    DataTable dataTable = new DataTable();
+                    dataAdapter.Fill(dataTable);
+
+                    DataRow row = dataTable.NewRow();
+                    row["Nome"] = "Escolha seu Setor!";
+                    dataTable.Rows.InsertAt(row, 0);
+
+                    cmbSetor.DataSource = dataTable;
+                    cmbSetor.DisplayMember = "Nome";
+                    //cmbSetor.ValueMember = "ID_Ferramenta";
+                    cmbSetor.SelectedIndex = 0;
+
+                    //PREENCHER COMBOBOX CARGO
+                    query = "SELECT Nome FROM cargo";
+
+                    MySqlDataAdapter dataAdapterCargo = new MySqlDataAdapter(query, connection);
+                    DataTable dataTableCargo = new DataTable();
+                    dataAdapterCargo.Fill(dataTableCargo);
+
+                    DataRow rowCargo = dataTableCargo.NewRow();
+                    rowCargo["Nome"] = "Escolha seu Setor!";
+                    dataTableCargo.Rows.InsertAt(rowCargo, 0);
+
+                    cmbCargo.DataSource = dataTableCargo;
+                    cmbCargo.DisplayMember = "Nome";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao preencher a ComboBox: " + ex.Message);
+                }
+            }
+        }
+
+        //FORMATAÇÃO CAMPO DE CONTATO
+        private void ContactFormatting(object sender, EventArgs e)
+        {
+            //Remove qualquer formatação existente
+            string numero = txtContato.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ","");
+            if (numero.Length > 2)
+            {
+                numero = "(" + numero.Substring(0, 2) + ") " + numero.Substring(2);
+            }
+            if (numero.Length > 10)
+            {
+                numero = numero.Substring(0, 10) + "-" + numero.Substring(10);
+            }
+            if (numero.Length <= 15)
+            {
+                txtContato.Text = numero;
+                txtContato.SelectionStart = txtContato.Text.Length;
+            }
+        }
+
+        //AÇÃO BOTÃO FINALIZAR CADASTRO
         private void rjButton1_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -91,6 +91,7 @@
             this.txtContato.Name = "txtContato";
             this.txtContato.Size = new System.Drawing.Size(286, 19);
             this.txtContato.TabIndex = 39;
+            this.txtContato.TextChanged += new System.EventHandler(this.ContactFormatting);
             // 
             // cmbCargo
             // 
