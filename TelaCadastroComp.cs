@@ -40,14 +40,35 @@ namespace Projeto_TCC
                 {
                     connection.Open();
 
+                    //PREENCHER COMBOBOX SETOR
                     string query = "SELECT Nome FROM setor";
 
                     MySqlDataAdapter dataAdapter = new MySqlDataAdapter(query, connection);
                     DataTable dataTable = new DataTable();
                     dataAdapter.Fill(dataTable);
+
+                    DataRow row = dataTable.NewRow();
+                    row["Nome"] = "Escolha seu Setor!";
+                    dataTable.Rows.InsertAt(row, 0);
+
                     cmbSetor.DataSource = dataTable;
                     cmbSetor.DisplayMember = "Nome";
                     //cmbSetor.ValueMember = "ID_Ferramenta";
+                    cmbSetor.SelectedIndex = 0;
+
+                    //PREENCHER COMBOBOX CARGO
+                    query = "SELECT Nome FROM cargo";
+
+                    MySqlDataAdapter dataAdapterCargo = new MySqlDataAdapter(query, connection);
+                    DataTable dataTableCargo = new DataTable();
+                    dataAdapterCargo.Fill(dataTableCargo);
+
+                    DataRow rowCargo = dataTableCargo.NewRow();
+                    rowCargo["Nome"] = "Escolha seu Setor!";
+                    dataTableCargo.Rows.InsertAt(rowCargo, 0);
+
+                    cmbCargo.DataSource = dataTableCargo;
+                    cmbCargo.DisplayMember = "Nome";
                 }
                 catch(Exception ex)
                 {
@@ -120,6 +141,11 @@ namespace Projeto_TCC
         {
             base.OnResize(e);
             this.Invalidate(); // Redesenha o formulário quando ele for redimensionado
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

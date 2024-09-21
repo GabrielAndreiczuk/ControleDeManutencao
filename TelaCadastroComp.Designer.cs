@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.cmbSetor = new System.Windows.Forms.ComboBox();
-            this.rjButton1 = new Projeto_TCC.RoundedButton();
-            this.roundedLabel1 = new Projeto_TCC.RoundedLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.roundedLabel2 = new Projeto_TCC.RoundedLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtContato = new System.Windows.Forms.TextBox();
-            this.roundedLabel3 = new Projeto_TCC.RoundedLabel();
             this.cmbCargo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.roundedLabel3 = new Projeto_TCC.RoundedLabel();
+            this.roundedLabel2 = new Projeto_TCC.RoundedLabel();
+            this.rjButton1 = new Projeto_TCC.RoundedButton();
+            this.roundedLabel1 = new Projeto_TCC.RoundedLabel();
             this.SuspendLayout();
             // 
             // cmbSetor
@@ -54,32 +54,6 @@
             this.cmbSetor.Size = new System.Drawing.Size(274, 27);
             this.cmbSetor.TabIndex = 26;
             // 
-            // rjButton1
-            // 
-            this.rjButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
-            this.rjButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(250, 525);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(300, 50);
-            this.rjButton1.TabIndex = 24;
-            this.rjButton1.Text = "Finalizar Cadastro";
-            this.rjButton1.UseVisualStyleBackColor = false;
-            // 
-            // roundedLabel1
-            // 
-            this.roundedLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.roundedLabel1.BackColor = System.Drawing.Color.White;
-            this.roundedLabel1.ForeColor = System.Drawing.Color.White;
-            this.roundedLabel1.Location = new System.Drawing.Point(250, 205);
-            this.roundedLabel1.Name = "roundedLabel1";
-            this.roundedLabel1.Size = new System.Drawing.Size(300, 50);
-            this.roundedLabel1.TabIndex = 27;
-            this.roundedLabel1.Text = "roundedLabel1";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -89,15 +63,6 @@
             this.label1.Size = new System.Drawing.Size(56, 19);
             this.label1.TabIndex = 34;
             this.label1.Text = "Cargo";
-            // 
-            // roundedLabel2
-            // 
-            this.roundedLabel2.BackColor = System.Drawing.Color.White;
-            this.roundedLabel2.ForeColor = System.Drawing.Color.Black;
-            this.roundedLabel2.Location = new System.Drawing.Point(249, 305);
-            this.roundedLabel2.Name = "roundedLabel2";
-            this.roundedLabel2.Size = new System.Drawing.Size(300, 50);
-            this.roundedLabel2.TabIndex = 36;
             // 
             // label2
             // 
@@ -127,15 +92,6 @@
             this.txtContato.Size = new System.Drawing.Size(286, 19);
             this.txtContato.TabIndex = 39;
             // 
-            // roundedLabel3
-            // 
-            this.roundedLabel3.BackColor = System.Drawing.Color.White;
-            this.roundedLabel3.ForeColor = System.Drawing.Color.Black;
-            this.roundedLabel3.Location = new System.Drawing.Point(250, 405);
-            this.roundedLabel3.Name = "roundedLabel3";
-            this.roundedLabel3.Size = new System.Drawing.Size(300, 50);
-            this.roundedLabel3.TabIndex = 40;
-            // 
             // cmbCargo
             // 
             this.cmbCargo.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -159,6 +115,51 @@
             this.label4.Size = new System.Drawing.Size(332, 44);
             this.label4.TabIndex = 42;
             this.label4.Text = "Nome do Sistema";
+            // 
+            // roundedLabel3
+            // 
+            this.roundedLabel3.BackColor = System.Drawing.Color.White;
+            this.roundedLabel3.ForeColor = System.Drawing.Color.Black;
+            this.roundedLabel3.Location = new System.Drawing.Point(250, 405);
+            this.roundedLabel3.Name = "roundedLabel3";
+            this.roundedLabel3.Size = new System.Drawing.Size(300, 50);
+            this.roundedLabel3.TabIndex = 40;
+            // 
+            // roundedLabel2
+            // 
+            this.roundedLabel2.BackColor = System.Drawing.Color.White;
+            this.roundedLabel2.ForeColor = System.Drawing.Color.Black;
+            this.roundedLabel2.Location = new System.Drawing.Point(249, 305);
+            this.roundedLabel2.Name = "roundedLabel2";
+            this.roundedLabel2.Size = new System.Drawing.Size(300, 50);
+            this.roundedLabel2.TabIndex = 36;
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.rjButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(250, 525);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(300, 50);
+            this.rjButton1.TabIndex = 24;
+            this.rjButton1.Text = "Finalizar Cadastro";
+            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
+            // 
+            // roundedLabel1
+            // 
+            this.roundedLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.roundedLabel1.BackColor = System.Drawing.Color.White;
+            this.roundedLabel1.ForeColor = System.Drawing.Color.White;
+            this.roundedLabel1.Location = new System.Drawing.Point(250, 205);
+            this.roundedLabel1.Name = "roundedLabel1";
+            this.roundedLabel1.Size = new System.Drawing.Size(300, 50);
+            this.roundedLabel1.TabIndex = 27;
+            this.roundedLabel1.Text = "roundedLabel1";
             // 
             // TelaCadastroComp
             // 

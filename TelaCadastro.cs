@@ -126,7 +126,7 @@ namespace Projeto_TCC
                     string senha = textBox3.Text;
 
                     //DEFINE A CONSULTA SQL PARA INSERIR UM NOVO CLIENTE NA TABELA PASSANDO PARÂMETROS
-                    string insertQuery = "INSERT INTO funcionario (Nome, Email, Senha) VALUES (@Nome, @Email, AES_ENCRYPT('@Senha','chave'))";
+                    string insertQuery = "INSERT INTO funcionario (Nome, Email, Senha) VALUES (@Nome, @Email, @Senha)";
 
                     //CRIA O COMANDO SQL COM A CONSULTA E A CONEXÃO
                     using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
