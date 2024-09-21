@@ -87,11 +87,12 @@
             // txtContato
             // 
             this.txtContato.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtContato.Location = new System.Drawing.Point(260, 420);
+            this.txtContato.Location = new System.Drawing.Point(263, 420);
             this.txtContato.Name = "txtContato";
-            this.txtContato.Size = new System.Drawing.Size(286, 19);
+            this.txtContato.Size = new System.Drawing.Size(283, 19);
             this.txtContato.TabIndex = 39;
             this.txtContato.TextChanged += new System.EventHandler(this.ContactFormatting);
+            this.txtContato.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyDigit);
             // 
             // cmbCargo
             // 

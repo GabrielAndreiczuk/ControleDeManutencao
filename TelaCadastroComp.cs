@@ -101,6 +101,14 @@ namespace Projeto_TCC
             this.Invalidate(); // Redesenha o formulário quando ele for redimensionado
         }
 
+        //MÉTODO QUE INSTANCIA E CHAMA NOTIFICAÇÕES PERSONALIZADAS
+        public void Alert(string msg, FormAlert.enmType type)
+        {
+            FormAlert frm = new FormAlert();
+            frm.showAlert(msg, type);
+            txtContato.Focus();
+        }
+
         //MÉTODO PARA PREENCHER AS COMBOBOX SETOR E CARGO
         private void PreencherComboBox()
         {
@@ -134,7 +142,7 @@ namespace Projeto_TCC
                     dataAdapterCargo.Fill(dataTableCargo);
 
                     DataRow rowCargo = dataTableCargo.NewRow();
-                    rowCargo["Nome"] = "Escolha seu Setor!";
+                    rowCargo["Nome"] = "Escolha seu Cargo!";
                     dataTableCargo.Rows.InsertAt(rowCargo, 0);
 
                     cmbCargo.DataSource = dataTableCargo;
@@ -160,10 +168,22 @@ namespace Projeto_TCC
             {
                 numero = numero.Substring(0, 10) + "-" + numero.Substring(10);
             }
-            if (numero.Length <= 15)
+            txtContato.Text = numero;
+            txtContato.SelectionStart = txtContato.Text.Length;
+        }
+        //VALIDAÇÃO CARACTERES CAMPO DE CONTATO
+        private void onlyDigit(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                txtContato.Text = numero;
-                txtContato.SelectionStart = txtContato.Text.Length;
+                e.Handled = true;
+                //MessageBox.Show("Este campo aceita somente números.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Alert("Este campo aceita somente números!", FormAlert.enmType.Info);
+            }
+            string numero = txtContato.Text;
+            if (!char.IsControl(e.KeyChar) && numero.Length >= 15)
+            {
+                e.Handled = true;
             }
         }
 
