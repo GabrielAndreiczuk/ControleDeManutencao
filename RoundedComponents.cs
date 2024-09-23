@@ -99,7 +99,7 @@ namespace Projeto_TCC
                 }
             }
         }
-
+        /*
         // BackColor change handler
         protected override void OnHandleCreated(EventArgs e)
         {
@@ -111,7 +111,7 @@ namespace Projeto_TCC
         {
             if (this.DesignMode)
                 this.Invalidate();
-        }
+        }*/
     }
 
     // CLASSES DERIVADAS DA CLASSE PRINCIPAL
@@ -233,6 +233,7 @@ namespace Projeto_TCC
                 }
             }
         }
+        /*
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
@@ -243,6 +244,6 @@ namespace Projeto_TCC
         {
             if (this.DesignMode)
                 this.Invalidate();
-        }
+        }*/
     }
 }
