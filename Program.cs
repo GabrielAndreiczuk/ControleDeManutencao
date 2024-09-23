@@ -17,7 +17,7 @@ namespace Projeto_TCC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TelaCadastroComp());
+            Application.Run(new TelaLogin());
         }
     }
 }
