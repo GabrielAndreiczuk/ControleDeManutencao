@@ -99,8 +99,8 @@ namespace Projeto_TCC
                 }
             }
         }
+
         /*
-        // BackColor change handler
         protected override void OnHandleCreated(EventArgs e)
         {
             base.OnHandleCreated(e);
@@ -233,6 +233,7 @@ namespace Projeto_TCC
                 }
             }
         }
+
         /*
         protected override void OnHandleCreated(EventArgs e)
         {
