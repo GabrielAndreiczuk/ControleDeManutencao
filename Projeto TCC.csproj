@@ -104,6 +104,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TelaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaMenu.Designer.cs">
+      <DependentUpon>TelaMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAlert.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="TelaMenu.resx">
+      <DependentUpon>TelaMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAlert.resx">
       <DependentUpon>FormAlert.cs</DependentUpon>
     </EmbeddedResource>

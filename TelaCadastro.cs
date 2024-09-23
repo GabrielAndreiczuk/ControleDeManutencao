@@ -92,6 +92,8 @@ namespace Projeto_TCC
             //VERIFICAR SE TODOS OS CAMPOS ESTÃO PREENCHIDOS
             if(textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "")
             {
+                FormAlert frm = new FormAlert();
+                //ADAPTAR NOTIFICAÇÕES
                 MessageBox.Show("Por favor, preencha todos os campos.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return; // Sai do método para impedir a execução de código adicional
             }
