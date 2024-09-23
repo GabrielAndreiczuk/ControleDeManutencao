@@ -201,6 +201,7 @@ namespace Projeto_TCC
             {
                 Alert("Prencha o campo de contato corretamente!", FormAlert.enmType.Warning);
                 txtContato.Focus();
+                return;
             }
 
             //CONEXÃO COM O BANCO DE DADOS
