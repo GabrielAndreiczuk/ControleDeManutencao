@@ -106,7 +106,6 @@ namespace Projeto_TCC
         {
             FormAlert frm = new FormAlert();
             frm.showAlert(msg, type);
-            txtContato.Focus();
         }
 
         //MÉTODO PARA PREENCHER AS COMBOBOX SETOR E CARGO
@@ -171,6 +170,7 @@ namespace Projeto_TCC
             txtContato.Text = numero;
             txtContato.SelectionStart = txtContato.Text.Length;
         }
+
         //VALIDAÇÃO CARACTERES CAMPO DE CONTATO
         private void onlyDigit(object sender, KeyPressEventArgs e)
         {
@@ -188,9 +188,50 @@ namespace Projeto_TCC
         }
 
         //AÇÃO BOTÃO FINALIZAR CADASTRO
-        private void rjButton1_Click(object sender, EventArgs e)
+        private void btnFinalizar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //VALIDAÇÃO VALORES DAS COMBOBOX
+            if(cmbSetor.SelectedIndex == 0 || cmbCargo.SelectedIndex == 0)
+            {
+                Alert("Escolha uma opção de setor e cargo válida!", FormAlert.enmType.Warning);
+                return;
+            }
+            //VALIDÃÇÃO TEXTBOX CONTATO
+            if (txtContato.Text.Length < 15)
+            {
+                Alert("Prencha o campo de contato corretamente!", FormAlert.enmType.Warning);
+                txtContato.Focus();
+            }
+
+            //CONEXÃO COM O BANCO DE DADOS
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    int setor = cmbSetor.SelectedIndex, cargo = cmbCargo.SelectedIndex;
+                    string contato = txtContato.Text;
+
+                    string updateQuery = "UPDATE funcionario SET Setor = @Setor, Cargo = @Cargo, Contato = @Contato WHERE ID_Funcionario = (select max(ID_Funcionario) from funcionario)";
+
+                    using (MySqlCommand command = new MySqlCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@Setor",setor);
+                        command.Parameters.AddWithValue("@Cargo",cargo);
+                        command.Parameters.AddWithValue("@Contato",contato);
+
+                        command.ExecuteNonQuery();
+
+                        Alert("Usuário cadastrado com sucesso!", FormAlert.enmType.Success);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Alert("Erro de conexão com o banco de dados!",FormAlert.enmType.Error);
+                }
+            }
         }
+
     }
 }

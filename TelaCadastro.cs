@@ -32,6 +32,7 @@ namespace Projeto_TCC
                 MessageBox.Show("Este campo aceita somente letras.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
         //VALIDAÇÃO EMAIL DO USUÁRIO
         private void validacaoEmail(object sender, KeyPressEventArgs e)
         {
@@ -41,6 +42,7 @@ namespace Projeto_TCC
                 MessageBox.Show("Este campo aceita somente um arroba.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
         //EVENTOS DE HOOVER LINK PARA LOGIN
         private void label7_MouseHover(object sender, EventArgs e)
         {
@@ -52,6 +54,7 @@ namespace Projeto_TCC
             this.label7.Font = new Font(this.label7.Font, FontStyle.Italic);
             this.label7.ForeColor = Color.White;
         }
+
         //VOLTA PARA A PÁGINA DE LOGIN
         private void label7_Click(object sender, EventArgs e)
         {
@@ -60,8 +63,8 @@ namespace Projeto_TCC
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
+
         //VERIFICAÇÃO DE COMPATIBILIDADE DAS SENHAS
-        //bool activePassword = false;
         private void checkPassword(object sender, EventArgs e)
         {
             if (textBox4.Text != "")
@@ -82,6 +85,7 @@ namespace Projeto_TCC
                 }
             }
         }
+
         //PROGRAMAÇÃO DO BOTÃO DE CADASTRO
         private void rjButton1_Click(object sender, EventArgs e)
         {
@@ -151,6 +155,7 @@ namespace Projeto_TCC
                 }
             }
         }
+
     }
     
 }
