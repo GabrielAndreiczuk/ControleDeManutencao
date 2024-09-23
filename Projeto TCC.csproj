@@ -193,5 +193,8 @@
   <ItemGroup>
     <None Include="Resources\sucesso.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem-tela-cadastro-final.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -35,11 +35,11 @@
             this.txtContato = new System.Windows.Forms.TextBox();
             this.cmbCargo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.roundedRightPanel1 = new Projeto_TCC.RoundedRightPanel();
             this.roundedLabel3 = new Projeto_TCC.RoundedLabel();
             this.roundedLabel2 = new Projeto_TCC.RoundedLabel();
             this.btnFinalizar = new Projeto_TCC.RoundedButton();
             this.roundedLabel1 = new Projeto_TCC.RoundedLabel();
-            this.roundedRightPanel1 = new Projeto_TCC.RoundedRightPanel();
             this.SuspendLayout();
             // 
             // cmbSetor
@@ -119,6 +119,17 @@
             this.label4.TabIndex = 42;
             this.label4.Text = "Nome do Sistema";
             // 
+            // roundedRightPanel1
+            // 
+            this.roundedRightPanel1.BackColor = System.Drawing.Color.Black;
+            this.roundedRightPanel1.BackgroundImage = global::Projeto_TCC.Properties.Resources.imagem_tela_cadastro_final;
+            this.roundedRightPanel1.ForeColor = System.Drawing.Color.White;
+            this.roundedRightPanel1.Location = new System.Drawing.Point(400, 0);
+            this.roundedRightPanel1.Name = "roundedRightPanel1";
+            this.roundedRightPanel1.Size = new System.Drawing.Size(400, 650);
+            this.roundedRightPanel1.TabIndex = 43;
+            this.roundedRightPanel1.Text = "roundedRightPanel1";
+            // 
             // roundedLabel3
             // 
             this.roundedLabel3.BackColor = System.Drawing.Color.White;
@@ -163,16 +174,6 @@
             this.roundedLabel1.Size = new System.Drawing.Size(300, 50);
             this.roundedLabel1.TabIndex = 27;
             this.roundedLabel1.Text = "roundedLabel1";
-            // 
-            // roundedRightPanel1
-            // 
-            this.roundedRightPanel1.BackColor = System.Drawing.Color.Black;
-            this.roundedRightPanel1.ForeColor = System.Drawing.Color.White;
-            this.roundedRightPanel1.Location = new System.Drawing.Point(400, 0);
-            this.roundedRightPanel1.Name = "roundedRightPanel1";
-            this.roundedRightPanel1.Size = new System.Drawing.Size(400, 650);
-            this.roundedRightPanel1.TabIndex = 43;
-            this.roundedRightPanel1.Text = "roundedRightPanel1";
             // 
             // TelaCadastroComp
             // 
