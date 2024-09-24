@@ -23,13 +23,22 @@ namespace Projeto_TCC
         {
             InitializeComponent();
         }
+
+        //MÉTODO QUE INSTANCIA E CHAMA NOTIFICAÇÕES PERSONALIZADAS
+        public void Alert(string msg, FormAlert.enmType type)
+        {
+            FormAlert frm = new FormAlert();
+            frm.showAlert(msg, type);
+        }
+
         //VALIDAÇÃO NOME DO USUÁRIO
         private void validacaoNome(object sender, KeyPressEventArgs e)
         {          
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && (e.KeyChar != ' '))
             {
                 e.Handled = true;
-                MessageBox.Show("Este campo aceita somente letras.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Alert("Este campo aceita somente letras.", FormAlert.enmType.Info);
+                //MessageBox.Show("Este campo aceita somente letras.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -39,7 +48,8 @@ namespace Projeto_TCC
             if ((e.KeyChar == '@') && ((sender as TextBox).Text.IndexOf('@') > -1))
             {
                 e.Handled = true;
-                MessageBox.Show("Este campo aceita somente um arroba.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Alert("Este campo aceita somente um arroba.", FormAlert.enmType.Info);
+                //MessageBox.Show("Este campo aceita somente um arroba.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -94,7 +104,7 @@ namespace Projeto_TCC
             {
                 FormAlert frm = new FormAlert();
                 //ADAPTAR NOTIFICAÇÕES
-                MessageBox.Show("Por favor, preencha todos os campos.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Alert("Por favor, preencha todos os campos.", FormAlert.enmType.Warning);
                 return; // Sai do método para impedir a execução de código adicional
             }
 
@@ -104,7 +114,7 @@ namespace Projeto_TCC
             Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
             if (!regex.IsMatch(TesteEmail))
             {
-                MessageBox.Show("Email no formato incorreto!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Alert("Email no formato incorreto!", FormAlert.enmType.Warning);
                 return;
                 
             }
@@ -112,7 +122,7 @@ namespace Projeto_TCC
             //VERIFICAR SE AS SENHAS SÃO IGUAIS
             if(textBox3.Text != textBox4.Text)
             {
-                MessageBox.Show("Senhas não coincidem!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Alert("Senhas não coincidem!", FormAlert.enmType.Warning);
                 return;
             }
 
@@ -153,7 +163,8 @@ namespace Projeto_TCC
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Erro: {ex.Message}", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Alert("Erro de conexão com o banco de dados!",FormAlert.enmType.Error);
+                    //MessageBox.Show($"Erro: {ex.Message}", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

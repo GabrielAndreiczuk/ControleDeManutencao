@@ -28,8 +28,8 @@ namespace Projeto_TCC
                 {
                     DisableButton((Button)btnSender);
                     currentButton = (Button)btnSender;
-                    //currentButton.BackColor = Color.FromArgb(54, 124, 221);
-                    currentButton.BackColor = Color.FromArgb(255, 165, 0);
+                    currentButton.BackColor = Color.FromArgb(54, 124, 221);
+                    //currentButton.BackColor = Color.FromArgb(255, 165, 0);
                 }
             }
         }

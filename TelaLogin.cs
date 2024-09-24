@@ -19,6 +19,14 @@ namespace Projeto_TCC
         {
             InitializeComponent();
         }
+
+        //MÉTODO QUE INSTANCIA E CHAMA NOTIFICAÇÕES PERSONALIZADAS
+        public void Alert(string msg, FormAlert.enmType type)
+        {
+            FormAlert frm = new FormAlert();
+            frm.showAlert(msg, type);
+        }
+
         private void label7_MouseHover(object sender, EventArgs e)
         {
             this.label7.Font = new Font(this.label7.Font, FontStyle.Italic | FontStyle.Bold);
@@ -42,9 +50,7 @@ namespace Projeto_TCC
         {
             if (textBox1.Text == "" || textBox2.Text == "")
             {
-                MessageBox.Show("Por favor, preencha todos os campos.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);             
-                //label8.Text = "Por favor, preencha todos os campos.";
-                //label8.Show();
+                Alert("Por favor, preencha todos os campos.", FormAlert.enmType.Warning);             
                 return; // Sai do método para impedir a execução de código adicional
             }
 
@@ -82,7 +88,8 @@ namespace Projeto_TCC
                             }
                             if(login == true)
                             {
-                                MessageBox.Show("Login Efetuado Com sucesso!", "Parabéns!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Alert("Login efetuado com sucesso!", FormAlert.enmType.Success);
+                                //MessageBox.Show("Login Efetuado Com sucesso!", "Parabéns!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
                             {
@@ -95,7 +102,8 @@ namespace Projeto_TCC
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Erro: {ex.Message}", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Alert("Erro de conexão com o banco de dados!", FormAlert.enmType.Error);
+                    //MessageBox.Show($"Erro: {ex.Message}", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

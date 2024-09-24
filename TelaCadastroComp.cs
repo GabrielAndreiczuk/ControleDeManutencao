@@ -149,7 +149,8 @@ namespace Projeto_TCC
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao preencher a ComboBox: " + ex.Message);
+                    Alert("Erro de conexão com o banco de dados!", FormAlert.enmType.Error);
+                    //MessageBox.Show("Erro ao preencher a ComboBox: " + ex.Message);
                 }
             }
         }

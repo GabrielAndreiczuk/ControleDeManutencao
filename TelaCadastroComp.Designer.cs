@@ -113,11 +113,11 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(34, 85);
+            this.label4.Location = new System.Drawing.Point(110, 85);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(332, 44);
+            this.label4.Size = new System.Drawing.Size(181, 44);
             this.label4.TabIndex = 42;
-            this.label4.Text = "Nome do Sistema";
+            this.label4.Text = "Cadastro";
             // 
             // roundedRightPanel1
             // 
