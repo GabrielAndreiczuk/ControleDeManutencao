@@ -118,31 +118,58 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="6310507" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6310507.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="atenção" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\atenção.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Imagem-tela-cadastro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Imagem-tela-cadastro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icone-historico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-historico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sucesso" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sucesso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="imagem-tela-cadastro-final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imagem-tela-cadastro-final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="6310507" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\6310507.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icone-indicativos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-indicativos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="erro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\erro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icone-home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-home1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone-serviço" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-serviço.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone-indicativos-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-indicativos-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone-home-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-home-22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imagem-tela-login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imagem-tela-login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sucesso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sucesso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="erro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\erro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fechar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fechar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imagem-tela-cadastro-final" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imagem-tela-cadastro-final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Imagem-tela-cadastro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Imagem-tela-cadastro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone-indicativos-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-indicativos-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone-historico-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-historico-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone-configuracoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-configuracoes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

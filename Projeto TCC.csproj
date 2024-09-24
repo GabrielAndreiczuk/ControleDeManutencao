@@ -205,5 +205,47 @@
   <ItemGroup>
     <None Include="Resources\imagem-tela-cadastro-final.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-home-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-home-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-home-21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-home-31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-indicativos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-indicativos-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-indicativos-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-serviço.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-historico-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-historico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-home-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-configuracoes.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
