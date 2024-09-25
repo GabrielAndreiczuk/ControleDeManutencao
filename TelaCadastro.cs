@@ -132,6 +132,7 @@ namespace Projeto_TCC
             //CRIA UMA NOVA CONEXÃO COM O BANCO DE DADOS MYSQL USANDO A STRING FORNECIDA
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
+
                 try
                 {
                     //ABRE A CONEXÃO DO BANCO DE DADOS
@@ -141,12 +142,38 @@ namespace Projeto_TCC
                     string email = textBox2.Text;                
                     string senha = textBox3.Text;
 
+                    //CONSULTA PARA OBTER A LISTA DE EMAILS CADASTRADOS
+                    string emailQuery = "SELECT Email FROM funcionario";
+                    bool cadastrado = false;
+
+                    //VERIFICA SE O EMAIL JÁ ESTÁ CADASTRADO
+                    using (MySqlCommand command = new MySqlCommand(emailQuery, connection))
+                    {
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string emailData = reader["Email"].ToString();
+                                if (emailData == textBox2.Text)
+                                {
+                                    cadastrado = true;
+                                }
+                            }
+                            if (cadastrado == true)
+                            {
+                                Alert("Este email já está cadastrado!", FormAlert.enmType.Warning);
+                                return;
+                            }
+                        }
+                    }
+
                     //DEFINE A CONSULTA SQL PARA INSERIR UM NOVO CLIENTE NA TABELA PASSANDO PARÂMETROS
                     string insertQuery = "INSERT INTO funcionario (Nome, Email, Senha) VALUES (@Nome, @Email, @Senha)";
 
                     //CRIA O COMANDO SQL COM A CONSULTA E A CONEXÃO
                     using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
                     {
+
                         //ADICIONA OS DADOS LIDOS COMO PARÂMETROS PARA CONSULTA
                         command.Parameters.AddWithValue("@Nome", nome);
                         command.Parameters.AddWithValue("@Email", email);
@@ -158,7 +185,7 @@ namespace Projeto_TCC
                         //DIRECIONA PARA A TELA DE COMPLEMENTO DE CADASTRO
                         TelaCadastroComp form = new TelaCadastroComp();
                         form.Closed += (s, args) => this.Close();
-                        form.Show();                       
+                        form.Show();                     
                     }
                 }
                 catch (Exception ex)
