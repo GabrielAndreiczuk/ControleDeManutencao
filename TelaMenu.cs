@@ -15,7 +15,7 @@ namespace Projeto_TCC
         public TelaMenu()
         {
             InitializeComponent();
-            button1_Click(button1,EventArgs.Empty);
+            btnMenu_Click(btnMenu,EventArgs.Empty);
         }
 
         private Button currentButton;
@@ -44,25 +44,30 @@ namespace Projeto_TCC
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnMenu_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
+            lblTittle.Text = "Menu Inicial";
         }
-        private void button2_Click(object sender, EventArgs e)
+        private void btnIndicativos_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
+            lblTittle.Text = "Consulta Indicativos";
         }
-        private void button3_Click(object sender, EventArgs e)
+        private void btnOrdem_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
+            lblTittle.Text = "Abrir Ordem de Serviço";
         }
-        private void button4_Click(object sender, EventArgs e)
+        private void btnHistorico_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
+            lblTittle.Text = "Consulta Histórico";
         }
-        private void button5_Click(object sender, EventArgs e)
+        private void btnConfig_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
+            lblTittle.Text = "Configurações";
         }
     }
 }
