@@ -226,6 +226,11 @@ namespace Projeto_TCC
                         command.ExecuteNonQuery();
 
                         Alert("Usuário cadastrado com sucesso!", FormAlert.enmType.Success);
+
+                        TelaMenu form = new TelaMenu();
+                        this.Hide();
+                        form.Closed += (s, args) => this.Close();
+                        form.Show();
                     }
                 }
                 catch (Exception ex)

@@ -89,6 +89,11 @@ namespace Projeto_TCC
                             if(login == true)
                             {
                                 Alert("Login efetuado com sucesso!", FormAlert.enmType.Success);
+
+                                TelaMenu form = new TelaMenu();
+                                this.Hide();
+                                form.Closed += (s, args) => this.Close();
+                                form.Show();
                                 //MessageBox.Show("Login Efetuado Com sucesso!", "Parabéns!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
