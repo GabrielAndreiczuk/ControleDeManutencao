@@ -53,6 +53,17 @@ namespace Projeto_TCC
         {
             ActiveButton(sender);
             lblTittle.Text = "Consulta Indicativos";
+
+            TelaMenu menu = Application.OpenForms["TelaMenu"] as TelaMenu;
+            menu.panelMenu.Controls.Clear();
+
+            TelaIndicativos historico = new TelaIndicativos ();
+            historico.TopLevel = false;
+            historico.Dock = DockStyle.Fill;
+            historico.FormBorderStyle = FormBorderStyle.None;
+
+            menu.panelMenu.Controls.Add(historico);
+            historico.Show();
         }
         private void btnOrdem_Click(object sender, EventArgs e)
         {
