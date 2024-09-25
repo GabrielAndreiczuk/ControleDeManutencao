@@ -63,6 +63,17 @@ namespace Projeto_TCC
         {
             ActiveButton(sender);
             lblTittle.Text = "Consulta Histórico";
+
+            TelaMenu menu = Application.OpenForms["TelaMenu"] as TelaMenu;
+            menu.panelMenu.Controls.Clear();
+
+            TelaHistorico historico = new TelaHistorico();
+            historico.TopLevel = false;
+            historico.Dock = DockStyle.Fill;
+            historico.FormBorderStyle = FormBorderStyle.None;
+
+            menu.panelMenu.Controls.Add(historico);
+            historico.Show();
         }
         private void btnConfig_Click(object sender, EventArgs e)
         {

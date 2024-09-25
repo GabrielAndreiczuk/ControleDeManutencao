@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTittle = new System.Windows.Forms.Label();
+            this.panelMenu = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -193,10 +194,19 @@
             this.lblTittle.Text = "Menu Inicial";
             this.lblTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panelMenu
+            // 
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMenu.Location = new System.Drawing.Point(300, 120);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(1020, 566);
+            this.panelMenu.TabIndex = 2;
+            // 
             // TelaMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1320, 686);
+            this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -224,5 +234,6 @@
         private System.Windows.Forms.Button btnOrdem;
         private System.Windows.Forms.Button btnConfig;
         private System.Windows.Forms.Button btnHistorico;
+        private System.Windows.Forms.Panel panelMenu;
     }
 }
