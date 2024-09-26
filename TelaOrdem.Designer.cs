@@ -55,18 +55,21 @@
             // 
             this.txtDescricao.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescricao.Location = new System.Drawing.Point(116, 118);
+            this.txtDescricao.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricao.Location = new System.Drawing.Point(75, 118);
             this.txtDescricao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(768, 65);
+            this.txtDescricao.Size = new System.Drawing.Size(853, 65);
             this.txtDescricao.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(112, 78);
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(70, 78);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 19);
@@ -77,10 +80,12 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(112, 228);
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(70, 228);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 19);
+            this.label2.Size = new System.Drawing.Size(89, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Data início";
             // 
@@ -88,20 +93,23 @@
             // 
             this.txtDataInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDataInicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDataInicio.Location = new System.Drawing.Point(116, 265);
+            this.txtDataInicio.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataInicio.Location = new System.Drawing.Point(75, 265);
             this.txtDataInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDataInicio.Name = "txtDataInicio";
-            this.txtDataInicio.Size = new System.Drawing.Size(148, 20);
+            this.txtDataInicio.Size = new System.Drawing.Size(186, 19);
             this.txtDataInicio.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(314, 228);
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(295, 228);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 19);
+            this.label3.Size = new System.Drawing.Size(114, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "Hora de início";
             // 
@@ -109,20 +117,23 @@
             // 
             this.txtHoraInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtHoraInicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtHoraInicio.Location = new System.Drawing.Point(318, 265);
+            this.txtHoraInicio.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoraInicio.Location = new System.Drawing.Point(299, 265);
             this.txtHoraInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtHoraInicio.Name = "txtHoraInicio";
-            this.txtHoraInicio.Size = new System.Drawing.Size(148, 20);
+            this.txtHoraInicio.Size = new System.Drawing.Size(189, 19);
             this.txtHoraInicio.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(732, 228);
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(755, 228);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(156, 19);
+            this.label4.Size = new System.Drawing.Size(153, 19);
             this.label4.TabIndex = 9;
             this.label4.Text = "Hora de conclusão";
             // 
@@ -130,10 +141,12 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(530, 228);
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(522, 228);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 19);
+            this.label5.Size = new System.Drawing.Size(128, 19);
             this.label5.TabIndex = 7;
             this.label5.Text = "Data conclusão";
             // 
@@ -141,7 +154,9 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(112, 332);
+            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(522, 327);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(116, 19);
@@ -152,10 +167,12 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(314, 332);
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(71, 327);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 19);
+            this.label7.Size = new System.Drawing.Size(74, 19);
             this.label7.TabIndex = 12;
             this.label7.Text = "Máquina";
             // 
@@ -166,52 +183,56 @@
             this.cmbMaquina.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbMaquina.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMaquina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbMaquina.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMaquina.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMaquina.FormattingEnabled = true;
-            this.cmbMaquina.Location = new System.Drawing.Point(310, 366);
+            this.cmbMaquina.Location = new System.Drawing.Point(75, 361);
             this.cmbMaquina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbMaquina.Name = "cmbMaquina";
-            this.cmbMaquina.Size = new System.Drawing.Size(164, 28);
+            this.cmbMaquina.Size = new System.Drawing.Size(413, 27);
             this.cmbMaquina.TabIndex = 13;
             // 
             // txtHoraFinal
             // 
             this.txtHoraFinal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtHoraFinal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtHoraFinal.Location = new System.Drawing.Point(736, 265);
+            this.txtHoraFinal.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoraFinal.Location = new System.Drawing.Point(760, 265);
             this.txtHoraFinal.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoraFinal.Name = "txtHoraFinal";
-            this.txtHoraFinal.Size = new System.Drawing.Size(148, 20);
+            this.txtHoraFinal.Size = new System.Drawing.Size(193, 19);
             this.txtHoraFinal.TabIndex = 18;
             // 
             // txtDataFinal
             // 
             this.txtDataFinal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDataFinal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDataFinal.Location = new System.Drawing.Point(534, 265);
+            this.txtDataFinal.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataFinal.Location = new System.Drawing.Point(526, 265);
             this.txtDataFinal.Margin = new System.Windows.Forms.Padding(4);
             this.txtDataFinal.Name = "txtDataFinal";
-            this.txtDataFinal.Size = new System.Drawing.Size(148, 20);
+            this.txtDataFinal.Size = new System.Drawing.Size(195, 19);
             this.txtDataFinal.TabIndex = 17;
             // 
             // txtIdFuncionario
             // 
             this.txtIdFuncionario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtIdFuncionario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtIdFuncionario.Location = new System.Drawing.Point(116, 369);
+            this.txtIdFuncionario.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdFuncionario.Location = new System.Drawing.Point(526, 364);
             this.txtIdFuncionario.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdFuncionario.Name = "txtIdFuncionario";
-            this.txtIdFuncionario.Size = new System.Drawing.Size(148, 20);
+            this.txtIdFuncionario.Size = new System.Drawing.Size(195, 19);
             this.txtIdFuncionario.TabIndex = 21;
             // 
             // roundedLabel6
             // 
             this.roundedLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.roundedLabel6.BackColor = System.Drawing.Color.White;
+            this.roundedLabel6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedLabel6.ForeColor = System.Drawing.Color.White;
-            this.roundedLabel6.Location = new System.Drawing.Point(100, 354);
+            this.roundedLabel6.Location = new System.Drawing.Point(513, 349);
             this.roundedLabel6.Name = "roundedLabel6";
-            this.roundedLabel6.Size = new System.Drawing.Size(180, 50);
+            this.roundedLabel6.Size = new System.Drawing.Size(215, 50);
             this.roundedLabel6.TabIndex = 22;
             this.roundedLabel6.Text = "roundedLabel6";
             // 
@@ -219,10 +240,11 @@
             // 
             this.roundedLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.roundedLabel4.BackColor = System.Drawing.Color.White;
+            this.roundedLabel4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedLabel4.ForeColor = System.Drawing.Color.White;
-            this.roundedLabel4.Location = new System.Drawing.Point(518, 250);
+            this.roundedLabel4.Location = new System.Drawing.Point(513, 250);
             this.roundedLabel4.Name = "roundedLabel4";
-            this.roundedLabel4.Size = new System.Drawing.Size(180, 50);
+            this.roundedLabel4.Size = new System.Drawing.Size(215, 50);
             this.roundedLabel4.TabIndex = 19;
             this.roundedLabel4.Text = "roundedLabel4";
             // 
@@ -230,10 +252,11 @@
             // 
             this.roundedLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.roundedLabel5.BackColor = System.Drawing.Color.White;
+            this.roundedLabel5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedLabel5.ForeColor = System.Drawing.Color.White;
-            this.roundedLabel5.Location = new System.Drawing.Point(720, 250);
+            this.roundedLabel5.Location = new System.Drawing.Point(742, 250);
             this.roundedLabel5.Name = "roundedLabel5";
-            this.roundedLabel5.Size = new System.Drawing.Size(180, 50);
+            this.roundedLabel5.Size = new System.Drawing.Size(215, 50);
             this.roundedLabel5.TabIndex = 20;
             this.roundedLabel5.Text = "roundedLabel5";
             // 
@@ -241,10 +264,11 @@
             // 
             this.roundedLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.roundedLabel1.BackColor = System.Drawing.Color.White;
+            this.roundedLabel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedLabel1.ForeColor = System.Drawing.Color.White;
-            this.roundedLabel1.Location = new System.Drawing.Point(100, 100);
+            this.roundedLabel1.Location = new System.Drawing.Point(57, 100);
             this.roundedLabel1.Name = "roundedLabel1";
-            this.roundedLabel1.Size = new System.Drawing.Size(800, 100);
+            this.roundedLabel1.Size = new System.Drawing.Size(900, 100);
             this.roundedLabel1.TabIndex = 14;
             this.roundedLabel1.Text = "roundedLabel1";
             // 
@@ -252,10 +276,11 @@
             // 
             this.roundedLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.roundedLabel2.BackColor = System.Drawing.Color.White;
+            this.roundedLabel2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedLabel2.ForeColor = System.Drawing.Color.White;
-            this.roundedLabel2.Location = new System.Drawing.Point(100, 250);
+            this.roundedLabel2.Location = new System.Drawing.Point(57, 250);
             this.roundedLabel2.Name = "roundedLabel2";
-            this.roundedLabel2.Size = new System.Drawing.Size(180, 50);
+            this.roundedLabel2.Size = new System.Drawing.Size(215, 50);
             this.roundedLabel2.TabIndex = 15;
             this.roundedLabel2.Text = "roundedLabel2";
             // 
@@ -263,10 +288,11 @@
             // 
             this.roundedLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.roundedLabel3.BackColor = System.Drawing.Color.White;
+            this.roundedLabel3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedLabel3.ForeColor = System.Drawing.Color.White;
-            this.roundedLabel3.Location = new System.Drawing.Point(302, 250);
+            this.roundedLabel3.Location = new System.Drawing.Point(285, 250);
             this.roundedLabel3.Name = "roundedLabel3";
-            this.roundedLabel3.Size = new System.Drawing.Size(180, 50);
+            this.roundedLabel3.Size = new System.Drawing.Size(215, 50);
             this.roundedLabel3.TabIndex = 16;
             this.roundedLabel3.Text = "roundedLabel3";
             // 
@@ -274,17 +300,19 @@
             // 
             this.roundedLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.roundedLabel7.BackColor = System.Drawing.Color.White;
+            this.roundedLabel7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedLabel7.ForeColor = System.Drawing.Color.White;
-            this.roundedLabel7.Location = new System.Drawing.Point(302, 354);
+            this.roundedLabel7.Location = new System.Drawing.Point(57, 349);
             this.roundedLabel7.Name = "roundedLabel7";
-            this.roundedLabel7.Size = new System.Drawing.Size(180, 50);
+            this.roundedLabel7.Size = new System.Drawing.Size(443, 50);
             this.roundedLabel7.TabIndex = 23;
             this.roundedLabel7.Text = "roundedLabel7";
             // 
             // TelaOrdem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.txtIdFuncionario);
             this.Controls.Add(this.roundedLabel6);
@@ -307,7 +335,7 @@
             this.Controls.Add(this.roundedLabel2);
             this.Controls.Add(this.roundedLabel3);
             this.Controls.Add(this.roundedLabel7);
-            this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TelaOrdem";
             this.Text = "Form1";
