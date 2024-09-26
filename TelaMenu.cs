@@ -57,18 +57,29 @@ namespace Projeto_TCC
             TelaMenu menu = Application.OpenForms["TelaMenu"] as TelaMenu;
             menu.panelMenu.Controls.Clear();
 
-            TelaIndicativos historico = new TelaIndicativos ();
-            historico.TopLevel = false;
-            historico.Dock = DockStyle.Fill;
-            historico.FormBorderStyle = FormBorderStyle.None;
+            TelaIndicativos indicativos = new TelaIndicativos ();
+            indicativos.TopLevel = false;
+            indicativos.Dock = DockStyle.Fill;
+            indicativos.FormBorderStyle = FormBorderStyle.None;
 
-            menu.panelMenu.Controls.Add(historico);
-            historico.Show();
+            menu.panelMenu.Controls.Add(indicativos);
+            indicativos.Show();
         }
         private void btnOrdem_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
             lblTittle.Text = "Abrir Ordem de Serviço";
+
+            TelaMenu menu = Application.OpenForms["TelaMenu"] as TelaMenu;
+            menu.panelMenu.Controls.Clear();
+
+            TelaOrdem ordem = new TelaOrdem();
+            ordem.TopLevel = false;
+            ordem.Dock = DockStyle.Fill;
+            ordem.FormBorderStyle = FormBorderStyle.None;
+
+            menu.panelMenu.Controls.Add(ordem);
+            ordem.Show();
         }
         private void btnHistorico_Click(object sender, EventArgs e)
         {
