@@ -57,7 +57,7 @@
             this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescricao.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescricao.Location = new System.Drawing.Point(75, 118);
-            this.txtDescricao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescricao.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(853, 65);
@@ -95,10 +95,12 @@
             this.txtDataInicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDataInicio.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDataInicio.Location = new System.Drawing.Point(75, 265);
-            this.txtDataInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDataInicio.Margin = new System.Windows.Forms.Padding(4);
             this.txtDataInicio.Name = "txtDataInicio";
             this.txtDataInicio.Size = new System.Drawing.Size(186, 19);
             this.txtDataInicio.TabIndex = 2;
+            this.txtDataInicio.TextChanged += new System.EventHandler(this.Format_Data);
+            this.txtDataInicio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidarData);
             // 
             // label3
             // 
@@ -119,10 +121,12 @@
             this.txtHoraInicio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtHoraInicio.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoraInicio.Location = new System.Drawing.Point(299, 265);
-            this.txtHoraInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoraInicio.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoraInicio.Name = "txtHoraInicio";
             this.txtHoraInicio.Size = new System.Drawing.Size(189, 19);
             this.txtHoraInicio.TabIndex = 4;
+            this.txtHoraInicio.TextChanged += new System.EventHandler(this.Format_Hora);
+            this.txtHoraInicio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidarHora);
             // 
             // label4
             // 
@@ -186,7 +190,7 @@
             this.cmbMaquina.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMaquina.FormattingEnabled = true;
             this.cmbMaquina.Location = new System.Drawing.Point(75, 361);
-            this.cmbMaquina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbMaquina.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMaquina.Name = "cmbMaquina";
             this.cmbMaquina.Size = new System.Drawing.Size(413, 27);
             this.cmbMaquina.TabIndex = 13;
@@ -199,8 +203,10 @@
             this.txtHoraFinal.Location = new System.Drawing.Point(760, 265);
             this.txtHoraFinal.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoraFinal.Name = "txtHoraFinal";
-            this.txtHoraFinal.Size = new System.Drawing.Size(193, 19);
+            this.txtHoraFinal.Size = new System.Drawing.Size(186, 19);
             this.txtHoraFinal.TabIndex = 18;
+            this.txtHoraFinal.TextChanged += new System.EventHandler(this.Format_Hora);
+            this.txtHoraFinal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidarHora);
             // 
             // txtDataFinal
             // 
@@ -212,6 +218,8 @@
             this.txtDataFinal.Name = "txtDataFinal";
             this.txtDataFinal.Size = new System.Drawing.Size(195, 19);
             this.txtDataFinal.TabIndex = 17;
+            this.txtDataFinal.TextChanged += new System.EventHandler(this.Format_Data);
+            this.txtDataFinal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidarData);
             // 
             // txtIdFuncionario
             // 
@@ -223,6 +231,7 @@
             this.txtIdFuncionario.Name = "txtIdFuncionario";
             this.txtIdFuncionario.Size = new System.Drawing.Size(195, 19);
             this.txtIdFuncionario.TabIndex = 21;
+            this.txtIdFuncionario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidarHora);
             // 
             // roundedLabel6
             // 
@@ -336,7 +345,7 @@
             this.Controls.Add(this.roundedLabel3);
             this.Controls.Add(this.roundedLabel7);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TelaOrdem";
             this.Text = "Form1";
             this.ResumeLayout(false);

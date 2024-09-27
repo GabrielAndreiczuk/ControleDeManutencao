@@ -57,5 +57,64 @@ namespace Projeto_TCC
                 }
             }
         }
+        //FORMATAÇÃO CAMPOS DE HORÁRIO
+        private void Format_Hora(object sender, EventArgs e)
+        {
+            string hora = (sender as TextBox).Text.Replace(":", "");
+            if (hora.Length > 2)
+            {
+                hora = hora.Substring(0, 2) + ":" + hora.Substring(2);
+            }
+            (sender as TextBox).Text = hora;
+            (sender as TextBox).SelectionStart = (sender as TextBox).Text.Length;
+        }
+        //VALIDAÇÃO CARACTERES CAMPOS DE HORÁRIO
+        private void ValidarHora(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                //MessageBox.Show("Este campo aceita somente números.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Alert("Este campo aceita somente números!", FormAlert.enmType.Info);
+            }
+            string numero = (sender as TextBox).Text;
+            if (!char.IsControl(e.KeyChar) && numero.Length >= 5)
+            {
+                e.Handled = true;
+            }
+        }
+
+        //FORMATAÇÃO CAMPOS DE DATA
+        private void Format_Data(object sender, EventArgs e)
+        {
+            string data = (sender as TextBox).Text.Replace("/", "");
+            if (data.Length > 2)
+            {
+                data = data.Substring(0, 2) + "/" + data.Substring(2);
+            }
+            if (data.Length > 5)
+            {
+                data = data.Substring(0, 5) + "/" + data.Substring(5);
+            }
+            (sender as TextBox).Text = data;
+            (sender as TextBox).SelectionStart = (sender as TextBox).Text.Length;
+        }
+
+        //VALIDAÇÃO CARACTERES CAMPOS DE DATA
+        private void ValidarData(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                //MessageBox.Show("Este campo aceita somente números.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                Alert("Este campo aceita somente números!", FormAlert.enmType.Info);
+            }
+            string numero = (sender as TextBox).Text;
+            if (!char.IsControl(e.KeyChar) && numero.Length >= 10)
+            {
+                e.Handled = true;
+            }
+        }
+
     }
 }
