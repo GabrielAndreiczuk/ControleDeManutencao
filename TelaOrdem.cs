@@ -19,7 +19,7 @@ namespace Projeto_TCC
         {
             InitializeComponent();
 
-            PreencherComboBox();
+            PreencherSetor();
         }
         public void Alert(string msg, FormAlert.enmType type)
         {
@@ -27,7 +27,7 @@ namespace Projeto_TCC
             frm.showAlert(msg, type);
         }
 
-        private void PreencherComboBox()
+        private void PreencherSetor()
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
@@ -36,21 +36,60 @@ namespace Projeto_TCC
                     connection.Open();
 
                     //PREENCHER COMBOBOX SETOR
-                    string query = "SELECT Nome FROM maquina";
+                    string query = "SELECT Nome FROM setor";
 
                     MySqlDataAdapter dataAdapter = new MySqlDataAdapter(query, connection);
                     DataTable dataTable = new DataTable();
                     dataAdapter.Fill(dataTable);
 
                     DataRow row = dataTable.NewRow();
-                    row["Nome"] = "Escolha uma máquina!";
+                    row["Nome"] = "Escolha um setor!";
                     dataTable.Rows.InsertAt(row, 0);
 
-                    cmbMaquina.DataSource = dataTable;
-                    cmbMaquina.DisplayMember = "Nome";
-                    cmbMaquina.SelectedIndex = 0;
+                    cmbSetor.DataSource = dataTable;
+                    cmbSetor.DisplayMember = "Nome";
+                    cmbSetor.SelectedIndex = 0;
                 }
                 catch (Exception ex)
+                {
+                    Alert("Erro de conexão com o banco de dados!", FormAlert.enmType.Error);
+                    //MessageBox.Show("Erro ao preencher a ComboBox: " + ex.Message);
+                }
+            }
+        }
+        private void cmbSetor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PreencherMaquina(cmbSetor.SelectedIndex);
+        }
+        private void PreencherMaquina(int setor)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "SELECT Nome FROM maquina WHERE Setor = @Setor";
+
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Setor",setor);
+
+                        MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
+                        DataTable dataTable = new DataTable();
+                        dataAdapter.Fill(dataTable);
+
+                        DataRow row = dataTable.NewRow();
+                        row["Nome"] = "Escolha uma máquina!";
+                        dataTable.Rows.InsertAt(row, 0);
+
+                        cmbMaquina.DataSource = dataTable;
+                        cmbMaquina.DisplayMember = "Nome";
+                        cmbMaquina.SelectedIndex = 0;
+                    }             
+                    
+                }
+                catch(Exception ex)
                 {
                     Alert("Erro de conexão com o banco de dados!", FormAlert.enmType.Error);
                     //MessageBox.Show("Erro ao preencher a ComboBox: " + ex.Message);
@@ -116,5 +155,6 @@ namespace Projeto_TCC
             }
         }
 
+        
     }
 }

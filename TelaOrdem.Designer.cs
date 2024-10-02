@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbMaquina = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbSetor = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.roundedButton1 = new Projeto_TCC.RoundedButton();
             this.roundedLabel2 = new Projeto_TCC.RoundedLabel();
@@ -93,20 +93,21 @@
             this.cmbMaquina.Size = new System.Drawing.Size(403, 27);
             this.cmbMaquina.TabIndex = 13;
             // 
-            // comboBox1
+            // cmbSetor
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(65, 138);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(399, 27);
-            this.comboBox1.TabIndex = 25;
+            this.cmbSetor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbSetor.BackColor = System.Drawing.Color.White;
+            this.cmbSetor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbSetor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSetor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbSetor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSetor.FormattingEnabled = true;
+            this.cmbSetor.Location = new System.Drawing.Point(65, 138);
+            this.cmbSetor.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbSetor.Name = "cmbSetor";
+            this.cmbSetor.Size = new System.Drawing.Size(399, 27);
+            this.cmbSetor.TabIndex = 25;
+            this.cmbSetor.SelectedIndexChanged += new System.EventHandler(this.cmbSetor_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -177,7 +178,7 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.roundedButton1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbSetor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.roundedLabel2);
             this.Controls.Add(this.cmbMaquina);
@@ -203,7 +204,7 @@
         private System.Windows.Forms.ComboBox cmbMaquina;
         private RoundedLabel roundedLabel1;
         private RoundedLabel roundedLabel7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbSetor;
         private System.Windows.Forms.Label label2;
         private RoundedLabel roundedLabel2;
         private RoundedButton roundedButton1;
