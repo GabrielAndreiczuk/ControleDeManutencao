@@ -216,6 +216,7 @@ namespace Projeto_TCC
                     string contato = txtContato.Text;
 
                     string updateQuery = "UPDATE funcionario SET Setor = @Setor, Cargo = @Cargo, Contato = @Contato WHERE ID_Funcionario = (select max(ID_Funcionario) from funcionario)";
+                    int id = 0;
 
                     using (MySqlCommand command = new MySqlCommand(updateQuery, connection))
                     {
@@ -223,15 +224,31 @@ namespace Projeto_TCC
                         command.Parameters.AddWithValue("@Cargo",cargo);
                         command.Parameters.AddWithValue("@Contato",contato);
 
-                        command.ExecuteNonQuery();
-
-                        Alert("Usuário cadastrado com sucesso!", FormAlert.enmType.Success);
-
-                        TelaMenu form = new TelaMenu();
-                        this.Hide();
-                        form.Closed += (s, args) => this.Close();
-                        form.Show();
+                        command.ExecuteNonQuery();      
                     }
+                    string selectQuery = "SELECT ID_Funcionario FROM funcionario WHERE ID_Funcionario = (select max(ID_Funcionario) from funcionario)";
+                    
+                    using (MySqlCommand commandID = new MySqlCommand(selectQuery, connection))
+                    {
+                        using (MySqlDataReader reader = commandID.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                id = (int)reader["ID_Funcionario"];
+                            }
+
+                            //DEFINE ATRIBUTOS DO USUÁRIO LOGADO NO SISTEMA
+                            UsuarioSessao.UsuarioAtual = new Usuario();
+                            UsuarioSessao.UsuarioAtual.ID = id;
+
+                            Alert("Usuário cadastrado com sucesso!", FormAlert.enmType.Success);
+
+                            TelaMenu form = new TelaMenu();
+                            this.Hide();
+                            form.Closed += (s, args) => this.Close();
+                            form.Show();
+                        }
+                    }    
                 }
                 catch (Exception ex)
                 {

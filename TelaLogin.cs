@@ -71,14 +71,18 @@ namespace Projeto_TCC
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
                             bool login = false;
+                            int id = 0;
+                            string nome = "";
+                            string email;
+                            string senha;
                             // PERCORRE CADA LINHA DE RESULTADOS RETORNADA PELA CONSULTA
                             while (reader.Read())
                             {
                                 // LÊ O VALOR DAS COLUNAS 'NOME' E 'EMAIL' DA LINHA ATUAL
-                                string id = reader["ID_Funcionario"].ToString();
-                                string nome = reader["Nome"].ToString();
-                                string email = reader["Email"].ToString();
-                                string senha = reader["Senha"].ToString();
+                                id = (int) reader["ID_Funcionario"];
+                                nome = reader["Nome"].ToString();
+                                email = reader["Email"].ToString();
+                                senha = reader["Senha"].ToString();
 
                                 if (email == textBox1.Text && senha == textBox2.Text)
                                 {
@@ -88,7 +92,13 @@ namespace Projeto_TCC
                             }
                             if(login == true)
                             {
-                                Alert("Login efetuado com sucesso!", FormAlert.enmType.Success);
+                                //DEFINE ATRIBUTOS DO USUÁRIO LOGADO NO SISTEMA
+                                UsuarioSessao.UsuarioAtual = new Usuario();
+                                UsuarioSessao.UsuarioAtual.Nome = nome;
+                                UsuarioSessao.UsuarioAtual.ID = id;
+
+
+                                Alert($"Login efetuado com sucesso!{nome}", FormAlert.enmType.Success);
 
                                 TelaMenu form = new TelaMenu();
                                 this.Hide();

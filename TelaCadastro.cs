@@ -182,6 +182,11 @@ namespace Projeto_TCC
                         //EXECUTA O COMANDO PARA INSERIR OS DADOS NO BANCO
                         command.ExecuteNonQuery();  //USADO PARA COMANDOS QUE NÃO RETORNAM RESULTADOS
 
+
+                        //DEFINE ATRIBUTOS DO USUÁRIO LOGADO NO SISTEMA
+                        UsuarioSessao.UsuarioAtual = new Usuario();
+                        UsuarioSessao.UsuarioAtual.Nome = nome;
+
                         //DIRECIONA PARA A TELA DE COMPLEMENTO DE CADASTRO
                         TelaCadastroComp form = new TelaCadastroComp();
                         this.Hide();

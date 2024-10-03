@@ -61,6 +61,7 @@ namespace Projeto_TCC
         {
             PreencherMaquina(cmbSetor.SelectedIndex);
         }
+
         private void PreencherMaquina(int setor)
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))

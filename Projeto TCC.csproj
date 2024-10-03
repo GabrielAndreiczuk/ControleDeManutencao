@@ -104,6 +104,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Usuario.cs" />
     <Compile Include="TelaOrdem.cs">
       <SubType>Form</SubType>
     </Compile>
