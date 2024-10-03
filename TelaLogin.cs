@@ -98,13 +98,12 @@ namespace Projeto_TCC
                                 UsuarioSessao.UsuarioAtual.ID = id;
 
 
-                                Alert($"Login efetuado com sucesso!{nome}", FormAlert.enmType.Success);
+                                Alert("Login efetuado com sucesso!", FormAlert.enmType.Success);
 
                                 TelaMenu form = new TelaMenu();
                                 this.Hide();
                                 form.Closed += (s, args) => this.Close();
                                 form.Show();
-                                //MessageBox.Show("Login Efetuado Com sucesso!", "Parabéns!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else
                             {

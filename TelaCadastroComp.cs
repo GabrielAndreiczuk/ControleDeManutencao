@@ -226,6 +226,8 @@ namespace Projeto_TCC
 
                         command.ExecuteNonQuery();      
                     }
+
+                    //CRIAR UMA NOVA CONSULTA PARA RECEBER O ID DO USUÁRIO QUE ESTÁ SENDO CRIADO
                     string selectQuery = "SELECT ID_Funcionario FROM funcionario WHERE ID_Funcionario = (select max(ID_Funcionario) from funcionario)";
                     
                     using (MySqlCommand commandID = new MySqlCommand(selectQuery, connection))
@@ -237,7 +239,7 @@ namespace Projeto_TCC
                                 id = (int)reader["ID_Funcionario"];
                             }
 
-                            //DEFINE ATRIBUTOS DO USUÁRIO LOGADO NO SISTEMA
+                            //DEFINE ID DO USUÁRIO LOGADO NO SISTEMA
                             UsuarioSessao.UsuarioAtual = new Usuario();
                             UsuarioSessao.UsuarioAtual.ID = id;
 
