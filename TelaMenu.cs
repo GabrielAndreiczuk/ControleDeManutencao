@@ -16,7 +16,6 @@ namespace Projeto_TCC
         {
             InitializeComponent();
             btnMenu_Click(btnMenu,EventArgs.Empty);
-            Usuario usuario = new Usuario();
             label1.Text = $"Boa noite {UsuarioSessao.UsuarioAtual.Nome}";
         }
 

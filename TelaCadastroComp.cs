@@ -240,7 +240,6 @@ namespace Projeto_TCC
                             }
 
                             //DEFINE ID DO USUÁRIO LOGADO NO SISTEMA
-                            UsuarioSessao.UsuarioAtual = new Usuario();
                             UsuarioSessao.UsuarioAtual.ID = id;
 
                             Alert("Usuário cadastrado com sucesso!", FormAlert.enmType.Success);
