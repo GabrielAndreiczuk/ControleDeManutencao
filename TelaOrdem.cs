@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using TextBox = System.Windows.Forms.TextBox;
 
 namespace Projeto_TCC
 {
@@ -156,6 +159,50 @@ namespace Projeto_TCC
             }
         }
 
-        
+        private void roundedButton1_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Server=localhost;Uid=root;Database=projeto;Port=3306;";
+
+            //CRIA UMA NOVA CONEXÃO COM O BANCO DE DADOS MYSQL USANDO A STRING FORNECIDA
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+
+                try
+                {
+                    //ABRE A CONEXÃO DO BANCO DE DADOS
+                    connection.Open();
+                    //FAZER VALIDAÇÕES
+                    int id = UsuarioSessao.UsuarioAtual.ID;
+                    int setor = cmbSetor.SelectedIndex;
+                    int maquina = cmbMaquina.SelectedIndex;
+                    string descricao = txtDescricao.Text;
+                    string data = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+                    //DEFINE A CONSULTA SQL PARA INSERIR UM NOVO CLIENTE NA TABELA PASSANDO PARÂMETROS
+                    string insertQuery = "INSERT INTO abertura_ordem (ID_Funcionario, ID_Setor, ID_Maquina, Data_Abertura, Descricao) VALUES (@ID, @Setor, @Maquina, @Data, @Descricao)";
+
+                    //CRIA O COMANDO SQL COM A CONSULTA E A CONEXÃO
+                    using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
+                    {
+
+                        //ADICIONA OS DADOS LIDOS COMO PARÂMETROS PARA CONSULTA
+                        command.Parameters.AddWithValue("@ID", id);
+                        command.Parameters.AddWithValue("@Setor", setor);
+                        command.Parameters.AddWithValue("@Maquina", maquina);
+                        command.Parameters.AddWithValue("@Data", data);
+                        command.Parameters.AddWithValue("@Descricao", descricao);
+
+                        //EXECUTA O COMANDO PARA INSERIR OS DADOS NO BANCO
+                        command.ExecuteNonQuery();  //USADO PARA COMANDOS QUE NÃO RETORNAM RESULTADOS
+                        Alert("A ordem foi registrada com sucesso!", FormAlert.enmType.Success);
+                    }
+                } catch (Exception ex)
+                {
+                    Alert("Erro de conexão com o banco de dados!", FormAlert.enmType.Error);
+                    MessageBox.Show($"Erro: {ex.Message}", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+        }
     }
 }
