@@ -103,5 +103,21 @@ namespace Projeto_TCC
             ActiveButton(sender);
             lblTittle.Text = "Configurações";
         }
+
+        private void btnOrdensAberto_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender);
+            lblTittle.Text = "Ordens em Aberto";
+
+            TelaMenu menu = Application.OpenForms["TelaMenu"] as TelaMenu;
+            menu.panelMenu.Controls.Clear();
+
+            TelaOrdensAberto emAberto = new TelaOrdensAberto();
+            emAberto.TopLevel = false;
+            emAberto.Dock = DockStyle.Fill; 
+            emAberto.FormBorderStyle = FormBorderStyle.None;
+
+            menu.panelMenu.Controls.Add(emAberto);
+            emAberto.Show();
     }
 }

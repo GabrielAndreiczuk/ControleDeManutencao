@@ -104,6 +104,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TelaOrdensAberto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaOrdensAberto.Designer.cs">
+      <DependentUpon>TelaOrdensAberto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuario.cs" />
     <Compile Include="TelaOrdem.cs">
       <SubType>Form</SubType>
@@ -191,6 +197,9 @@
     </Compile>
     <EmbeddedResource Include="TelaOrdem.resx">
       <DependentUpon>TelaOrdem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaOrdensAberto.resx">
+      <DependentUpon>TelaOrdensAberto.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

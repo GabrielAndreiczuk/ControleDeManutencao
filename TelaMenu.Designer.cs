@@ -117,6 +117,7 @@
             // btnOrdensAberto
             // 
             this.btnOrdensAberto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnOrdensAberto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOrdensAberto.FlatAppearance.BorderSize = 0;
             this.btnOrdensAberto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrdensAberto.ForeColor = System.Drawing.Color.White;
@@ -130,10 +131,12 @@
             this.btnOrdensAberto.Text = "      Ordens em aberto";
             this.btnOrdensAberto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOrdensAberto.UseVisualStyleBackColor = false;
+            this.btnOrdensAberto.Click += new System.EventHandler(this.btnOrdensAberto_Click);
             // 
             // btnConfig
             // 
             this.btnConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnConfig.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConfig.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnConfig.FlatAppearance.BorderSize = 0;
             this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -153,6 +156,7 @@
             // btnHistorico
             // 
             this.btnHistorico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnHistorico.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHistorico.FlatAppearance.BorderSize = 0;
             this.btnHistorico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHistorico.ForeColor = System.Drawing.Color.White;
@@ -171,6 +175,7 @@
             // btnIndicativos
             // 
             this.btnIndicativos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnIndicativos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIndicativos.FlatAppearance.BorderSize = 0;
             this.btnIndicativos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIndicativos.ForeColor = System.Drawing.Color.White;
@@ -189,6 +194,7 @@
             // btnOrdem
             // 
             this.btnOrdem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnOrdem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOrdem.FlatAppearance.BorderSize = 0;
             this.btnOrdem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrdem.ForeColor = System.Drawing.Color.White;
@@ -207,6 +213,7 @@
             // btnMenu
             // 
             this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMenu.FlatAppearance.BorderSize = 0;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.ForeColor = System.Drawing.Color.White;
