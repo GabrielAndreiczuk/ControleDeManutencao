@@ -30,16 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaMenu));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnConfig = new System.Windows.Forms.Button();
-            this.btnHistorico = new System.Windows.Forms.Button();
-            this.btnIndicativos = new System.Windows.Forms.Button();
-            this.btnOrdem = new System.Windows.Forms.Button();
-            this.btnMenu = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTittle = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnOrdensAberto = new System.Windows.Forms.Button();
+            this.btnConfig = new System.Windows.Forms.Button();
+            this.btnHistorico = new System.Windows.Forms.Button();
+            this.btnIndicativos = new System.Windows.Forms.Button();
+            this.btnOrdem = new System.Windows.Forms.Button();
+            this.btnMenu = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -48,6 +49,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.panel1.Controls.Add(this.btnOrdensAberto);
             this.panel1.Controls.Add(this.btnConfig);
             this.panel1.Controls.Add(this.btnHistorico);
             this.panel1.Controls.Add(this.btnIndicativos);
@@ -59,97 +61,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 686);
             this.panel1.TabIndex = 0;
-            // 
-            // btnConfig
-            // 
-            this.btnConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.btnConfig.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnConfig.FlatAppearance.BorderSize = 0;
-            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfig.ForeColor = System.Drawing.Color.White;
-            this.btnConfig.Image = global::Projeto_TCC.Properties.Resources.icone_configuracoes;
-            this.btnConfig.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfig.Location = new System.Drawing.Point(0, 611);
-            this.btnConfig.Name = "btnConfig";
-            this.btnConfig.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnConfig.Size = new System.Drawing.Size(300, 75);
-            this.btnConfig.TabIndex = 6;
-            this.btnConfig.Text = "      Configurações";
-            this.btnConfig.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnConfig.UseVisualStyleBackColor = false;
-            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
-            // 
-            // btnHistorico
-            // 
-            this.btnHistorico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.btnHistorico.FlatAppearance.BorderSize = 0;
-            this.btnHistorico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorico.ForeColor = System.Drawing.Color.White;
-            this.btnHistorico.Image = global::Projeto_TCC.Properties.Resources.icone_historico_2;
-            this.btnHistorico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistorico.Location = new System.Drawing.Point(0, 416);
-            this.btnHistorico.Name = "btnHistorico";
-            this.btnHistorico.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnHistorico.Size = new System.Drawing.Size(300, 75);
-            this.btnHistorico.TabIndex = 5;
-            this.btnHistorico.Text = "      Consultar Histórico";
-            this.btnHistorico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHistorico.UseVisualStyleBackColor = false;
-            this.btnHistorico.Click += new System.EventHandler(this.btnHistorico_Click);
-            // 
-            // btnIndicativos
-            // 
-            this.btnIndicativos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.btnIndicativos.FlatAppearance.BorderSize = 0;
-            this.btnIndicativos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIndicativos.ForeColor = System.Drawing.Color.White;
-            this.btnIndicativos.Image = global::Projeto_TCC.Properties.Resources.icone_indicativos_2;
-            this.btnIndicativos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIndicativos.Location = new System.Drawing.Point(0, 341);
-            this.btnIndicativos.Name = "btnIndicativos";
-            this.btnIndicativos.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnIndicativos.Size = new System.Drawing.Size(300, 75);
-            this.btnIndicativos.TabIndex = 3;
-            this.btnIndicativos.Text = "      Consultar Indicativos";
-            this.btnIndicativos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnIndicativos.UseVisualStyleBackColor = false;
-            this.btnIndicativos.Click += new System.EventHandler(this.btnIndicativos_Click);
-            // 
-            // btnOrdem
-            // 
-            this.btnOrdem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.btnOrdem.FlatAppearance.BorderSize = 0;
-            this.btnOrdem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrdem.ForeColor = System.Drawing.Color.White;
-            this.btnOrdem.Image = global::Projeto_TCC.Properties.Resources.icone_serviço;
-            this.btnOrdem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrdem.Location = new System.Drawing.Point(0, 266);
-            this.btnOrdem.Name = "btnOrdem";
-            this.btnOrdem.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnOrdem.Size = new System.Drawing.Size(300, 75);
-            this.btnOrdem.TabIndex = 4;
-            this.btnOrdem.Text = "      Abrir Ordem de Serviço";
-            this.btnOrdem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnOrdem.UseVisualStyleBackColor = false;
-            this.btnOrdem.Click += new System.EventHandler(this.btnOrdem_Click);
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.btnMenu.FlatAppearance.BorderSize = 0;
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.ForeColor = System.Drawing.Color.White;
-            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
-            this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(0, 191);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnMenu.Size = new System.Drawing.Size(300, 75);
-            this.btnMenu.TabIndex = 2;
-            this.btnMenu.Text = "      Menu Inicial";
-            this.btnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMenu.UseVisualStyleBackColor = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // panel3
             // 
@@ -203,6 +114,114 @@
             this.panelMenu.Size = new System.Drawing.Size(1020, 566);
             this.panelMenu.TabIndex = 2;
             // 
+            // btnOrdensAberto
+            // 
+            this.btnOrdensAberto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnOrdensAberto.FlatAppearance.BorderSize = 0;
+            this.btnOrdensAberto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrdensAberto.ForeColor = System.Drawing.Color.White;
+            this.btnOrdensAberto.Image = global::Projeto_TCC.Properties.Resources.icone_ordens_aberto;
+            this.btnOrdensAberto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrdensAberto.Location = new System.Drawing.Point(0, 329);
+            this.btnOrdensAberto.Name = "btnOrdensAberto";
+            this.btnOrdensAberto.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnOrdensAberto.Size = new System.Drawing.Size(300, 75);
+            this.btnOrdensAberto.TabIndex = 7;
+            this.btnOrdensAberto.Text = "      Ordens em aberto";
+            this.btnOrdensAberto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOrdensAberto.UseVisualStyleBackColor = false;
+            // 
+            // btnConfig
+            // 
+            this.btnConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnConfig.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnConfig.FlatAppearance.BorderSize = 0;
+            this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfig.ForeColor = System.Drawing.Color.White;
+            this.btnConfig.Image = global::Projeto_TCC.Properties.Resources.icone_configuracoes;
+            this.btnConfig.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfig.Location = new System.Drawing.Point(0, 611);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnConfig.Size = new System.Drawing.Size(300, 75);
+            this.btnConfig.TabIndex = 6;
+            this.btnConfig.Text = "      Configurações";
+            this.btnConfig.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnConfig.UseVisualStyleBackColor = false;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
+            // 
+            // btnHistorico
+            // 
+            this.btnHistorico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnHistorico.FlatAppearance.BorderSize = 0;
+            this.btnHistorico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorico.ForeColor = System.Drawing.Color.White;
+            this.btnHistorico.Image = global::Projeto_TCC.Properties.Resources.icone_historico_2;
+            this.btnHistorico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistorico.Location = new System.Drawing.Point(0, 479);
+            this.btnHistorico.Name = "btnHistorico";
+            this.btnHistorico.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnHistorico.Size = new System.Drawing.Size(300, 75);
+            this.btnHistorico.TabIndex = 5;
+            this.btnHistorico.Text = "      Consultar Histórico";
+            this.btnHistorico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHistorico.UseVisualStyleBackColor = false;
+            this.btnHistorico.Click += new System.EventHandler(this.btnHistorico_Click);
+            // 
+            // btnIndicativos
+            // 
+            this.btnIndicativos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnIndicativos.FlatAppearance.BorderSize = 0;
+            this.btnIndicativos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIndicativos.ForeColor = System.Drawing.Color.White;
+            this.btnIndicativos.Image = global::Projeto_TCC.Properties.Resources.icone_indicativos_2;
+            this.btnIndicativos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnIndicativos.Location = new System.Drawing.Point(0, 404);
+            this.btnIndicativos.Name = "btnIndicativos";
+            this.btnIndicativos.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnIndicativos.Size = new System.Drawing.Size(300, 75);
+            this.btnIndicativos.TabIndex = 3;
+            this.btnIndicativos.Text = "      Consultar Indicativos";
+            this.btnIndicativos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnIndicativos.UseVisualStyleBackColor = false;
+            this.btnIndicativos.Click += new System.EventHandler(this.btnIndicativos_Click);
+            // 
+            // btnOrdem
+            // 
+            this.btnOrdem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnOrdem.FlatAppearance.BorderSize = 0;
+            this.btnOrdem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrdem.ForeColor = System.Drawing.Color.White;
+            this.btnOrdem.Image = global::Projeto_TCC.Properties.Resources.icone_serviço;
+            this.btnOrdem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrdem.Location = new System.Drawing.Point(0, 254);
+            this.btnOrdem.Name = "btnOrdem";
+            this.btnOrdem.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnOrdem.Size = new System.Drawing.Size(300, 75);
+            this.btnOrdem.TabIndex = 4;
+            this.btnOrdem.Text = "      Abrir Ordem de Serviço";
+            this.btnOrdem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOrdem.UseVisualStyleBackColor = false;
+            this.btnOrdem.Click += new System.EventHandler(this.btnOrdem_Click);
+            // 
+            // btnMenu
+            // 
+            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnMenu.FlatAppearance.BorderSize = 0;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.ForeColor = System.Drawing.Color.White;
+            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
+            this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenu.Location = new System.Drawing.Point(0, 179);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.btnMenu.Size = new System.Drawing.Size(300, 75);
+            this.btnMenu.TabIndex = 2;
+            this.btnMenu.Text = "      Menu Inicial";
+            this.btnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
             // TelaMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -235,5 +254,6 @@
         private System.Windows.Forms.Button btnConfig;
         private System.Windows.Forms.Button btnHistorico;
         private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Button btnOrdensAberto;
     }
 }
