@@ -183,6 +183,16 @@ namespace Projeto_TCC.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icone_ordens_aberto {
+            get {
+                object obj = ResourceManager.GetObject("icone-ordens-aberto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icone_serviço {
             get {
                 object obj = ResourceManager.GetObject("icone-serviço", resourceCulture);
