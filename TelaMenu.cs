@@ -16,7 +16,7 @@ namespace Projeto_TCC
         {
             InitializeComponent();
             btnMenu_Click(btnMenu,EventArgs.Empty);
-            label1.Text = $"Boa noite {UsuarioSessao.UsuarioAtual.Nome}";
+            //label1.Text = $"Boa noite {UsuarioSessao.UsuarioAtual.Nome}";
         }
 
         private Button currentButton;
@@ -114,10 +114,11 @@ namespace Projeto_TCC
 
             TelaOrdensAberto emAberto = new TelaOrdensAberto();
             emAberto.TopLevel = false;
-            emAberto.Dock = DockStyle.Fill; 
+            emAberto.Dock = DockStyle.Fill;
             emAberto.FormBorderStyle = FormBorderStyle.None;
 
             menu.panelMenu.Controls.Add(emAberto);
             emAberto.Show();
+        }
     }
 }

@@ -38,7 +38,6 @@
             this.roundedLabel2 = new Projeto_TCC.RoundedLabel();
             this.roundedLabel1 = new Projeto_TCC.RoundedLabel();
             this.roundedLabel7 = new Projeto_TCC.RoundedLabel();
-            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtDescricao
@@ -173,22 +172,12 @@
             this.roundedLabel7.TabIndex = 23;
             this.roundedLabel7.Text = "roundedLabel7";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(799, 454);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 19);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "label3";
-            // 
             // TelaOrdem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.roundedButton1);
             this.Controls.Add(this.cmbSetor);
             this.Controls.Add(this.label2);
@@ -220,6 +209,5 @@
         private System.Windows.Forms.Label label2;
         private RoundedLabel roundedLabel2;
         private RoundedButton roundedButton1;
-        private System.Windows.Forms.Label label3;
     }
 }
