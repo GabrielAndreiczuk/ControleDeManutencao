@@ -33,7 +33,7 @@ namespace Projeto_TCC
                     connection.Open();
                     string selectQuery = "SELECT * from view_abertura_ordem";
                     
-                    int yOffset = 10;
+                    int yOffset = 20;
 
                     using (MySqlCommand command = new MySqlCommand(selectQuery, connection))
                     {
@@ -45,7 +45,6 @@ namespace Projeto_TCC
                                 
                                 id = reader["ID"].ToString();
                                 solicitante = reader["Solicitante"].ToString();
-                                label8.Text += " " + solicitante;
                                 DateTime dataHora = Convert.ToDateTime(reader["abertura"]);
                                 abertura = dataHora.ToString("dd/MM/yyyy");
                                 setor = reader["Setor"].ToString();
@@ -121,14 +120,22 @@ namespace Projeto_TCC
             this.panel3.Controls.Add(lblDescricao);
 
             Label lblStatus = new Label()
-            {
+            {  
                 Text = $"{status}",
                 Location = new System.Drawing.Point(775, yOffset),
                 AutoSize = true
             };
+            if (status == "Não Iniciado")
+            {
+                lblStatus.ForeColor = System.Drawing.Color.Orange;
+            }
+            else
+            {
+                lblStatus.ForeColor = System.Drawing.Color.Green;
+            }
             this.panel3.Controls.Add(lblStatus);
 
-            return (yOffset += 50);
+            return (yOffset += 40);
         }
     }
 }
