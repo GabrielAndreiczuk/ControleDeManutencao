@@ -1,4 +1,5 @@
 ﻿using MySqlConnector;
+using Mysqlx.Crud;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace Projeto_TCC
             InitializeComponent();
             AdicionarComponentes();
         }
-
+        string id = "", solicitante = "", abertura = "", setor = "", maquina = "", descricao = "", status = "";
         private void AdicionarComponentes()
         {
             string connectionString = "Server=localhost;Uid=root;Database=projeto;Port=3306";
@@ -27,33 +28,107 @@ namespace Projeto_TCC
 
             using(MySqlConnection connection = new MySqlConnection(connectionString))
             {
-                connection.Open();
-                string selectQuery = "SELECT ID_Abertura from abertura_ordem";
-
-                using (MySqlCommand command = new MySqlCommand(selectQuery, connection))
+                try
                 {
-                    using (MySqlDataReader reader = command.ExecuteReader())
+                    connection.Open();
+                    string selectQuery = "SELECT * from view_abertura_ordem";
+                    
+                    int yOffset = 10;
+
+                    using (MySqlCommand command = new MySqlCommand(selectQuery, connection))
                     {
-                        while (reader.Read())
+                        using (MySqlDataReader reader = command.ExecuteReader())
                         {
-                            ordens.Add(reader["ID_Abertura"].ToString());
-                        }
-                    }
-                }                                      
-            }
-            int yOffset = 10;
 
-            foreach (var id in ordens)
-            {
-                Label label = new Label()
+                            while (reader.Read())
+                            {
+                                
+                                id = reader["ID"].ToString();
+                                solicitante = reader["Solicitante"].ToString();
+                                label8.Text += " " + solicitante;
+                                DateTime dataHora = Convert.ToDateTime(reader["abertura"]);
+                                abertura = dataHora.ToString("dd/MM/yyyy");
+                                setor = reader["Setor"].ToString();
+                                maquina = reader["Máquina"].ToString();
+                                descricao = reader["Descrição"].ToString();
+                                status = reader["Status"].ToString();
+
+                                //string consulta = ($"{id} {solicitante} {abertura} {setor} {maquina} {descricao} {status}");
+
+                                //ordens.Add(consulta);
+                                
+                                yOffset = AdicionarColunas(yOffset);
+                            }
+                        }
+                    } 
+                }
+                catch(Exception ex)
                 {
-                    Text = $"ID: {id}",
-                    Location = new System.Drawing.Point(10, yOffset),
-                    AutoSize = true
-                };
-                this.panel3.Controls.Add(label);
-                yOffset += 30;
+                    MessageBox.Show(ex.Message);
+                }                                   
             }
+        }
+        private int AdicionarColunas(int yOffset)
+        {
+            Label lblID = new Label()
+            {
+                Text = $"{id}",
+                Location = new System.Drawing.Point(25, yOffset),
+                AutoSize = true
+            };
+            this.panel3.Controls.Add(lblID);
+
+            Label lblSolicitante = new Label()
+            {
+                Text = $"{solicitante}",
+                Location = new System.Drawing.Point(100, yOffset),
+                AutoSize = true
+            };
+            this.panel3.Controls.Add(lblSolicitante);
+
+            Label lblAbertura = new Label()
+            {
+                Text = $"{abertura}",
+                Location = new System.Drawing.Point(225, yOffset),
+                AutoSize = true
+            };
+            this.panel3.Controls.Add(lblAbertura);
+
+            Label lblSetor = new Label()
+            {
+                Text = $"{setor}",
+                Location = new System.Drawing.Point(335, yOffset),
+                AutoSize = true
+            };
+            this.panel3.Controls.Add(lblSetor);
+
+            Label lblMaquina = new Label()
+            {
+                Text = $"{maquina}",
+                Location = new System.Drawing.Point(445, yOffset),
+                AutoSize = false,
+                Size = new System.Drawing.Size(180, 25)
+            };
+            this.panel3.Controls.Add(lblMaquina);
+
+            Label lblDescricao = new Label()
+            {
+                Text = $"{descricao}",
+                Location = new System.Drawing.Point(620, yOffset),
+                AutoSize = false,
+                Size = new System.Drawing.Size(140, 25)
+            };
+            this.panel3.Controls.Add(lblDescricao);
+
+            Label lblStatus = new Label()
+            {
+                Text = $"{status}",
+                Location = new System.Drawing.Point(775, yOffset),
+                AutoSize = true
+            };
+            this.panel3.Controls.Add(lblStatus);
+
+            return (yOffset += 50);
         }
     }
 }
