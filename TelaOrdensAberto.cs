@@ -20,6 +20,7 @@ namespace Projeto_TCC
             AdicionarComponentes();
         }
         string id = "", solicitante = "", abertura = "", setor = "", maquina = "", descricao = "", status = "";
+
         private void AdicionarComponentes()
         {
             string connectionString = "Server=localhost;Uid=root;Database=projeto;Port=3306";
@@ -125,15 +126,41 @@ namespace Projeto_TCC
                 Location = new System.Drawing.Point(775, yOffset),
                 AutoSize = true
             };
+            this.panel3.Controls.Add(lblStatus);
+
             if (status == "Não Iniciado")
             {
                 lblStatus.ForeColor = System.Drawing.Color.Orange;
+                Button btnIniciar = new RoundedButton()
+                {
+                    Text = "Iniciar",
+                    Location = new System.Drawing.Point(915, (yOffset - 8)),
+                    Size = new System.Drawing.Size(85, 35),
+                    //BackColor = System.Drawing.Color.FromArgb(54, 124, 221),
+                    BackColor = System.Drawing.Color.Orange,
+                    ForeColor = System.Drawing.Color.White,
+                    FlatStyle = FlatStyle.Flat,
+                    Cursor = Cursors.Hand
+                };
+                this.panel3.Controls.Add(btnIniciar);
             }
             else
             {
-                lblStatus.ForeColor = System.Drawing.Color.Green;
+                lblStatus.ForeColor = System.Drawing.Color.DarkGreen;
+                Button btnConcluir = new RoundedButton()
+                {
+                    Text = "Concluir",
+                    Location = new System.Drawing.Point(915, (yOffset - 8)),
+                    Size = new System.Drawing.Size(85, 35),
+                    //BackColor = System.Drawing.Color.FromArgb(0, 51, 102),
+                    BackColor = System.Drawing.Color.DarkGreen,
+                    ForeColor = System.Drawing.Color.White,
+                    FlatStyle = FlatStyle.Flat,
+                    Cursor = Cursors.Hand
+                };
+                this.panel3.Controls.Add(btnConcluir);
             }
-            this.panel3.Controls.Add(lblStatus);
+            
 
             return (yOffset += 40);
         }
