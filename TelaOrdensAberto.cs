@@ -121,48 +121,90 @@ namespace Projeto_TCC
             this.panel3.Controls.Add(lblDescricao);
 
             Label lblStatus = new Label()
-            {  
+            {
                 Text = $"{status}",
                 Location = new System.Drawing.Point(775, yOffset),
                 AutoSize = true
             };
             this.panel3.Controls.Add(lblStatus);
+            label8.Text += lblStatus.AccessibleName;
 
-            if (status == "Não Iniciado")
+            if (status == "Não iniciado")
             {
-                lblStatus.ForeColor = System.Drawing.Color.Orange;
+                lblStatus.ForeColor = System.Drawing.Color.Gray;
                 Button btnIniciar = new RoundedButton()
                 {
                     Text = "Iniciar",
                     Location = new System.Drawing.Point(915, (yOffset - 8)),
                     Size = new System.Drawing.Size(85, 35),
-                    //BackColor = System.Drawing.Color.FromArgb(54, 124, 221),
-                    BackColor = System.Drawing.Color.Orange,
+                    BackColor = System.Drawing.Color.Gray,
                     ForeColor = System.Drawing.Color.White,
                     FlatStyle = FlatStyle.Flat,
                     Cursor = Cursors.Hand
+
                 };
+                btnIniciar.Click += btnIniciar_Click;
                 this.panel3.Controls.Add(btnIniciar);
+                btnIniciar.Tag = lblStatus;
             }
             else
             {
-                lblStatus.ForeColor = System.Drawing.Color.DarkGreen;
+                lblStatus.ForeColor = System.Drawing.Color.Chocolate;
                 Button btnConcluir = new RoundedButton()
                 {
                     Text = "Concluir",
                     Location = new System.Drawing.Point(915, (yOffset - 8)),
                     Size = new System.Drawing.Size(85, 35),
-                    //BackColor = System.Drawing.Color.FromArgb(0, 51, 102),
-                    BackColor = System.Drawing.Color.DarkGreen,
+                    BackColor = System.Drawing.Color.Chocolate,
                     ForeColor = System.Drawing.Color.White,
                     FlatStyle = FlatStyle.Flat,
                     Cursor = Cursors.Hand
                 };
+                btnConcluir.Click += btnConcluir_Click;
                 this.panel3.Controls.Add(btnConcluir);
+                btnConcluir.Tag = lblStatus;
             }
-            
 
-            return (yOffset += 40);
+            return (yOffset += 40); 
         }
+
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+            Button btnAtual = sender as Button;
+            btnAtual.BackColor = System.Drawing.Color.Chocolate;
+            btnAtual.Text = "Concluir";
+
+            Label lblStatus = btnAtual.Tag as Label;
+            lblStatus.Text = "Em andamento";
+            lblStatus.ForeColor = System.Drawing.Color.Chocolate;
+
+            btnAtual.Click += btnConcluir_Click;
+        }
+        private void btnConcluir_Click(object sender, EventArgs e)
+        {
+            Button btnAtual = sender as Button;
+            btnAtual.BackColor = System.Drawing.Color.DarkGreen;
+            btnAtual.Text = "Cancelar";
+
+            Label lblStatus = btnAtual.Tag as Label;
+            lblStatus.Text = "Concluído";
+            lblStatus.ForeColor = System.Drawing.Color.DarkGreen;
+
+            btnAtual.Click += btnCancelar_Click;
+        }
+        
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Button btnAtual = sender as Button;
+            btnAtual.BackColor = System.Drawing.Color.Chocolate;
+            btnAtual.Text = "Concluir";
+
+            Label lblStatus = btnAtual.Tag as Label;
+            lblStatus.Text = "Em andamento";
+            lblStatus.ForeColor = System.Drawing.Color.Chocolate;
+
+            btnAtual.Click += btnConcluir_Click;
+        }
+        
     }
 }
