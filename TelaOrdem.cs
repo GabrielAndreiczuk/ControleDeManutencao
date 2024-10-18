@@ -179,7 +179,7 @@ namespace Projeto_TCC
                     string data = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
                     //DEFINE A CONSULTA SQL PARA INSERIR UM NOVO CLIENTE NA TABELA PASSANDO PARÂMETROS
-                    string insertQuery = "INSERT INTO abertura_ordem (ID_Funcionario, ID_Setor, ID_Maquina, Data_Abertura, Descricao) VALUES (@ID, @Setor, @Maquina, @Data, @Descricao)";
+                    string insertQuery = "INSERT INTO abertura_ordem (ID_Funcionario, ID_Setor, ID_Maquina, Data_Abertura, Descricao, Status) VALUES (@ID, @Setor, @Maquina, @Data, @Descricao, 1)";
 
                     //CRIA O COMANDO SQL COM A CONSULTA E A CONEXÃO
                     using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
