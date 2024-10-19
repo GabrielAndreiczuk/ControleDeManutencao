@@ -250,6 +250,7 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(1020, 566);
             this.panelMenu.TabIndex = 2;
+            this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseDown);
             // 
             // btnMaximize
             // 
@@ -284,12 +285,12 @@
             // TelaMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(1320, 686);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

@@ -19,6 +19,8 @@ namespace Projeto_TCC
             btnMenu_Click(btnMenu,EventArgs.Empty);
             //label1.Text = $"Boa noite {UsuarioSessao.UsuarioAtual.Nome}";
 
+            this.Text = string.Empty;
+            this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
