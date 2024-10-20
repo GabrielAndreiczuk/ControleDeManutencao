@@ -34,7 +34,7 @@ namespace Projeto_TCC
                     connection.Open();
                     string selectQuery = "SELECT * from view_abertura_ordem";
                     
-                    int yOffset = 20;
+                    int yOffset = 50;
 
                     using (MySqlCommand command = new MySqlCommand(selectQuery, connection))
                     {
@@ -68,66 +68,79 @@ namespace Projeto_TCC
                 }                                   
             }
         }
+        
         private int AdicionarColunas(int yOffset)
         {
             Label lblID = new Label()
             {
                 Text = $"{id}",
-                Location = new System.Drawing.Point(25, yOffset),
-                AutoSize = true
+                TextAlign = ContentAlignment.MiddleCenter,
+                Location = new System.Drawing.Point(0, yOffset),                
+                Size = new System.Drawing.Size(100,40),
             };
-            this.panel3.Controls.Add(lblID);
+            this.panID.Controls.Add(lblID);
 
             Label lblSolicitante = new Label()
             {
                 Text = $"{solicitante}",
-                Location = new System.Drawing.Point(100, yOffset),
-                AutoSize = true
+                TextAlign = ContentAlignment.MiddleLeft,
+                Location = new System.Drawing.Point(0, yOffset),
+                MinimumSize = new System.Drawing.Size(100, 40),
+                AutoSize = true,
+                Padding = new Padding(10)
             };
-            this.panel3.Controls.Add(lblSolicitante);
+            this.panSolicitante.Controls.Add(lblSolicitante);
 
             Label lblAbertura = new Label()
             {
                 Text = $"{abertura}",
-                Location = new System.Drawing.Point(225, yOffset),
-                AutoSize = true
+                TextAlign = ContentAlignment.MiddleCenter,
+                Location = new System.Drawing.Point(0, yOffset),
+                Size = new System.Drawing.Size(100, 40)
             };
-            this.panel3.Controls.Add(lblAbertura);
+            this.panAbertura.Controls.Add(lblAbertura);
 
             Label lblSetor = new Label()
             {
                 Text = $"{setor}",
-                Location = new System.Drawing.Point(335, yOffset),
-                AutoSize = true
+                TextAlign = ContentAlignment.MiddleLeft,
+                Location = new System.Drawing.Point(0, yOffset),
+                MinimumSize = new System.Drawing.Size(120, 40),
+                AutoSize = true,
+                Padding = new Padding(10)
             };
-            this.panel3.Controls.Add(lblSetor);
+            this.panSetor.Controls.Add(lblSetor);
 
             Label lblMaquina = new Label()
             {
                 Text = $"{maquina}",
-                Location = new System.Drawing.Point(445, yOffset),
-                AutoSize = false,
-                Size = new System.Drawing.Size(180, 25)
+                TextAlign = ContentAlignment.MiddleLeft,
+                Location = new System.Drawing.Point(0, yOffset),
+                MinimumSize = new System.Drawing.Size(120, 40),
+                AutoSize = true,
+                Padding = new Padding(10)
             };
-            this.panel3.Controls.Add(lblMaquina);
+            this.panMaquina.Controls.Add(lblMaquina);
 
             Label lblDescricao = new Label()
             {
                 Text = $"{descricao}",
-                Location = new System.Drawing.Point(620, yOffset),
-                AutoSize = false,
-                Size = new System.Drawing.Size(140, 25)
+                TextAlign = ContentAlignment.MiddleLeft,
+                Location = new System.Drawing.Point(0, yOffset),
+                MinimumSize = new System.Drawing.Size(180, 40),
+                AutoSize = true,
+                Padding = new Padding(10)
             };
-            this.panel3.Controls.Add(lblDescricao);
+            this.panDescricao.Controls.Add(lblDescricao);
 
             Label lblStatus = new Label()
             {
                 Text = $"{status}",
-                Location = new System.Drawing.Point(775, yOffset),
-                AutoSize = true
+                TextAlign = ContentAlignment.MiddleCenter,
+                Location = new System.Drawing.Point(0, yOffset),
+                Size = new System.Drawing.Size(140, 40)
             };
-            this.panel3.Controls.Add(lblStatus);
-            label8.Text += lblStatus.AccessibleName;
+            this.panStatus.Controls.Add(lblStatus);
 
             if (status == "Não iniciado")
             {
@@ -135,8 +148,8 @@ namespace Projeto_TCC
                 Button btnIniciar = new RoundedButton()
                 {
                     Text = "Iniciar",
-                    Location = new System.Drawing.Point(915, (yOffset - 8)),
-                    Size = new System.Drawing.Size(85, 35),
+                    Location = new System.Drawing.Point(905, (yOffset +3)),
+                    Size = new System.Drawing.Size(90, 36),
                     BackColor = System.Drawing.Color.Gray,
                     ForeColor = System.Drawing.Color.White,
                     FlatStyle = FlatStyle.Flat,
@@ -144,7 +157,7 @@ namespace Projeto_TCC
 
                 };
                 btnIniciar.Click += btnIniciar_Click;
-                this.panel3.Controls.Add(btnIniciar);
+                this.panel1.Controls.Add(btnIniciar);
                 btnIniciar.Tag = lblStatus;
             }
             else
@@ -153,15 +166,15 @@ namespace Projeto_TCC
                 Button btnConcluir = new RoundedButton()
                 {
                     Text = "Concluir",
-                    Location = new System.Drawing.Point(915, (yOffset - 8)),
-                    Size = new System.Drawing.Size(85, 35),
+                    Location = new System.Drawing.Point(905, (yOffset + 3)),
+                    Size = new System.Drawing.Size(90, 36),
                     BackColor = System.Drawing.Color.Chocolate,
                     ForeColor = System.Drawing.Color.White,
                     FlatStyle = FlatStyle.Flat,
                     Cursor = Cursors.Hand
                 };
                 btnConcluir.Click += btnConcluir_Click;
-                this.panel3.Controls.Add(btnConcluir);
+                this.panel1.Controls.Add(btnConcluir);
                 btnConcluir.Tag = lblStatus;
             }
 
@@ -180,6 +193,7 @@ namespace Projeto_TCC
 
             btnAtual.Click += btnConcluir_Click;
         }
+        
         private void btnConcluir_Click(object sender, EventArgs e)
         {
             Button btnAtual = sender as Button;
@@ -191,7 +205,7 @@ namespace Projeto_TCC
             lblStatus.ForeColor = System.Drawing.Color.DarkGreen;
 
             btnAtual.Click += btnCancelar_Click;
-        }
+        }    
         
         private void btnCancelar_Click(object sender, EventArgs e)
         {

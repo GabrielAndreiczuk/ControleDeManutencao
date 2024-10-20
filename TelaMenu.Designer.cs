@@ -235,9 +235,9 @@
             this.lblTittle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTittle.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTittle.ForeColor = System.Drawing.Color.White;
-            this.lblTittle.Location = new System.Drawing.Point(416, 45);
+            this.lblTittle.Location = new System.Drawing.Point(260, 35);
             this.lblTittle.Name = "lblTittle";
-            this.lblTittle.Size = new System.Drawing.Size(210, 41);
+            this.lblTittle.Size = new System.Drawing.Size(510, 50);
             this.lblTittle.TabIndex = 23;
             this.lblTittle.Text = "Menu Inicial";
             this.lblTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -291,6 +291,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinimumSize = new System.Drawing.Size(1300, 700);
             this.Name = "TelaMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
