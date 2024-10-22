@@ -56,7 +56,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.mySqlCommand1 = new MySqlConnector.MySqlCommand();
-            this.label6 = new System.Windows.Forms.Label();
             this.panMenu.SuspendLayout();
             this.panDescricao.SuspendLayout();
             this.panMaquina.SuspendLayout();
@@ -91,7 +90,6 @@
             // panDescricao
             // 
             this.panDescricao.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panDescricao.Controls.Add(this.label6);
             this.panDescricao.Controls.Add(this.label7);
             this.panDescricao.Controls.Add(this.label15);
             this.panDescricao.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -398,15 +396,6 @@
             this.mySqlCommand1.Transaction = null;
             this.mySqlCommand1.UpdatedRowSource = System.Data.UpdateRowSource.None;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(60, 418);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 19);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "label6";
-            // 
             // TelaOrdensAberto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -422,7 +411,6 @@
             this.panMenu.ResumeLayout(false);
             this.panMenu.PerformLayout();
             this.panDescricao.ResumeLayout(false);
-            this.panDescricao.PerformLayout();
             this.panMaquina.ResumeLayout(false);
             this.panSetor.ResumeLayout(false);
             this.panSolicitante.ResumeLayout(false);
@@ -465,6 +453,5 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label6;
     }
 }

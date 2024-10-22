@@ -206,7 +206,7 @@ namespace Projeto_TCC
             lblStatus.Text = "Em andamento";
             lblStatus.ForeColor = System.Drawing.Color.Chocolate;
             int ID = lblStatus.TabIndex;
-            label6.Text += $" {ID}";
+
             AtualizarStatus(ID,2);
 
             btnAtual.Click += btnConcluir_Click;
@@ -222,7 +222,7 @@ namespace Projeto_TCC
             lblStatus.Text = "Concluído";
             lblStatus.ForeColor = System.Drawing.Color.DarkGreen;
             int ID = lblStatus.TabIndex;
-            label6.Text += $" {ID}";
+
             AtualizarStatus(ID, 3);
 
             btnAtual.Click += btnCancelar_Click;
@@ -238,7 +238,7 @@ namespace Projeto_TCC
             lblStatus.Text = "Em andamento";
             lblStatus.ForeColor = System.Drawing.Color.Chocolate;
             int ID = lblStatus.TabIndex;
-            label6.Text += $" {ID}";
+
             AtualizarStatus(ID, 2);
 
             btnAtual.Click += btnConcluir_Click;

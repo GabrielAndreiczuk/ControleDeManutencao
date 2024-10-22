@@ -34,6 +34,7 @@
             this.cmbMaquina = new System.Windows.Forms.ComboBox();
             this.cmbSetor = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblCaracteres = new System.Windows.Forms.Label();
             this.roundedButton1 = new Projeto_TCC.RoundedButton();
             this.roundedLabel2 = new Projeto_TCC.RoundedLabel();
             this.roundedLabel1 = new Projeto_TCC.RoundedLabel();
@@ -52,6 +53,8 @@
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(401, 98);
             this.txtDescricao.TabIndex = 0;
+            this.txtDescricao.TextChanged += new System.EventHandler(this.txtDescricao_TextChanged);
+            this.txtDescricao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescricao_KeyPress);
             // 
             // label1
             // 
@@ -123,6 +126,17 @@
             this.label2.TabIndex = 24;
             this.label2.Text = "Setor";
             // 
+            // lblCaracteres
+            // 
+            this.lblCaracteres.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCaracteres.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCaracteres.Location = new System.Drawing.Point(636, 408);
+            this.lblCaracteres.Name = "lblCaracteres";
+            this.lblCaracteres.Size = new System.Drawing.Size(65, 24);
+            this.lblCaracteres.TabIndex = 28;
+            this.lblCaracteres.Text = "0/50";
+            this.lblCaracteres.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // roundedButton1
             // 
             this.roundedButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -180,6 +194,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.lblCaracteres);
             this.Controls.Add(this.roundedButton1);
             this.Controls.Add(this.cmbSetor);
             this.Controls.Add(this.label2);
@@ -211,5 +226,6 @@
         private System.Windows.Forms.Label label2;
         private RoundedLabel roundedLabel2;
         private RoundedButton roundedButton1;
+        private System.Windows.Forms.Label lblCaracteres;
     }
 }
