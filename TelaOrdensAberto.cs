@@ -20,12 +20,12 @@ namespace Projeto_TCC
             AdicionarComponentes();
         }
         string id = "", solicitante = "", abertura = "", setor = "", maquina = "", descricao = "", status = "";
+        int index = 0;
+        string connectionString = "Server=localhost;Uid=root;Database=projeto;Port=3306";
         private void AdicionarComponentes()
         {
-            string connectionString = "Server=localhost;Uid=root;Database=projeto;Port=3306";
-            List<string> ordens = new List<string>();
             
-
+            List<string> ordens = new List<string>();
             using(MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 try
@@ -55,8 +55,11 @@ namespace Projeto_TCC
                                 //string consulta = ($"{id} {solicitante} {abertura} {setor} {maquina} {descricao} {status}");
 
                                 //ordens.Add(consulta);
+                                if (status != "Concluído")
+                                {
+                                    yOffset = AdicionarColunas(yOffset);
+                                }
                                 
-                                yOffset = AdicionarColunas(yOffset);
                             }
                         }
                     } 
@@ -146,8 +149,10 @@ namespace Projeto_TCC
                 Text = $"{status}",
                 TextAlign = ContentAlignment.MiddleCenter,
                 Location = new System.Drawing.Point(0, yOffset),
-                Size = new System.Drawing.Size(140, 40)
+                Size = new System.Drawing.Size(140, 40),
+                TabIndex = int.Parse(lblID.Text)
             };
+            index++;
             this.panStatus.Controls.Add(lblStatus);
 
             if (status == "Não iniciado")
@@ -164,6 +169,7 @@ namespace Projeto_TCC
                     Cursor = Cursors.Hand
 
                 };
+
                 btnIniciar.Click += btnIniciar_Click;
                 this.panBotoes.Controls.Add(btnIniciar);
                 btnIniciar.Tag = lblStatus;
@@ -181,6 +187,7 @@ namespace Projeto_TCC
                     FlatStyle = FlatStyle.Flat,
                     Cursor = Cursors.Hand
                 };
+
                 btnConcluir.Click += btnConcluir_Click;
                 this.panBotoes.Controls.Add(btnConcluir);
                 btnConcluir.Tag = lblStatus;
@@ -198,6 +205,9 @@ namespace Projeto_TCC
             Label lblStatus = btnAtual.Tag as Label;
             lblStatus.Text = "Em andamento";
             lblStatus.ForeColor = System.Drawing.Color.Chocolate;
+            int ID = lblStatus.TabIndex;
+            label6.Text += $" {ID}";
+            AtualizarStatus(ID,2);
 
             btnAtual.Click += btnConcluir_Click;
         }
@@ -211,6 +221,9 @@ namespace Projeto_TCC
             Label lblStatus = btnAtual.Tag as Label;
             lblStatus.Text = "Concluído";
             lblStatus.ForeColor = System.Drawing.Color.DarkGreen;
+            int ID = lblStatus.TabIndex;
+            label6.Text += $" {ID}";
+            AtualizarStatus(ID, 3);
 
             btnAtual.Click += btnCancelar_Click;
         }    
@@ -224,9 +237,37 @@ namespace Projeto_TCC
             Label lblStatus = btnAtual.Tag as Label;
             lblStatus.Text = "Em andamento";
             lblStatus.ForeColor = System.Drawing.Color.Chocolate;
+            int ID = lblStatus.TabIndex;
+            label6.Text += $" {ID}";
+            AtualizarStatus(ID, 2);
 
             btnAtual.Click += btnConcluir_Click;
         }
-        
+
+        private void AtualizarStatus(int id, int status)
+        {
+            
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string uptadeQuery = "update abertura_ordem set Status = @Status where ID_Abertura = @ID";
+
+                    using (MySqlCommand command = new MySqlCommand(uptadeQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("ID", id);
+                        command.Parameters.AddWithValue("Status", status);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+                catch(Exception ex) 
+                {
+                    
+                }
+            }
+        }      
     }
 }
