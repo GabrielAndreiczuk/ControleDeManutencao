@@ -79,7 +79,7 @@ namespace Projeto_TCC
         private void btnOrdem_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
-            lblTittle.Text = "Abrir Ordem de Serviço";
+            lblTittle.Text = "Nova Ordem";
 
             TelaMenu menu = Application.OpenForms["TelaMenu"] as TelaMenu;
             menu.panelMenu.Controls.Clear();

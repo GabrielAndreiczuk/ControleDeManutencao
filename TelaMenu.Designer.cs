@@ -113,7 +113,7 @@
             this.btnHistorico.ForeColor = System.Drawing.Color.White;
             this.btnHistorico.Image = global::Projeto_TCC.Properties.Resources.icone_historico_2;
             this.btnHistorico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistorico.Location = new System.Drawing.Point(0, 479);
+            this.btnHistorico.Location = new System.Drawing.Point(0, 404);
             this.btnHistorico.Name = "btnHistorico";
             this.btnHistorico.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnHistorico.Size = new System.Drawing.Size(300, 75);
@@ -132,7 +132,7 @@
             this.btnIndicativos.ForeColor = System.Drawing.Color.White;
             this.btnIndicativos.Image = global::Projeto_TCC.Properties.Resources.icone_indicativos_2;
             this.btnIndicativos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIndicativos.Location = new System.Drawing.Point(0, 404);
+            this.btnIndicativos.Location = new System.Drawing.Point(0, 479);
             this.btnIndicativos.Name = "btnIndicativos";
             this.btnIndicativos.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnIndicativos.Size = new System.Drawing.Size(300, 75);
@@ -156,7 +156,7 @@
             this.btnOrdem.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnOrdem.Size = new System.Drawing.Size(300, 75);
             this.btnOrdem.TabIndex = 4;
-            this.btnOrdem.Text = "      Abrir Ordem de Serviço";
+            this.btnOrdem.Text = "      Nova Ordem";
             this.btnOrdem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOrdem.UseVisualStyleBackColor = false;
             this.btnOrdem.Click += new System.EventHandler(this.btnOrdem_Click);

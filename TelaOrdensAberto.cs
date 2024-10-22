@@ -150,7 +150,7 @@ namespace Projeto_TCC
                 TextAlign = ContentAlignment.MiddleCenter,
                 Location = new System.Drawing.Point(0, yOffset),
                 Size = new System.Drawing.Size(140, 40),
-                TabIndex = int.Parse(lblID.Text)
+                TabIndex = int.Parse(lblID.Text               )
             };
             index++;
             this.panStatus.Controls.Add(lblStatus);
