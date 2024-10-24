@@ -51,8 +51,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.panBotoes = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.mySqlCommand1 = new MySqlConnector.MySqlCommand();
@@ -65,8 +63,6 @@
             this.panID.SuspendLayout();
             this.panStatus.SuspendLayout();
             this.panBotoes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panMenu
@@ -96,7 +92,7 @@
             this.panDescricao.Location = new System.Drawing.Point(560, 0);
             this.panDescricao.MinimumSize = new System.Drawing.Size(100, 550);
             this.panDescricao.Name = "panDescricao";
-            this.panDescricao.Size = new System.Drawing.Size(170, 550);
+            this.panDescricao.Size = new System.Drawing.Size(190, 550);
             this.panDescricao.TabIndex = 26;
             // 
             // label7
@@ -105,7 +101,7 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Top;
             this.label7.Location = new System.Drawing.Point(0, 48);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(170, 2);
+            this.label7.Size = new System.Drawing.Size(190, 2);
             this.label7.TabIndex = 6;
             // 
             // label15
@@ -116,7 +112,7 @@
             this.label15.Location = new System.Drawing.Point(0, 0);
             this.label15.Name = "label15";
             this.label15.Padding = new System.Windows.Forms.Padding(5);
-            this.label15.Size = new System.Drawing.Size(170, 48);
+            this.label15.Size = new System.Drawing.Size(190, 48);
             this.label15.TabIndex = 5;
             this.label15.Text = "Descrição";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -303,7 +299,7 @@
             this.panStatus.Controls.Add(this.label17);
             this.panStatus.Controls.Add(this.label18);
             this.panStatus.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panStatus.Location = new System.Drawing.Point(730, 0);
+            this.panStatus.Location = new System.Drawing.Point(750, 0);
             this.panStatus.MaximumSize = new System.Drawing.Size(140, 0);
             this.panStatus.MinimumSize = new System.Drawing.Size(140, 550);
             this.panStatus.Name = "panStatus";
@@ -335,37 +331,15 @@
             // panBotoes
             // 
             this.panBotoes.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panBotoes.Controls.Add(this.pictureBox2);
-            this.panBotoes.Controls.Add(this.pictureBox1);
             this.panBotoes.Controls.Add(this.label14);
             this.panBotoes.Controls.Add(this.label16);
             this.panBotoes.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panBotoes.Location = new System.Drawing.Point(870, 0);
-            this.panBotoes.MaximumSize = new System.Drawing.Size(130, 0);
-            this.panBotoes.MinimumSize = new System.Drawing.Size(130, 550);
+            this.panBotoes.Location = new System.Drawing.Point(890, 0);
+            this.panBotoes.MaximumSize = new System.Drawing.Size(110, 0);
+            this.panBotoes.MinimumSize = new System.Drawing.Size(110, 550);
             this.panBotoes.Name = "panBotoes";
-            this.panBotoes.Size = new System.Drawing.Size(130, 550);
+            this.panBotoes.Size = new System.Drawing.Size(110, 550);
             this.panBotoes.TabIndex = 11;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Projeto_TCC.Properties.Resources.fechar;
-            this.pictureBox2.Location = new System.Drawing.Point(102, 102);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Projeto_TCC.Properties.Resources.fechar;
-            this.pictureBox1.Location = new System.Drawing.Point(102, 62);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
             // 
             // label14
             // 
@@ -373,7 +347,7 @@
             this.label14.Dock = System.Windows.Forms.DockStyle.Top;
             this.label14.Location = new System.Drawing.Point(0, 48);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(130, 2);
+            this.label14.Size = new System.Drawing.Size(110, 2);
             this.label14.TabIndex = 12;
             // 
             // label16
@@ -384,7 +358,7 @@
             this.label16.Location = new System.Drawing.Point(0, 0);
             this.label16.Name = "label16";
             this.label16.Padding = new System.Windows.Forms.Padding(5);
-            this.label16.Size = new System.Drawing.Size(130, 48);
+            this.label16.Size = new System.Drawing.Size(110, 48);
             this.label16.TabIndex = 11;
             this.label16.Text = "Ação";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -418,8 +392,6 @@
             this.panID.ResumeLayout(false);
             this.panStatus.ResumeLayout(false);
             this.panBotoes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -451,7 +423,5 @@
         private System.Windows.Forms.Panel panSetor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

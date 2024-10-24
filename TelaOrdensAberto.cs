@@ -24,8 +24,6 @@ namespace Projeto_TCC
         string connectionString = "Server=localhost;Uid=root;Database=projeto;Port=3306";
         private void AdicionarComponentes()
         {
-            
-            List<string> ordens = new List<string>();
             using(MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 try
@@ -224,6 +222,7 @@ namespace Projeto_TCC
             int ID = lblStatus.TabIndex;
 
             AtualizarStatus(ID, 3);
+            ConcluirOrdem(ID);
 
             btnAtual.Click += btnCancelar_Click;
         }    
@@ -268,6 +267,50 @@ namespace Projeto_TCC
                     
                 }
             }
-        }      
+        }
+
+        private void ConcluirOrdem(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    int Maquina=0, Setor=0;
+
+                    string selectQuery = "select ID_Maquina,ID_Setor from abertura_ordem where ID_Abertura = @ID";
+
+                    using (MySqlCommand cmd = new MySqlCommand(selectQuery, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@ID", id);
+                        
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Maquina = int.Parse(reader["ID_Maquina"].ToString());
+                                Setor = int.Parse(reader["ID_Setor"].ToString());
+                            }
+                        }
+                    }
+                    //ADICIONAR PESSOA RESPONSAVEL
+                    string insertQuery = "insert into manutencao (ID_Ordem,ID_Maquina,ID_Setor,Tipo,Responsavel) values (@ID,@Maquina,@Setor,1,1)";
+
+                    using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@ID", id);
+                        command.Parameters.AddWithValue("@Maquina", Maquina);
+                        command.Parameters.AddWithValue("@Setor", Setor);
+
+                        command.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }    
+        }
     }
 }
