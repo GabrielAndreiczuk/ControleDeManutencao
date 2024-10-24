@@ -48,7 +48,8 @@ namespace Projeto_TCC
                                 descricao = reader["Descrição"].ToString();
                                 maquina = reader["Máquina"].ToString();
                                 setor = reader["Setor"].ToString();
-                                duracao = reader["Duração"].ToString();
+                                DateTime data = Convert.ToDateTime(reader["Duração"]);
+                                duracao = data.ToString("HH:mm");
                                 tipo = reader["Tipo"].ToString();
                                 custo = reader["Custo"].ToString();
                                 responsavel = reader["Responsável"].ToString();

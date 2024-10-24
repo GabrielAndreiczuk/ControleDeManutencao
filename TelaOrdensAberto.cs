@@ -278,8 +278,9 @@ namespace Projeto_TCC
                     connection.Open();
 
                     int Maquina=0, Setor=0;
+                    DateTime dataInicial = new DateTime(2023, 1, 1);
 
-                    string selectQuery = "select ID_Maquina,ID_Setor from abertura_ordem where ID_Abertura = @ID";
+                    string selectQuery = "select ID_Maquina,ID_Setor,Data_Abertura from abertura_ordem where ID_Abertura = @ID";
 
                     using (MySqlCommand cmd = new MySqlCommand(selectQuery, connection))
                     {
@@ -291,20 +292,27 @@ namespace Projeto_TCC
                             {
                                 Maquina = int.Parse(reader["ID_Maquina"].ToString());
                                 Setor = int.Parse(reader["ID_Setor"].ToString());
+                                dataInicial = Convert.ToDateTime(reader["Data_Abertura"]);
                             }
                         }
                     }
+
+                    DateTime dataAtual = DateTime.Now;
+
+                    TimeSpan diferenca = dataAtual.Subtract(dataInicial);
+
+
                     //ADICIONAR PESSOA RESPONSAVEL
-                    string insertQuery = "insert into manutencao (ID_Ordem,ID_Maquina,ID_Setor,Tipo,Responsavel) values (@ID,@Maquina,@Setor,1,@Responsavel)";
+                    string insertQuery = "insert into manutencao (ID_Ordem,ID_Maquina,ID_Setor,Tempo,Tipo,Responsavel) values (@ID,@Maquina,@Setor,@Tempo,1,@Responsavel)";
 
                     using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
                     {
                         command.Parameters.AddWithValue("@ID", id);
                         command.Parameters.AddWithValue("@Maquina", Maquina);
                         command.Parameters.AddWithValue("@Setor", Setor);
+                        command.Parameters.AddWithValue("@Tempo", diferenca);
                         command.Parameters.AddWithValue("@Responsavel", UsuarioSessao.UsuarioAtual.ID);
                         
-
                         command.ExecuteNonQuery();
                     }
                 }
