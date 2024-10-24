@@ -295,13 +295,15 @@ namespace Projeto_TCC
                         }
                     }
                     //ADICIONAR PESSOA RESPONSAVEL
-                    string insertQuery = "insert into manutencao (ID_Ordem,ID_Maquina,ID_Setor,Tipo,Responsavel) values (@ID,@Maquina,@Setor,1,1)";
+                    string insertQuery = "insert into manutencao (ID_Ordem,ID_Maquina,ID_Setor,Tipo,Responsavel) values (@ID,@Maquina,@Setor,1,@Responsavel)";
 
                     using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
                     {
                         command.Parameters.AddWithValue("@ID", id);
                         command.Parameters.AddWithValue("@Maquina", Maquina);
                         command.Parameters.AddWithValue("@Setor", Setor);
+                        command.Parameters.AddWithValue("@Responsavel", UsuarioSessao.UsuarioAtual.ID);
+                        
 
                         command.ExecuteNonQuery();
                     }
