@@ -54,6 +54,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.mySqlCommand1 = new MySqlConnector.MySqlCommand();
+            this.label6 = new System.Windows.Forms.Label();
             this.panMenu.SuspendLayout();
             this.panDescricao.SuspendLayout();
             this.panMaquina.SuspendLayout();
@@ -86,6 +87,7 @@
             // panDescricao
             // 
             this.panDescricao.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panDescricao.Controls.Add(this.label6);
             this.panDescricao.Controls.Add(this.label7);
             this.panDescricao.Controls.Add(this.label15);
             this.panDescricao.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -370,6 +372,16 @@
             this.mySqlCommand1.Transaction = null;
             this.mySqlCommand1.UpdatedRowSource = System.Data.UpdateRowSource.None;
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.IndianRed;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Location = new System.Drawing.Point(0, 50);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(190, 19);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "label6";
+            // 
             // TelaOrdensAberto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -423,5 +435,6 @@
         private System.Windows.Forms.Panel panSetor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label6;
     }
 }

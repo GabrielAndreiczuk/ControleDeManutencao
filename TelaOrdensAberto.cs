@@ -37,7 +37,7 @@ namespace Projeto_TCC
                     {
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
-
+                            int contColor = 0;
                             while (reader.Read())
                             {
                                 
@@ -50,14 +50,15 @@ namespace Projeto_TCC
                                 descricao = reader["Descrição"].ToString();
                                 status = reader["Status"].ToString();
 
-                                //string consulta = ($"{id} {solicitante} {abertura} {setor} {maquina} {descricao} {status}");
+                                Color cor = contColor % 2 == 0 ? Color.Gainsboro : Color.WhiteSmoke;
 
-                                //ordens.Add(consulta);
                                 if (status != "Concluído")
                                 {
-                                    yOffset = AdicionarColunas(yOffset);
+                                    yOffset = AdicionarColunas(yOffset,cor);
                                 }
                                 
+                                contColor++;
+
                             }
                         }
                     } 
@@ -69,7 +70,7 @@ namespace Projeto_TCC
             }
         }
         
-        private int AdicionarColunas(int yOffset)
+        private int AdicionarColunas(int yOffset, Color cor)
         {
             Label lblIndice = new Label()
             {
@@ -85,6 +86,7 @@ namespace Projeto_TCC
                 TextAlign = ContentAlignment.MiddleCenter,
                 Location = new System.Drawing.Point(0, yOffset),
                 Size = new System.Drawing.Size(100, 40),
+                BackColor = cor
             };
             this.panID.Controls.Add(lblID);
 
@@ -94,7 +96,8 @@ namespace Projeto_TCC
                 Text = $"{abertura}",
                 TextAlign = ContentAlignment.MiddleCenter,
                 Location = new System.Drawing.Point(0, yOffset),
-                Size = new System.Drawing.Size(100, 40)
+                Size = new System.Drawing.Size(100, 40),
+                BackColor = cor
             };
             this.panAbertura.Controls.Add(lblAbertura);
 
@@ -105,7 +108,8 @@ namespace Projeto_TCC
                 Location = new System.Drawing.Point(0, yOffset),
                 MinimumSize = new System.Drawing.Size(100, 40),
                 AutoSize = true,
-                Padding = new Padding(10)
+                Padding = new Padding(10),
+                BackColor = cor
             };
             this.panSolicitante.Controls.Add(lblSolicitante); 
 
@@ -116,7 +120,8 @@ namespace Projeto_TCC
                 Location = new System.Drawing.Point(0, yOffset),
                 MinimumSize = new System.Drawing.Size(120, 40),
                 AutoSize = true,
-                Padding = new Padding(10)
+                Padding = new Padding(10),
+                BackColor = cor
             };
             this.panSetor.Controls.Add(lblSetor);
 
@@ -127,7 +132,8 @@ namespace Projeto_TCC
                 Location = new System.Drawing.Point(0, yOffset),
                 MinimumSize = new System.Drawing.Size(120, 40),
                 AutoSize = true,
-                Padding = new Padding(10)
+                Padding = new Padding(10),
+                BackColor = cor
             };
             this.panMaquina.Controls.Add(lblMaquina);
 
@@ -138,7 +144,8 @@ namespace Projeto_TCC
                 Location = new System.Drawing.Point(0, yOffset),
                 MinimumSize = new System.Drawing.Size(180, 40),
                 AutoSize = true,
-                Padding = new Padding(10)
+                Padding = new Padding(10),
+                BackColor = cor
             };
             this.panDescricao.Controls.Add(lblDescricao);
 
@@ -148,7 +155,8 @@ namespace Projeto_TCC
                 TextAlign = ContentAlignment.MiddleCenter,
                 Location = new System.Drawing.Point(0, yOffset),
                 Size = new System.Drawing.Size(140, 40),
-                TabIndex = int.Parse(lblID.Text               )
+                TabIndex = int.Parse(lblID.Text),
+                BackColor = cor
             };
             index++;
             this.panStatus.Controls.Add(lblStatus);
