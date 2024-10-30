@@ -154,5 +154,28 @@ namespace Projeto_TCC
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void panelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if(panel1.Width == 300)
+            {
+                lblTitulo.Text = "";
+                btnConfig.Text = "";
+                panel1.Width = 85;
+
+            }
+            else
+            {
+                lblTitulo.Text = "Boa noite";
+                btnConfig.Text = "      Configurações";
+                panel1.Width = 300;
+            }
+            
+        }
     }
 }
