@@ -116,9 +116,26 @@ namespace Projeto_TCC
                     //FAZER VALIDAÇÕES
                     int id = UsuarioSessao.UsuarioAtual.ID;
                     int setor = cmbSetor.SelectedIndex;
-                    int maquina = cmbMaquina.SelectedIndex;
+                    int maquina = 0;
                     string descricao = txtDescricao.Text;
                     string data = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+                    string selectQuery = "SELECT ID_Maquina FROM maquina WHERE Setor = @Setor AND Nome = @Nome";
+
+                    using (MySqlCommand cmd = new MySqlCommand(selectQuery, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@Setor",setor);
+                        cmd.Parameters.AddWithValue("@Nome",cmbMaquina.Text);
+                        cmd.ExecuteNonQuery();
+
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                maquina = Convert.ToInt32(reader["ID_Maquina"]);
+                            }
+                        }
+                    }
 
                     //DEFINE A CONSULTA SQL PARA INSERIR UM NOVO CLIENTE NA TABELA PASSANDO PARÂMETROS
                     string insertQuery = "INSERT INTO abertura_ordem (ID_Funcionario, ID_Setor, ID_Maquina, Data_Abertura, Descricao, Status) VALUES (@ID, @Setor, @Maquina, @Data, @Descricao, 1)";
