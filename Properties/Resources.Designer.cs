@@ -113,6 +113,16 @@ namespace Projeto_TCC.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icone_fechar {
+            get {
+                object obj = ResourceManager.GetObject("icone-fechar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icone_historico {
             get {
                 object obj = ResourceManager.GetObject("icone-historico", resourceCulture);
@@ -176,6 +186,26 @@ namespace Projeto_TCC.Properties {
         internal static System.Drawing.Bitmap icone_indicativos_3 {
             get {
                 object obj = ResourceManager.GetObject("icone-indicativos-3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icone_maximizar {
+            get {
+                object obj = ResourceManager.GetObject("icone-maximizar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icone_minimizar {
+            get {
+                object obj = ResourceManager.GetObject("icone-minimizar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

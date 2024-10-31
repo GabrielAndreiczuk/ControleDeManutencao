@@ -177,5 +177,34 @@ namespace Projeto_TCC
             }
             
         }
+
+        private void pibFechar_MouseHover(object sender, EventArgs e)
+        {
+            //BackColor = Color.FromArgb(54, 124, 200);
+            pibFechar.BackColor = Color.Red;
+            labelClose.BackColor = Color.Red;
+        }
+        private void pibMaximizar_MouseHover(object sender, EventArgs e)
+        {
+            pibMaximizar.BackColor = Color.FromArgb(0, 36, 72);
+            lblMaximizar.BackColor = Color.FromArgb(0, 36, 72);
+        }
+        private void pibMinimizar_MouseHover(object sender, EventArgs e)
+        {
+            pibMinimizar.BackColor = Color.FromArgb(0, 36, 72);
+            lblMinimizar.BackColor = Color.FromArgb(0, 36, 72);
+        }
+
+        private void ResetBackground_MouseLeave(object sender, EventArgs e)
+        {
+            pibFechar.BackColor = Color.FromArgb(54, 124, 221);
+            pibMaximizar.BackColor = Color.FromArgb(54, 124, 221);
+            pibMinimizar.BackColor = Color.FromArgb(54, 124, 221);
+            labelClose.BackColor = Color.FromArgb(54, 124, 221);
+            lblMaximizar.BackColor = Color.FromArgb(54, 124, 221);
+            lblMinimizar.BackColor = Color.FromArgb(54, 124, 221);
+        }
+
+        
     }
 }

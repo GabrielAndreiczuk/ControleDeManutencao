@@ -30,24 +30,30 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaMenu));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTittle = new System.Windows.Forms.Label();
-            this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnMinimize = new System.Windows.Forms.Button();
-            this.btnMaximize = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.btnOrdensAberto = new System.Windows.Forms.Button();
             this.btnConfig = new System.Windows.Forms.Button();
             this.btnHistorico = new System.Windows.Forms.Button();
             this.btnIndicativos = new System.Windows.Forms.Button();
             this.btnOrdem = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pibMinimizar = new System.Windows.Forms.PictureBox();
+            this.pibFechar = new System.Windows.Forms.PictureBox();
+            this.pibMaximizar = new System.Windows.Forms.PictureBox();
+            this.lblTittle = new System.Windows.Forms.Label();
+            this.labelClose = new System.Windows.Forms.Label();
+            this.lblMaximizar = new System.Windows.Forms.Label();
+            this.lblMinimizar = new System.Windows.Forms.Label();
+            this.panelMenu = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibFechar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibMaximizar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,87 +74,30 @@
             this.panel1.Size = new System.Drawing.Size(300, 700);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // pictureBox1
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
-            this.panel2.Controls.Add(this.btnMinimize);
-            this.panel2.Controls.Add(this.btnMaximize);
-            this.panel2.Controls.Add(this.btnClose);
-            this.panel2.Controls.Add(this.lblTittle);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(300, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1020, 120);
-            this.panel2.TabIndex = 1;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseDown);
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::Projeto_TCC.Properties.Resources.icone_recolher;
+            this.pictureBox1.Location = new System.Drawing.Point(20, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // lblTittle
+            // lblTitulo
             // 
-            this.lblTittle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTittle.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTittle.ForeColor = System.Drawing.Color.White;
-            this.lblTittle.Location = new System.Drawing.Point(260, 35);
-            this.lblTittle.Name = "lblTittle";
-            this.lblTittle.Size = new System.Drawing.Size(510, 50);
-            this.lblTittle.TabIndex = 23;
-            this.lblTittle.Text = "Menu Inicial";
-            this.lblTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panelMenu
-            // 
-            this.panelMenu.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMenu.Location = new System.Drawing.Point(300, 120);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(1020, 580);
-            this.panelMenu.TabIndex = 2;
-            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
-            this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseDown);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.AutoSize = true;
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.Image = global::Projeto_TCC.Properties.Resources.fechar;
-            this.btnMinimize.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMinimize.Location = new System.Drawing.Point(910, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(40, 40);
-            this.btnMinimize.TabIndex = 26;
-            this.btnMinimize.UseVisualStyleBackColor = true;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximize.AutoSize = true;
-            this.btnMaximize.FlatAppearance.BorderSize = 0;
-            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximize.Image = global::Projeto_TCC.Properties.Resources.fechar;
-            this.btnMaximize.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMaximize.Location = new System.Drawing.Point(945, 0);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(40, 40);
-            this.btnMaximize.TabIndex = 25;
-            this.btnMaximize.UseVisualStyleBackColor = true;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.AutoSize = true;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::Projeto_TCC.Properties.Resources.fechar;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnClose.Location = new System.Drawing.Point(980, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(40, 40);
-            this.btnClose.TabIndex = 24;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.lblTitulo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(68, 49);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(205, 24);
+            this.lblTitulo.TabIndex = 24;
+            this.lblTitulo.Text = "Nome do Sistema";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnOrdensAberto
             // 
@@ -265,31 +214,6 @@
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Projeto_TCC.Properties.Resources.icone_recolher;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.lblTitulo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(68, 49);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(205, 24);
-            this.lblTitulo.TabIndex = 24;
-            this.lblTitulo.Text = "Nome do Sistema";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
@@ -298,6 +222,121 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(300, 120);
             this.label2.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.panel2.Controls.Add(this.pibMinimizar);
+            this.panel2.Controls.Add(this.pibFechar);
+            this.panel2.Controls.Add(this.pibMaximizar);
+            this.panel2.Controls.Add(this.lblTittle);
+            this.panel2.Controls.Add(this.labelClose);
+            this.panel2.Controls.Add(this.lblMaximizar);
+            this.panel2.Controls.Add(this.lblMinimizar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(300, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1020, 120);
+            this.panel2.TabIndex = 1;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseDown);
+            // 
+            // pibMinimizar
+            // 
+            this.pibMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pibMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pibMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pibMinimizar.Image")));
+            this.pibMinimizar.Location = new System.Drawing.Point(884, 6);
+            this.pibMinimizar.Name = "pibMinimizar";
+            this.pibMinimizar.Size = new System.Drawing.Size(23, 23);
+            this.pibMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibMinimizar.TabIndex = 1;
+            this.pibMinimizar.TabStop = false;
+            this.pibMinimizar.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.pibMinimizar.MouseEnter += new System.EventHandler(this.pibMinimizar_MouseHover);
+            this.pibMinimizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
+            // 
+            // pibFechar
+            // 
+            this.pibFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pibFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pibFechar.Image = ((System.Drawing.Image)(resources.GetObject("pibFechar.Image")));
+            this.pibFechar.Location = new System.Drawing.Point(984, 6);
+            this.pibFechar.Name = "pibFechar";
+            this.pibFechar.Size = new System.Drawing.Size(23, 23);
+            this.pibFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibFechar.TabIndex = 27;
+            this.pibFechar.TabStop = false;
+            this.pibFechar.Click += new System.EventHandler(this.btnClose_Click);
+            this.pibFechar.MouseEnter += new System.EventHandler(this.pibFechar_MouseHover);
+            this.pibFechar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
+            // 
+            // pibMaximizar
+            // 
+            this.pibMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pibMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pibMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("pibMaximizar.Image")));
+            this.pibMaximizar.Location = new System.Drawing.Point(934, 6);
+            this.pibMaximizar.Name = "pibMaximizar";
+            this.pibMaximizar.Size = new System.Drawing.Size(23, 23);
+            this.pibMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibMaximizar.TabIndex = 0;
+            this.pibMaximizar.TabStop = false;
+            this.pibMaximizar.Click += new System.EventHandler(this.btnMaximize_Click);
+            this.pibMaximizar.MouseEnter += new System.EventHandler(this.pibMaximizar_MouseHover);
+            this.pibMaximizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
+            // 
+            // lblTittle
+            // 
+            this.lblTittle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTittle.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTittle.ForeColor = System.Drawing.Color.White;
+            this.lblTittle.Location = new System.Drawing.Point(260, 35);
+            this.lblTittle.Name = "lblTittle";
+            this.lblTittle.Size = new System.Drawing.Size(510, 50);
+            this.lblTittle.TabIndex = 23;
+            this.lblTittle.Text = "Menu Inicial";
+            this.lblTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelClose
+            // 
+            this.labelClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelClose.Location = new System.Drawing.Point(970, 0);
+            this.labelClose.Name = "labelClose";
+            this.labelClose.Size = new System.Drawing.Size(50, 35);
+            this.labelClose.TabIndex = 28;
+            this.labelClose.MouseEnter += new System.EventHandler(this.pibFechar_MouseHover);
+            this.labelClose.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
+            // 
+            // lblMaximizar
+            // 
+            this.lblMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMaximizar.Location = new System.Drawing.Point(920, 0);
+            this.lblMaximizar.Name = "lblMaximizar";
+            this.lblMaximizar.Size = new System.Drawing.Size(50, 35);
+            this.lblMaximizar.TabIndex = 29;
+            this.lblMaximizar.MouseEnter += new System.EventHandler(this.pibMaximizar_MouseHover);
+            this.lblMaximizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
+            // 
+            // lblMinimizar
+            // 
+            this.lblMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMinimizar.Location = new System.Drawing.Point(870, 0);
+            this.lblMinimizar.Name = "lblMinimizar";
+            this.lblMinimizar.Size = new System.Drawing.Size(50, 35);
+            this.lblMinimizar.TabIndex = 30;
+            this.lblMinimizar.MouseEnter += new System.EventHandler(this.pibMinimizar_MouseHover);
+            this.lblMinimizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMenu.Location = new System.Drawing.Point(300, 120);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(1020, 580);
+            this.panelMenu.TabIndex = 2;
+            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
+            this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseDown);
             // 
             // TelaMenu
             // 
@@ -314,9 +353,11 @@
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pibMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibFechar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibMaximizar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -325,7 +366,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblTittle;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Button btnIndicativos;
         private System.Windows.Forms.Button btnOrdem;
@@ -333,11 +373,15 @@
         private System.Windows.Forms.Button btnHistorico;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button btnOrdensAberto;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnMinimize;
-        private System.Windows.Forms.Button btnMaximize;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pibFechar;
+        private System.Windows.Forms.PictureBox pibMaximizar;
+        private System.Windows.Forms.PictureBox pibMinimizar;
+        private System.Windows.Forms.Label lblTittle;
+        private System.Windows.Forms.Label labelClose;
+        private System.Windows.Forms.Label lblMaximizar;
+        private System.Windows.Forms.Label lblMinimizar;
     }
 }

@@ -290,5 +290,14 @@
   <ItemGroup>
     <None Include="Resources\icone-recolher.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-fechar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-maximizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone-minimizar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

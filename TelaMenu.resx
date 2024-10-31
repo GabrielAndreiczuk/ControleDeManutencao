@@ -132,4 +132,34 @@
         1KNe+/pfSCS+AUWo4PPuSx9TAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="pibMinimizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DwAACw8BkvkDpQAAAG9JREFUWEft0jEKgDAMBdB20GuIXsBNvLa71xHBS6Q/JVuzabDDf/CnhvxCm4iI
+        iLojIiMyI8vH0Z2D1fgwsCMPEuVGVqtr4fCsY7EOq2vh8PcL6BNcdSyG7t6szoeBjEyI95HeRHdmqyEi
+        IupFSgV96i8ielngiwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="pibFechar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DgAACw4BQL7hQQAAARFJREFUWEftlk0OgkAMhdmbmHgzuYJxo7d0oxuvJPg1aRMCDMx0ZmQhX9LwM+17
+        D0RCs7MzR9/3R+qsh9mIlmjq4TJq/qI66q6n3aBxoT7Umzrp6TA0tTogyPaqS8nIrGoIsm11aRkaLbXg
+        uhPMjDVuuhQHA+4Q9OaZGwwmh6CnjLmBQHQI1sqaGwithuBcHXMDwWAI9uuaGwhPQlC/MTcwGP+3h/vu
+        d0YSGA2vWqh/5UMwmwsQ/Z7IAqPtfgIMJg8cNXkwtb0sCAefdvbrhkAwaG5wrk4IhFbNDdbKhkAg2tyg
+        p0wIBpPNDXrzQjDgNjeY8YWgcdtPMpoO1INyXfkYNOxOPKmkL+NtPst3/oym+QK5NBNYTUVrNAAAAABJ
+        RU5ErkJggg==
+</value>
+  </data>
+  <data name="pibMaximizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DgAACw4BQL7hQQAAAS1JREFUWEftlzFOw0AQRR0pF6AjLQk3QSJllBsQiBCKKKi4AhyBK3AgOgpQgBOA
+        olCY91dfWIALdr1WgvCTXjET78x3ksIuOr5TluU+HuNlZjVz5DX1cME5vuMz3mdWM9e48Lqv8IHuXMtP
+        3MoOs+eoEEO3KmjOcOmyNdjxhEcuK2he4J3L1tAO7XJZsZUBqPt4jbeJXmHf4wLUUQHGqD/mTaI6e+hx
+        AeqoAFN8w71EdXbqcQHq6ABNaRxg49/Aq8todFYzXAa0A7sAXYAuwN8JMMEVHiSqsxOPC1BHBRjgI6by
+        gLseF6D+fQBBr4c7ifY85hN6cQFys9UBNv5QOkI9Ms/dyg6zT73j52O54IOFL3jBupeLJmqmZp95XT1c
+        MMQ2Xs30E9ff+T+mKD4Awd820oslZcAAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>
