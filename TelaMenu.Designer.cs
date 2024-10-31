@@ -38,7 +38,6 @@
             this.btnIndicativos = new System.Windows.Forms.Button();
             this.btnOrdem = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pibMinimizar = new System.Windows.Forms.PictureBox();
             this.pibFechar = new System.Windows.Forms.PictureBox();
@@ -48,6 +47,7 @@
             this.lblMaximizar = new System.Windows.Forms.Label();
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -58,7 +58,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.btnOrdensAberto);
@@ -67,7 +67,7 @@
             this.panel1.Controls.Add(this.btnIndicativos);
             this.panel1.Controls.Add(this.btnOrdem);
             this.panel1.Controls.Add(this.btnMenu);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -76,7 +76,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Projeto_TCC.Properties.Resources.icone_recolher;
             this.pictureBox1.Location = new System.Drawing.Point(20, 40);
@@ -89,7 +89,7 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.lblTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.lblTitulo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(68, 49);
@@ -101,7 +101,7 @@
             // 
             // btnOrdensAberto
             // 
-            this.btnOrdensAberto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnOrdensAberto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
             this.btnOrdensAberto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOrdensAberto.FlatAppearance.BorderSize = 0;
             this.btnOrdensAberto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -120,7 +120,7 @@
             // 
             // btnConfig
             // 
-            this.btnConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
             this.btnConfig.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConfig.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnConfig.FlatAppearance.BorderSize = 0;
@@ -140,7 +140,7 @@
             // 
             // btnHistorico
             // 
-            this.btnHistorico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnHistorico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
             this.btnHistorico.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHistorico.FlatAppearance.BorderSize = 0;
             this.btnHistorico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -159,7 +159,7 @@
             // 
             // btnIndicativos
             // 
-            this.btnIndicativos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnIndicativos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
             this.btnIndicativos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIndicativos.FlatAppearance.BorderSize = 0;
             this.btnIndicativos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -178,7 +178,7 @@
             // 
             // btnOrdem
             // 
-            this.btnOrdem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnOrdem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
             this.btnOrdem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOrdem.FlatAppearance.BorderSize = 0;
             this.btnOrdem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -197,7 +197,7 @@
             // 
             // btnMenu
             // 
-            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
             this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMenu.FlatAppearance.BorderSize = 0;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -213,15 +213,6 @@
             this.btnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(300, 120);
-            this.label2.TabIndex = 0;
             // 
             // panel2
             // 
@@ -338,6 +329,15 @@
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseDown);
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(300, 120);
+            this.label1.TabIndex = 25;
+            // 
             // TelaMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -375,7 +375,6 @@
         private System.Windows.Forms.Button btnOrdensAberto;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pibFechar;
         private System.Windows.Forms.PictureBox pibMaximizar;
         private System.Windows.Forms.PictureBox pibMinimizar;
@@ -383,5 +382,6 @@
         private System.Windows.Forms.Label labelClose;
         private System.Windows.Forms.Label lblMaximizar;
         private System.Windows.Forms.Label lblMinimizar;
+        private System.Windows.Forms.Label label1;
     }
 }

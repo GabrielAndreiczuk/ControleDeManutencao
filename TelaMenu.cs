@@ -39,7 +39,7 @@ namespace Projeto_TCC
                 {
                     DisableButton((Button)btnSender);
                     currentButton = (Button)btnSender;
-                    currentButton.BackColor = Color.FromArgb(54, 124, 221);
+                    currentButton.BackColor = Color.FromArgb(0, 51, 102);
                     //currentButton.BackColor = Color.FromArgb(255, 165, 0);
                 }
             }
@@ -50,7 +50,7 @@ namespace Projeto_TCC
             { 
                 if (previusBtn.GetType() == typeof(Button))
                 {
-                    previusBtn.BackColor = Color.FromArgb(0, 51, 102);
+                    previusBtn.BackColor = Color.FromArgb(54, 124, 221);
                 }
             }
         }

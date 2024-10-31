@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -39,6 +40,12 @@
             this.roundedLabel2 = new Projeto_TCC.RoundedLabel();
             this.roundedLabel1 = new Projeto_TCC.RoundedLabel();
             this.roundedLabel7 = new Projeto_TCC.RoundedLabel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblData = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtDescricao
@@ -47,11 +54,11 @@
             this.txtDescricao.BackColor = System.Drawing.Color.White;
             this.txtDescricao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescricao.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricao.Location = new System.Drawing.Point(43, 288);
+            this.txtDescricao.Location = new System.Drawing.Point(518, 204);
             this.txtDescricao.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(401, 98);
+            this.txtDescricao.Size = new System.Drawing.Size(401, 130);
             this.txtDescricao.TabIndex = 0;
             // 
             // label1
@@ -60,7 +67,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(39, 251);
+            this.label1.Location = new System.Drawing.Point(514, 169);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(186, 19);
@@ -73,7 +80,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(39, 147);
+            this.label7.Location = new System.Drawing.Point(48, 274);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 19);
@@ -89,7 +96,7 @@
             this.cmbMaquina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMaquina.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMaquina.FormattingEnabled = true;
-            this.cmbMaquina.Location = new System.Drawing.Point(43, 180);
+            this.cmbMaquina.Location = new System.Drawing.Point(52, 307);
             this.cmbMaquina.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMaquina.Name = "cmbMaquina";
             this.cmbMaquina.Size = new System.Drawing.Size(403, 27);
@@ -104,7 +111,7 @@
             this.cmbSetor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbSetor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSetor.FormattingEnabled = true;
-            this.cmbSetor.Location = new System.Drawing.Point(43, 86);
+            this.cmbSetor.Location = new System.Drawing.Point(52, 203);
             this.cmbSetor.Margin = new System.Windows.Forms.Padding(4);
             this.cmbSetor.Name = "cmbSetor";
             this.cmbSetor.Size = new System.Drawing.Size(403, 27);
@@ -116,7 +123,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(39, 52);
+            this.label2.Location = new System.Drawing.Point(48, 169);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 19);
@@ -128,7 +135,7 @@
             this.lblCaracteres.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCaracteres.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCaracteres.ForeColor = System.Drawing.Color.White;
-            this.lblCaracteres.Location = new System.Drawing.Point(379, 402);
+            this.lblCaracteres.Location = new System.Drawing.Point(854, 351);
             this.lblCaracteres.Name = "lblCaracteres";
             this.lblCaracteres.Size = new System.Drawing.Size(65, 24);
             this.lblCaracteres.TabIndex = 28;
@@ -142,9 +149,9 @@
             this.roundedButton1.FlatAppearance.BorderSize = 0;
             this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundedButton1.ForeColor = System.Drawing.Color.White;
-            this.roundedButton1.Location = new System.Drawing.Point(93, 438);
+            this.roundedButton1.Location = new System.Drawing.Point(37, 426);
             this.roundedButton1.Name = "roundedButton1";
-            this.roundedButton1.Size = new System.Drawing.Size(300, 50);
+            this.roundedButton1.Size = new System.Drawing.Size(430, 50);
             this.roundedButton1.TabIndex = 27;
             this.roundedButton1.Text = "Registrar Ordem";
             this.roundedButton1.UseVisualStyleBackColor = false;
@@ -155,7 +162,7 @@
             this.roundedLabel2.BackColor = System.Drawing.Color.White;
             this.roundedLabel2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedLabel2.ForeColor = System.Drawing.Color.White;
-            this.roundedLabel2.Location = new System.Drawing.Point(28, 74);
+            this.roundedLabel2.Location = new System.Drawing.Point(37, 191);
             this.roundedLabel2.Name = "roundedLabel2";
             this.roundedLabel2.Size = new System.Drawing.Size(430, 50);
             this.roundedLabel2.TabIndex = 26;
@@ -167,9 +174,9 @@
             this.roundedLabel1.BackColor = System.Drawing.Color.White;
             this.roundedLabel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedLabel1.ForeColor = System.Drawing.Color.White;
-            this.roundedLabel1.Location = new System.Drawing.Point(28, 273);
+            this.roundedLabel1.Location = new System.Drawing.Point(503, 189);
             this.roundedLabel1.Name = "roundedLabel1";
-            this.roundedLabel1.Size = new System.Drawing.Size(430, 126);
+            this.roundedLabel1.Size = new System.Drawing.Size(430, 157);
             this.roundedLabel1.TabIndex = 14;
             this.roundedLabel1.Text = "roundedLabel1";
             // 
@@ -179,11 +186,65 @@
             this.roundedLabel7.BackColor = System.Drawing.Color.White;
             this.roundedLabel7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedLabel7.ForeColor = System.Drawing.Color.White;
-            this.roundedLabel7.Location = new System.Drawing.Point(28, 169);
+            this.roundedLabel7.Location = new System.Drawing.Point(37, 296);
             this.roundedLabel7.Name = "roundedLabel7";
             this.roundedLabel7.Size = new System.Drawing.Size(430, 50);
             this.roundedLabel7.TabIndex = 23;
             this.roundedLabel7.Text = "roundedLabel7";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.lblData);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(984, 561);
+            this.panel3.TabIndex = 33;
+            // 
+            // lblData
+            // 
+            this.lblData.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblData.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.ForeColor = System.Drawing.Color.White;
+            this.lblData.Location = new System.Drawing.Point(503, 426);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(416, 50);
+            this.lblData.TabIndex = 0;
+            this.lblData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.label4.Location = new System.Drawing.Point(47, 88);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(218, 19);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Preencha os dados abaixo:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.label3.Location = new System.Drawing.Point(46, 40);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(810, 32);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Boa noite, Gabriel, deseja abrir uma ordem de manutenção?";
             // 
             // TelaIndicativos
             // 
@@ -202,10 +263,13 @@
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.roundedLabel1);
             this.Controls.Add(this.roundedLabel7);
+            this.Controls.Add(this.panel3);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TelaIndicativos";
             this.Text = "Form1";
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +288,10 @@
         private RoundedLabel roundedLabel2;
         private RoundedButton roundedButton1;
         private System.Windows.Forms.Label lblCaracteres;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblData;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
     }
 }

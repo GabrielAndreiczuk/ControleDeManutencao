@@ -299,5 +299,8 @@
   <ItemGroup>
     <None Include="Resources\icone-minimizar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19197945.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
