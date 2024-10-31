@@ -204,7 +204,5 @@ namespace Projeto_TCC
             lblMaximizar.BackColor = Color.FromArgb(54, 124, 221);
             lblMinimizar.BackColor = Color.FromArgb(54, 124, 221);
         }
-
-        
     }
 }
