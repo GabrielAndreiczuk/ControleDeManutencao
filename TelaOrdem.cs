@@ -23,6 +23,8 @@ namespace Projeto_TCC
             InitializeComponent();
 
             PreencherSetor();
+
+            timer1_Tick(this, EventArgs.Empty);
         }
         public void Alert(string msg, FormAlert.enmType type)
         {
@@ -101,7 +103,7 @@ namespace Projeto_TCC
             }
         }
 
-        private void roundedButton1_Click(object sender, EventArgs e)
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
             string connectionString = "Server=localhost;Uid=root;Database=projeto;Port=3306;";
 
@@ -176,6 +178,12 @@ namespace Projeto_TCC
             {
                 e.Handled = true;
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime data = DateTime.Now;
+            lblData.Text = data.ToString("HH:mm:ss - dd/MM/yyyy");
         }
     }
 }

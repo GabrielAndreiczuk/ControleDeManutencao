@@ -36,15 +36,15 @@
             this.cmbSetor = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblCaracteres = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblData = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.roundedButton1 = new Projeto_TCC.RoundedButton();
             this.roundedLabel2 = new Projeto_TCC.RoundedLabel();
             this.roundedLabel1 = new Projeto_TCC.RoundedLabel();
             this.roundedLabel7 = new Projeto_TCC.RoundedLabel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblData = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -142,6 +142,60 @@
             this.lblCaracteres.Text = "0/50";
             this.lblCaracteres.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.lblData);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(984, 561);
+            this.panel3.TabIndex = 33;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(47, 88);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(218, 19);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Preencha os dados abaixo:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(46, 40);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(810, 32);
+            this.label3.TabIndex = 33;
+            this.label3.Text = "Boa noite, Gabriel, deseja abrir uma ordem de manutenção?";
+            // 
+            // lblData
+            // 
+            this.lblData.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblData.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.ForeColor = System.Drawing.Color.White;
+            this.lblData.Location = new System.Drawing.Point(503, 426);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(416, 50);
+            this.lblData.TabIndex = 0;
+            this.lblData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // roundedButton1
             // 
             this.roundedButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -191,60 +245,6 @@
             this.roundedLabel7.Size = new System.Drawing.Size(430, 50);
             this.roundedLabel7.TabIndex = 23;
             this.roundedLabel7.Text = "roundedLabel7";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.lblData);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(984, 561);
-            this.panel3.TabIndex = 33;
-            // 
-            // lblData
-            // 
-            this.lblData.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblData.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblData.ForeColor = System.Drawing.Color.White;
-            this.lblData.Location = new System.Drawing.Point(503, 426);
-            this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(416, 50);
-            this.lblData.TabIndex = 0;
-            this.lblData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
-            this.label4.Location = new System.Drawing.Point(47, 88);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(218, 19);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Preencha os dados abaixo:";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
-            this.label3.Location = new System.Drawing.Point(46, 40);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(810, 32);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "Boa noite, Gabriel, deseja abrir uma ordem de manutenção?";
             // 
             // TelaIndicativos
             // 
