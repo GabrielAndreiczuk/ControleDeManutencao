@@ -50,7 +50,7 @@ namespace Projeto_TCC
                                 descricao = reader["Descrição"].ToString();
                                 status = reader["Status"].ToString();
 
-                                Color cor = contColor % 2 == 0 ? Color.Gainsboro : Color.WhiteSmoke;
+                                Color cor = contColor % 2 == 0 ? Color.FromArgb(38, 79, 120) : Color.FromArgb(0, 36, 72);
 
                                 if (status != "Concluído")
                                 {
@@ -77,6 +77,7 @@ namespace Projeto_TCC
                 Text = $"{id}",
                 Location = new System.Drawing.Point(0, yOffset),                
                 Size = new System.Drawing.Size(100,40),
+                ForeColor = Color.White
             };
             this.panMenu.Controls.Add(lblIndice);
 
@@ -86,7 +87,8 @@ namespace Projeto_TCC
                 TextAlign = ContentAlignment.MiddleCenter,
                 Location = new System.Drawing.Point(0, yOffset),
                 Size = new System.Drawing.Size(100, 40),
-                BackColor = cor
+                BackColor = cor,
+                ForeColor = Color.White
             };
             this.panID.Controls.Add(lblID);
 
@@ -97,7 +99,8 @@ namespace Projeto_TCC
                 TextAlign = ContentAlignment.MiddleCenter,
                 Location = new System.Drawing.Point(0, yOffset),
                 Size = new System.Drawing.Size(100, 40),
-                BackColor = cor
+                BackColor = cor,
+                ForeColor = Color.White
             };
             this.panAbertura.Controls.Add(lblAbertura);
 
@@ -109,7 +112,8 @@ namespace Projeto_TCC
                 MinimumSize = new System.Drawing.Size(100, 40),
                 AutoSize = true,
                 Padding = new Padding(10),
-                BackColor = cor
+                BackColor = cor,
+                ForeColor = Color.White
             };
             this.panSolicitante.Controls.Add(lblSolicitante); 
 
@@ -121,7 +125,8 @@ namespace Projeto_TCC
                 MinimumSize = new System.Drawing.Size(120, 40),
                 AutoSize = true,
                 Padding = new Padding(10),
-                BackColor = cor
+                BackColor = cor,
+                ForeColor = Color.White
             };
             this.panSetor.Controls.Add(lblSetor);
 
@@ -133,7 +138,8 @@ namespace Projeto_TCC
                 MinimumSize = new System.Drawing.Size(120, 40),
                 AutoSize = true,
                 Padding = new Padding(10),
-                BackColor = cor
+                BackColor = cor,
+                ForeColor = Color.White
             };
             this.panMaquina.Controls.Add(lblMaquina);
 
@@ -145,7 +151,8 @@ namespace Projeto_TCC
                 MinimumSize = new System.Drawing.Size(180, 40),
                 AutoSize = true,
                 Padding = new Padding(10),
-                BackColor = cor
+                BackColor = cor,
+                ForeColor = Color.White
             };
             this.panDescricao.Controls.Add(lblDescricao);
 
@@ -156,14 +163,15 @@ namespace Projeto_TCC
                 Location = new System.Drawing.Point(0, yOffset),
                 Size = new System.Drawing.Size(140, 40),
                 TabIndex = int.Parse(lblID.Text),
-                BackColor = cor
+                BackColor = cor,
+                ForeColor = Color.White
             };
             index++;
             this.panStatus.Controls.Add(lblStatus);
 
             if (status == "Não iniciado")
             {
-                lblStatus.ForeColor = System.Drawing.Color.Gray;
+                lblStatus.ForeColor = System.Drawing.Color.White;
                 Button btnIniciar = new RoundedButton()
                 {
                     Text = "Iniciar",
@@ -182,14 +190,14 @@ namespace Projeto_TCC
             }
             else
             {
-                lblStatus.ForeColor = System.Drawing.Color.Chocolate;
+                lblStatus.ForeColor = System.Drawing.Color.Yellow;
                 Button btnConcluir = new RoundedButton()
                 {
                     Text = "Concluir",
                     Location = new System.Drawing.Point(5, (yOffset + 3)),
                     Size = new System.Drawing.Size(90, 36),
-                    BackColor = System.Drawing.Color.Chocolate,
-                    ForeColor = System.Drawing.Color.White,
+                    BackColor = System.Drawing.Color.Yellow,
+                    ForeColor = System.Drawing.Color.Black,
                     FlatStyle = FlatStyle.Flat,
                     Cursor = Cursors.Hand
                 };
@@ -205,12 +213,12 @@ namespace Projeto_TCC
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             Button btnAtual = sender as Button;
-            btnAtual.BackColor = System.Drawing.Color.Chocolate;
+            btnAtual.BackColor = System.Drawing.Color.Yellow;
             btnAtual.Text = "Concluir";
 
             Label lblStatus = btnAtual.Tag as Label;
             lblStatus.Text = "Em andamento";
-            lblStatus.ForeColor = System.Drawing.Color.Chocolate;
+            lblStatus.ForeColor = System.Drawing.Color.Yellow;
             int ID = lblStatus.TabIndex;
 
             AtualizarStatus(ID,2);
