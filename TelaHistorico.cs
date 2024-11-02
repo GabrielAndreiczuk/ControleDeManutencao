@@ -27,7 +27,7 @@ namespace Projeto_TCC
         private void AdicionarComponentes()
         {
 
-            List<string> ordens = new List<string>();
+            //List<string> ordens = new List<string>();
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 try
@@ -54,7 +54,7 @@ namespace Projeto_TCC
                                 custo = reader["Custo"].ToString();
                                 responsavel = reader["Responsável"].ToString();
 
-                                Color cor = contColor % 2 == 0 ? Color.Gainsboro : Color.WhiteSmoke;
+                                Color cor = contColor % 2 == 0 ? Color.FromArgb(38, 79, 120) : Color.FromArgb(0, 36, 72);
                                 yOffset = AdicionarColunas(yOffset,cor);
                                 contColor++;
                             }
@@ -79,14 +79,15 @@ namespace Projeto_TCC
                 
             };
             this.panMenu.Controls.Add(lblIndice);
-            
+
             Label lblID = new Label()
             {
                 Text = $"{id}",
                 TextAlign = ContentAlignment.MiddleCenter,
                 Location = new System.Drawing.Point(0, yOffset),
                 Size = new System.Drawing.Size(100, 40),
-                BackColor = cor
+                BackColor = cor,
+                ForeColor = Color.White
             };
             this.panID.Controls.Add(lblID);
 
@@ -98,7 +99,8 @@ namespace Projeto_TCC
                 MinimumSize = new System.Drawing.Size(180, 40),
                 AutoSize = true,
                 Padding = new Padding(10),
-                BackColor = cor
+                BackColor = cor,
+                ForeColor = Color.White
             };
             this.panDescricao.Controls.Add(lblDescricao);
 
@@ -110,7 +112,8 @@ namespace Projeto_TCC
                 MinimumSize = new System.Drawing.Size(120, 40),
                 AutoSize = true,
                 Padding = new Padding(10),
-                BackColor = cor
+                BackColor = cor,
+                ForeColor = Color.White
             };
             this.panMaquina.Controls.Add(lblMaquina);
 
@@ -122,7 +125,8 @@ namespace Projeto_TCC
                 MinimumSize = new System.Drawing.Size(120, 40),
                 AutoSize = true,
                 Padding = new Padding(10),
-                BackColor = cor
+                BackColor = cor,
+                ForeColor = Color.White
             };
             this.panSetor.Controls.Add(lblSetor);
 
@@ -134,7 +138,8 @@ namespace Projeto_TCC
                 MinimumSize = new System.Drawing.Size(120, 40),
                 AutoSize = true,
                 Padding = new Padding(10),
-                BackColor = cor
+                BackColor = cor,
+                ForeColor = Color.White
             };
             this.panDuracao.Controls.Add(lblDuracao);
 
@@ -146,7 +151,8 @@ namespace Projeto_TCC
                 MinimumSize = new System.Drawing.Size(120, 40),
                 AutoSize = true,
                 Padding = new Padding(10),
-                BackColor = cor
+                BackColor = cor,
+                ForeColor = Color.White
             };
             this.panTipo.Controls.Add(lblTipo);
 
@@ -158,7 +164,8 @@ namespace Projeto_TCC
                 MinimumSize = new System.Drawing.Size(120, 40),
                 AutoSize = true,
                 Padding = new Padding(10),
-                BackColor = cor
+                BackColor = cor,
+                ForeColor = Color.White
             };
             this.panCusto.Controls.Add(lblCusto);
 
@@ -170,7 +177,8 @@ namespace Projeto_TCC
                 MinimumSize = new System.Drawing.Size(120, 40),
                 AutoSize = true,
                 Padding = new Padding(10),
-                BackColor = cor
+                BackColor = cor,
+                ForeColor = Color.White
             };
             this.panResponsavel.Controls.Add(lblResponsavel);
 

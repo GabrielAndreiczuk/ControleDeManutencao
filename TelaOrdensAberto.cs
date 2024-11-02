@@ -55,10 +55,8 @@ namespace Projeto_TCC
                                 if (status != "Concluído")
                                 {
                                     yOffset = AdicionarColunas(yOffset,cor);
+                                    contColor++;
                                 }
-                                
-                                contColor++;
-
                             }
                         }
                     } 
@@ -215,6 +213,7 @@ namespace Projeto_TCC
             Button btnAtual = sender as Button;
             btnAtual.BackColor = System.Drawing.Color.Yellow;
             btnAtual.Text = "Concluir";
+            btnAtual.ForeColor = System.Drawing.Color.Black;
 
             Label lblStatus = btnAtual.Tag as Label;
             lblStatus.Text = "Em andamento";
@@ -229,12 +228,13 @@ namespace Projeto_TCC
         private void btnConcluir_Click(object sender, EventArgs e)
         {
             Button btnAtual = sender as Button;
-            btnAtual.BackColor = System.Drawing.Color.DarkGreen;
+            btnAtual.BackColor = System.Drawing.Color.Lime;
             btnAtual.Text = "Cancelar";
+            btnAtual.ForeColor = System.Drawing.Color.Black;
 
             Label lblStatus = btnAtual.Tag as Label;
             lblStatus.Text = "Concluído";
-            lblStatus.ForeColor = System.Drawing.Color.DarkGreen;
+            lblStatus.ForeColor = System.Drawing.Color.Lime;
             int ID = lblStatus.TabIndex;
 
             AtualizarStatus(ID, 3);
@@ -246,12 +246,13 @@ namespace Projeto_TCC
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Button btnAtual = sender as Button;
-            btnAtual.BackColor = System.Drawing.Color.Chocolate;
+            btnAtual.BackColor = System.Drawing.Color.Yellow;
             btnAtual.Text = "Concluir";
+            btnAtual.ForeColor = System.Drawing.Color.Black;
 
             Label lblStatus = btnAtual.Tag as Label;
             lblStatus.Text = "Em andamento";
-            lblStatus.ForeColor = System.Drawing.Color.Chocolate;
+            lblStatus.ForeColor = System.Drawing.Color.Yellow;
             int ID = lblStatus.TabIndex;
 
             AtualizarStatus(ID, 2);
