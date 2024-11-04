@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +19,21 @@ namespace Projeto_TCC
         public TelaLogin()
         {
             InitializeComponent();
+
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+        }
+        //CÓDIGO PARA MOVIMENTAÇÃO E REDIMENSIONAMENTO DA TELA
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void TelaLogin_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         //MÉTODO QUE INSTANCIA E CHAMA NOTIFICAÇÕES PERSONALIZADAS
@@ -27,18 +43,18 @@ namespace Projeto_TCC
             frm.showAlert(msg, type);
         }
 
-        private void label7_MouseHover(object sender, EventArgs e)
+        private void lblCadastro_MouseHover(object sender, EventArgs e)
         {
-            this.label7.Font = new Font(this.label7.Font, FontStyle.Italic | FontStyle.Bold);
-            this.label7.ForeColor = Color.Yellow;
+            this.lblCadastro.Font = new Font(this.lblCadastro.Font, FontStyle.Italic | FontStyle.Bold);
+            this.lblCadastro.ForeColor = Color.Yellow;
         }
 
-        private void label7_MouseLeave(object sender, EventArgs e)
+        private void lblCadastro_MouseLeave(object sender, EventArgs e)
         {
-            this.label7.Font = new Font(this.label7.Font, FontStyle.Italic);
-            this.label7.ForeColor = Color.White;
+            this.lblCadastro.Font = new Font(this.lblCadastro.Font, FontStyle.Italic);
+            this.lblCadastro.ForeColor = Color.White;
         }
-        private void label7_Click(object sender, EventArgs e)
+        private void lblCadastro_Click(object sender, EventArgs e)
         {
             TelaCadastro form = new TelaCadastro();
             this.Hide();
@@ -46,7 +62,7 @@ namespace Projeto_TCC
             form.Show();
         }
 
-        private void rjButton2_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "" || textBox2.Text == "")
             {
@@ -120,6 +136,60 @@ namespace Projeto_TCC
                     //MessageBox.Show($"Erro: {ex.Message}", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        //EVENTOS BOTÕES CONTROLES DE TELA - FECHAR
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        //EVENTOS BOTÕES CONTROLES DE TELA - MAXIMIZAR
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+        //EVENTOS BOTÕES CONTROLES DE TELA - MINIMIZAR
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        //HOOVER CONTROLES DE TELA - FECHAR
+        private void pibFechar_MouseHover(object sender, EventArgs e)
+        {
+            //BackColor = Color.FromArgb(54, 124, 200);
+            pibFechar.BackColor = Color.Red;
+            labelClose.BackColor = Color.Red;
+        }
+        //HOOVER CONTROLES DE TELA - MAXIMIZAR
+        private void pibMaximizar_MouseHover(object sender, EventArgs e)
+        {
+            pibMaximizar.BackColor = Color.FromArgb(0, 36, 72);
+            lblMaximizar.BackColor = Color.FromArgb(0, 36, 72);
+        }
+        //HOOVER CONTROLES DE TELA - MINIMIZAR
+        private void pibMinimizar_MouseHover(object sender, EventArgs e)
+        {
+            pibMinimizar.BackColor = Color.FromArgb(0, 36, 72);
+            lblMinimizar.BackColor = Color.FromArgb(0, 36, 72);
+        }
+        //HOOVER CONTROLES DE TELA - RESET DO ESTILO
+        private void ResetBackground_MouseLeave(object sender, EventArgs e)
+        {
+            pibFechar.BackColor = Color.FromArgb(0,51,102);
+            pibMaximizar.BackColor = Color.FromArgb(0,51,102);
+            pibMinimizar.BackColor = Color.FromArgb(0, 51, 102);
+            labelClose.BackColor = Color.FromArgb(0, 51, 102);
+            lblMaximizar.BackColor = Color.FromArgb(0, 51, 102);
+            lblMinimizar.BackColor = Color.FromArgb(0, 51, 102);
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

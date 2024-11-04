@@ -13,10 +13,11 @@ namespace Projeto_TCC
 {
     public partial class TelaMenu : Form
     {
+        //MÉTODO CONSTRUTOR
         public TelaMenu()
         {
             InitializeComponent();
-            btnMenu_Click(btnMenu,EventArgs.Empty);
+            btnMenu_Click(btnMenu, EventArgs.Empty);
             //label1.Text = $"Boa noite {UsuarioSessao.UsuarioAtual.Nome}";
 
             this.Text = string.Empty;
@@ -24,13 +25,22 @@ namespace Projeto_TCC
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
+        //CÓDIGO PARA MOVIMENTAÇÃO E REDIMENSIONAMENTO DA TELA
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
+        //EVENTO PARA MOVIMENTAÇÃO DA TELA
+        private void Panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        //DECLARAÇÃO DO BOTÃO ATIVO
         private Button currentButton;
-        
+        //CÓDIGO PARA DETERMINAÇÃO DO BOTÃO ATIVO
         public void ActiveButton(object btnSender)
         {
             if (btnSender != null)
@@ -44,6 +54,7 @@ namespace Projeto_TCC
                 }
             }
         }
+        //CÓDIGO PARA DESATIVAR BOTÃO ATUAL
         private void DisableButton(object btnSender)
         {
             foreach(Control previusBtn in this.panel1.Controls)
@@ -55,6 +66,7 @@ namespace Projeto_TCC
             }
         }
 
+        //EVENTOS DE CLIQUE BOTÕES LATERAIS
         private void btnMenu_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
@@ -113,7 +125,6 @@ namespace Projeto_TCC
             ActiveButton(sender);
             lblTittle.Text = "Configurações";
         }
-
         private void btnOrdensAberto_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
@@ -131,38 +142,10 @@ namespace Projeto_TCC
             emAberto.Show();
         }
 
-        private void Panel2_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnMaximize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-                this.WindowState = FormWindowState.Maximized;
-            else
-                this.WindowState = FormWindowState.Normal;
-        }
-
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void panelMenu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        //RECOLHER MENU LATERAL
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            if(panel1.Width == 300)
+            if (panel1.Width == 300)
             {
                 lblTitulo.Text = "";
                 btnConfig.Text = "";
@@ -175,26 +158,48 @@ namespace Projeto_TCC
                 btnConfig.Text = "      Configurações";
                 panel1.Width = 300;
             }
-            
+
         }
 
+        //EVENTOS BOTÕES CONTROLES DE TELA - FECHAR
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        //EVENTOS BOTÕES CONTROLES DE TELA - MAXIMIZAR
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+        //EVENTOS BOTÕES CONTROLES DE TELA - MINIMIZAR
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        //HOOVER CONTROLES DE TELA - FECHAR
         private void pibFechar_MouseHover(object sender, EventArgs e)
         {
             //BackColor = Color.FromArgb(54, 124, 200);
             pibFechar.BackColor = Color.Red;
             labelClose.BackColor = Color.Red;
         }
+        //HOOVER CONTROLES DE TELA - MAXIMIZAR
         private void pibMaximizar_MouseHover(object sender, EventArgs e)
         {
             pibMaximizar.BackColor = Color.FromArgb(0, 36, 72);
             lblMaximizar.BackColor = Color.FromArgb(0, 36, 72);
         }
+        //HOOVER CONTROLES DE TELA - MINIMIZAR
         private void pibMinimizar_MouseHover(object sender, EventArgs e)
         {
             pibMinimizar.BackColor = Color.FromArgb(0, 36, 72);
             lblMinimizar.BackColor = Color.FromArgb(0, 36, 72);
         }
-
+        //HOOVER CONTROLES DE TELA - RESET DO ESTILO
         private void ResetBackground_MouseLeave(object sender, EventArgs e)
         {
             pibFechar.BackColor = Color.FromArgb(54, 124, 221);
@@ -204,5 +209,6 @@ namespace Projeto_TCC
             lblMaximizar.BackColor = Color.FromArgb(54, 124, 221);
             lblMinimizar.BackColor = Color.FromArgb(54, 124, 221);
         }
-    }
-}
+
+    }//FECHAR CLASSE
+}//FECHAR NAMESPACE

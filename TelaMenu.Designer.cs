@@ -337,7 +337,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(1020, 580);
             this.panelMenu.TabIndex = 2;
-            this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseDown);
             // 
             // label2

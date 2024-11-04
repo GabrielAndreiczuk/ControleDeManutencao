@@ -28,209 +28,440 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rjPanel1 = new Projeto_TCC.RoundedRightPanel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaLogin));
+            this.pibMinimizar = new System.Windows.Forms.PictureBox();
+            this.pibFechar = new System.Windows.Forms.PictureBox();
+            this.pibMaximizar = new System.Windows.Forms.PictureBox();
+            this.labelClose = new System.Windows.Forms.Label();
+            this.lblMaximizar = new System.Windows.Forms.Label();
+            this.lblMinimizar = new System.Windows.Forms.Label();
             this.rjPanel21 = new Projeto_TCC.RoundedLeftPanel();
-            this.label8 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.linePanel2 = new Projeto_TCC.LinePanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.rjButton2 = new Projeto_TCC.RoundedButton();
-            this.linePanel1 = new Projeto_TCC.LinePanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.rjPanel1 = new Projeto_TCC.RoundedRightPanel();
             this.rjLabel2 = new Projeto_TCC.RoundedLabel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.linePanel1 = new Projeto_TCC.LinePanel();
+            this.rjButton2 = new Projeto_TCC.RoundedButton();
+            this.linePanel2 = new Projeto_TCC.LinePanel();
+            this.label8 = new System.Windows.Forms.Label();
             this.rjLabel1 = new Projeto_TCC.RoundedLabel();
-            this.rjPanel21.SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.roundedLabel1 = new Projeto_TCC.RoundedLabel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.linePanel3 = new Projeto_TCC.LinePanel();
+            this.btnLogin = new Projeto_TCC.RoundedButton();
+            this.linePanel4 = new Projeto_TCC.LinePanel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblCadastro = new System.Windows.Forms.Label();
+            this.roundedLabel2 = new Projeto_TCC.RoundedLabel();
+            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pibMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibFechar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibMaximizar)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pibMinimizar
+            // 
+            this.pibMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pibMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pibMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pibMinimizar.Image")));
+            this.pibMinimizar.Location = new System.Drawing.Point(885, 6);
+            this.pibMinimizar.Name = "pibMinimizar";
+            this.pibMinimizar.Size = new System.Drawing.Size(23, 23);
+            this.pibMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibMinimizar.TabIndex = 32;
+            this.pibMinimizar.TabStop = false;
+            this.pibMinimizar.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.pibMinimizar.MouseEnter += new System.EventHandler(this.pibMinimizar_MouseHover);
+            this.pibMinimizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
+            // 
+            // pibFechar
+            // 
+            this.pibFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pibFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pibFechar.Image = ((System.Drawing.Image)(resources.GetObject("pibFechar.Image")));
+            this.pibFechar.Location = new System.Drawing.Point(985, 6);
+            this.pibFechar.Name = "pibFechar";
+            this.pibFechar.Size = new System.Drawing.Size(23, 23);
+            this.pibFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibFechar.TabIndex = 33;
+            this.pibFechar.TabStop = false;
+            this.pibFechar.Click += new System.EventHandler(this.btnClose_Click);
+            this.pibFechar.MouseEnter += new System.EventHandler(this.pibFechar_MouseHover);
+            this.pibFechar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
+            // 
+            // pibMaximizar
+            // 
+            this.pibMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pibMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pibMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("pibMaximizar.Image")));
+            this.pibMaximizar.Location = new System.Drawing.Point(935, 6);
+            this.pibMaximizar.Name = "pibMaximizar";
+            this.pibMaximizar.Size = new System.Drawing.Size(23, 23);
+            this.pibMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibMaximizar.TabIndex = 31;
+            this.pibMaximizar.TabStop = false;
+            this.pibMaximizar.Click += new System.EventHandler(this.btnMaximize_Click);
+            this.pibMaximizar.MouseEnter += new System.EventHandler(this.pibMaximizar_MouseHover);
+            this.pibMaximizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
+            // 
+            // labelClose
+            // 
+            this.labelClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelClose.Location = new System.Drawing.Point(971, 0);
+            this.labelClose.Name = "labelClose";
+            this.labelClose.Size = new System.Drawing.Size(50, 35);
+            this.labelClose.TabIndex = 34;
+            this.labelClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.labelClose.MouseEnter += new System.EventHandler(this.pibFechar_MouseHover);
+            this.labelClose.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
+            // 
+            // lblMaximizar
+            // 
+            this.lblMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMaximizar.Location = new System.Drawing.Point(921, 0);
+            this.lblMaximizar.Name = "lblMaximizar";
+            this.lblMaximizar.Size = new System.Drawing.Size(50, 35);
+            this.lblMaximizar.TabIndex = 35;
+            this.lblMaximizar.Click += new System.EventHandler(this.btnMaximize_Click);
+            this.lblMaximizar.MouseEnter += new System.EventHandler(this.pibMaximizar_MouseHover);
+            this.lblMaximizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
+            // 
+            // lblMinimizar
+            // 
+            this.lblMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMinimizar.Location = new System.Drawing.Point(871, 0);
+            this.lblMinimizar.Name = "lblMinimizar";
+            this.lblMinimizar.Size = new System.Drawing.Size(50, 35);
+            this.lblMinimizar.TabIndex = 36;
+            this.lblMinimizar.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.lblMinimizar.MouseEnter += new System.EventHandler(this.pibMinimizar_MouseHover);
+            this.lblMinimizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
+            // 
+            // rjPanel21
+            // 
+            this.rjPanel21.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rjPanel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.rjPanel21.ForeColor = System.Drawing.Color.White;
+            this.rjPanel21.Location = new System.Drawing.Point(12, 95);
+            this.rjPanel21.Name = "rjPanel21";
+            this.rjPanel21.Size = new System.Drawing.Size(500, 650);
+            this.rjPanel21.TabIndex = 10;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(113, 438);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '●';
+            this.textBox2.Size = new System.Drawing.Size(306, 19);
+            this.textBox2.TabIndex = 2;
             // 
             // rjPanel1
             // 
             this.rjPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rjPanel1.BackColor = System.Drawing.Color.White;
             this.rjPanel1.BackgroundImage = global::Projeto_TCC.Properties.Resources.imagem_tela_login;
+            this.rjPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.rjPanel1.ForeColor = System.Drawing.Color.White;
-            this.rjPanel1.Location = new System.Drawing.Point(500, 100);
+            this.rjPanel1.Location = new System.Drawing.Point(510, 95);
             this.rjPanel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.rjPanel1.Name = "rjPanel1";
-            this.rjPanel1.Size = new System.Drawing.Size(400, 650);
+            this.rjPanel1.Size = new System.Drawing.Size(500, 650);
             this.rjPanel1.TabIndex = 0;
             // 
-            // rjPanel21
+            // rjLabel2
             // 
-            this.rjPanel21.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rjPanel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.rjPanel21.Controls.Add(this.label8);
-            this.rjPanel21.Controls.Add(this.textBox2);
-            this.rjPanel21.Controls.Add(this.textBox1);
-            this.rjPanel21.Controls.Add(this.linePanel2);
-            this.rjPanel21.Controls.Add(this.label3);
-            this.rjPanel21.Controls.Add(this.rjButton2);
-            this.rjPanel21.Controls.Add(this.linePanel1);
-            this.rjPanel21.Controls.Add(this.label2);
-            this.rjPanel21.Controls.Add(this.label6);
-            this.rjPanel21.Controls.Add(this.label1);
-            this.rjPanel21.Controls.Add(this.label7);
-            this.rjPanel21.Controls.Add(this.rjLabel2);
-            this.rjPanel21.Controls.Add(this.rjLabel1);
-            this.rjPanel21.ForeColor = System.Drawing.Color.White;
-            this.rjPanel21.Location = new System.Drawing.Point(100, 100);
-            this.rjPanel21.Name = "rjPanel21";
-            this.rjPanel21.Size = new System.Drawing.Size(400, 650);
-            this.rjPanel21.TabIndex = 1;
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Yellow;
-            this.label8.Location = new System.Drawing.Point(57, 415);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(287, 16);
-            this.label8.TabIndex = 44;
-            this.label8.Text = "As senhas não coincidem!";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label8.Visible = false;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(63, 350);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '●';
-            this.textBox2.Size = new System.Drawing.Size(286, 19);
-            this.textBox2.TabIndex = 3;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(63, 264);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(286, 19);
-            this.textBox1.TabIndex = 2;
-            // 
-            // linePanel2
-            // 
-            this.linePanel2.Location = new System.Drawing.Point(214, 548);
-            this.linePanel2.Name = "linePanel2";
-            this.linePanel2.Size = new System.Drawing.Size(135, 12);
-            this.linePanel2.TabIndex = 43;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 314);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 19);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Senha";
-            // 
-            // rjButton2
-            // 
-            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
-            this.rjButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rjButton2.FlatAppearance.BorderSize = 0;
-            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton2.ForeColor = System.Drawing.Color.White;
-            this.rjButton2.Location = new System.Drawing.Point(50, 468);
-            this.rjButton2.Name = "rjButton2";
-            this.rjButton2.Size = new System.Drawing.Size(300, 50);
-            this.rjButton2.TabIndex = 4;
-            this.rjButton2.Text = "Conectar";
-            this.rjButton2.UseVisualStyleBackColor = false;
-            this.rjButton2.Click += new System.EventHandler(this.rjButton2_Click);
-            // 
-            // linePanel1
-            // 
-            this.linePanel1.Location = new System.Drawing.Point(54, 548);
-            this.linePanel1.Name = "linePanel1";
-            this.linePanel1.Size = new System.Drawing.Size(135, 12);
-            this.linePanel1.TabIndex = 42;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 228);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 19);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "E-mail";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(188, 542);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(24, 15);
-            this.label6.TabIndex = 40;
-            this.label6.Text = "OU";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 99);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(332, 44);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Nome do Sistema";
+            this.rjLabel2.BackColor = System.Drawing.Color.White;
+            this.rjLabel2.ForeColor = System.Drawing.Color.Black;
+            this.rjLabel2.Location = new System.Drawing.Point(75, 334);
+            this.rjLabel2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.rjLabel2.Name = "rjLabel2";
+            this.rjLabel2.Size = new System.Drawing.Size(350, 50);
+            this.rjLabel2.TabIndex = 11;
             // 
             // label7
             // 
             this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(139, 576);
+            this.label7.Location = new System.Drawing.Point(189, 576);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(122, 19);
             this.label7.TabIndex = 41;
             this.label7.Text = "Cadastrar-se";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            this.label7.MouseLeave += new System.EventHandler(this.label7_MouseLeave);
-            this.label7.MouseHover += new System.EventHandler(this.label7_MouseHover);
+            this.label7.Click += new System.EventHandler(this.lblCadastro_Click);
+            this.label7.MouseLeave += new System.EventHandler(this.lblCadastro_MouseLeave);
+            this.label7.MouseHover += new System.EventHandler(this.lblCadastro_MouseHover);
             // 
-            // rjLabel2
+            // label6
             // 
-            this.rjLabel2.BackColor = System.Drawing.Color.White;
-            this.rjLabel2.ForeColor = System.Drawing.Color.Black;
-            this.rjLabel2.Location = new System.Drawing.Point(50, 334);
-            this.rjLabel2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.rjLabel2.Name = "rjLabel2";
-            this.rjLabel2.Size = new System.Drawing.Size(300, 50);
-            this.rjLabel2.TabIndex = 11;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(238, 542);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(24, 15);
+            this.label6.TabIndex = 40;
+            this.label6.Text = "OU";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // linePanel1
+            // 
+            this.linePanel1.Location = new System.Drawing.Point(92, 548);
+            this.linePanel1.Name = "linePanel1";
+            this.linePanel1.Size = new System.Drawing.Size(145, 12);
+            this.linePanel1.TabIndex = 42;
+            // 
+            // rjButton2
+            // 
+            this.rjButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.rjButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rjButton2.FlatAppearance.BorderSize = 0;
+            this.rjButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton2.ForeColor = System.Drawing.Color.White;
+            this.rjButton2.Location = new System.Drawing.Point(75, 468);
+            this.rjButton2.Name = "rjButton2";
+            this.rjButton2.Size = new System.Drawing.Size(350, 50);
+            this.rjButton2.TabIndex = 4;
+            this.rjButton2.Text = "Conectar";
+            this.rjButton2.UseVisualStyleBackColor = false;
+            this.rjButton2.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // linePanel2
+            // 
+            this.linePanel2.Location = new System.Drawing.Point(262, 548);
+            this.linePanel2.Name = "linePanel2";
+            this.linePanel2.Size = new System.Drawing.Size(145, 12);
+            this.linePanel2.TabIndex = 43;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Yellow;
+            this.label8.Location = new System.Drawing.Point(107, 415);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(287, 16);
+            this.label8.TabIndex = 44;
+            this.label8.Text = "As senhas não coincidem!";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.Visible = false;
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // rjLabel1
             // 
             this.rjLabel1.BackColor = System.Drawing.Color.White;
             this.rjLabel1.ForeColor = System.Drawing.Color.Black;
-            this.rjLabel1.Location = new System.Drawing.Point(50, 249);
+            this.rjLabel1.Location = new System.Drawing.Point(75, 249);
             this.rjLabel1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.rjLabel1.Name = "rjLabel1";
-            this.rjLabel1.Size = new System.Drawing.Size(300, 50);
+            this.rjLabel1.Size = new System.Drawing.Size(350, 50);
             this.rjLabel1.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(84, 99);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(332, 44);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Nome do Sistema";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(90, 318);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 19);
+            this.label3.TabIndex = 50;
+            this.label3.Text = "E-mail";
+            // 
+            // roundedLabel1
+            // 
+            this.roundedLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.roundedLabel1.BackColor = System.Drawing.Color.White;
+            this.roundedLabel1.ForeColor = System.Drawing.Color.White;
+            this.roundedLabel1.Location = new System.Drawing.Point(75, 337);
+            this.roundedLabel1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.roundedLabel1.Name = "roundedLabel1";
+            this.roundedLabel1.Size = new System.Drawing.Size(350, 50);
+            this.roundedLabel1.TabIndex = 47;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(113, 352);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(306, 19);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(88, 403);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 19);
+            this.label4.TabIndex = 51;
+            this.label4.Text = "Senha";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Yellow;
+            this.label5.Location = new System.Drawing.Point(107, 503);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(287, 16);
+            this.label5.TabIndex = 56;
+            this.label5.Text = "As senhas não coincidem!";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Visible = false;
+            // 
+            // linePanel3
+            // 
+            this.linePanel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.linePanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.linePanel3.Location = new System.Drawing.Point(262, 636);
+            this.linePanel3.Name = "linePanel3";
+            this.linePanel3.Size = new System.Drawing.Size(145, 12);
+            this.linePanel3.TabIndex = 55;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(75, 556);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(350, 50);
+            this.btnLogin.TabIndex = 3;
+            this.btnLogin.Text = "Conectar";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // linePanel4
+            // 
+            this.linePanel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.linePanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.linePanel4.Location = new System.Drawing.Point(92, 636);
+            this.linePanel4.Name = "linePanel4";
+            this.linePanel4.Size = new System.Drawing.Size(145, 12);
+            this.linePanel4.TabIndex = 54;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(238, 630);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(24, 15);
+            this.label9.TabIndex = 52;
+            this.label9.Text = "OU";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblCadastro
+            // 
+            this.lblCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.lblCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblCadastro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadastro.ForeColor = System.Drawing.Color.White;
+            this.lblCadastro.Location = new System.Drawing.Point(189, 664);
+            this.lblCadastro.Name = "lblCadastro";
+            this.lblCadastro.Size = new System.Drawing.Size(122, 19);
+            this.lblCadastro.TabIndex = 53;
+            this.lblCadastro.Text = "Cadastre-se";
+            this.lblCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCadastro.Click += new System.EventHandler(this.lblCadastro_Click);
+            this.lblCadastro.MouseEnter += new System.EventHandler(this.lblCadastro_MouseHover);
+            this.lblCadastro.MouseLeave += new System.EventHandler(this.lblCadastro_MouseLeave);
+            // 
+            // roundedLabel2
+            // 
+            this.roundedLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.roundedLabel2.BackColor = System.Drawing.Color.White;
+            this.roundedLabel2.ForeColor = System.Drawing.Color.Black;
+            this.roundedLabel2.Location = new System.Drawing.Point(75, 422);
+            this.roundedLabel2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.roundedLabel2.Name = "roundedLabel2";
+            this.roundedLabel2.Size = new System.Drawing.Size(350, 50);
+            this.roundedLabel2.TabIndex = 48;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.label2.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(84, 188);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(332, 44);
+            this.label2.TabIndex = 57;
+            this.label2.Text = "Nome do Sistema";
             // 
             // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.ClientSize = new System.Drawing.Size(984, 811);
-            this.Controls.Add(this.rjPanel21);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.ClientSize = new System.Drawing.Size(1020, 800);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.linePanel3);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.linePanel4);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblCadastro);
+            this.Controls.Add(this.pibMinimizar);
+            this.Controls.Add(this.pibFechar);
+            this.Controls.Add(this.pibMaximizar);
+            this.Controls.Add(this.labelClose);
+            this.Controls.Add(this.lblMaximizar);
+            this.Controls.Add(this.lblMinimizar);
             this.Controls.Add(this.rjPanel1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.roundedLabel1);
+            this.Controls.Add(this.roundedLabel2);
+            this.Controls.Add(this.rjPanel21);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "TelaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.rjPanel21.ResumeLayout(false);
-            this.rjPanel21.PerformLayout();
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TelaLogin_MouseDown);
+            ((System.ComponentModel.ISupportInitialize)(this.pibMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibFechar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pibMaximizar)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -238,18 +469,33 @@
 
         private RoundedRightPanel rjPanel1;
         private RoundedLeftPanel rjPanel21;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private RoundedLabel rjLabel2;
-        private RoundedLabel rjLabel1;
-        private LinePanel linePanel2;
-        private RoundedButton rjButton2;
-        private LinePanel linePanel1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox pibMinimizar;
+        private System.Windows.Forms.PictureBox pibFechar;
+        private System.Windows.Forms.PictureBox pibMaximizar;
+        private System.Windows.Forms.Label labelClose;
+        private System.Windows.Forms.Label lblMaximizar;
+        private System.Windows.Forms.Label lblMinimizar;
+        private RoundedLabel rjLabel2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private LinePanel linePanel1;
+        private RoundedButton rjButton2;
+        private LinePanel linePanel2;
         private System.Windows.Forms.Label label8;
+        private RoundedLabel rjLabel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private RoundedLabel roundedLabel1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private LinePanel linePanel3;
+        private RoundedButton btnLogin;
+        private LinePanel linePanel4;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblCadastro;
+        private RoundedLabel roundedLabel2;
+        private System.Windows.Forms.Label label2;
     }
 }
