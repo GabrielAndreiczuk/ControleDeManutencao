@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace Projeto_TCC
 {
@@ -19,6 +20,8 @@ namespace Projeto_TCC
         {
             InitializeComponent();
             AdicionarComponentes();
+
+            toolTip1.SetToolTip(label1, "Save changes");
         }
 
         string id = "", descricao = "", maquina = "", setor = "", duracao = "", tipo = "", custo = "", responsavel = "";
@@ -97,10 +100,15 @@ namespace Projeto_TCC
                 TextAlign = ContentAlignment.MiddleLeft,
                 Location = new System.Drawing.Point(0, yOffset),
                 MinimumSize = new System.Drawing.Size(180, 40),
-                AutoSize = true,
+                AutoSize = false,
                 Padding = new Padding(10),
                 BackColor = cor,
-                ForeColor = Color.White
+                ForeColor = Color.White,
+                Width = this.panDescricao.ClientSize.Width
+            };
+            //LINKA O REDIMENSIONAMENTO DA TELA COM O TAMANHO DA LABEL DESCRIÇÃO
+            this.panDescricao.Resize += (sender, e) => {
+                lblDescricao.Width = this.panDescricao.ClientSize.Width;
             };
             this.panDescricao.Controls.Add(lblDescricao);
 
@@ -110,7 +118,7 @@ namespace Projeto_TCC
                 TextAlign = ContentAlignment.MiddleLeft,
                 Location = new System.Drawing.Point(0, yOffset),
                 MinimumSize = new System.Drawing.Size(120, 40),
-                AutoSize = true,
+                Size = new System.Drawing.Size(130,40),
                 Padding = new Padding(10),
                 BackColor = cor,
                 ForeColor = Color.White
