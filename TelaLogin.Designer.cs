@@ -58,7 +58,7 @@
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(101, 343);
+            this.textBox2.Location = new System.Drawing.Point(113, 343);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '●';
             this.textBox2.Size = new System.Drawing.Size(306, 19);
@@ -120,7 +120,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(78, 223);
+            this.label3.Location = new System.Drawing.Point(90, 223);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 19);
             this.label3.TabIndex = 50;
@@ -130,7 +130,7 @@
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(101, 257);
+            this.textBox1.Location = new System.Drawing.Point(113, 257);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(306, 19);
             this.textBox1.TabIndex = 1;
@@ -141,7 +141,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(76, 308);
+            this.label4.Location = new System.Drawing.Point(88, 308);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 19);
             this.label4.TabIndex = 51;
@@ -153,7 +153,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Yellow;
-            this.label5.Location = new System.Drawing.Point(95, 408);
+            this.label5.Location = new System.Drawing.Point(107, 408);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(287, 16);
             this.label5.TabIndex = 56;
@@ -168,7 +168,7 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
             this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(226, 535);
+            this.label9.Location = new System.Drawing.Point(238, 535);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(24, 15);
             this.label9.TabIndex = 52;
@@ -182,7 +182,7 @@
             this.lblCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCadastro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastro.ForeColor = System.Drawing.Color.White;
-            this.lblCadastro.Location = new System.Drawing.Point(177, 569);
+            this.lblCadastro.Location = new System.Drawing.Point(189, 569);
             this.lblCadastro.Name = "lblCadastro";
             this.lblCadastro.Size = new System.Drawing.Size(122, 19);
             this.lblCadastro.TabIndex = 53;
@@ -199,7 +199,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
             this.label2.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(72, 93);
+            this.label2.Location = new System.Drawing.Point(84, 93);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(332, 44);
@@ -210,7 +210,7 @@
             // 
             this.linePanel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
-            this.linePanel3.Location = new System.Drawing.Point(250, 541);
+            this.linePanel3.Location = new System.Drawing.Point(262, 541);
             this.linePanel3.Name = "linePanel3";
             this.linePanel3.Size = new System.Drawing.Size(145, 12);
             this.linePanel3.TabIndex = 55;
@@ -223,7 +223,7 @@
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(63, 461);
+            this.btnLogin.Location = new System.Drawing.Point(75, 461);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(350, 50);
             this.btnLogin.TabIndex = 3;
@@ -235,7 +235,7 @@
             // 
             this.linePanel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linePanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
-            this.linePanel4.Location = new System.Drawing.Point(80, 541);
+            this.linePanel4.Location = new System.Drawing.Point(92, 541);
             this.linePanel4.Name = "linePanel4";
             this.linePanel4.Size = new System.Drawing.Size(145, 12);
             this.linePanel4.TabIndex = 54;
@@ -258,7 +258,7 @@
             this.roundedLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.roundedLabel1.BackColor = System.Drawing.Color.White;
             this.roundedLabel1.ForeColor = System.Drawing.Color.White;
-            this.roundedLabel1.Location = new System.Drawing.Point(63, 242);
+            this.roundedLabel1.Location = new System.Drawing.Point(75, 242);
             this.roundedLabel1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.roundedLabel1.Name = "roundedLabel1";
             this.roundedLabel1.Size = new System.Drawing.Size(350, 50);
@@ -269,7 +269,7 @@
             this.roundedLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.roundedLabel2.BackColor = System.Drawing.Color.White;
             this.roundedLabel2.ForeColor = System.Drawing.Color.Black;
-            this.roundedLabel2.Location = new System.Drawing.Point(63, 327);
+            this.roundedLabel2.Location = new System.Drawing.Point(75, 327);
             this.roundedLabel2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.roundedLabel2.Name = "roundedLabel2";
             this.roundedLabel2.Size = new System.Drawing.Size(350, 50);

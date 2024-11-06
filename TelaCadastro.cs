@@ -54,53 +54,51 @@ namespace Projeto_TCC
         }
 
         //EVENTOS DE HOOVER LINK PARA LOGIN
-        private void label7_MouseHover(object sender, EventArgs e)
+        private void lblLogin_MouseEnter(object sender, EventArgs e)
         {
-            this.label7.Font = new Font(this.label7.Font, FontStyle.Italic | FontStyle.Bold);
-            this.label7.ForeColor = Color.Yellow;
+            this.lblLogin.Font = new Font(this.lblLogin.Font, FontStyle.Italic | FontStyle.Bold);
+            this.lblLogin.ForeColor = Color.Yellow;
         }
-        private void label7_MouseLeave(object sender, EventArgs e)
+        private void lblLogin_MouseLeave(object sender, EventArgs e)
         {
-            this.label7.Font = new Font(this.label7.Font, FontStyle.Italic);
-            this.label7.ForeColor = Color.White;
+            this.lblLogin.Font = new Font(this.lblLogin.Font, FontStyle.Italic);
+            this.lblLogin.ForeColor = Color.White;
         }
 
         //VOLTA PARA A PÁGINA DE LOGIN
-        private void label7_Click(object sender, EventArgs e)
+        private void lblLogin_Click(object sender, EventArgs e)
         {
-            TelaLogin form = new TelaLogin();
-            this.Hide();
-            form.Closed += (s, args) => this.Close();
-            form.Show();
+            TelaInicial tela = new TelaInicial();
+            tela.IniciarLogin();
         }
 
         //VERIFICAÇÃO DE COMPATIBILIDADE DAS SENHAS
         private void checkPassword(object sender, EventArgs e)
         {
-            if (textBox4.Text != "")
+            if (txtSenhaConfirm.Text != "")
             {
-                string passowrd = textBox3.Text;
-                if (textBox4.Text != passowrd)
+                string passowrd = txtSenha.Text;
+                if (txtSenhaConfirm.Text != passowrd)
                 {
-                    label8.Show();
-                    label8.ForeColor = Color.Yellow;
-                    label8.Text = "As senhas não coincidem!";
+                    lblSenha.Show();
+                    lblSenha.ForeColor = Color.Yellow;
+                    lblSenha.Text = "As senhas não coincidem!";
                 }
                 else
                 {
-                    label8.Show();
-                    label8.ForeColor = Color.Lime;
-                    label8.Text = "Ótimo! As senhas estão iguais.";
+                    lblSenha.Show();
+                    lblSenha.ForeColor = Color.Lime;
+                    lblSenha.Text = "Ótimo! As senhas estão iguais.";
 
                 }
             }
         }
 
         //PROGRAMAÇÃO DO BOTÃO DE CADASTRO
-        private void rjButton1_Click(object sender, EventArgs e)
+        private void btnCadastrar_Click(object sender, EventArgs e)
         {
             //VERIFICAR SE TODOS OS CAMPOS ESTÃO PREENCHIDOS
-            if(textBox1.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "")
+            if(txtNome.Text == "" || txtEmail.Text == "" || txtSenha.Text == "" || txtSenhaConfirm.Text == "")
             {
                 FormAlert frm = new FormAlert();
                 //ADAPTAR NOTIFICAÇÕES
@@ -109,7 +107,7 @@ namespace Projeto_TCC
             }
 
             //VERFICAR SE O EMAIL ESTA NO FORMATO CORRETO
-            string TesteEmail = textBox2.Text;
+            string TesteEmail = txtEmail.Text;
             string pattern = @"^[^@\s]+@[^@\s]+\.(com)$";
             Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
             if (!regex.IsMatch(TesteEmail))
@@ -120,7 +118,7 @@ namespace Projeto_TCC
             }
             
             //VERIFICAR SE AS SENHAS SÃO IGUAIS
-            if(textBox3.Text != textBox4.Text)
+            if(txtSenha.Text != txtSenhaConfirm.Text)
             {
                 Alert("Senhas não coincidem!", FormAlert.enmType.Warning);
                 return;
@@ -138,9 +136,9 @@ namespace Projeto_TCC
                     //ABRE A CONEXÃO DO BANCO DE DADOS
                     connection.Open();
 
-                    string nome = textBox1.Text;
-                    string email = textBox2.Text;                
-                    string senha = textBox3.Text;
+                    string nome = txtNome.Text;
+                    string email = txtEmail.Text;                
+                    string senha = txtSenha.Text;
 
                     //CONSULTA PARA OBTER A LISTA DE EMAILS CADASTRADOS
                     string emailQuery = "SELECT Email FROM funcionario";
@@ -154,7 +152,7 @@ namespace Projeto_TCC
                             while (reader.Read())
                             {
                                 string emailData = reader["Email"].ToString();
-                                if (emailData == textBox2.Text)
+                                if (emailData == txtEmail.Text)
                                 {
                                     cadastrado = true;
                                 }

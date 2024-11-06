@@ -41,7 +41,7 @@ namespace Projeto_TCC
         }
 
         //MÉTODO QUE INICIAR A TELA DE LOGIN NA TELA INICIAL
-        private void IniciarLogin()
+        public void IniciarLogin()
         {
             try
             {
@@ -62,6 +62,26 @@ namespace Projeto_TCC
                 MessageBox.Show($"{ex}");
             }
             
+        }
+        public void IniciarCadastro()
+        {
+            try
+            {
+                TelaInicial tela = Application.OpenForms["TelaInicial"] as TelaInicial;
+                tela.panelInfo.Controls.Clear();
+
+                TelaCadastro cadastro = new TelaCadastro();
+                cadastro.TopLevel = false;
+                cadastro.Dock = DockStyle.Fill;
+                cadastro.FormBorderStyle = FormBorderStyle.None;
+
+                tela.panelInfo.Controls.Add(cadastro);
+                cadastro.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex}");
+            }
         }
 
         //EVENTOS BOTÕES CONTROLES DE TELA - FECHAR

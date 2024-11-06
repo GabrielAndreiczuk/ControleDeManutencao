@@ -41,10 +41,8 @@ namespace Projeto_TCC
         }
         private void lblCadastro_Click(object sender, EventArgs e)
         {
-            TelaCadastro form = new TelaCadastro();
-            this.Hide();
-            form.Closed += (s, args) => this.Close();
-            form.Show();
+            TelaInicial inicial = new TelaInicial();
+            inicial.IniciarCadastro();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
