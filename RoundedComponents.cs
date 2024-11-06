@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Projeto_TCC
 {
@@ -121,6 +122,19 @@ namespace Projeto_TCC
         public RoundedLabel() : base()
         {
             this.Size = new Size(300, 50);
+            this.BackColor = Color.White;
+        }
+    }
+
+    // PAINEL COM ARREDONDAMENTO ESQUERDO E DIREITO
+    public class RoundedPanel : RoundedComponentBase
+    {
+        public RoundedPanel() : base()
+        {
+            this.Size = new Size(1000, 650);
+            //PASSA COMANDO DE ARREDONDAR APENAS AS BORDAS ESQUERDAS
+            this.roundedCorners = new bool[] { true, true, true, true };
+            this.borderRadius = 50;
             this.BackColor = Color.White;
         }
     }
