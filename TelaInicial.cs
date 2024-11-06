@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Org.BouncyCastle.Tls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +17,51 @@ namespace Projeto_TCC
         public TelaInicial()
         {
             InitializeComponent();
+
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+        }
+        private void TelaInicial_Load(object sender, EventArgs e)
+        {
+            IniciarLogin();
+        }
+
+        //CÓDIGO PARA MOVIMENTAÇÃO E REDIMENSIONAMENTO DA TELA
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        //MÉTODO QUE PASSA A INFORMAÇÃO DE MOVIMENTO DA TELA
+        private void TelaInicial_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        //MÉTODO QUE INICIAR A TELA DE LOGIN NA TELA INICIAL
+        private void IniciarLogin()
+        {
+            try
+            {
+                TelaInicial tela = Application.OpenForms["TelaInicial"] as TelaInicial;
+                tela.panelInfo.Controls.Clear();
+
+                TelaLogin login = new TelaLogin();
+                login.TopLevel = false;
+                login.Dock = DockStyle.Fill;
+                login.FormBorderStyle = FormBorderStyle.None;
+
+                tela.panelInfo.Controls.Add(login);
+                login.Show();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex}");
+            }
+            
         }
 
         //EVENTOS BOTÕES CONTROLES DE TELA - FECHAR
@@ -66,5 +113,6 @@ namespace Projeto_TCC
             lblMinimizar.BackColor = Color.FromArgb(0, 51, 102);
         }
 
+        
     }
 }

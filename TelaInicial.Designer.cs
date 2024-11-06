@@ -29,27 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaInicial));
-            this.roundedPanel1 = new Projeto_TCC.RoundedPanel();
             this.pibMinimizar = new System.Windows.Forms.PictureBox();
             this.pibFechar = new System.Windows.Forms.PictureBox();
             this.pibMaximizar = new System.Windows.Forms.PictureBox();
             this.labelClose = new System.Windows.Forms.Label();
             this.lblMaximizar = new System.Windows.Forms.Label();
             this.lblMinimizar = new System.Windows.Forms.Label();
+            this.panelInfo = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pibMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibMaximizar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // roundedPanel1
-            // 
-            this.roundedPanel1.BackColor = System.Drawing.Color.White;
-            this.roundedPanel1.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel1.Location = new System.Drawing.Point(10, 50);
-            this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.Size = new System.Drawing.Size(1000, 650);
-            this.roundedPanel1.TabIndex = 0;
-            this.roundedPanel1.Text = "roundedPanel1";
             // 
             // pibMinimizar
             // 
@@ -129,19 +119,27 @@
             this.lblMinimizar.MouseEnter += new System.EventHandler(this.pibMinimizar_MouseHover);
             this.lblMinimizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
             // 
+            // panelInfo
+            // 
+            this.panelInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelInfo.Location = new System.Drawing.Point(10, 50);
+            this.panelInfo.Name = "panelInfo";
+            this.panelInfo.Size = new System.Drawing.Size(1000, 650);
+            this.panelInfo.TabIndex = 37;
+            // 
             // TelaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(1020, 700);
+            this.ClientSize = new System.Drawing.Size(1020, 710);
+            this.Controls.Add(this.panelInfo);
             this.Controls.Add(this.pibMinimizar);
             this.Controls.Add(this.pibFechar);
             this.Controls.Add(this.pibMaximizar);
             this.Controls.Add(this.labelClose);
             this.Controls.Add(this.lblMaximizar);
             this.Controls.Add(this.lblMinimizar);
-            this.Controls.Add(this.roundedPanel1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -149,6 +147,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.TelaInicial_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TelaInicial_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pibMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibMaximizar)).EndInit();
@@ -157,13 +157,12 @@
         }
 
         #endregion
-
-        private RoundedPanel roundedPanel1;
         private System.Windows.Forms.PictureBox pibMinimizar;
         private System.Windows.Forms.PictureBox pibFechar;
         private System.Windows.Forms.PictureBox pibMaximizar;
         private System.Windows.Forms.Label labelClose;
         private System.Windows.Forms.Label lblMaximizar;
         private System.Windows.Forms.Label lblMinimizar;
+        private System.Windows.Forms.Panel panelInfo;
     }
 }
