@@ -40,13 +40,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.lblCadastro = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.linePanel3 = new Projeto_TCC.LinePanel();
             this.btnLogin = new Projeto_TCC.RoundedButton();
             this.linePanel4 = new Projeto_TCC.LinePanel();
-            this.rjPanel1 = new Projeto_TCC.RoundedRightPanel();
             this.roundedLabel1 = new Projeto_TCC.RoundedLabel();
             this.roundedLabel2 = new Projeto_TCC.RoundedLabel();
             this.rjPanel21 = new Projeto_TCC.RoundedLeftPanel();
@@ -55,8 +52,11 @@
             this.rjButton2 = new Projeto_TCC.RoundedButton();
             this.linePanel2 = new Projeto_TCC.LinePanel();
             this.rjLabel1 = new Projeto_TCC.RoundedLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rjPanel1 = new Projeto_TCC.RoundedRightPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox2
@@ -213,38 +213,16 @@
             this.label2.TabIndex = 57;
             this.label2.Text = "Bem vindo de volta!";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::Projeto_TCC.Properties.Resources.user_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(87, 257);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 58;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = global::Projeto_TCC.Properties.Resources.password_icon;
-            this.pictureBox2.Location = new System.Drawing.Point(86, 341);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 59;
-            this.pictureBox2.TabStop = false;
-            // 
             // label10
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
             this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(64, 117);
+            this.label10.Location = new System.Drawing.Point(68, 116);
             this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(372, 61);
+            this.label10.Size = new System.Drawing.Size(372, 45);
             this.label10.TabIndex = 60;
             this.label10.Text = "Insiria suas informações abaixo para fazer login";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -282,19 +260,6 @@
             this.linePanel4.Name = "linePanel4";
             this.linePanel4.Size = new System.Drawing.Size(145, 12);
             this.linePanel4.TabIndex = 54;
-            // 
-            // rjPanel1
-            // 
-            this.rjPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rjPanel1.BackColor = System.Drawing.Color.White;
-            this.rjPanel1.BackgroundImage = global::Projeto_TCC.Properties.Resources.imagem_tela_login;
-            this.rjPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.rjPanel1.ForeColor = System.Drawing.Color.White;
-            this.rjPanel1.Location = new System.Drawing.Point(498, 0);
-            this.rjPanel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.rjPanel1.Name = "rjPanel1";
-            this.rjPanel1.Size = new System.Drawing.Size(500, 650);
-            this.rjPanel1.TabIndex = 0;
             // 
             // roundedLabel1
             // 
@@ -378,6 +343,41 @@
             this.rjLabel1.Size = new System.Drawing.Size(350, 50);
             this.rjLabel1.TabIndex = 10;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::Projeto_TCC.Properties.Resources.password_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(86, 341);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 59;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::Projeto_TCC.Properties.Resources.user_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(87, 257);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 58;
+            this.pictureBox1.TabStop = false;
+            // 
+            // rjPanel1
+            // 
+            this.rjPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rjPanel1.BackColor = System.Drawing.Color.White;
+            this.rjPanel1.BackgroundImage = global::Projeto_TCC.Properties.Resources.imagem_tela_login;
+            this.rjPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.rjPanel1.ForeColor = System.Drawing.Color.White;
+            this.rjPanel1.Location = new System.Drawing.Point(498, 0);
+            this.rjPanel1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.rjPanel1.Name = "rjPanel1";
+            this.rjPanel1.Size = new System.Drawing.Size(500, 650);
+            this.rjPanel1.TabIndex = 0;
+            // 
             // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -408,8 +408,8 @@
             this.Name = "TelaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
