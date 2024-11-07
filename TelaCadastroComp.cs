@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Projeto_TCC
 {
@@ -135,20 +136,33 @@ namespace Projeto_TCC
                 {
                     connection.Open();
 
+                    string nome = UsuarioSessao.UsuarioAtual.Nome, 
+                           email = UsuarioSessao.UsuarioAtual.Email, 
+                           senha = UsuarioSessao.UsuarioAtual.Senha;
+
                     int setor = cmbSetor.SelectedIndex, cargo = cmbCargo.SelectedIndex;
                     string contato = txtContato.Text;
 
-                    string updateQuery = "UPDATE funcionario SET Setor = @Setor, Cargo = @Cargo, Contato = @Contato WHERE ID_Funcionario = (select max(ID_Funcionario) from funcionario)";
+                    //string updateQuery = "UPDATE funcionario SET Setor = @Setor, Cargo = @Cargo, Contato = @Contato WHERE ID_Funcionario = (select max(ID_Funcionario) from funcionario)";
+                    string insertQuery = "INSERT INTO funcionario (Nome, Email, Senha,Setor,Cargo,Contato) VALUES (@Nome, @Email, @Senha,@Setor,@Cargo,@Contato)";
+
                     int id = 0;
 
-                    using (MySqlCommand command = new MySqlCommand(updateQuery, connection))
+                    using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
                     {
+                        command.Parameters.AddWithValue("@Nome", nome);
+                        command.Parameters.AddWithValue("@Email", email);
+                        command.Parameters.AddWithValue("@Senha", senha);
+
                         command.Parameters.AddWithValue("@Setor",setor);
                         command.Parameters.AddWithValue("@Cargo",cargo);
                         command.Parameters.AddWithValue("@Contato",contato);
 
                         command.ExecuteNonQuery();      
                     }
+
+                    //LIMPA DADOS DE SENHA DA CLASS USUÁRIO
+                    UsuarioSessao.UsuarioAtual.Senha = "";
 
                     //CRIAR UMA NOVA CONSULTA PARA RECEBER O ID DO USUÁRIO QUE ESTÁ SENDO CRIADO
                     string selectQuery = "SELECT ID_Funcionario FROM funcionario WHERE ID_Funcionario = (select max(ID_Funcionario) from funcionario)";

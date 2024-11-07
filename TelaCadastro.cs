@@ -168,8 +168,10 @@ namespace Projeto_TCC
                     //DEFINE ATRIBUTOS DO USUÁRIO LOGADO NO SISTEMA
                     UsuarioSessao.UsuarioAtual = new Usuario();
                     UsuarioSessao.UsuarioAtual.Nome = nome;
-                    
+                    UsuarioSessao.UsuarioAtual.Email = email;
+                    UsuarioSessao.UsuarioAtual.Senha = senha;
 
+                    /*
                     //DEFINE A CONSULTA SQL PARA INSERIR UM NOVO CLIENTE NA TABELA PASSANDO PARÂMETROS
                     string insertQuery = "INSERT INTO funcionario (Nome, Email, Senha) VALUES (@Nome, @Email, @Senha)";
 
@@ -184,12 +186,12 @@ namespace Projeto_TCC
 
                         //EXECUTA O COMANDO PARA INSERIR OS DADOS NO BANCO
                         command.ExecuteNonQuery();  //USADO PARA COMANDOS QUE NÃO RETORNAM RESULTADOS
-
+                    */
 
                         //DIRECIONA PARA A TELA DE COMPLEMENTO DE CADASTRO
                         TelaInicial tela = new TelaInicial();
                         tela.IniciarCadastroComp();
-                    }
+                    //}
                 }
                 catch (Exception ex)
                 {
