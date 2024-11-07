@@ -93,6 +93,16 @@ namespace Projeto_TCC.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap email_icon {
+            get {
+                object obj = ResourceManager.GetObject("email-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap erro {
             get {
                 object obj = ResourceManager.GetObject("erro", resourceCulture);
@@ -313,9 +323,29 @@ namespace Projeto_TCC.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap password_icon {
+            get {
+                object obj = ResourceManager.GetObject("password-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sucesso {
             get {
                 object obj = ResourceManager.GetObject("sucesso", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_icon {
+            get {
+                object obj = ResourceManager.GetObject("user-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

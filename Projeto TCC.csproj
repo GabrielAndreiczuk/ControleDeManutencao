@@ -317,5 +317,14 @@
   <ItemGroup>
     <None Include="Resources\imagem-cadastro-comp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

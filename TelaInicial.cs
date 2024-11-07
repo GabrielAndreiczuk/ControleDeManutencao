@@ -103,6 +103,23 @@ namespace Projeto_TCC
                 MessageBox.Show($"{ex}");
             }
         }
+        public void IniciarMenu()
+        {         
+            try
+            {
+                TelaInicial tela = Application.OpenForms["TelaInicial"] as TelaInicial;
+                tela.panelInfo.Controls.Clear();
+
+                TelaMenu menu = new TelaMenu();
+                tela.Hide();
+                menu.Closed += (s, args) => tela.Close();
+                menu.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex}");
+            }
+        }
 
         //EVENTOS BOTÕES CONTROLES DE TELA - FECHAR
         private void btnClose_Click(object sender, EventArgs e)

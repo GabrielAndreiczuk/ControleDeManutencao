@@ -36,28 +36,34 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblSenha = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblCadastro = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.linePanel3 = new Projeto_TCC.LinePanel();
             this.btnLogin = new Projeto_TCC.RoundedButton();
             this.linePanel4 = new Projeto_TCC.LinePanel();
             this.rjPanel1 = new Projeto_TCC.RoundedRightPanel();
             this.roundedLabel1 = new Projeto_TCC.RoundedLabel();
             this.roundedLabel2 = new Projeto_TCC.RoundedLabel();
+            this.rjPanel21 = new Projeto_TCC.RoundedLeftPanel();
             this.rjLabel2 = new Projeto_TCC.RoundedLabel();
             this.linePanel1 = new Projeto_TCC.LinePanel();
             this.rjButton2 = new Projeto_TCC.RoundedButton();
             this.linePanel2 = new Projeto_TCC.LinePanel();
             this.rjLabel1 = new Projeto_TCC.RoundedLabel();
-            this.rjPanel21 = new Projeto_TCC.RoundedLeftPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.textBox2.Location = new System.Drawing.Point(113, 343);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '●';
@@ -120,7 +126,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(90, 223);
+            this.label3.Location = new System.Drawing.Point(81, 220);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 19);
             this.label3.TabIndex = 50;
@@ -130,7 +136,8 @@
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(113, 257);
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.textBox1.Location = new System.Drawing.Point(113, 258);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(306, 19);
             this.textBox1.TabIndex = 1;
@@ -141,25 +148,25 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(88, 308);
+            this.label4.Location = new System.Drawing.Point(81, 306);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 19);
             this.label4.TabIndex = 51;
             this.label4.Text = "Senha";
             // 
-            // label5
+            // lblSenha
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
-            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Yellow;
-            this.label5.Location = new System.Drawing.Point(107, 408);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(287, 16);
-            this.label5.TabIndex = 56;
-            this.label5.Text = "As senhas não coincidem!";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Visible = false;
+            this.lblSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.lblSenha.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.ForeColor = System.Drawing.Color.Yellow;
+            this.lblSenha.Location = new System.Drawing.Point(107, 408);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(287, 16);
+            this.lblSenha.TabIndex = 56;
+            this.lblSenha.Text = "As senhas não coincidem!";
+            this.lblSenha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSenha.Visible = false;
             // 
             // label9
             // 
@@ -198,13 +205,49 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
             this.label2.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(84, 93);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.label2.Location = new System.Drawing.Point(64, 72);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(332, 44);
+            this.label2.Size = new System.Drawing.Size(372, 44);
             this.label2.TabIndex = 57;
-            this.label2.Text = "Nome do Sistema";
+            this.label2.Text = "Bem vindo de volta!";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::Projeto_TCC.Properties.Resources.user_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(87, 257);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 58;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::Projeto_TCC.Properties.Resources.password_icon;
+            this.pictureBox2.Location = new System.Drawing.Point(86, 341);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 59;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(64, 117);
+            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(372, 61);
+            this.label10.TabIndex = 60;
+            this.label10.Text = "Insiria suas informações abaixo para fazer login";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // linePanel3
             // 
@@ -257,6 +300,7 @@
             // 
             this.roundedLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.roundedLabel1.BackColor = System.Drawing.Color.White;
+            this.roundedLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.roundedLabel1.ForeColor = System.Drawing.Color.White;
             this.roundedLabel1.Location = new System.Drawing.Point(75, 242);
             this.roundedLabel1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -274,6 +318,16 @@
             this.roundedLabel2.Name = "roundedLabel2";
             this.roundedLabel2.Size = new System.Drawing.Size(350, 50);
             this.roundedLabel2.TabIndex = 48;
+            // 
+            // rjPanel21
+            // 
+            this.rjPanel21.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rjPanel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.rjPanel21.ForeColor = System.Drawing.Color.White;
+            this.rjPanel21.Location = new System.Drawing.Point(0, 0);
+            this.rjPanel21.Name = "rjPanel21";
+            this.rjPanel21.Size = new System.Drawing.Size(500, 650);
+            this.rjPanel21.TabIndex = 10;
             // 
             // rjLabel2
             // 
@@ -324,27 +378,20 @@
             this.rjLabel1.Size = new System.Drawing.Size(350, 50);
             this.rjLabel1.TabIndex = 10;
             // 
-            // rjPanel21
-            // 
-            this.rjPanel21.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.rjPanel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
-            this.rjPanel21.ForeColor = System.Drawing.Color.White;
-            this.rjPanel21.Location = new System.Drawing.Point(0, 0);
-            this.rjPanel21.Name = "rjPanel21";
-            this.rjPanel21.Size = new System.Drawing.Size(500, 650);
-            this.rjPanel21.TabIndex = 10;
-            // 
             // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(1000, 650);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.linePanel3);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.linePanel4);
@@ -361,6 +408,8 @@
             this.Name = "TelaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,7 +432,7 @@
         private RoundedLabel roundedLabel1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblSenha;
         private LinePanel linePanel3;
         private RoundedButton btnLogin;
         private LinePanel linePanel4;
@@ -392,5 +441,8 @@
         private RoundedLabel roundedLabel2;
         private System.Windows.Forms.Label label2;
         private RoundedLeftPanel rjPanel21;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label10;
     }
 }

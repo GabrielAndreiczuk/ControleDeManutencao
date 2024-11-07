@@ -87,7 +87,7 @@ namespace Projeto_TCC
                 else
                 {
                     lblSenha.Show();
-                    lblSenha.ForeColor = Color.Lime;
+                    lblSenha.ForeColor = Color.Chartreuse;
                     lblSenha.Text = "Ótimo! As senhas estão iguais.";
 
                 }

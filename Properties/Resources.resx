@@ -118,41 +118,29 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Imagem-tela-cadastro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Imagem-tela-cadastro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="6310507" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\6310507.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone-configuracoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone-configuracoes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone-ordens-aberto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone-ordens-aberto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="atenção" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\atenção.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="user-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="19197945" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\19197945.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone-indicativos-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-indicativos-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imagem-cadastro-comp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imagem-cadastro-comp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icone-home-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone-home-22.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone-serviço" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone-serviço.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone-maximizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone-maximizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone-indicativos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone-indicativos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone-home" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone-home1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone-indicativos-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone-indicativos-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone-minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone-minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imagem-tela-login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imagem-tela-login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,40 +148,61 @@
   <data name="sucesso" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sucesso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="imagem-cadastro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imagem-cadastro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="erro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\erro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fechar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fechar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icone-configuracoes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-configuracoes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icone-historico" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone-historico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icone-serviço" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-serviço.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Imagem-tela-cadastro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Imagem-tela-cadastro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="password-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\password-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icone-recolher" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone-recolher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icone-minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icone-indicativos-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone-indicativos-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icone-ordens-aberto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-ordens-aberto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icone-fechar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone-fechar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imagem-cadastro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imagem-cadastro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icone-maximizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-maximizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="19197945" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\19197945.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="imagem-tela-cadastro-final" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imagem-tela-cadastro-final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icone-historico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-historico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icone-historico-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone-historico-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imagem-cadastro-comp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imagem-cadastro-comp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icone-recolher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-recolher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone-indicativos-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-indicativos-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone-indicativos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-indicativos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imagem-tela-cadastro-final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imagem-tela-cadastro-final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fechar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fechar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone-home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-home1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="email-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\email-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

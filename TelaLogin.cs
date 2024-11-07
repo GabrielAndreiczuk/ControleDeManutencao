@@ -106,8 +106,8 @@ namespace Projeto_TCC
                             }
                             else
                             {
-                                label8.Show();
-                                label8.Text = "Usuário ou senha incorreta!";
+                                lblSenha.Show();
+                                lblSenha.Text = "Usuário ou senha incorreta!";
                             }
                             
                         }
