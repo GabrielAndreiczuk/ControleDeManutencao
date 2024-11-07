@@ -187,10 +187,8 @@ namespace Projeto_TCC
 
 
                         //DIRECIONA PARA A TELA DE COMPLEMENTO DE CADASTRO
-                        TelaCadastroComp form = new TelaCadastroComp();
-                        this.Hide();
-                        form.Closed += (s, args) => this.Close();
-                        form.Show();                     
+                        TelaInicial tela = new TelaInicial();
+                        tela.IniciarCadastroComp();
                     }
                 }
                 catch (Exception ex)

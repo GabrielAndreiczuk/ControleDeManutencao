@@ -263,6 +263,16 @@ namespace Projeto_TCC.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap imagem_cadastro_comp {
+            get {
+                object obj = ResourceManager.GetObject("imagem-cadastro-comp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Imagem_tela_cadastro {
             get {
                 object obj = ResourceManager.GetObject("Imagem-tela-cadastro", resourceCulture);

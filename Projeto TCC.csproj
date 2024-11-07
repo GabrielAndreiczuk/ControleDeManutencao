@@ -314,5 +314,8 @@
   <ItemGroup>
     <None Include="Resources\imagem-cadastro.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagem-cadastro-comp.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

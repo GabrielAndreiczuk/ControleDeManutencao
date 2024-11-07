@@ -83,6 +83,26 @@ namespace Projeto_TCC
                 MessageBox.Show($"{ex}");
             }
         }
+        public void IniciarCadastroComp()
+        {
+            try
+            {
+                TelaInicial tela = Application.OpenForms["TelaInicial"] as TelaInicial;
+                tela.panelInfo.Controls.Clear();
+
+                TelaCadastroComp cadastro = new TelaCadastroComp();
+                cadastro.TopLevel = false;
+                cadastro.Dock = DockStyle.Fill;
+                cadastro.FormBorderStyle = FormBorderStyle.None;
+
+                tela.panelInfo.Controls.Add(cadastro);
+                cadastro.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex}");
+            }
+        }
 
         //EVENTOS BOTÕES CONTROLES DE TELA - FECHAR
         private void btnClose_Click(object sender, EventArgs e)
