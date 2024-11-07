@@ -99,10 +99,8 @@ namespace Projeto_TCC
 
                                 Alert("Login efetuado com sucesso!", FormAlert.enmType.Success);
 
-                                TelaMenu form = new TelaMenu();
-                                this.Hide();
-                                form.Closed += (s, args) => this.Close();
-                                form.Show();
+                                TelaInicial tela = new TelaInicial();
+                                tela.IniciarMenu();
                             }
                             else
                             {
