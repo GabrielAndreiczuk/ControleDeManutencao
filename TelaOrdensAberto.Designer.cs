@@ -89,10 +89,10 @@
             this.panDescricao.Controls.Add(this.label7);
             this.panDescricao.Controls.Add(this.label15);
             this.panDescricao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panDescricao.Location = new System.Drawing.Point(560, 0);
-            this.panDescricao.MinimumSize = new System.Drawing.Size(100, 550);
+            this.panDescricao.Location = new System.Drawing.Point(600, 0);
+            this.panDescricao.MinimumSize = new System.Drawing.Size(150, 550);
             this.panDescricao.Name = "panDescricao";
-            this.panDescricao.Size = new System.Drawing.Size(190, 550);
+            this.panDescricao.Size = new System.Drawing.Size(150, 550);
             this.panDescricao.TabIndex = 26;
             // 
             // label7
@@ -101,7 +101,7 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Top;
             this.label7.Location = new System.Drawing.Point(0, 48);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(190, 2);
+            this.label7.Size = new System.Drawing.Size(150, 2);
             this.label7.TabIndex = 6;
             // 
             // label15
@@ -112,23 +112,21 @@
             this.label15.Location = new System.Drawing.Point(0, 0);
             this.label15.Name = "label15";
             this.label15.Padding = new System.Windows.Forms.Padding(5);
-            this.label15.Size = new System.Drawing.Size(190, 48);
+            this.label15.Size = new System.Drawing.Size(150, 48);
             this.label15.TabIndex = 5;
             this.label15.Text = "Descrição";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panMaquina
             // 
-            this.panMaquina.AutoSize = true;
             this.panMaquina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.panMaquina.Controls.Add(this.label5);
             this.panMaquina.Controls.Add(this.label13);
             this.panMaquina.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panMaquina.Location = new System.Drawing.Point(440, 0);
-            this.panMaquina.MaximumSize = new System.Drawing.Size(200, 0);
-            this.panMaquina.MinimumSize = new System.Drawing.Size(120, 550);
+            this.panMaquina.Location = new System.Drawing.Point(465, 0);
+            this.panMaquina.MinimumSize = new System.Drawing.Size(135, 550);
             this.panMaquina.Name = "panMaquina";
-            this.panMaquina.Size = new System.Drawing.Size(120, 550);
+            this.panMaquina.Size = new System.Drawing.Size(135, 550);
             this.panMaquina.TabIndex = 25;
             // 
             // label5
@@ -137,7 +135,7 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Top;
             this.label5.Location = new System.Drawing.Point(0, 48);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 2);
+            this.label5.Size = new System.Drawing.Size(135, 2);
             this.label5.TabIndex = 6;
             // 
             // label13
@@ -148,23 +146,21 @@
             this.label13.Location = new System.Drawing.Point(0, 0);
             this.label13.Name = "label13";
             this.label13.Padding = new System.Windows.Forms.Padding(5);
-            this.label13.Size = new System.Drawing.Size(120, 48);
+            this.label13.Size = new System.Drawing.Size(135, 48);
             this.label13.TabIndex = 5;
             this.label13.Text = "Máquina";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panSetor
             // 
-            this.panSetor.AutoSize = true;
             this.panSetor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.panSetor.Controls.Add(this.label4);
             this.panSetor.Controls.Add(this.label12);
             this.panSetor.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panSetor.Location = new System.Drawing.Point(320, 0);
-            this.panSetor.MaximumSize = new System.Drawing.Size(200, 0);
-            this.panSetor.MinimumSize = new System.Drawing.Size(120, 550);
+            this.panSetor.Location = new System.Drawing.Point(330, 0);
+            this.panSetor.MinimumSize = new System.Drawing.Size(135, 550);
             this.panSetor.Name = "panSetor";
-            this.panSetor.Size = new System.Drawing.Size(120, 550);
+            this.panSetor.Size = new System.Drawing.Size(135, 550);
             this.panSetor.TabIndex = 24;
             // 
             // label4
@@ -173,7 +169,7 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
             this.label4.Location = new System.Drawing.Point(0, 48);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 2);
+            this.label4.Size = new System.Drawing.Size(135, 2);
             this.label4.TabIndex = 6;
             // 
             // label12
@@ -184,23 +180,21 @@
             this.label12.Location = new System.Drawing.Point(0, 0);
             this.label12.Name = "label12";
             this.label12.Padding = new System.Windows.Forms.Padding(5);
-            this.label12.Size = new System.Drawing.Size(120, 48);
+            this.label12.Size = new System.Drawing.Size(135, 48);
             this.label12.TabIndex = 5;
             this.label12.Text = "Setor";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panSolicitante
             // 
-            this.panSolicitante.AutoSize = true;
             this.panSolicitante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.panSolicitante.Controls.Add(this.label3);
             this.panSolicitante.Controls.Add(this.label11);
             this.panSolicitante.Dock = System.Windows.Forms.DockStyle.Left;
             this.panSolicitante.Location = new System.Drawing.Point(200, 0);
-            this.panSolicitante.MaximumSize = new System.Drawing.Size(200, 0);
-            this.panSolicitante.MinimumSize = new System.Drawing.Size(120, 550);
+            this.panSolicitante.MinimumSize = new System.Drawing.Size(130, 550);
             this.panSolicitante.Name = "panSolicitante";
-            this.panSolicitante.Size = new System.Drawing.Size(120, 550);
+            this.panSolicitante.Size = new System.Drawing.Size(130, 550);
             this.panSolicitante.TabIndex = 23;
             // 
             // label3
@@ -209,7 +203,7 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Location = new System.Drawing.Point(0, 48);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 2);
+            this.label3.Size = new System.Drawing.Size(130, 2);
             this.label3.TabIndex = 8;
             // 
             // label11
@@ -220,7 +214,7 @@
             this.label11.Location = new System.Drawing.Point(0, 0);
             this.label11.Name = "label11";
             this.label11.Padding = new System.Windows.Forms.Padding(5);
-            this.label11.Size = new System.Drawing.Size(120, 48);
+            this.label11.Size = new System.Drawing.Size(130, 48);
             this.label11.TabIndex = 7;
             this.label11.Text = "Solicitante";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -302,7 +296,6 @@
             this.panStatus.Controls.Add(this.label18);
             this.panStatus.Dock = System.Windows.Forms.DockStyle.Right;
             this.panStatus.Location = new System.Drawing.Point(750, 0);
-            this.panStatus.MaximumSize = new System.Drawing.Size(140, 0);
             this.panStatus.MinimumSize = new System.Drawing.Size(140, 550);
             this.panStatus.Name = "panStatus";
             this.panStatus.Size = new System.Drawing.Size(140, 550);
@@ -337,7 +330,6 @@
             this.panBotoes.Controls.Add(this.label16);
             this.panBotoes.Dock = System.Windows.Forms.DockStyle.Right;
             this.panBotoes.Location = new System.Drawing.Point(890, 0);
-            this.panBotoes.MaximumSize = new System.Drawing.Size(110, 0);
             this.panBotoes.MinimumSize = new System.Drawing.Size(110, 550);
             this.panBotoes.Name = "panBotoes";
             this.panBotoes.Size = new System.Drawing.Size(110, 550);
@@ -385,7 +377,6 @@
             this.Name = "TelaOrdensAberto";
             this.Text = "Form1";
             this.panMenu.ResumeLayout(false);
-            this.panMenu.PerformLayout();
             this.panDescricao.ResumeLayout(false);
             this.panMaquina.ResumeLayout(false);
             this.panSetor.ResumeLayout(false);

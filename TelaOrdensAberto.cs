@@ -107,50 +107,59 @@ namespace Projeto_TCC
                 Text = $"{solicitante}",
                 TextAlign = ContentAlignment.MiddleLeft,
                 Location = new System.Drawing.Point(0, yOffset),
-                MinimumSize = new System.Drawing.Size(100, 40),
-                AutoSize = true,
+                Size = new System.Drawing.Size(130, 40),
+                AutoSize = false,
                 Padding = new Padding(10),
                 BackColor = cor,
                 ForeColor = Color.White
             };
+            lblSolicitante.Text = AjustarTextoComReticencias(lblSolicitante, solicitante, 75);
             this.panSolicitante.Controls.Add(lblSolicitante); 
 
             Label lblSetor = new Label()
             {
-                Text = $"{setor}",
                 TextAlign = ContentAlignment.MiddleLeft,
                 Location = new System.Drawing.Point(0, yOffset),
-                MinimumSize = new System.Drawing.Size(120, 40),
-                AutoSize = true,
+                Size = new System.Drawing.Size(135, 40),
+                AutoSize = false,
                 Padding = new Padding(10),
                 BackColor = cor,
                 ForeColor = Color.White
             };
+            lblSetor.Text = AjustarTextoComReticencias(lblSetor, setor,80);
             this.panSetor.Controls.Add(lblSetor);
 
             Label lblMaquina = new Label()
             {
-                Text = $"{maquina}",
                 TextAlign = ContentAlignment.MiddleLeft,
                 Location = new System.Drawing.Point(0, yOffset),
-                MinimumSize = new System.Drawing.Size(120, 40),
-                AutoSize = true,
+                Size = new System.Drawing.Size(135, 40),
+                AutoSize = false,
                 Padding = new Padding(10),
                 BackColor = cor,
                 ForeColor = Color.White
             };
+            lblMaquina.Text = AjustarTextoComReticencias(lblMaquina, maquina, 80);
             this.panMaquina.Controls.Add(lblMaquina);
 
             Label lblDescricao = new Label()
             {
-                Text = $"{descricao}",
                 TextAlign = ContentAlignment.MiddleLeft,
                 Location = new System.Drawing.Point(0, yOffset),
                 MinimumSize = new System.Drawing.Size(180, 40),
-                AutoSize = true,
+                AutoSize = false,
                 Padding = new Padding(10),
                 BackColor = cor,
-                ForeColor = Color.White
+                ForeColor = Color.White,          
+                Width = this.panDescricao.ClientSize.Width
+            };
+            lblDescricao.Text = AjustarTextoComReticencias(lblDescricao, descricao, lblDescricao.Width - 20);
+            lblDescricao.Tag = descricao;
+            //LINKA O REDIMENSIONAMENTO DA TELA COM O TAMANHO DA LABEL DESCRIÇÃO
+            this.panDescricao.Resize += (sender, e) => {
+                lblDescricao.Width = this.panDescricao.ClientSize.Width;
+                string descricaoAtual = lblDescricao.Tag as string;
+                lblDescricao.Text = AjustarTextoComReticencias(lblDescricao, descricaoAtual, lblDescricao.Width - 20);
             };
             this.panDescricao.Controls.Add(lblDescricao);
 
@@ -338,6 +347,34 @@ namespace Projeto_TCC
                     MessageBox.Show(ex.Message);
                 }
             }    
+        }
+
+
+        //MÉTODO QUE AJUSTA O TEXTO AO TAMANHO DA LABEL
+        private string AjustarTextoComReticencias(Label label, string texto, int larguraDisponivel)
+        {
+            using (Graphics g = label.CreateGraphics())
+            {
+                //int larguraDisponivel = label.Width - label.Padding.Left - label.Padding.Right;
+                SizeF tamanhoTexto = g.MeasureString(texto, label.Font);
+
+                if (tamanhoTexto.Width <= larguraDisponivel)
+                {
+                    return texto; // Se o texto cabe, retorna o texto completo
+                }
+
+                // Ajusta o texto com reticências
+                string textoAjustado = texto;
+                
+                while (tamanhoTexto.Width > larguraDisponivel && textoAjustado.Length > 0)
+                {
+                    textoAjustado = textoAjustado.Substring(0, textoAjustado.Length - 4);
+                    
+                    tamanhoTexto = g.MeasureString(textoAjustado + "...", label.Font);
+                }
+                textoAjustado += "...";
+                return textoAjustado;
+            }
         }
     }
 }
