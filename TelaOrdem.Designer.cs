@@ -61,6 +61,7 @@
             this.txtDescricao.Size = new System.Drawing.Size(401, 130);
             this.txtDescricao.TabIndex = 0;
             this.txtDescricao.TextChanged += new System.EventHandler(this.txtDescricao_TextChanged);
+            this.txtDescricao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescricao_KeyPress);
             // 
             // label1
             // 

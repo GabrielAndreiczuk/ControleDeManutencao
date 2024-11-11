@@ -19,9 +19,13 @@ namespace Projeto_TCC
             InitializeComponent();
             AdicionarComponentes();
         }
+
+        //VARIÁVEIS DE ATRIBUTOS DE ORDENS EM ABERTO
         string id = "", solicitante = "", abertura = "", setor = "", maquina = "", descricao = "", status = "";
         int index = 0;
+        //STRING DE CONEXÃO COM O BANCO
         string connectionString = "Server=localhost;Uid=root;Database=projeto;Port=3306";
+
         private void AdicionarComponentes()
         {
             using(MySqlConnection connection = new MySqlConnection(connectionString))
@@ -114,7 +118,8 @@ namespace Projeto_TCC
                 ForeColor = Color.White
             };
             lblSolicitante.Text = AjustarTextoComReticencias(lblSolicitante, solicitante, 75);
-            this.panSolicitante.Controls.Add(lblSolicitante); 
+            this.panSolicitante.Controls.Add(lblSolicitante);
+            toolTip1.SetToolTip(lblSolicitante, solicitante);
 
             Label lblSetor = new Label()
             {
@@ -128,6 +133,7 @@ namespace Projeto_TCC
             };
             lblSetor.Text = AjustarTextoComReticencias(lblSetor, setor,80);
             this.panSetor.Controls.Add(lblSetor);
+            toolTip1.SetToolTip(lblSetor, setor);
 
             Label lblMaquina = new Label()
             {
@@ -141,6 +147,7 @@ namespace Projeto_TCC
             };
             lblMaquina.Text = AjustarTextoComReticencias(lblMaquina, maquina, 80);
             this.panMaquina.Controls.Add(lblMaquina);
+            toolTip1.SetToolTip(lblMaquina, maquina);
 
             Label lblDescricao = new Label()
             {
@@ -155,6 +162,7 @@ namespace Projeto_TCC
             };
             lblDescricao.Text = AjustarTextoComReticencias(lblDescricao, descricao, lblDescricao.Width - 20);
             lblDescricao.Tag = descricao;
+
             //LINKA O REDIMENSIONAMENTO DA TELA COM O TAMANHO DA LABEL DESCRIÇÃO
             this.panDescricao.Resize += (sender, e) => {
                 lblDescricao.Width = this.panDescricao.ClientSize.Width;
@@ -162,6 +170,7 @@ namespace Projeto_TCC
                 lblDescricao.Text = AjustarTextoComReticencias(lblDescricao, descricaoAtual, lblDescricao.Width - 20);
             };
             this.panDescricao.Controls.Add(lblDescricao);
+            toolTip1.SetToolTip(lblDescricao, descricao);
 
             Label lblStatus = new Label()
             {
@@ -182,9 +191,9 @@ namespace Projeto_TCC
                 Button btnIniciar = new RoundedButton()
                 {
                     Text = "Iniciar",
-                    Location = new System.Drawing.Point(5, (yOffset +3)),
+                    Location = new System.Drawing.Point(10, (yOffset +3)),
                     Size = new System.Drawing.Size(90, 36),
-                    BackColor = System.Drawing.Color.Gray,
+                    BackColor = System.Drawing.Color.Red,
                     ForeColor = System.Drawing.Color.White,
                     FlatStyle = FlatStyle.Flat,
                     Cursor = Cursors.Hand

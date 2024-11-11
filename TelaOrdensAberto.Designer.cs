@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panMenu = new System.Windows.Forms.Panel();
             this.panDescricao = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,7 +54,7 @@
             this.panBotoes = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.mySqlCommand1 = new MySqlConnector.MySqlCommand();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panMenu.SuspendLayout();
             this.panDescricao.SuspendLayout();
             this.panMaquina.SuspendLayout();
@@ -357,12 +358,11 @@
             this.label16.Text = "Ação";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // mySqlCommand1
+            // toolTip1
             // 
-            this.mySqlCommand1.CommandTimeout = 0;
-            this.mySqlCommand1.Connection = null;
-            this.mySqlCommand1.Transaction = null;
-            this.mySqlCommand1.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            this.toolTip1.BackColor = System.Drawing.Color.White;
+            this.toolTip1.ForeColor = System.Drawing.Color.Black;
+            this.toolTip1.IsBalloon = true;
             // 
             // TelaOrdensAberto
             // 
@@ -391,7 +391,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panMenu;
-        private MySqlConnector.MySqlCommand mySqlCommand1;
         private System.Windows.Forms.Panel panBotoes;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
@@ -416,5 +415,6 @@
         private System.Windows.Forms.Panel panSetor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -189,12 +189,12 @@ namespace Projeto_TCC
         private void txtDescricao_TextChanged(object sender, EventArgs e)
         {
             valorDescricao = txtDescricao.Text.Length;
-            lblCaracteres.Text = $"{valorDescricao}/50";
+            lblCaracteres.Text = $"{valorDescricao}/100";
         }
 
         private void txtDescricao_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (valorDescricao >= 50 && !char.IsControl(e.KeyChar))
+            if (valorDescricao >= 100 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
