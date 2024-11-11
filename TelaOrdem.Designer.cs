@@ -60,6 +60,7 @@
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(401, 130);
             this.txtDescricao.TabIndex = 0;
+            this.txtDescricao.TextChanged += new System.EventHandler(this.txtDescricao_TextChanged);
             // 
             // label1
             // 
@@ -201,6 +202,7 @@
             // 
             this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistrar.FlatAppearance.BorderSize = 0;
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;

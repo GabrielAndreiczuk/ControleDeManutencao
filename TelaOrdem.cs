@@ -107,6 +107,23 @@ namespace Projeto_TCC
         {
             string connectionString = "Server=localhost;Uid=root;Database=projeto;Port=3306;";
 
+            //VALIDAÇÕES DE CRIAÇÃO
+            if (cmbSetor.SelectedIndex == 0)
+            {
+                Alert("Selecione um setor!", FormAlert.enmType.Info);
+                return;
+            }
+            if (cmbMaquina.SelectedIndex == 0)
+            {
+                Alert("Selecione uma máquina!", FormAlert.enmType.Info);
+                return;
+            }
+            if (string.IsNullOrEmpty(txtDescricao.Text))
+            {
+                Alert("Informe a descrição!", FormAlert.enmType.Info);
+                return;
+            }
+
             //CRIA UMA NOVA CONEXÃO COM O BANCO DE DADOS MYSQL USANDO A STRING FORNECIDA
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
@@ -162,6 +179,9 @@ namespace Projeto_TCC
                     Alert("Erro de conexão com o banco de dados!", FormAlert.enmType.Error);
                     MessageBox.Show($"Erro: {ex.Message}", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
+                cmbSetor.SelectedIndex = 0;
+                txtDescricao.Text = "";
 
             }
         }
