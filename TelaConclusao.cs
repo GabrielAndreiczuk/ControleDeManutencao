@@ -21,6 +21,12 @@ namespace Projeto_TCC
         private int id;
         string connectionString = "Server=localhost;Uid=root;Database=projeto;Port=3306";
 
+        public void Alert(string msg, FormAlert.enmType type)
+        {
+            FormAlert frm = new FormAlert();
+            frm.showAlert(msg, type);
+        }
+
         private void btnConcluir_Click(object sender, EventArgs e)
         {
             int tipo = 0;
@@ -43,6 +49,12 @@ namespace Projeto_TCC
 
         private void ConcluirOrdem(int id, int tipo, string descricao)
         {
+            if (string.IsNullOrEmpty(txtDescricao.Text))
+            {
+                Alert("Informe a descrição!", FormAlert.enmType.Info);
+                return;
+            }
+
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 try
@@ -73,8 +85,6 @@ namespace Projeto_TCC
 
                     TimeSpan diferenca = dataAtual.Subtract(dataInicial);
                     DateTime novaData = dataInicial.Add(diferenca);
-                    label2.Text = novaData.ToString();
-
 
                     //ADICIONAR PESSOA RESPONSAVEL
                     string insertQuery = "insert into manutencao (ID_Ordem,Descricao,ID_Maquina,ID_Setor,Tempo,Tipo,Responsavel) values (@ID,@Descricao,@Maquina,@Setor,@Tempo,@Tipo,@Responsavel)";
@@ -93,14 +103,17 @@ namespace Projeto_TCC
                     }
 
                     AtualizarStatus(id, 3);
+                    Alert("A ordem foi concluída com sucesso!", FormAlert.enmType.Success);
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }
-            
+                btnCorretiva.Checked = true;
+                txtDescricao.Text = "";
+            }          
         }
+        
         private void AtualizarStatus(int id, int status)
         {
 
@@ -123,6 +136,48 @@ namespace Projeto_TCC
                 catch (Exception ex)
                 {
 
+                }
+            }
+        }
+
+        int valorDescricao = 0;
+        private void txtDescricao_TextChanged(object sender, EventArgs e)
+        {
+            valorDescricao = txtDescricao.Text.Length;
+            lblCaracteres.Text = $"{valorDescricao}/100";
+        }
+
+        private void txtDescricao_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (valorDescricao >= 100 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btnIncluirPecas_Click(object sender, EventArgs e)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string selectQuery = "select * from pecas";
+                    using (MySqlCommand command = new MySqlCommand(selectQuery, connection))
+                    {
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                lblPecas.Text += $"\n- {reader["Nome"].ToString()}";
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"ERRO: {ex}");
                 }
             }
         }
