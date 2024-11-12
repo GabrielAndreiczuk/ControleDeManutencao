@@ -210,5 +210,20 @@ namespace Projeto_TCC
             lblMinimizar.BackColor = Color.FromArgb(54, 124, 221);
         }
 
+        public void IniciarConclusaoOrdem(int ID)
+        {
+            TelaMenu menu = Application.OpenForms["TelaMenu"] as TelaMenu;
+            menu.panelMenu.Controls.Clear();
+            menu.lblTittle.Text = "Conclusão de Ordem";
+
+            TelaConclusao conclusao = new TelaConclusao(ID);
+            conclusao.TopLevel = false;
+            conclusao.Dock = DockStyle.Fill;
+            conclusao.FormBorderStyle = FormBorderStyle.None;
+
+            menu.panelMenu.Controls.Add(conclusao);
+            conclusao.Show();
+        }
+
     }//FECHAR CLASSE
 }//FECHAR NAMESPACE

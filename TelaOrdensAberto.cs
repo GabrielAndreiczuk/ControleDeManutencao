@@ -1,5 +1,6 @@
 ﻿using MySqlConnector;
 using Mysqlx.Crud;
+using Org.BouncyCastle.Asn1.Cmp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -246,19 +247,26 @@ namespace Projeto_TCC
         private void btnConcluir_Click(object sender, EventArgs e)
         {
             Button btnAtual = sender as Button;
-            btnAtual.BackColor = System.Drawing.Color.Lime;
-            btnAtual.Text = "Cancelar";
-            btnAtual.ForeColor = System.Drawing.Color.Black;
+            //btnAtual.BackColor = System.Drawing.Color.Lime;
+            //btnAtual.Text = "Cancelar";
+            //btnAtual.ForeColor = System.Drawing.Color.Black;
 
             Label lblStatus = btnAtual.Tag as Label;
-            lblStatus.Text = "Concluído";
-            lblStatus.ForeColor = System.Drawing.Color.Lime;
+            //lblStatus.Text = "Concluído";
+
+            //lblStatus.ForeColor = System.Drawing.Color.Lime;
             int ID = lblStatus.TabIndex;
+
+            TelaMenu tela = new TelaMenu();
+            tela.IniciarConclusaoOrdem(ID);
+            /*
+            
+            
 
             AtualizarStatus(ID, 3);
             ConcluirOrdem(ID);
 
-            btnAtual.Click += btnCancelar_Click;
+            btnAtual.Click += btnCancelar_Click;*/
         }    
         
         private void btnCancelar_Click(object sender, EventArgs e)

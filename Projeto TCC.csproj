@@ -104,6 +104,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TelaConclusao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaConclusao.Designer.cs">
+      <DependentUpon>TelaConclusao.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="TelaConclusao.resx">
+      <DependentUpon>TelaConclusao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaIndicativos.resx">
       <DependentUpon>TelaIndicativos.cs</DependentUpon>
     </EmbeddedResource>
