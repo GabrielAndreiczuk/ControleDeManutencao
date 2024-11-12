@@ -24,6 +24,7 @@ namespace Projeto_TCC
         //VARIÁVEIS DE ATRIBUTOS DE ORDENS EM ABERTO
         string id = "", solicitante = "", abertura = "", setor = "", maquina = "", descricao = "", status = "";
         int index = 0;
+
         //STRING DE CONEXÃO COM O BANCO
         string connectionString = "Server=localhost;Uid=root;Database=projeto;Port=3306";
 
@@ -247,44 +248,14 @@ namespace Projeto_TCC
         private void btnConcluir_Click(object sender, EventArgs e)
         {
             Button btnAtual = sender as Button;
-            //btnAtual.BackColor = System.Drawing.Color.Lime;
-            //btnAtual.Text = "Cancelar";
-            //btnAtual.ForeColor = System.Drawing.Color.Black;
 
             Label lblStatus = btnAtual.Tag as Label;
-            //lblStatus.Text = "Concluído";
 
-            //lblStatus.ForeColor = System.Drawing.Color.Lime;
             int ID = lblStatus.TabIndex;
 
             TelaMenu tela = new TelaMenu();
             tela.IniciarConclusaoOrdem(ID);
-            /*
-            
-            
-
-            AtualizarStatus(ID, 3);
-            ConcluirOrdem(ID);
-
-            btnAtual.Click += btnCancelar_Click;*/
         }    
-        
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Button btnAtual = sender as Button;
-            btnAtual.BackColor = System.Drawing.Color.Yellow;
-            btnAtual.Text = "Concluir";
-            btnAtual.ForeColor = System.Drawing.Color.Black;
-
-            Label lblStatus = btnAtual.Tag as Label;
-            lblStatus.Text = "Em andamento";
-            lblStatus.ForeColor = System.Drawing.Color.Yellow;
-            int ID = lblStatus.TabIndex;
-
-            AtualizarStatus(ID, 2);
-
-            btnAtual.Click += btnConcluir_Click;
-        }
 
         private void AtualizarStatus(int id, int status)
         {
@@ -311,61 +282,6 @@ namespace Projeto_TCC
                 }
             }
         }
-
-        private void ConcluirOrdem(int id)
-        {
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-
-                    int Maquina=0, Setor=0;
-                    DateTime dataInicial = new DateTime(2023, 1, 1);
-
-                    string selectQuery = "select ID_Maquina,ID_Setor,Data_Abertura from abertura_ordem where ID_Abertura = @ID";
-
-                    using (MySqlCommand cmd = new MySqlCommand(selectQuery, connection))
-                    {
-                        cmd.Parameters.AddWithValue("@ID", id);
-                        
-                        using (MySqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                Maquina = int.Parse(reader["ID_Maquina"].ToString());
-                                Setor = int.Parse(reader["ID_Setor"].ToString());
-                                dataInicial = Convert.ToDateTime(reader["Data_Abertura"]);
-                            }
-                        }
-                    }
-
-                    DateTime dataAtual = DateTime.Now;
-
-                    TimeSpan diferenca = dataAtual.Subtract(dataInicial);
-
-
-                    //ADICIONAR PESSOA RESPONSAVEL
-                    string insertQuery = "insert into manutencao (ID_Ordem,ID_Maquina,ID_Setor,Tempo,Tipo,Responsavel) values (@ID,@Maquina,@Setor,@Tempo,1,@Responsavel)";
-
-                    using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
-                    {
-                        command.Parameters.AddWithValue("@ID", id);
-                        command.Parameters.AddWithValue("@Maquina", Maquina);
-                        command.Parameters.AddWithValue("@Setor", Setor);
-                        command.Parameters.AddWithValue("@Tempo", diferenca);
-                        command.Parameters.AddWithValue("@Responsavel", UsuarioSessao.UsuarioAtual.ID);
-                        
-                        command.ExecuteNonQuery();
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }    
-        }
-
 
         //MÉTODO QUE AJUSTA O TEXTO AO TAMANHO DA LABEL
         private string AjustarTextoComReticencias(Label label, string texto, int larguraDisponivel)
