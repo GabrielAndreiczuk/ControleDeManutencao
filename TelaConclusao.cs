@@ -157,29 +157,30 @@ namespace Projeto_TCC
 
         private void btnIncluirPecas_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
+            int quantidade = 0;
+            string nomePecas = "";
+            TelaInclusaoPecas pecas = new TelaInclusaoPecas();
+            pecas.Closed += (s, args) => quantidade = pecas.Quantidade;
+            pecas.Closed += (s, args) => nomePecas = pecas.Nome;
+            pecas.Closed += (s, args) => AtribuirValor(nomePecas, quantidade);
+            pecas.Show();
+        }
 
-                    string selectQuery = "select * from pecas";
-                    using (MySqlCommand command = new MySqlCommand(selectQuery, connection))
-                    {
-                        using (MySqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                lblPecas.Text += $"\n- {reader["Nome"].ToString()}";
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"ERRO: {ex}");
-                }
+        private void AtribuirValor(string nome, int qtd)
+        {
+            if (nome == "Lista de peças!")
+            {
+                return;
             }
+            if (lblPecas.Text == "Nenhuma peça foi inclusa...")
+            {
+                lblPecas.Text = $"{qtd} - {nome}";
+            }
+            else
+            {
+                lblPecas.Text += $"\n{qtd} - {nome}";
+            }
+            
         }
     }
 }

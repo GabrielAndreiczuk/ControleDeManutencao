@@ -35,12 +35,12 @@
             this.lblCaracteres = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblPecas = new System.Windows.Forms.Label();
             this.btnConcluir = new Projeto_TCC.RoundedButton();
             this.btnIncluirPecas = new Projeto_TCC.RoundedButton();
             this.roundedLabel2 = new Projeto_TCC.RoundedLabel();
             this.roundedLabel1 = new Projeto_TCC.RoundedLabel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblPecas = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -130,6 +130,30 @@
             this.txtDescricao.TextChanged += new System.EventHandler(this.txtDescricao_TextChanged);
             this.txtDescricao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescricao_KeyPress);
             // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(530, 228);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 19);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Lista de peças";
+            // 
+            // lblPecas
+            // 
+            this.lblPecas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPecas.BackColor = System.Drawing.Color.White;
+            this.lblPecas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.lblPecas.Location = new System.Drawing.Point(534, 263);
+            this.lblPecas.Name = "lblPecas";
+            this.lblPecas.Size = new System.Drawing.Size(405, 130);
+            this.lblPecas.TabIndex = 38;
+            this.lblPecas.Text = "Nenhuma peça foi inclusa...";
+            // 
             // btnConcluir
             // 
             this.btnConcluir.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -153,9 +177,9 @@
             this.btnIncluirPecas.FlatAppearance.BorderSize = 0;
             this.btnIncluirPecas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIncluirPecas.ForeColor = System.Drawing.Color.White;
-            this.btnIncluirPecas.Location = new System.Drawing.Point(520, 121);
+            this.btnIncluirPecas.Location = new System.Drawing.Point(520, 131);
             this.btnIncluirPecas.Name = "btnIncluirPecas";
-            this.btnIncluirPecas.Size = new System.Drawing.Size(430, 60);
+            this.btnIncluirPecas.Size = new System.Drawing.Size(430, 50);
             this.btnIncluirPecas.TabIndex = 35;
             this.btnIncluirPecas.Text = "Incluir Peças";
             this.btnIncluirPecas.UseVisualStyleBackColor = false;
@@ -184,30 +208,6 @@
             this.roundedLabel1.Size = new System.Drawing.Size(430, 157);
             this.roundedLabel1.TabIndex = 31;
             this.roundedLabel1.Text = "roundedLabel1";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(530, 228);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 19);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "Lista de peças";
-            // 
-            // lblPecas
-            // 
-            this.lblPecas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPecas.BackColor = System.Drawing.Color.White;
-            this.lblPecas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.lblPecas.Location = new System.Drawing.Point(534, 263);
-            this.lblPecas.Name = "lblPecas";
-            this.lblPecas.Size = new System.Drawing.Size(405, 130);
-            this.lblPecas.TabIndex = 38;
-            this.lblPecas.Text = "Nenhuma peça foi inclusa...";
             // 
             // TelaConclusao
             // 
