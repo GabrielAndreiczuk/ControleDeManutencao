@@ -117,6 +117,10 @@ namespace Projeto_TCC
         {
             get { return (int) numQuantidade.Value; }
         }
+        public int idPecas
+        {
+            get { return cmbPecas.SelectedIndex; }
+        }
 
         //PROGRAMAÇÃO DO BOTÃO DE REGISTRO
         private void btnRegistrar_Click(object sender, EventArgs e)

@@ -353,5 +353,8 @@
   <ItemGroup>
     <None Include="Resources\icon-contato.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-fechar-item.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

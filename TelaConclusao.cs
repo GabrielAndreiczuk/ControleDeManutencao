@@ -5,9 +5,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Button = System.Windows.Forms.Button;
 
 namespace Projeto_TCC
 {
@@ -20,6 +23,8 @@ namespace Projeto_TCC
         }
         private int id;
         string connectionString = "Server=localhost;Uid=root;Database=projeto;Port=3306";
+        int yOffset = 5;
+        int index = 1;
 
         public void Alert(string msg, FormAlert.enmType type)
         {
@@ -103,6 +108,7 @@ namespace Projeto_TCC
                     }
 
                     AtualizarStatus(id, 3);
+                    AtribuirPecas();
                     Alert("A ordem foi concluída com sucesso!", FormAlert.enmType.Success);
                 }
                 catch (Exception ex)
@@ -158,29 +164,153 @@ namespace Projeto_TCC
         private void btnIncluirPecas_Click(object sender, EventArgs e)
         {
             int quantidade = 0;
+            int idPecas = 0;
             string nomePecas = "";
             TelaInclusaoPecas pecas = new TelaInclusaoPecas();
             pecas.Closed += (s, args) => quantidade = pecas.Quantidade;
             pecas.Closed += (s, args) => nomePecas = pecas.Nome;
-            pecas.Closed += (s, args) => AtribuirValor(nomePecas, quantidade);
+            pecas.Closed += (s, args) => idPecas = pecas.idPecas;
+            pecas.Closed += (s, args) => AtribuirValor(idPecas,nomePecas, quantidade);
             pecas.Show();
         }
 
-        private void AtribuirValor(string nome, int qtd)
+        private List<(int, string, int)> dadosPecas = new List<(int,string, int)>();
+
+        private void AtribuirValor(int id ,string nome, int qtd)
         {
-            if (nome == "Lista de peças!")
+            if (nome == "Lista de peças!" || id == 0)
             {
                 return;
             }
-            if (lblPecas.Text == "Nenhuma peça foi inclusa...")
+
+            lblPecas.Text = $"    ID                        Peças                      Quantidade";
+
+            Label lblId = new Label()
             {
-                lblPecas.Text = $"{qtd} - {nome}";
-            }
-            else
+                Text = $"{id}",
+                TextAlign = ContentAlignment.MiddleCenter,
+                Location = new System.Drawing.Point(0, yOffset),
+                Size = new System.Drawing.Size(50, 25),
+                ForeColor = Color.FromArgb(0, 51, 102)
+            };
+            this.panInfoPecas.Controls.Add(lblId);
+
+            Label lblID = new Label()
             {
-                lblPecas.Text += $"\n{qtd} - {nome}";
+                Text = $"{id}",
+                TextAlign = ContentAlignment.MiddleCenter,
+                Location = new System.Drawing.Point(0, yOffset),
+                Size = new System.Drawing.Size(50, 25),
+                ForeColor = Color.FromArgb(0,51,102)
+            };            
+            this.panID.Controls.Add(lblID);
+
+            Label lblNome = new Label()
+            {
+                Text = $"{nome}",
+                TextAlign = ContentAlignment.MiddleCenter,
+                Location = new System.Drawing.Point(0, yOffset),
+                Size = new System.Drawing.Size(251, 25),
+                ForeColor = Color.FromArgb(0, 51, 102)
+            };
+            this.panNome.Controls.Add(lblNome);
+
+            Label lblQtd = new Label()
+            {
+                Text = $"{qtd}",
+                TextAlign = ContentAlignment.MiddleCenter,
+                Location = new System.Drawing.Point(0, yOffset),
+                Size = new System.Drawing.Size(100, 25),
+                ForeColor = Color.FromArgb(0, 51, 102)
+            };
+            this.panQtd.Controls.Add(lblQtd);
+
+            System.Windows.Forms.Button btnDelete = new System.Windows.Forms.Button()
+            {
+                BackgroundImage = Properties.Resources.icon_fechar_item,
+                ImageAlign = ContentAlignment.MiddleCenter,
+                Location = new System.Drawing.Point(0, yOffset),
+                Size = new System.Drawing.Size(20, 20),
+                Cursor = Cursors.Hand
+            };
+            this.panDelete.Controls.Add(btnDelete);
+            btnDelete.Tag = index;
+            btnDelete.Click += btnDelete_Click;
+            dadosPecas.Add((id,nome,qtd));
+
+            yOffset += 25;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Button btnAtual = sender as Button;
+            int ItemLista = (int) btnAtual.Tag;
+            dadosPecas.RemoveAt(ItemLista);
+            ResetPecas();
+            Recriar();
+           
+        }
+        private void Recriar()
+        {
+            foreach (var item in dadosPecas)
+            {
+                AtribuirValor(item.Item1, item.Item2, item.Item3);
             }
-            
+        }
+
+        private void AtribuirPecas()
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string insertQuery = "insert into pecas_manutencao (ID_Pecas,ID_Manutencao,Quantidade) values (@ID_Pecas,@ID_Manutencao,@Quantidade)";
+
+                    using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@ID_Manutencao", id);
+                        command.Parameters.Add("@ID_Pecas", MySqlDbType.Int32);  // Define o tipo de dado explicitamente
+                        command.Parameters.Add("@Quantidade", MySqlDbType.Int32);
+
+                        foreach (var item in dadosPecas)
+                        {
+
+                            command.Parameters["@ID_Pecas"].Value = item.Item1;
+                            command.Parameters["@Quantidade"].Value = item.Item3;
+
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    ResetPecas();
+                }
+            }
+        }
+        private void ResetPecas()
+        {
+            lblPecas.Text = "Nenhuma peça foi inclusa...";
+            yOffset = 5;
+
+            panID.Controls.Clear();
+            panNome.Controls.Clear();
+            panQtd.Controls.Clear();
+            panDelete.Controls.Clear();
+
+            foreach (Control control in this.panInfoPecas.Controls)
+            {
+                if (control is Label)
+                {
+                    this.panInfoPecas.Controls.Remove(control);
+                }
+            }
         }
     }
 }

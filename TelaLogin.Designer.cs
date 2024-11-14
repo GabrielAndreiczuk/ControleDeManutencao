@@ -345,6 +345,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = global::Projeto_TCC.Properties.Resources.password_icon;
             this.pictureBox2.Location = new System.Drawing.Point(86, 341);
@@ -356,6 +357,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::Projeto_TCC.Properties.Resources.user_icon;
             this.pictureBox1.Location = new System.Drawing.Point(87, 257);

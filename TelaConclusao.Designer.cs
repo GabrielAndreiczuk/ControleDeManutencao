@@ -41,7 +41,14 @@
             this.btnIncluirPecas = new Projeto_TCC.RoundedButton();
             this.roundedLabel2 = new Projeto_TCC.RoundedLabel();
             this.roundedLabel1 = new Projeto_TCC.RoundedLabel();
+            this.panInfoPecas = new System.Windows.Forms.Panel();
+            this.panNome = new System.Windows.Forms.Panel();
+            this.panQtd = new System.Windows.Forms.Panel();
+            this.panDelete = new System.Windows.Forms.Panel();
+            this.panID = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            this.panInfoPecas.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -148,11 +155,11 @@
             this.lblPecas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPecas.BackColor = System.Drawing.Color.White;
             this.lblPecas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.lblPecas.Location = new System.Drawing.Point(534, 263);
+            this.lblPecas.Location = new System.Drawing.Point(530, 263);
             this.lblPecas.Name = "lblPecas";
-            this.lblPecas.Size = new System.Drawing.Size(405, 130);
+            this.lblPecas.Size = new System.Drawing.Size(405, 25);
             this.lblPecas.TabIndex = 38;
-            this.lblPecas.Text = "Nenhuma peça foi inclusa...";
+            this.lblPecas.Text = "Nenhuma peça foi inclusa...\r\n";
             // 
             // btnConcluir
             // 
@@ -174,6 +181,7 @@
             // 
             this.btnIncluirPecas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnIncluirPecas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.btnIncluirPecas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIncluirPecas.FlatAppearance.BorderSize = 0;
             this.btnIncluirPecas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIncluirPecas.ForeColor = System.Drawing.Color.White;
@@ -209,12 +217,71 @@
             this.roundedLabel1.TabIndex = 31;
             this.roundedLabel1.Text = "roundedLabel1";
             // 
+            // panInfoPecas
+            // 
+            this.panInfoPecas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panInfoPecas.AutoScroll = true;
+            this.panInfoPecas.BackColor = System.Drawing.Color.White;
+            this.panInfoPecas.Controls.Add(this.panNome);
+            this.panInfoPecas.Controls.Add(this.panQtd);
+            this.panInfoPecas.Controls.Add(this.panDelete);
+            this.panInfoPecas.Controls.Add(this.panID);
+            this.panInfoPecas.Location = new System.Drawing.Point(534, 290);
+            this.panInfoPecas.Name = "panInfoPecas";
+            this.panInfoPecas.Size = new System.Drawing.Size(401, 100);
+            this.panInfoPecas.TabIndex = 39;
+            // 
+            // panNome
+            // 
+            this.panNome.BackColor = System.Drawing.Color.White;
+            this.panNome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panNome.Location = new System.Drawing.Point(50, 0);
+            this.panNome.Name = "panNome";
+            this.panNome.Size = new System.Drawing.Size(211, 100);
+            this.panNome.TabIndex = 5;
+            // 
+            // panQtd
+            // 
+            this.panQtd.BackColor = System.Drawing.Color.White;
+            this.panQtd.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panQtd.Location = new System.Drawing.Point(261, 0);
+            this.panQtd.Name = "panQtd";
+            this.panQtd.Size = new System.Drawing.Size(100, 100);
+            this.panQtd.TabIndex = 4;
+            // 
+            // panDelete
+            // 
+            this.panDelete.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panDelete.Location = new System.Drawing.Point(361, 0);
+            this.panDelete.Name = "panDelete";
+            this.panDelete.Size = new System.Drawing.Size(40, 100);
+            this.panDelete.TabIndex = 3;
+            // 
+            // panID
+            // 
+            this.panID.BackColor = System.Drawing.Color.White;
+            this.panID.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panID.Location = new System.Drawing.Point(0, 0);
+            this.panID.Name = "panID";
+            this.panID.Size = new System.Drawing.Size(50, 100);
+            this.panID.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Location = new System.Drawing.Point(534, 288);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(401, 2);
+            this.label3.TabIndex = 40;
+            // 
             // TelaConclusao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(1000, 550);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.panInfoPecas);
             this.Controls.Add(this.lblPecas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnConcluir);
@@ -232,6 +299,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
+            this.panInfoPecas.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,5 +320,11 @@
         private RoundedButton btnConcluir;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblPecas;
+        private System.Windows.Forms.Panel panInfoPecas;
+        private System.Windows.Forms.Panel panID;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panNome;
+        private System.Windows.Forms.Panel panQtd;
+        private System.Windows.Forms.Panel panDelete;
     }
 }
