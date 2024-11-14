@@ -247,15 +247,11 @@ namespace Projeto_TCC
             int ItemLista = (int) btnAtual.Tag;
             dadosPecas.RemoveAt(ItemLista);
             ResetPecas();
-            Recriar();
-           
-        }
-        private void Recriar()
-        {
             foreach (var item in dadosPecas)
             {
                 AtribuirValor(item.Item1, item.Item2, item.Item3);
             }
+
         }
 
         private void AtribuirPecas()
