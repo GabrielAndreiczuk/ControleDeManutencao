@@ -119,7 +119,7 @@ namespace Projeto_TCC
                 BackColor = cor,
                 ForeColor = Color.White
             };
-            lblSolicitante.Text = AjustarTextoComReticencias(lblSolicitante, solicitante, 75);
+            lblSolicitante.Text = AjustarTexto(lblSolicitante, solicitante, 75);
             this.panSolicitante.Controls.Add(lblSolicitante);
             toolTip1.SetToolTip(lblSolicitante, solicitante);
 
@@ -133,7 +133,7 @@ namespace Projeto_TCC
                 BackColor = cor,
                 ForeColor = Color.White
             };
-            lblSetor.Text = AjustarTextoComReticencias(lblSetor, setor,80);
+            lblSetor.Text = AjustarTexto(lblSetor, setor,80);
             this.panSetor.Controls.Add(lblSetor);
             toolTip1.SetToolTip(lblSetor, setor);
 
@@ -147,7 +147,7 @@ namespace Projeto_TCC
                 BackColor = cor,
                 ForeColor = Color.White
             };
-            lblMaquina.Text = AjustarTextoComReticencias(lblMaquina, maquina, 80);
+            lblMaquina.Text = AjustarTexto(lblMaquina, maquina, 80);
             this.panMaquina.Controls.Add(lblMaquina);
             toolTip1.SetToolTip(lblMaquina, maquina);
 
@@ -162,14 +162,14 @@ namespace Projeto_TCC
                 ForeColor = Color.White,          
                 Width = this.panDescricao.ClientSize.Width
             };
-            lblDescricao.Text = AjustarTextoComReticencias(lblDescricao, descricao, lblDescricao.Width - 20);
+            lblDescricao.Text = AjustarTexto(lblDescricao, descricao, lblDescricao.Width - 20);
             lblDescricao.Tag = descricao;
 
             //LINKA O REDIMENSIONAMENTO DA TELA COM O TAMANHO DA LABEL DESCRIÇÃO
             this.panDescricao.Resize += (sender, e) => {
                 lblDescricao.Width = this.panDescricao.ClientSize.Width;
                 string descricaoAtual = lblDescricao.Tag as string;
-                lblDescricao.Text = AjustarTextoComReticencias(lblDescricao, descricaoAtual, lblDescricao.Width - 20);
+                lblDescricao.Text = AjustarTexto(lblDescricao, descricaoAtual, lblDescricao.Width - 20);
             };
             this.panDescricao.Controls.Add(lblDescricao);
             toolTip1.SetToolTip(lblDescricao, descricao);
@@ -284,7 +284,7 @@ namespace Projeto_TCC
         }
 
         //MÉTODO QUE AJUSTA O TEXTO AO TAMANHO DA LABEL
-        private string AjustarTextoComReticencias(Label label, string texto, int larguraDisponivel)
+        private string AjustarTexto(Label label, string texto, int larguraDisponivel)
         {
             using (Graphics g = label.CreateGraphics())
             {
