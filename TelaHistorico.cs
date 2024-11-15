@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
+using Button = System.Windows.Forms.Button;
 
 namespace Projeto_TCC
 {
@@ -187,6 +188,18 @@ namespace Projeto_TCC
                 ForeColor = Color.White
             };
             this.panCusto.Controls.Add(lblCusto);
+
+            Button btnLista = new RoundedButton()
+            {
+                Text = "Verificar",
+                TextAlign = ContentAlignment.MiddleCenter,
+                Location = new System.Drawing.Point(5, (yOffset + 3)),
+                Size = new System.Drawing.Size(90, 36),
+                AutoSize = false,
+                BackColor = System.Drawing.Color.White,
+                ForeColor = Color.FromArgb(0,51,102)
+            };
+            this.panPecas.Controls.Add(btnLista);
 
             Label lblResponsavel = new Label()
             {
