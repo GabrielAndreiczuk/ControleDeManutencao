@@ -47,7 +47,6 @@
             this.panDelete = new System.Windows.Forms.Panel();
             this.panID = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panInfoPecas.SuspendLayout();
             this.SuspendLayout();
@@ -252,6 +251,7 @@
             // 
             // panDelete
             // 
+            this.panDelete.BackColor = System.Drawing.Color.White;
             this.panDelete.Dock = System.Windows.Forms.DockStyle.Right;
             this.panDelete.Location = new System.Drawing.Point(361, 0);
             this.panDelete.Name = "panDelete";
@@ -275,22 +275,12 @@
             this.label3.Size = new System.Drawing.Size(401, 2);
             this.label3.TabIndex = 40;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(61, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 19);
-            this.label4.TabIndex = 41;
-            this.label4.Text = "label4";
-            // 
             // TelaConclusao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(1000, 550);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panInfoPecas);
             this.Controls.Add(this.lblPecas);
@@ -337,6 +327,5 @@
         private System.Windows.Forms.Panel panNome;
         private System.Windows.Forms.Panel panQtd;
         private System.Windows.Forms.Panel panDelete;
-        private System.Windows.Forms.Label label4;
     }
 }

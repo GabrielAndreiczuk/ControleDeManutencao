@@ -16,6 +16,13 @@ namespace Projeto_TCC
 {
     public partial class TelaConclusao : Form
     {
+        //MÉTODO CONSTRUTOR
+        public TelaConclusao(int ID)
+        {
+            InitializeComponent();
+            id = ID;
+        }
+
         //LISTA DE VARIÁVEIS GLOBAIS
         private List<(int, string, int)> dadosPecas = new List<(int, string, int)>();
         private List<(int, string, int)> _dadosPecas = new List<(int, string, int)>();
@@ -46,14 +53,8 @@ namespace Projeto_TCC
             }
         }
 
-        //MÉTODO CONSTRUTOR
-        public TelaConclusao(int ID)
-        {
-            InitializeComponent();
-            id = ID;
-        }
 
-        //MÉTODOS QUE REGISTRAM AS PEÇAS ---
+        //--- MÉTODOS QUE REGISTRAM AS PEÇAS ---
 
         //MÉTODO PARA INCLUSÃO DE PEÇAS
         private void btnIncluirPecas_Click(object sender, EventArgs e)
@@ -123,11 +124,15 @@ namespace Projeto_TCC
 
             Button btnDelete = new Button()
             {
-                BackgroundImage = Properties.Resources.icon_fechar_item,
+                //BackgroundImage = Properties.Resources.icon_fechar_item,
+                //BackgroundImage = Properties.Resources.iconeExcluirPeca,
+                BackgroundImage = Properties.Resources.iconeExcluir,
                 ImageAlign = ContentAlignment.MiddleCenter,
-                Location = new System.Drawing.Point(0, yOffset),
-                Size = new System.Drawing.Size(20, 20),
-                Cursor = Cursors.Hand
+                Location = new System.Drawing.Point(9, yOffset),
+                Size = new System.Drawing.Size(22, 22),
+                Cursor = Cursors.Hand,
+                ForeColor = System.Drawing.Color.White,
+                FlatStyle = FlatStyle.Flat
             };
             this.panDelete.Controls.Add(btnDelete);
             btnDelete.Tag = index;
@@ -138,7 +143,7 @@ namespace Projeto_TCC
         }
 
 
-        //MÉTODOS PARA REMOÇÃO DE PEÇAS ---
+        //--- MÉTODOS PARA REMOÇÃO DE PEÇAS ---
 
         //EVENTO DE CLIQUE DO BOTÃO DE EXCLUIR PEÇAS
         private void btnExcluirPeca_Click(object sender, EventArgs e)
@@ -149,18 +154,14 @@ namespace Projeto_TCC
 
             dadosPecas.RemoveAt(ItemLista);
             ResetPecas();
-            string teste = "";
 
             foreach (var item in dadosPecas.ToList())
             {
-                teste += " " + (item.Item1, item.Item2, item.Item3);
                 AdicionarComponentes(item.Item1, item.Item2, item.Item3);
             }
-            label4.Text = teste;
-
         }
 
-        
+        //MÉTODO QUE RESETA PEÇAS SELECIONADAS
         private void ResetPecas()
         {
             lblPecas.Text = "Nenhuma peça foi inclusa...";
@@ -181,7 +182,7 @@ namespace Projeto_TCC
             }
         }
 
-        //MÉTODOS DE FINZALIZAÇÃO ---
+        //--- MÉTODOS DE FINZALIZAÇÃO ---
 
         //EVENTO CLIQUE DO BOTÃO, ARMAZENA AS VARIÁVEIS
         private void btnConcluir_Click(object sender, EventArgs e)
