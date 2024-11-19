@@ -125,7 +125,7 @@ namespace Projeto_TCC
             ActiveButton(sender);
             lblTittle.Text = "Configurações";
         }
-        private void btnOrdensAberto_Click(object sender, EventArgs e)
+        public void btnOrdensAberto_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
             lblTittle.Text = "Ordens em Aberto";

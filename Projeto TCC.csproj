@@ -362,5 +362,8 @@
   <ItemGroup>
     <None Include="Resources\iconeExcluir.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fecharPecas-icone.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

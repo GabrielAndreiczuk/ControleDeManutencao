@@ -30,6 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaMenu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTittle = new System.Windows.Forms.Label();
+            this.labelClose = new System.Windows.Forms.Label();
+            this.lblMaximizar = new System.Windows.Forms.Label();
+            this.lblMinimizar = new System.Windows.Forms.Label();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pibMinimizar = new System.Windows.Forms.PictureBox();
+            this.pibFechar = new System.Windows.Forms.PictureBox();
+            this.pibMaximizar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnOrdensAberto = new System.Windows.Forms.Button();
@@ -38,24 +50,12 @@
             this.btnIndicativos = new System.Windows.Forms.Button();
             this.btnOrdem = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pibMinimizar = new System.Windows.Forms.PictureBox();
-            this.pibFechar = new System.Windows.Forms.PictureBox();
-            this.pibMaximizar = new System.Windows.Forms.PictureBox();
-            this.lblTittle = new System.Windows.Forms.Label();
-            this.labelClose = new System.Windows.Forms.Label();
-            this.lblMaximizar = new System.Windows.Forms.Label();
-            this.lblMinimizar = new System.Windows.Forms.Label();
-            this.panelMenu = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pibMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibMaximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,6 +75,147 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 700);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(300, 120);
+            this.label1.TabIndex = 25;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.panel2.Controls.Add(this.pibMinimizar);
+            this.panel2.Controls.Add(this.pibFechar);
+            this.panel2.Controls.Add(this.pibMaximizar);
+            this.panel2.Controls.Add(this.lblTittle);
+            this.panel2.Controls.Add(this.labelClose);
+            this.panel2.Controls.Add(this.lblMaximizar);
+            this.panel2.Controls.Add(this.lblMinimizar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(300, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1020, 120);
+            this.panel2.TabIndex = 1;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseDown);
+            // 
+            // lblTittle
+            // 
+            this.lblTittle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTittle.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTittle.ForeColor = System.Drawing.Color.White;
+            this.lblTittle.Location = new System.Drawing.Point(260, 35);
+            this.lblTittle.Name = "lblTittle";
+            this.lblTittle.Size = new System.Drawing.Size(510, 50);
+            this.lblTittle.TabIndex = 23;
+            this.lblTittle.Text = "Menu Inicial";
+            this.lblTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelClose
+            // 
+            this.labelClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelClose.Location = new System.Drawing.Point(970, 0);
+            this.labelClose.Name = "labelClose";
+            this.labelClose.Size = new System.Drawing.Size(50, 35);
+            this.labelClose.TabIndex = 28;
+            this.labelClose.MouseEnter += new System.EventHandler(this.pibFechar_MouseHover);
+            this.labelClose.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
+            // 
+            // lblMaximizar
+            // 
+            this.lblMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMaximizar.Location = new System.Drawing.Point(920, 0);
+            this.lblMaximizar.Name = "lblMaximizar";
+            this.lblMaximizar.Size = new System.Drawing.Size(50, 35);
+            this.lblMaximizar.TabIndex = 29;
+            this.lblMaximizar.MouseEnter += new System.EventHandler(this.pibMaximizar_MouseHover);
+            this.lblMaximizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
+            // 
+            // lblMinimizar
+            // 
+            this.lblMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMinimizar.Location = new System.Drawing.Point(870, 0);
+            this.lblMinimizar.Name = "lblMinimizar";
+            this.lblMinimizar.Size = new System.Drawing.Size(50, 35);
+            this.lblMinimizar.TabIndex = 30;
+            this.lblMinimizar.MouseEnter += new System.EventHandler(this.pibMinimizar_MouseHover);
+            this.lblMinimizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMenu.Location = new System.Drawing.Point(300, 120);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(1020, 580);
+            this.panelMenu.TabIndex = 2;
+            this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseDown);
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label2.Location = new System.Drawing.Point(300, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(2, 580);
+            this.label2.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Black;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Location = new System.Drawing.Point(302, 120);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(1018, 2);
+            this.label3.TabIndex = 4;
+            // 
+            // pibMinimizar
+            // 
+            this.pibMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pibMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pibMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pibMinimizar.Image")));
+            this.pibMinimizar.Location = new System.Drawing.Point(884, 6);
+            this.pibMinimizar.Name = "pibMinimizar";
+            this.pibMinimizar.Size = new System.Drawing.Size(23, 23);
+            this.pibMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibMinimizar.TabIndex = 1;
+            this.pibMinimizar.TabStop = false;
+            this.pibMinimizar.Click += new System.EventHandler(this.btnMinimize_Click);
+            this.pibMinimizar.MouseEnter += new System.EventHandler(this.pibMinimizar_MouseHover);
+            this.pibMinimizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
+            // 
+            // pibFechar
+            // 
+            this.pibFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pibFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pibFechar.Image = ((System.Drawing.Image)(resources.GetObject("pibFechar.Image")));
+            this.pibFechar.Location = new System.Drawing.Point(984, 6);
+            this.pibFechar.Name = "pibFechar";
+            this.pibFechar.Size = new System.Drawing.Size(23, 23);
+            this.pibFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibFechar.TabIndex = 27;
+            this.pibFechar.TabStop = false;
+            this.pibFechar.Click += new System.EventHandler(this.btnClose_Click);
+            this.pibFechar.MouseEnter += new System.EventHandler(this.pibFechar_MouseHover);
+            this.pibFechar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
+            // 
+            // pibMaximizar
+            // 
+            this.pibMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pibMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pibMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("pibMaximizar.Image")));
+            this.pibMaximizar.Location = new System.Drawing.Point(934, 6);
+            this.pibMaximizar.Name = "pibMaximizar";
+            this.pibMaximizar.Size = new System.Drawing.Size(23, 23);
+            this.pibMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibMaximizar.TabIndex = 0;
+            this.pibMaximizar.TabStop = false;
+            this.pibMaximizar.Click += new System.EventHandler(this.btnMaximize_Click);
+            this.pibMaximizar.MouseEnter += new System.EventHandler(this.pibMaximizar_MouseHover);
+            this.pibMaximizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
             // 
             // pictureBox1
             // 
@@ -216,147 +357,6 @@
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 120);
-            this.label1.TabIndex = 25;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
-            this.panel2.Controls.Add(this.pibMinimizar);
-            this.panel2.Controls.Add(this.pibFechar);
-            this.panel2.Controls.Add(this.pibMaximizar);
-            this.panel2.Controls.Add(this.lblTittle);
-            this.panel2.Controls.Add(this.labelClose);
-            this.panel2.Controls.Add(this.lblMaximizar);
-            this.panel2.Controls.Add(this.lblMinimizar);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(300, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1020, 120);
-            this.panel2.TabIndex = 1;
-            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseDown);
-            // 
-            // pibMinimizar
-            // 
-            this.pibMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pibMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pibMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pibMinimizar.Image")));
-            this.pibMinimizar.Location = new System.Drawing.Point(884, 6);
-            this.pibMinimizar.Name = "pibMinimizar";
-            this.pibMinimizar.Size = new System.Drawing.Size(23, 23);
-            this.pibMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pibMinimizar.TabIndex = 1;
-            this.pibMinimizar.TabStop = false;
-            this.pibMinimizar.Click += new System.EventHandler(this.btnMinimize_Click);
-            this.pibMinimizar.MouseEnter += new System.EventHandler(this.pibMinimizar_MouseHover);
-            this.pibMinimizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
-            // 
-            // pibFechar
-            // 
-            this.pibFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pibFechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pibFechar.Image = ((System.Drawing.Image)(resources.GetObject("pibFechar.Image")));
-            this.pibFechar.Location = new System.Drawing.Point(984, 6);
-            this.pibFechar.Name = "pibFechar";
-            this.pibFechar.Size = new System.Drawing.Size(23, 23);
-            this.pibFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pibFechar.TabIndex = 27;
-            this.pibFechar.TabStop = false;
-            this.pibFechar.Click += new System.EventHandler(this.btnClose_Click);
-            this.pibFechar.MouseEnter += new System.EventHandler(this.pibFechar_MouseHover);
-            this.pibFechar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
-            // 
-            // pibMaximizar
-            // 
-            this.pibMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pibMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pibMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("pibMaximizar.Image")));
-            this.pibMaximizar.Location = new System.Drawing.Point(934, 6);
-            this.pibMaximizar.Name = "pibMaximizar";
-            this.pibMaximizar.Size = new System.Drawing.Size(23, 23);
-            this.pibMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pibMaximizar.TabIndex = 0;
-            this.pibMaximizar.TabStop = false;
-            this.pibMaximizar.Click += new System.EventHandler(this.btnMaximize_Click);
-            this.pibMaximizar.MouseEnter += new System.EventHandler(this.pibMaximizar_MouseHover);
-            this.pibMaximizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
-            // 
-            // lblTittle
-            // 
-            this.lblTittle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTittle.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTittle.ForeColor = System.Drawing.Color.White;
-            this.lblTittle.Location = new System.Drawing.Point(260, 35);
-            this.lblTittle.Name = "lblTittle";
-            this.lblTittle.Size = new System.Drawing.Size(510, 50);
-            this.lblTittle.TabIndex = 23;
-            this.lblTittle.Text = "Menu Inicial";
-            this.lblTittle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelClose
-            // 
-            this.labelClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelClose.Location = new System.Drawing.Point(970, 0);
-            this.labelClose.Name = "labelClose";
-            this.labelClose.Size = new System.Drawing.Size(50, 35);
-            this.labelClose.TabIndex = 28;
-            this.labelClose.MouseEnter += new System.EventHandler(this.pibFechar_MouseHover);
-            this.labelClose.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
-            // 
-            // lblMaximizar
-            // 
-            this.lblMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMaximizar.Location = new System.Drawing.Point(920, 0);
-            this.lblMaximizar.Name = "lblMaximizar";
-            this.lblMaximizar.Size = new System.Drawing.Size(50, 35);
-            this.lblMaximizar.TabIndex = 29;
-            this.lblMaximizar.MouseEnter += new System.EventHandler(this.pibMaximizar_MouseHover);
-            this.lblMaximizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
-            // 
-            // lblMinimizar
-            // 
-            this.lblMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMinimizar.Location = new System.Drawing.Point(870, 0);
-            this.lblMinimizar.Name = "lblMinimizar";
-            this.lblMinimizar.Size = new System.Drawing.Size(50, 35);
-            this.lblMinimizar.TabIndex = 30;
-            this.lblMinimizar.MouseEnter += new System.EventHandler(this.pibMinimizar_MouseHover);
-            this.lblMinimizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
-            // 
-            // panelMenu
-            // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMenu.Location = new System.Drawing.Point(300, 120);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(1020, 580);
-            this.panelMenu.TabIndex = 2;
-            this.panelMenu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel2_MouseDown);
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Location = new System.Drawing.Point(300, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(2, 580);
-            this.label2.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Black;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Location = new System.Drawing.Point(302, 120);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1018, 2);
-            this.label3.TabIndex = 4;
-            // 
             // TelaMenu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -374,11 +374,11 @@
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pibMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibMaximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

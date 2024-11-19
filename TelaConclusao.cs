@@ -126,7 +126,8 @@ namespace Projeto_TCC
             {
                 //BackgroundImage = Properties.Resources.icon_fechar_item,
                 //BackgroundImage = Properties.Resources.iconeExcluirPeca,
-                BackgroundImage = Properties.Resources.iconeExcluir,
+                //BackgroundImage = Properties.Resources.iconeExcluir,
+                BackgroundImage = Properties.Resources.fecharPecas_icone,
                 ImageAlign = ContentAlignment.MiddleCenter,
                 Location = new System.Drawing.Point(9, yOffset),
                 Size = new System.Drawing.Size(22, 22),
@@ -264,12 +265,11 @@ namespace Projeto_TCC
                 finally
                 {
                     RegistrarPecas();   //RESGISTRA NO BANCO DE DADOS AS PEÇAS SELECIONADAS
-                    AtualizarStatus(id, 3);
-                    Alert("A ordem foi concluída com sucesso!", FormAlert.enmType.Success);
+                    AtualizarStatus(id, 3);                    
 
-                    //RESET NAS INFORMAÇÕES
-                    btnCorretiva.Checked = true;
-                    txtDescricao.Text = "";
+                    TelaMenu menu = new TelaMenu();
+                    menu.btnOrdensAberto_Click(sender, EventArgs.Empty);
+                    Alert("A ordem foi concluída com sucesso!", FormAlert.enmType.Success);
                 }
             }
         }
@@ -304,10 +304,6 @@ namespace Projeto_TCC
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    ResetPecas();
                 }
             }
         }

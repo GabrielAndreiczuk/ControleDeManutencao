@@ -130,6 +130,9 @@
   <data name="user-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconeExcluir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconeExcluir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="19197945" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\19197945.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -138,9 +141,6 @@
   </data>
   <data name="icone-indicativos-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone-indicativos-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="imagem-tela-cadastro-final" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imagem-tela-cadastro-final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconeExcluirPeca" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconeExcluirPeca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,11 +157,11 @@
   <data name="sucesso" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sucesso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-contato" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-contato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="imagem-cadastro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imagem-cadastro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-setor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-setor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,14 +178,14 @@
   <data name="password-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\password-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icone-minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icone-ordens-aberto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone-ordens-aberto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icone-fechar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone-fechar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fechar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fechar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icone-recolher" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone-recolher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,20 +196,23 @@
   <data name="icone-historico-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone-historico-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icone-indicativos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icone-indicativos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icone-maximizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone-maximizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icone-indicativos-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone-indicativos-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icone-indicativos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone-indicativos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon-contato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-contato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icone-minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icone-minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="imagem-tela-cadastro-final" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imagem-tela-cadastro-final.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-setor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-setor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fechar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fechar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icone-home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone-home1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,7 +223,7 @@
   <data name="icon-cargo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-cargo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconeExcluir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconeExcluir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fecharPecas-icone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fecharPecas-icone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

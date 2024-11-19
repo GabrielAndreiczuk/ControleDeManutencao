@@ -123,6 +123,16 @@ namespace Projeto_TCC.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fecharPecas_icone {
+            get {
+                object obj = ResourceManager.GetObject("fecharPecas-icone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_cargo {
             get {
                 object obj = ResourceManager.GetObject("icon-cargo", resourceCulture);
