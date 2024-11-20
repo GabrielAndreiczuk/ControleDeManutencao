@@ -241,7 +241,11 @@ namespace Projeto_TCC
                     DateTime dataAtual = DateTime.Now;
 
                     TimeSpan diferenca = dataAtual.Subtract(dataInicial);
-                    DateTime novaData = dataInicial.Add(diferenca);
+
+                    string duracaoFormatada = string.Format("{0:D2}:{1:D2}:{2:D2}",
+                                                                diferenca.Hours,
+                                                                diferenca.Minutes,
+                                                                diferenca.Seconds);
 
                     string insertQuery = "insert into manutencao (ID_Ordem,Descricao,ID_Maquina,ID_Setor,Tempo,Tipo,Responsavel) values (@ID,@Descricao,@Maquina,@Setor,@Tempo,@Tipo,@Responsavel)";
 
@@ -251,7 +255,7 @@ namespace Projeto_TCC
                         command.Parameters.AddWithValue("@Descricao", descricao);
                         command.Parameters.AddWithValue("@Maquina", Maquina);
                         command.Parameters.AddWithValue("@Setor", Setor);
-                        command.Parameters.AddWithValue("@Tempo", novaData);
+                        command.Parameters.AddWithValue("@Tempo", duracaoFormatada);
                         command.Parameters.AddWithValue("@Tipo", tipo);
                         command.Parameters.AddWithValue("@Responsavel", UsuarioSessao.UsuarioAtual.ID);
 
