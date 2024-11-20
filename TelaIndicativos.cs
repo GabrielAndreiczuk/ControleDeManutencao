@@ -30,8 +30,6 @@ namespace Projeto_TCC
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            DateTime data = DateTime.Now;
-            lblData.Text = data.ToString("HH:mm:ss - dd/MM/yyyy");
         }
     }
 }

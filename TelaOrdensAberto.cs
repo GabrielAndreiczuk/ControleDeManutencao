@@ -189,14 +189,14 @@ namespace Projeto_TCC
 
             if (status == "Não iniciado")
             {
-                lblStatus.ForeColor = System.Drawing.Color.White;
+                lblStatus.ForeColor = System.Drawing.Color.FromArgb(255, 204, 153);
                 Button btnIniciar = new RoundedButton()
                 {
                     Text = "Iniciar",
-                    Location = new System.Drawing.Point(10, (yOffset +3)),
+                    Location = new System.Drawing.Point(10, (yOffset +2)),
                     Size = new System.Drawing.Size(90, 36),
-                    BackColor = System.Drawing.Color.Red,
-                    ForeColor = System.Drawing.Color.White,
+                    BackColor = System.Drawing.Color.FromArgb(255, 204, 153),
+                    ForeColor = System.Drawing.Color.Black,
                     FlatStyle = FlatStyle.Flat,
                     Cursor = Cursors.Hand
 
@@ -212,7 +212,7 @@ namespace Projeto_TCC
                 Button btnConcluir = new RoundedButton()
                 {
                     Text = "Concluir",
-                    Location = new System.Drawing.Point(5, (yOffset + 3)),
+                    Location = new System.Drawing.Point(10, (yOffset + 2)),
                     Size = new System.Drawing.Size(90, 36),
                     BackColor = System.Drawing.Color.Yellow,
                     ForeColor = System.Drawing.Color.Black,
@@ -224,6 +224,14 @@ namespace Projeto_TCC
                 this.panBotoes.Controls.Add(btnConcluir);
                 btnConcluir.Tag = lblStatus;
             }
+
+            Label lblFundo = new Label()
+            {
+                Location = new System.Drawing.Point(0, yOffset),
+                Size = new System.Drawing.Size(110, 40),
+                BackColor = cor,
+            };
+            this.panBotoes.Controls.Add(lblFundo);
 
             return (yOffset += 40); 
         }

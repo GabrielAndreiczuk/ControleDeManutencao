@@ -187,19 +187,31 @@ namespace Projeto_TCC
                 BackColor = cor,
                 ForeColor = Color.White
             };
-            this.panCusto.Controls.Add(lblCusto);
+            this.panCusto.Controls.Add(lblCusto);            
 
             Button btnLista = new RoundedButton()
             {
                 Text = "Verificar",
                 TextAlign = ContentAlignment.MiddleCenter,
-                Location = new System.Drawing.Point(5, (yOffset + 3)),
+                Location = new System.Drawing.Point(5, (yOffset + 2)),
                 Size = new System.Drawing.Size(90, 36),
+                Font = new Font("Arial", 10, FontStyle.Bold),
                 AutoSize = false,
-                BackColor = System.Drawing.Color.White,
-                ForeColor = Color.FromArgb(0,51,102)
+                BackColor = System.Drawing.Color.FromArgb(255, 204, 153),
+                ForeColor = Color.Black,
+                Cursor = System.Windows.Forms.Cursors.Hand
             };
+            btnLista.Click += btnLista_Click;
+            btnLista.Tag = id;
             this.panPecas.Controls.Add(btnLista);
+
+            Label lblFundo = new Label()
+            {
+                Location = new System.Drawing.Point(0, yOffset),
+                Size = new System.Drawing.Size(100, 40),
+                BackColor = cor,
+            };
+            this.panPecas.Controls.Add(lblFundo);
 
             Label lblResponsavel = new Label()
             {
@@ -217,6 +229,54 @@ namespace Projeto_TCC
             toolTip1.SetToolTip(lblResponsavel, responsavel);
 
             return (yOffset += 40);
+        }
+
+        private void btnLista_Click(object sender, EventArgs e)
+        {
+            Button btnAtual = sender as Button;
+            int idAtual = int.Parse(btnAtual.Tag.ToString());
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string selectQuery = "select * from view_pecas WHERE Ordem = @ID";
+
+                    using (MySqlCommand command = new MySqlCommand(selectQuery,connection))
+                    {
+                        command.Parameters.AddWithValue("@ID", idAtual);                        
+
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            ContextMenuStrip contextMenu = new ContextMenuStrip();
+                            contextMenu.BackColor = Color.FromArgb(0, 51, 102);
+                            contextMenu.Font = new Font("Arial", 10, FontStyle.Bold);
+                            contextMenu.ForeColor = Color.White;
+                            contextMenu.ShowImageMargin = false;
+                            contextMenu.ShowCheckMargin = false;
+                            bool Dados = false;
+
+                            while (reader.Read())
+                            {
+                                Dados = true;
+                                contextMenu.Items.Add($"{reader["Quantidade"]} - {reader["Peça"]}");                                                              
+                            }
+
+                            if (!Dados)
+                            {
+                                contextMenu.Items.Add("Nunhuma peça utilizada!");
+                            }
+                            contextMenu.Show((Button)sender, new Point(0, ((Button)sender).Height));
+                        }                        
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }            
         }
 
         //MÉTODO QUE AJUSTA O TEXTO AO TAMANHO DA LABEL

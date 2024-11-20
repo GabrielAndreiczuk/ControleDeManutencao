@@ -94,20 +94,17 @@ namespace Projeto_TCC
                                 //DEFINE ATRIBUTOS DO USUÁRIO LOGADO NO SISTEMA
                                 UsuarioSessao.UsuarioAtual = new Usuario();
                                 UsuarioSessao.UsuarioAtual.Nome = nome;
-                                UsuarioSessao.UsuarioAtual.ID = id;
-
-
-                                Alert("Login efetuado com sucesso!", FormAlert.enmType.Success);
+                                UsuarioSessao.UsuarioAtual.ID = id;                                
 
                                 TelaInicial tela = new TelaInicial();
                                 tela.IniciarMenu();
+                                Alert("Login efetuado com sucesso!", FormAlert.enmType.Success);
                             }
                             else
                             {
                                 lblSenha.Show();
                                 lblSenha.Text = "Usuário ou senha incorreta!";
-                            }
-                            
+                            }                            
                         }
                     }
                 }
