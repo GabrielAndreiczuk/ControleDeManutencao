@@ -400,6 +400,10 @@
             this.label1.Text = "N° Ordem";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            // 
             // TelaHistorico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
