@@ -109,8 +109,10 @@ namespace Projeto_TCC
             //VERFICAR SE O EMAIL ESTA NO FORMATO CORRETO
             string TesteEmail = txtEmail.Text;
             string pattern = @"^[^@\s]+@[^@\s]+\.(com)$";
+            string pattern2 = @"^[^@\s]+@[^@\s]+\.(com).(br)$";
             Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
-            if (!regex.IsMatch(TesteEmail))
+            Regex regex2 = new Regex(pattern2, RegexOptions.IgnoreCase);
+            if (!regex.IsMatch(TesteEmail) && !regex2.IsMatch(TesteEmail))
             {
                 Alert("Email no formato incorreto!", FormAlert.enmType.Warning);
                 return;
