@@ -17,7 +17,7 @@ namespace Projeto_TCC
         public TelaMenu()
         {
             InitializeComponent();
-            btnMenu_Click(btnMenu, EventArgs.Empty);
+
             try
             {
                 lblTitulo.Text = $"Boa noite {UsuarioSessao.UsuarioAtual.Nome}";
@@ -26,9 +26,15 @@ namespace Projeto_TCC
             {
                 lblTitulo.Text = $"Boa noite";
             }
+
             this.Text = string.Empty;
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+        }
+
+        private void TelaMenu_Load(object sender, EventArgs e)
+        {
+            btnMenu_Click(btnMenu, EventArgs.Empty);
         }
 
         //CÓDIGO PARA MOVIMENTAÇÃO E REDIMENSIONAMENTO DA TELA
@@ -77,7 +83,19 @@ namespace Projeto_TCC
         {
             ActiveButton(sender);
             lblTittle.Text = "Menu Inicial";
+
+            TelaMenu menu = Application.OpenForms["TelaMenu"] as TelaMenu;
+            menu.panelMenu.Controls.Clear();
+
+            TelaHome home = new TelaHome();
+            home.TopLevel = false;
+            home.Dock = DockStyle.Fill;
+            home.FormBorderStyle = FormBorderStyle.None;
+
+            menu.panelMenu.Controls.Add(home);
+            home.Show();
         }
+
         private void btnIndicativos_Click(object sender, EventArgs e)
         {
             ActiveButton(sender);
@@ -231,5 +249,6 @@ namespace Projeto_TCC
             conclusao.Show();
         }
 
+        
     }//FECHAR CLASSE
 }//FECHAR NAMESPACE

@@ -90,6 +90,7 @@
       <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -104,6 +105,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TelaHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaHome.Designer.cs">
+      <DependentUpon>TelaHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaInclusaoPecas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +189,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="TelaHome.resx">
+      <DependentUpon>TelaHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaInclusaoPecas.resx">
       <DependentUpon>TelaInclusaoPecas.cs</DependentUpon>
     </EmbeddedResource>

@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Projeto_TCC
 {
-    public partial class Form1 : Form
+    public partial class TelaHome : Form
     {
-        public Form1()
+        public TelaHome()
         {
             InitializeComponent();
         }
+
     }
 }
