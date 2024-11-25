@@ -74,6 +74,8 @@ namespace Projeto_TCC
                                     case 3:
                                         preditiva++;
                                         break;
+                                    default:
+                                        break;
                                 }
                             }
                         }
