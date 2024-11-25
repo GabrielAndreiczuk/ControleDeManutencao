@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pieChart1 = new LiveCharts.WinForms.PieChart();
+            this.label5 = new System.Windows.Forms.Label();
             this.roundedPanel6 = new Projeto_TCC.RoundedPanel();
             this.roundedPanel5 = new Projeto_TCC.RoundedPanel();
             this.roundedPanel4 = new Projeto_TCC.RoundedPanel();
@@ -48,18 +50,18 @@
             // chart1
             // 
             this.chart1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(52, 33);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(557, 373);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(404, 240);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(404, 136);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
             // 
@@ -91,11 +93,11 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(550, 161);
+            this.label3.Font = new System.Drawing.Font("Arial", 65.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.label3.Location = new System.Drawing.Point(534, 168);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 100);
+            this.label3.Size = new System.Drawing.Size(183, 100);
             this.label3.TabIndex = 7;
             this.label3.Text = "10";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -104,14 +106,37 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Arial", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label4.Location = new System.Drawing.Point(800, 161);
+            this.label4.Font = new System.Drawing.Font("Arial", 65.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.label4.Location = new System.Drawing.Point(783, 168);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 100);
+            this.label4.Size = new System.Drawing.Size(184, 100);
             this.label4.TabIndex = 8;
             this.label4.Text = "6";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pieChart1
+            // 
+            this.pieChart1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pieChart1.BackColor = System.Drawing.Color.White;
+            this.pieChart1.Location = new System.Drawing.Point(44, 66);
+            this.pieChart1.Name = "pieChart1";
+            this.pieChart1.Size = new System.Drawing.Size(412, 237);
+            this.pieChart1.TabIndex = 12;
+            this.pieChart1.Text = "pieChart1";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.label5.Location = new System.Drawing.Point(118, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(265, 29);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Manutenções por tipo";
             // 
             // roundedPanel6
             // 
@@ -153,7 +178,7 @@
             this.roundedPanel2.ForeColor = System.Drawing.Color.White;
             this.roundedPanel2.Location = new System.Drawing.Point(775, 99);
             this.roundedPanel2.Name = "roundedPanel2";
-            this.roundedPanel2.Size = new System.Drawing.Size(200, 200);
+            this.roundedPanel2.Size = new System.Drawing.Size(200, 213);
             this.roundedPanel2.TabIndex = 1;
             this.roundedPanel2.Text = "roundedPanel2";
             // 
@@ -164,7 +189,7 @@
             this.roundedPanel1.ForeColor = System.Drawing.Color.White;
             this.roundedPanel1.Location = new System.Drawing.Point(525, 99);
             this.roundedPanel1.Name = "roundedPanel1";
-            this.roundedPanel1.Size = new System.Drawing.Size(200, 200);
+            this.roundedPanel1.Size = new System.Drawing.Size(200, 213);
             this.roundedPanel1.TabIndex = 0;
             this.roundedPanel1.Text = "roundedPanel1";
             // 
@@ -175,7 +200,7 @@
             this.roundedPanel3.ForeColor = System.Drawing.Color.White;
             this.roundedPanel3.Location = new System.Drawing.Point(25, 12);
             this.roundedPanel3.Name = "roundedPanel3";
-            this.roundedPanel3.Size = new System.Drawing.Size(450, 287);
+            this.roundedPanel3.Size = new System.Drawing.Size(450, 300);
             this.roundedPanel3.TabIndex = 3;
             this.roundedPanel3.Text = "roundedPanel3";
             // 
@@ -183,8 +208,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(1000, 550);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.pieChart1);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.roundedPanel6);
             this.Controls.Add(this.roundedPanel5);
             this.Controls.Add(this.label4);
@@ -192,7 +220,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.roundedPanel4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.chart1);
             this.Controls.Add(this.roundedPanel2);
             this.Controls.Add(this.roundedPanel1);
             this.Controls.Add(this.roundedPanel3);
@@ -221,5 +248,7 @@
         private System.Windows.Forms.Label label4;
         private RoundedPanel roundedPanel5;
         private RoundedPanel roundedPanel6;
+        private LiveCharts.WinForms.PieChart pieChart1;
+        private System.Windows.Forms.Label label5;
     }
 }
