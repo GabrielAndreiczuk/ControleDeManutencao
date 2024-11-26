@@ -22,16 +22,43 @@ namespace Projeto_TCC
         int corretiva = 0, preditiva = 0, preventiva = 0;
         public TelaHome()
         {
-            InitializeComponent();
-            CarregarDados();
+            InitializeComponent();                       
         }
 
         private void TelaHome_Load(object sender, EventArgs e)
         {
-            GerarGraficos();
+            //CHAMA MÉTODO QUE TRÁS INFORMAÇÕES DO BANCO DE DADOS
+            CarregarDados();
 
+            //DEFINE A DATA INICIAL COMO O PRIMEIRO DIA DO MÊS ATUAL
+            dateInicial.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
         }
 
+        //VERIFICA SE A DATA INICIAL SELECIONADA É MAIOR QUE A DATA FINAL
+        private void dateInicial_ValueChanged(object sender, EventArgs e)
+        {
+            if(dateInicial.Value > dateFinal.Value)
+            {
+                dateFinal.Value = dateInicial.Value;
+            }
+        }
+        //VERIFICA SE A DATA FINAL SELECIONADA É MENOR QUE A DATA INICIAL
+        private void dateFinal_ValueChanged(object sender, EventArgs e)
+        {
+            if (dateInicial.Value > dateFinal.Value)
+            {
+                dateInicial.Value = dateFinal.Value;
+            }
+        }
+
+        private void roundedButton1_Click(object sender, EventArgs e)
+        {
+            //CONFIGURAR CARREGAMENTO CORRETO
+            pieChart1.Series.Clear();
+            CarregarDados();
+        }
+
+        //MÉTODO QUE CARREGA AS INFORMAÇÕES DO BANCO DE DADOS
         private void CarregarDados() 
         { 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -40,19 +67,25 @@ namespace Projeto_TCC
                 {
                     connection.Open();
                     int aberto = 0, concluido = 0;
-                    string selectQuery = "SELECT COUNT(*) FROM abertura_ordem WHERE Status = 1 OR Status = 2";
+                    DateTime dataInicio = dateInicial.Value.Date;
+                    DateTime dataFim = dateFinal.Value.Date;
+
+                    string selectQuery = "SELECT COUNT(*) FROM abertura_ordem WHERE DATE (Data_Abertura) between @DataInicio AND @DataFinal and Status = 1 OR Status = 2";
 
                     using (MySqlCommand command = new MySqlCommand(selectQuery, connection))
                     {
+                        command.Parameters.AddWithValue("@DataInicio",dataInicio.ToString());
+                        command.Parameters.AddWithValue("@DataFinal",dataFim.ToString());
+
                         aberto = Convert.ToInt32(command.ExecuteScalar());
-                        label3.Text = aberto.ToString();                                                
+                        lblAberto.Text = aberto.ToString();                                                
                     }
 
                     selectQuery = "SELECT COUNT(*) FROM abertura_ordem WHERE Status = 3";
                     using (MySqlCommand command = new MySqlCommand(selectQuery, connection))
                     {
                         concluido = Convert.ToInt32(command.ExecuteScalar());
-                        label4.Text = concluido.ToString();
+                        lblConcluido.Text = concluido.ToString();
                     }
 
                     selectQuery = "SELECT (Tipo) FROM manutencao";
@@ -79,7 +112,8 @@ namespace Projeto_TCC
                                 }
                             }
                         }
-                    }
+                    }                       
+                    GerarGraficos();                    
                 }
                 catch (Exception ex)
                 {
@@ -88,6 +122,7 @@ namespace Projeto_TCC
             }
         }
 
+        //MÉTODO QUE GERA GRÁFICOS E INFORMAÇÕES NA TELA
         private void GerarGraficos()
         {
             pieChart1.Series = new SeriesCollection
@@ -111,36 +146,10 @@ namespace Projeto_TCC
                     Fill = new SolidColorBrush(System.Windows.Media.Color.FromRgb(54, 124, 221))
                 },
             };
-            pieChart1.LegendLocation = LiveCharts.LegendLocation.Right;          
-
-
-            chart1.Series.Clear();
-            /*
-            var series = new System.Windows.Forms.DataVisualization.Charting.Series
-            {
-                Name = "Exemplo",
-                IsVisibleInLegend = true,
-                ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie, // ou outro tipo de gráfico
-            };
-
-            series.Points.AddXY("Categoria A",50);
-            series.Points.AddXY("Categoria B",20);
-            series.Points.AddXY("Categoria C",30);
-
-
-            chart1.Legends[0].Font = new System.Drawing.Font("Arial", 12);
-            //chart1.Legends[1].Font = new System.Drawing.Font("Arial", 12);
-            //chart1.Legends[2].Font = new System.Drawing.Font("Arial", 12);
-
-            series.Points[0].Color = .Red;
-            series.Points[1].Color = Color.Blue;
-            series.Points[2].Color = Color.Green;
-
-            chart1.Series.Add(series);
-
-            // Ajustar a aparência do gráfico, se necessário
-            chart1.Titles.Add("Exemplo de Gráfico de Pizza");
-            */
+            pieChart1.LegendLocation = LegendLocation.Right;
+            pieChart1.DefaultLegend.Foreground = System.Windows.Media.Brushes.White;
+            pieChart1.DataTooltip.Background = System.Windows.Media.Brushes.White;
+            pieChart1.DataTooltip.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 0, 54, 102));
         }
     }
 }
