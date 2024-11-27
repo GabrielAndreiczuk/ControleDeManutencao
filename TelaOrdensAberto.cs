@@ -35,7 +35,7 @@ namespace Projeto_TCC
                 try
                 {
                     connection.Open();
-                    string selectQuery = "SELECT * from view_abertura_ordem";
+                    string selectQuery = "SELECT * from view_ordens_aberto";
                     
                     int yOffset = 50;
 
@@ -47,13 +47,13 @@ namespace Projeto_TCC
                             while (reader.Read())
                             {
                                 
-                                id = reader["ID"].ToString();
-                                solicitante = reader["Solicitante"].ToString();
-                                DateTime dataHora = Convert.ToDateTime(reader["abertura"]);
+                                id = reader["Ordem"].ToString();
+                                solicitante = reader["ResponsavelAbertura"].ToString();
+                                DateTime dataHora = Convert.ToDateTime(reader["DataAbertura"]);
                                 abertura = dataHora.ToString("dd/MM/yyyy");
                                 setor = reader["Setor"].ToString();
-                                maquina = reader["Máquina"].ToString();
-                                descricao = reader["Descrição"].ToString();
+                                maquina = reader["Maquina"].ToString();
+                                descricao = reader["DescricaoAbertura"].ToString();
                                 status = reader["Status"].ToString();
 
                                 Color cor = contColor % 2 == 0 ? Color.FromArgb(38, 79, 120) : Color.FromArgb(0, 36, 72);
@@ -274,7 +274,7 @@ namespace Projeto_TCC
                 {
                     connection.Open();
 
-                    string uptadeQuery = "update abertura_ordem set Status = @Status where ID_Abertura = @ID";
+                    string uptadeQuery = "update manutencao set Status = @Status where ID_Manutencao = @ID";
 
                     using (MySqlCommand command = new MySqlCommand(uptadeQuery, connection))
                     {
@@ -286,7 +286,7 @@ namespace Projeto_TCC
                 }
                 catch(Exception ex) 
                 {
-                    
+                    MessageBox.Show(ex.Message);
                 }
             }
         }

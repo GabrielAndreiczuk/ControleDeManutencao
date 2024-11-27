@@ -221,7 +221,7 @@ namespace Projeto_TCC
                     int Maquina = 0, Setor = 0;
                     DateTime dataInicial = new DateTime(2023, 1, 1);
 
-                    string selectQuery = "select ID_Maquina,ID_Setor,Data_Abertura from abertura_ordem where ID_Abertura = @ID";
+                    string selectQuery = "select ID_Maquina,ID_Setor,Data_Abertura from manutencao where ID_Manutencao = @ID";
 
                     using (MySqlCommand cmd = new MySqlCommand(selectQuery, connection))
                     {
@@ -239,6 +239,7 @@ namespace Projeto_TCC
                     }
 
                     DateTime dataAtual = DateTime.Now;
+                    string dataConclusao = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
                     TimeSpan diferenca = dataAtual.Subtract(dataInicial);
 
@@ -247,15 +248,17 @@ namespace Projeto_TCC
                                                                 diferenca.Minutes,
                                                                 diferenca.Seconds);
 
-                    string insertQuery = "insert into manutencao (ID_Ordem,Descricao,ID_Maquina,ID_Setor,Tempo,Tipo,Responsavel) values (@ID,@Descricao,@Maquina,@Setor,@Tempo,@Tipo,@Responsavel)";
+                    string updateQuery = "UPDATE manutencao SET Descricao_Conclusao = @Descricao, ID_Maquina = @Maquina, ID_Setor = @Setor, Data_Conclusao = @Data_Conclusao," +
+                                         "Duracao = @Duracao,Tipo = @Tipo,ID_Funcionario_Conclusao = @Responsavel, Status = 3 WHERE ID_Manutencao = @ID";
 
-                    using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
+                    using (MySqlCommand command = new MySqlCommand(updateQuery, connection))
                     {
                         command.Parameters.AddWithValue("@ID", id);
                         command.Parameters.AddWithValue("@Descricao", descricao);
                         command.Parameters.AddWithValue("@Maquina", Maquina);
                         command.Parameters.AddWithValue("@Setor", Setor);
-                        command.Parameters.AddWithValue("@Tempo", duracaoFormatada);
+                        command.Parameters.AddWithValue("@Data_Conclusao", dataConclusao);
+                        command.Parameters.AddWithValue("@Duracao", duracaoFormatada);
                         command.Parameters.AddWithValue("@Tipo", tipo);
                         command.Parameters.AddWithValue("@Responsavel", UsuarioSessao.UsuarioAtual.ID);
 
@@ -268,8 +271,7 @@ namespace Projeto_TCC
                 }
                 finally
                 {
-                    RegistrarPecas();   //RESGISTRA NO BANCO DE DADOS AS PEÇAS SELECIONADAS
-                    AtualizarStatus(id, 3);                    
+                    RegistrarPecas();   //RESGISTRA NO BANCO DE DADOS AS PEÇAS SELECIONADAS             
 
                     TelaMenu menu = new TelaMenu();
                     menu.btnOrdensAberto_Click(sender, EventArgs.Empty);
@@ -303,33 +305,6 @@ namespace Projeto_TCC
 
                             command.ExecuteNonQuery();
                         }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-        }
-
-        //ATUALIZA STATUS DE "EM ANDAMENTO" PARA "ORDEM CONCLUÍDA"
-        private void AtualizarStatus(int id, int status)
-        {
-
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-
-                    string uptadeQuery = "update abertura_ordem set Status = @Status where ID_Abertura = @ID";
-
-                    using (MySqlCommand command = new MySqlCommand(uptadeQuery, connection))
-                    {
-                        command.Parameters.AddWithValue("ID", id);
-                        command.Parameters.AddWithValue("Status", status);
-
-                        command.ExecuteNonQuery();
                     }
                 }
                 catch (Exception ex)
