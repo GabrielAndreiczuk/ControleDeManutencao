@@ -53,7 +53,17 @@ namespace Projeto_TCC
                                 descricao = reader["DescricaoConclusao"].ToString();
                                 maquina = reader["Máquina"].ToString();
                                 setor = reader["Setor"].ToString();
-                                duracao = reader["Duracao"].ToString();
+
+                                TimeSpan Tempo = (TimeSpan) reader["Duracao"];
+                                string tempo = Tempo.ToString();
+                                string[] semHrs = tempo.Split(':');
+
+                                semHrs[0] = $"{Tempo.Hours + (Tempo.Days * 24)}";
+
+
+
+                                duracao = string.Join(":",semHrs);
+
                                 tipo = reader["Tipo"].ToString();
                                 custo = reader["Custo"].ToString();
                                 responsavel = reader["ResponsavelConclusao"].ToString();

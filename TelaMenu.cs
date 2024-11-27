@@ -178,7 +178,7 @@ namespace Projeto_TCC
             }
             else
             {
-                lblTitulo.Text = "Boa noite";
+                lblTitulo.Text = $"Boa noite {UsuarioSessao.UsuarioAtual.Nome}";
                 btnConfig.Text = "      Configurações";
                 panel1.Width = 300;
             }
