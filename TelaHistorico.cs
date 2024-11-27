@@ -50,13 +50,13 @@ namespace Projeto_TCC
                             while (reader.Read())
                             {
                                 id = reader["Ordem"].ToString();
-                                descricao = reader["Descrição"].ToString();
+                                descricao = reader["DescricaoConclusao"].ToString();
                                 maquina = reader["Máquina"].ToString();
                                 setor = reader["Setor"].ToString();
-                                duracao = reader["Duração"].ToString();
+                                duracao = reader["Duracao"].ToString();
                                 tipo = reader["Tipo"].ToString();
                                 custo = reader["Custo"].ToString();
-                                responsavel = reader["Responsável"].ToString();
+                                responsavel = reader["ResponsavelConclusao"].ToString();
 
                                 Color cor = contColor % 2 == 0 ? Color.FromArgb(38, 79, 120) : Color.FromArgb(0, 36, 72);
                                 yOffset = AdicionarComponentes(yOffset,cor);

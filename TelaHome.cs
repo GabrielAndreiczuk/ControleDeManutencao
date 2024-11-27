@@ -27,13 +27,13 @@ namespace Projeto_TCC
 
         private void TelaHome_Load(object sender, EventArgs e)
         {
-            //CHAMA MÉTODO QUE TRÁS INFORMAÇÕES DO BANCO DE DADOS
-            CarregarDados();
-
             //DEFINE A DATA INICIAL COMO O PRIMEIRO DIA DO MÊS ATUAL
             dateInicial.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
             dateFinal.MaxDate = DateTime.Now;
-            dateFinal.Value = DateTime.Now;            
+            dateFinal.Value = DateTime.Now;
+
+            //CHAMA MÉTODO QUE TRÁS INFORMAÇÕES DO BANCO DE DADOS
+            CarregarDados();
         }
 
         //VERIFICA SE A DATA INICIAL SELECIONADA É MAIOR QUE A DATA FINAL
