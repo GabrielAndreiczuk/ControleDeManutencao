@@ -32,6 +32,8 @@ namespace Projeto_TCC
 
             //DEFINE A DATA INICIAL COMO O PRIMEIRO DIA DO MÊS ATUAL
             dateInicial.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            dateFinal.MaxDate = DateTime.Now;
+            dateFinal.Value = DateTime.Now;            
         }
 
         //VERIFICA SE A DATA INICIAL SELECIONADA É MAIOR QUE A DATA FINAL
@@ -70,23 +72,30 @@ namespace Projeto_TCC
                     DateTime dataInicio = dateInicial.Value.Date;
                     DateTime dataFim = dateFinal.Value.Date;
 
-                    string selectQuery = "SELECT COUNT(*) FROM abertura_ordem WHERE DATE (Data_Abertura) between @DataInicio AND @DataFinal and Status = 1 OR Status = 2";
+                    string selectQuery = "SELECT COUNT(*) FROM manutencao WHERE DATE (Data_Abertura) between @DataInicio AND @DataFinal and Status = 1 OR Status = 2";
 
                     using (MySqlCommand command = new MySqlCommand(selectQuery, connection))
                     {
-                        command.Parameters.AddWithValue("@DataInicio",dataInicio.ToString());
-                        command.Parameters.AddWithValue("@DataFinal",dataFim.ToString());
+                        command.Parameters.AddWithValue("@DataInicio",dataInicio.ToString("yyyy-MM-dd 00:00:00"));
+                        command.Parameters.AddWithValue("@DataFinal",dataFim.ToString("yyyy-MM-dd 23:59:59"));
 
                         aberto = Convert.ToInt32(command.ExecuteScalar());
                         lblAberto.Text = aberto.ToString();                                                
                     }
 
-                    selectQuery = "SELECT COUNT(*) FROM abertura_ordem WHERE Status = 3";
+                    selectQuery = "SELECT COUNT(*) FROM manutencao WHERE DATE (Data_Conclusao) between @DataInicio AND @DataFinal AND Status = 3";
                     using (MySqlCommand command = new MySqlCommand(selectQuery, connection))
                     {
+                        command.Parameters.AddWithValue("@DataInicio", dataInicio.ToString("yyyy-MM-dd 00:00:00"));
+                        command.Parameters.AddWithValue("@DataFinal", dataFim.ToString("yyyy-MM-dd 23:59:59"));
+
                         concluido = Convert.ToInt32(command.ExecuteScalar());
                         lblConcluido.Text = concluido.ToString();
                     }
+
+                    corretiva = 0;
+                    preditiva = 0;
+                    preventiva = 0;
 
                     selectQuery = "SELECT (Tipo) FROM manutencao";
                     using (MySqlCommand command = new MySqlCommand(selectQuery, connection))

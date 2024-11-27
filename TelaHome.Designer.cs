@@ -154,7 +154,7 @@
             this.dateFinal.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.dateFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateFinal.Location = new System.Drawing.Point(250, 54);
-            this.dateFinal.MaxDate = new System.DateTime(2024, 11, 25, 0, 0, 0, 0);
+            this.dateFinal.MaxDate = new System.DateTime(2024, 11, 26, 0, 0, 0, 0);
             this.dateFinal.MinimumSize = new System.Drawing.Size(4, 30);
             this.dateFinal.Name = "dateFinal";
             this.dateFinal.Size = new System.Drawing.Size(200, 30);
