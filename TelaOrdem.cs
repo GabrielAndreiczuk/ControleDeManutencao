@@ -25,6 +25,8 @@ namespace Projeto_TCC
             PreencherSetor();
 
             timer1_Tick(this, EventArgs.Empty);
+
+            label3.Text = $"Boa noite, {UsuarioSessao.UsuarioAtual.Nome}, deseja abrir uma ordem de manutenção?";
         }
         public void Alert(string msg, FormAlert.enmType type)
         {
@@ -157,7 +159,7 @@ namespace Projeto_TCC
                     }
 
                     //DEFINE A CONSULTA SQL PARA INSERIR UM NOVO CLIENTE NA TABELA PASSANDO PARÂMETROS
-                    string insertQuery = "INSERT INTO abertura_ordem (ID_Funcionario, ID_Setor, ID_Maquina, Data_Abertura, Descricao, Status) VALUES (@ID, @Setor, @Maquina, @Data, @Descricao, 1)";
+                    string insertQuery = "INSERT INTO manutencao (ID_Funcionario_Abertura, ID_Setor, ID_Maquina, Data_Abertura, Descricao_Abertura, Tipo, Status) VALUES (@ID, @Setor, @Maquina, @Data, @Descricao, 1, 1)";
 
                     //CRIA O COMANDO SQL COM A CONSULTA E A CONEXÃO
                     using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
