@@ -60,8 +60,6 @@ namespace Projeto_TCC
 
                                 semHrs[0] = $"{Tempo.Hours + (Tempo.Days * 24)}";
 
-
-
                                 duracao = string.Join(":",semHrs);
 
                                 tipo = reader["Tipo"].ToString();

@@ -13,6 +13,7 @@ using LiveCharts.Defaults;
 using LiveChartsCore;
 using System.Windows.Media;
 using MySql.Data.MySqlClient;
+using System.Windows.Ink;
 
 namespace Projeto_TCC
 {
@@ -20,6 +21,9 @@ namespace Projeto_TCC
     {
         string connectionString = "Server=localhost;Uid=root;Database=projeto;Port=3306";
         int corretiva = 0, preditiva = 0, preventiva = 0;
+        private List<string> setores = new List<string>();
+        private ChartValues<int> manutencaoSetor = new ChartValues<int>();
+
         public TelaHome()
         {
             InitializeComponent();                       
@@ -97,9 +101,12 @@ namespace Projeto_TCC
                     preditiva = 0;
                     preventiva = 0;
 
-                    selectQuery = "SELECT (Tipo) FROM manutencao";
+                    selectQuery = "SELECT (Tipo) FROM manutencao WHERE DATE (Data_Abertura) between @DataInicio AND @DataFinal OR DATE (Data_Conclusao) between @DataInicio AND @DataFinal";
                     using (MySqlCommand command = new MySqlCommand(selectQuery, connection))
                     {
+                        command.Parameters.AddWithValue("@DataInicio", dataInicio.ToString("yyyy-MM-dd 00:00:00"));
+                        command.Parameters.AddWithValue("@DataFinal", dataFim.ToString("yyyy-MM-dd 23:59:59"));
+
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())
@@ -121,7 +128,23 @@ namespace Projeto_TCC
                                 }
                             }
                         }
-                    }                       
+                    }
+
+                    selectQuery = "SELECT * FROM manutencao_setor";
+                    using (MySqlCommand command = new MySqlCommand(selectQuery, connection))
+                    {
+                        setores.Clear();
+                        manutencaoSetor.Clear();
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                setores.Add(reader["Setor"].ToString());
+                                manutencaoSetor.Add(int.Parse(reader["Total"].ToString()));
+                            }
+                        }
+                    }
+
                     GerarGraficos();                    
                 }
                 catch (Exception ex)
@@ -134,6 +157,7 @@ namespace Projeto_TCC
         //MÉTODO QUE GERA GRÁFICOS E INFORMAÇÕES NA TELA
         private void GerarGraficos()
         {
+            //CONFIGURAÇÃO GRÁFICO DE PIZZA - MANUTENÇÕES POR TIPO
             pieChart1.Series = new SeriesCollection
             {
                 new PieSeries {
@@ -159,6 +183,30 @@ namespace Projeto_TCC
             pieChart1.DefaultLegend.Foreground = System.Windows.Media.Brushes.White;
             pieChart1.DataTooltip.Background = System.Windows.Media.Brushes.White;
             pieChart1.DataTooltip.Foreground = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 0, 54, 102));
+
+            cartesianChart1.Invalidate();
+            //CONFIGURAÇÃO GRÁFICO DE COLUNAS - MANUTENÇÕES POR SETOR
+            cartesianChart1.Series = new SeriesCollection()
+            {
+                new ColumnSeries
+                {
+                    Values = manutencaoSetor,
+                    Fill = new SolidColorBrush(System.Windows.Media.Color.FromRgb(54, 124, 221))
+                }
+            };
+
+            cartesianChart1.AxisX.Add(new Axis { });
+
+            cartesianChart1.AxisX[0] = new Axis 
+            {
+                Labels = setores.ToList(),
+                LabelsRotation = 135,
+                Separator = new Separator { Step = 1, IsEnabled = true, StrokeThickness = 0.3}
+            };
+
+            cartesianChart1.AxisY.Add(new Axis { Separator = new Separator { Step = 1, IsEnabled = true, StrokeThickness = 0.3 } });
+                
+            cartesianChart1.AxisX[0].Foreground = System.Windows.Media.Brushes.White;
         }
     }
 }

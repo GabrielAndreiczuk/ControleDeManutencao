@@ -38,6 +38,8 @@
             this.dateFinal = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.roundedButton1 = new Projeto_TCC.RoundedButton();
             this.roundedPanel6 = new Projeto_TCC.RoundedPanel();
             this.roundedPanel4 = new Projeto_TCC.RoundedPanel();
@@ -186,6 +188,29 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Final:";
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(44)))), ((int)(((byte)(82)))));
+            this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(618, 252);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(278, 29);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Manutenções por setor";
+            // 
+            // cartesianChart1
+            // 
+            this.cartesianChart1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cartesianChart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(44)))), ((int)(((byte)(82)))));
+            this.cartesianChart1.Location = new System.Drawing.Point(544, 293);
+            this.cartesianChart1.Name = "cartesianChart1";
+            this.cartesianChart1.Size = new System.Drawing.Size(412, 237);
+            this.cartesianChart1.TabIndex = 27;
+            this.cartesianChart1.Text = "cartesianChart1";
+            // 
             // roundedButton1
             // 
             this.roundedButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -317,6 +342,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(1000, 550);
+            this.Controls.Add(this.cartesianChart1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.roundedButton1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -372,5 +399,7 @@
         private RoundedPanel roundedPanel9;
         private RoundedPanel roundedPanel10;
         private RoundedPanel roundedPanel12;
+        private System.Windows.Forms.Label label3;
+        private LiveCharts.WinForms.CartesianChart cartesianChart1;
     }
 }
