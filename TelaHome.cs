@@ -14,6 +14,7 @@ using LiveChartsCore;
 using System.Windows.Media;
 using MySql.Data.MySqlClient;
 using System.Windows.Ink;
+using LiveChartsCore.Themes;
 
 namespace Projeto_TCC
 {
@@ -61,6 +62,7 @@ namespace Projeto_TCC
         {
             //CONFIGURAR CARREGAMENTO CORRETO
             pieChart1.Series.Clear();
+            cartesianChart1.Series.Clear();
             CarregarDados();
         }
 
@@ -129,12 +131,16 @@ namespace Projeto_TCC
                             }
                         }
                     }
-
-                    selectQuery = "SELECT * FROM manutencao_setor";
+                    
+                    setores.Clear();
+                    manutencaoSetor.Clear();
+                    selectQuery = "SELECT (Setor), COUNT(*) as \"Total\" FROM view_manutencao WHERE DATE (DataConclusao) between @DataInicio AND @DataFinal GROUP BY Setor";
+                    //              SELECT COUNT(*) FROM view_manutencao WHERE DATE(DataConclusao) between '2024-10-29' AND '2024-11-27' GROUP BY Setor;
                     using (MySqlCommand command = new MySqlCommand(selectQuery, connection))
                     {
-                        setores.Clear();
-                        manutencaoSetor.Clear();
+                        command.Parameters.AddWithValue("@DataInicio", dataInicio.ToString("yyyy-MM-dd 00:00:00"));
+                        command.Parameters.AddWithValue("@DataFinal", dataFim.ToString("yyyy-MM-dd 23:59:59"));
+                        
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())
@@ -195,15 +201,15 @@ namespace Projeto_TCC
                 }
             };
 
-            cartesianChart1.AxisX.Add(new Axis { });
-
-            cartesianChart1.AxisX[0] = new Axis 
-            {
+            cartesianChart1.AxisX.Clear();
+            cartesianChart1.AxisX.Add(new Axis {
                 Labels = setores.ToList(),
                 LabelsRotation = 135,
-                Separator = new Separator { Step = 1, IsEnabled = true, StrokeThickness = 0.3}
-            };
+                Separator = new Separator { Step = 1, IsEnabled = true, StrokeThickness = 0.3 }
 
+            });
+
+            cartesianChart1.AxisY.Clear();
             cartesianChart1.AxisY.Add(new Axis { Separator = new Separator { Step = 1, IsEnabled = true, StrokeThickness = 0.3 } });
                 
             cartesianChart1.AxisX[0].Foreground = System.Windows.Media.Brushes.White;

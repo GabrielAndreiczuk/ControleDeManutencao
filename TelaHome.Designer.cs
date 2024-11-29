@@ -51,6 +51,7 @@
             this.roundedPanel9 = new Projeto_TCC.RoundedPanel();
             this.roundedPanel10 = new Projeto_TCC.RoundedPanel();
             this.roundedPanel12 = new Projeto_TCC.RoundedPanel();
+            this.roundedButton2 = new Projeto_TCC.RoundedButton();
             this.SuspendLayout();
             // 
             // label1
@@ -195,11 +196,11 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(44)))), ((int)(((byte)(82)))));
             this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(618, 252);
+            this.label3.Location = new System.Drawing.Point(545, 252);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(278, 29);
+            this.label3.Size = new System.Drawing.Size(411, 29);
             this.label3.TabIndex = 26;
-            this.label3.Text = "Manutenções por setor";
+            this.label3.Text = "Manutenções concluídas por setor";
             // 
             // cartesianChart1
             // 
@@ -215,6 +216,7 @@
             // 
             this.roundedButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.roundedButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.roundedButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.roundedButton1.FlatAppearance.BorderSize = 0;
             this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundedButton1.ForeColor = System.Drawing.Color.White;
@@ -336,6 +338,20 @@
             this.roundedPanel12.TabIndex = 24;
             this.roundedPanel12.Text = "roundedPanel12";
             // 
+            // roundedButton2
+            // 
+            this.roundedButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.roundedButton2.BackColor = System.Drawing.Color.Black;
+            this.roundedButton2.FlatAppearance.BorderSize = 0;
+            this.roundedButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton2.ForeColor = System.Drawing.Color.White;
+            this.roundedButton2.Location = new System.Drawing.Point(25, 139);
+            this.roundedButton2.Name = "roundedButton2";
+            this.roundedButton2.Size = new System.Drawing.Size(453, 60);
+            this.roundedButton2.TabIndex = 28;
+            this.roundedButton2.Text = "Filtrar";
+            this.roundedButton2.UseVisualStyleBackColor = false;
+            // 
             // TelaHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -365,6 +381,7 @@
             this.Controls.Add(this.roundedPanel9);
             this.Controls.Add(this.roundedPanel10);
             this.Controls.Add(this.roundedPanel12);
+            this.Controls.Add(this.roundedButton2);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -401,5 +418,6 @@
         private RoundedPanel roundedPanel12;
         private System.Windows.Forms.Label label3;
         private LiveCharts.WinForms.CartesianChart cartesianChart1;
+        private RoundedButton roundedButton2;
     }
 }
