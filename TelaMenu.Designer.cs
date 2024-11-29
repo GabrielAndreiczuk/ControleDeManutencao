@@ -302,30 +302,36 @@
             // labelClose
             // 
             this.labelClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelClose.Location = new System.Drawing.Point(970, 0);
             this.labelClose.Name = "labelClose";
             this.labelClose.Size = new System.Drawing.Size(50, 35);
             this.labelClose.TabIndex = 28;
+            this.labelClose.Click += new System.EventHandler(this.btnClose_Click);
             this.labelClose.MouseEnter += new System.EventHandler(this.pibFechar_MouseHover);
             this.labelClose.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
             // 
             // lblMaximizar
             // 
             this.lblMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMaximizar.Location = new System.Drawing.Point(920, 0);
             this.lblMaximizar.Name = "lblMaximizar";
             this.lblMaximizar.Size = new System.Drawing.Size(50, 35);
             this.lblMaximizar.TabIndex = 29;
+            this.lblMaximizar.Click += new System.EventHandler(this.btnMaximize_Click);
             this.lblMaximizar.MouseEnter += new System.EventHandler(this.pibMaximizar_MouseHover);
             this.lblMaximizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
             // 
             // lblMinimizar
             // 
             this.lblMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMinimizar.Location = new System.Drawing.Point(870, 0);
             this.lblMinimizar.Name = "lblMinimizar";
             this.lblMinimizar.Size = new System.Drawing.Size(50, 35);
             this.lblMinimizar.TabIndex = 30;
+            this.lblMinimizar.Click += new System.EventHandler(this.btnMinimize_Click);
             this.lblMinimizar.MouseEnter += new System.EventHandler(this.pibMinimizar_MouseHover);
             this.lblMinimizar.MouseLeave += new System.EventHandler(this.ResetBackground_MouseLeave);
             // 

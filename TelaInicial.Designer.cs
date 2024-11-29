@@ -89,6 +89,7 @@
             // labelClose
             // 
             this.labelClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelClose.Location = new System.Drawing.Point(971, 0);
             this.labelClose.Name = "labelClose";
             this.labelClose.Size = new System.Drawing.Size(50, 35);
@@ -100,6 +101,7 @@
             // lblMaximizar
             // 
             this.lblMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMaximizar.Location = new System.Drawing.Point(921, 0);
             this.lblMaximizar.Name = "lblMaximizar";
             this.lblMaximizar.Size = new System.Drawing.Size(50, 35);
@@ -111,6 +113,7 @@
             // lblMinimizar
             // 
             this.lblMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMinimizar.Location = new System.Drawing.Point(871, 0);
             this.lblMinimizar.Name = "lblMinimizar";
             this.lblMinimizar.Size = new System.Drawing.Size(50, 35);
@@ -140,6 +143,7 @@
             this.Controls.Add(this.labelClose);
             this.Controls.Add(this.lblMaximizar);
             this.Controls.Add(this.lblMinimizar);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
