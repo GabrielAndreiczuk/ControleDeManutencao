@@ -50,7 +50,7 @@
             // 
             // pnlFiltros
             // 
-            this.pnlFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
+            this.pnlFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.pnlFiltros.Controls.Add(this.pibFiltrar);
             this.pnlFiltros.Controls.Add(this.label3);
             this.pnlFiltros.Controls.Add(this.lblLine);
@@ -108,7 +108,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(750, 65);
+            this.label1.Location = new System.Drawing.Point(770, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 19);
             this.label1.TabIndex = 21;
@@ -163,7 +163,7 @@
             this.dateFinal.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.dateFinal.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.dateFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateFinal.Location = new System.Drawing.Point(750, 97);
+            this.dateFinal.Location = new System.Drawing.Point(770, 97);
             this.dateFinal.MaxDate = new System.DateTime(2024, 11, 26, 0, 0, 0, 0);
             this.dateFinal.MinimumSize = new System.Drawing.Size(4, 30);
             this.dateFinal.Name = "dateFinal";
@@ -257,7 +257,7 @@
             this.roundedLabel3.BackColor = System.Drawing.Color.White;
             this.roundedLabel3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedLabel3.ForeColor = System.Drawing.Color.White;
-            this.roundedLabel3.Location = new System.Drawing.Point(740, 87);
+            this.roundedLabel3.Location = new System.Drawing.Point(760, 87);
             this.roundedLabel3.Name = "roundedLabel3";
             this.roundedLabel3.Size = new System.Drawing.Size(200, 50);
             this.roundedLabel3.TabIndex = 34;
