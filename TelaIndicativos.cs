@@ -15,21 +15,33 @@ namespace Projeto_TCC
         public TelaIndicativos()
         {
             InitializeComponent();
-            timer1_Tick(this, EventArgs.Empty);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
+            if (pnlFiltros.Height == 150)
+            {
+                foreach (Control control in pnlFiltros.Controls)
+                {
+                    if (!(control is Button))
+                    {
+                        control.Visible = false;
+                    }
+                }
+                pnlFiltros.Height = 50;
+            }
+            else
+            {
+                foreach (Control control in pnlFiltros.Controls)
+                {
+                    if (!(control is Button))
+                    {
+                        control.Visible = true;
+                    }
+                }
+                pnlFiltros.Height = 150;
+            }
+            
         }
     }
 }

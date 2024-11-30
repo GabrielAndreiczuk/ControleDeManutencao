@@ -38,11 +38,11 @@
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnRegistrar = new Projeto_TCC.RoundedButton();
             this.numQuantidade = new System.Windows.Forms.NumericUpDown();
             this.lblEstoque = new System.Windows.Forms.Label();
             this.cmbPecas = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnRegistrar = new Projeto_TCC.RoundedButton();
             this.roundedLabel2 = new Projeto_TCC.RoundedLabel();
             this.label1 = new Projeto_TCC.RoundedLabel();
             this.panel1.SuspendLayout();
@@ -55,7 +55,7 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.panel1.Controls.Add(this.pibMinimizar);
             this.panel1.Controls.Add(this.pibFechar);
             this.panel1.Controls.Add(this.pibMaximizar);
@@ -181,6 +181,23 @@
             this.label3.Text = "Quantidade";
             this.label3.Visible = false;
             // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrar.FlatAppearance.BorderSize = 0;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.Location = new System.Drawing.Point(25, 450);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(350, 50);
+            this.btnRegistrar.TabIndex = 33;
+            this.btnRegistrar.Text = "Registrar peças";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Visible = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
             // numQuantidade
             // 
             this.numQuantidade.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -242,23 +259,6 @@
             this.label2.Size = new System.Drawing.Size(56, 19);
             this.label2.TabIndex = 27;
             this.label2.Text = "Peças";
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
-            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegistrar.FlatAppearance.BorderSize = 0;
-            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(25, 450);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(350, 50);
-            this.btnRegistrar.TabIndex = 33;
-            this.btnRegistrar.Text = "Registrar peças";
-            this.btnRegistrar.UseVisualStyleBackColor = false;
-            this.btnRegistrar.Visible = false;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // roundedLabel2
             // 

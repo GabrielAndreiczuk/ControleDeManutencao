@@ -58,7 +58,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(44)))), ((int)(((byte)(82)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(553, 32);
             this.label1.Name = "label1";
@@ -70,7 +70,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(44)))), ((int)(((byte)(82)))));
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(799, 32);
             this.label2.Name = "label2";
@@ -81,7 +81,7 @@
             // lblAberto
             // 
             this.lblAberto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblAberto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(44)))), ((int)(((byte)(82)))));
+            this.lblAberto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.lblAberto.Font = new System.Drawing.Font("Arial", 65.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAberto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.lblAberto.Location = new System.Drawing.Point(534, 67);
@@ -94,7 +94,7 @@
             // lblConcluido
             // 
             this.lblConcluido.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblConcluido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(44)))), ((int)(((byte)(82)))));
+            this.lblConcluido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.lblConcluido.Font = new System.Drawing.Font("Arial", 65.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConcluido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
             this.lblConcluido.Location = new System.Drawing.Point(783, 67);
@@ -107,7 +107,7 @@
             // pieChart1
             // 
             this.pieChart1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pieChart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(44)))), ((int)(((byte)(82)))));
+            this.pieChart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.pieChart1.ForeColor = System.Drawing.Color.White;
             this.pieChart1.Location = new System.Drawing.Point(44, 293);
             this.pieChart1.Name = "pieChart1";
@@ -119,7 +119,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(44)))), ((int)(((byte)(82)))));
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label5.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(118, 252);
@@ -169,7 +169,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(44)))), ((int)(((byte)(82)))));
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(46, 29);
             this.label6.Name = "label6";
@@ -181,7 +181,7 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(44)))), ((int)(((byte)(82)))));
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(246, 29);
             this.label7.Name = "label7";
@@ -193,7 +193,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(44)))), ((int)(((byte)(82)))));
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(545, 252);
@@ -205,7 +205,7 @@
             // cartesianChart1
             // 
             this.cartesianChart1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cartesianChart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(44)))), ((int)(((byte)(82)))));
+            this.cartesianChart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.cartesianChart1.Location = new System.Drawing.Point(544, 293);
             this.cartesianChart1.Name = "cartesianChart1";
             this.cartesianChart1.Size = new System.Drawing.Size(412, 237);
@@ -231,7 +231,7 @@
             // roundedPanel6
             // 
             this.roundedPanel6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.roundedPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(44)))), ((int)(((byte)(82)))));
+            this.roundedPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.roundedPanel6.ForeColor = System.Drawing.Color.White;
             this.roundedPanel6.Location = new System.Drawing.Point(525, 239);
             this.roundedPanel6.Name = "roundedPanel6";
@@ -242,7 +242,7 @@
             // roundedPanel4
             // 
             this.roundedPanel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.roundedPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(44)))), ((int)(((byte)(82)))));
+            this.roundedPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.roundedPanel4.ForeColor = System.Drawing.Color.White;
             this.roundedPanel4.Location = new System.Drawing.Point(25, 12);
             this.roundedPanel4.Name = "roundedPanel4";
@@ -253,7 +253,7 @@
             // roundedPanel2
             // 
             this.roundedPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.roundedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(44)))), ((int)(((byte)(82)))));
+            this.roundedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.roundedPanel2.ForeColor = System.Drawing.Color.White;
             this.roundedPanel2.Location = new System.Drawing.Point(775, 12);
             this.roundedPanel2.Name = "roundedPanel2";
@@ -264,7 +264,7 @@
             // roundedPanel1
             // 
             this.roundedPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(44)))), ((int)(((byte)(82)))));
+            this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.roundedPanel1.ForeColor = System.Drawing.Color.White;
             this.roundedPanel1.Location = new System.Drawing.Point(525, 12);
             this.roundedPanel1.Name = "roundedPanel1";
@@ -275,7 +275,7 @@
             // roundedPanel7
             // 
             this.roundedPanel7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.roundedPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(44)))), ((int)(((byte)(82)))));
+            this.roundedPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.roundedPanel7.ForeColor = System.Drawing.Color.White;
             this.roundedPanel7.Location = new System.Drawing.Point(25, 239);
             this.roundedPanel7.Name = "roundedPanel7";
@@ -356,7 +356,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.ClientSize = new System.Drawing.Size(1000, 550);
             this.Controls.Add(this.cartesianChart1);
             this.Controls.Add(this.label3);

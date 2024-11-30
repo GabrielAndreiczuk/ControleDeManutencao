@@ -157,24 +157,24 @@ namespace Projeto_TCC
         //HOOVER CONTROLES DE TELA - MAXIMIZAR
         private void pibMaximizar_MouseHover(object sender, EventArgs e)
         {
-            pibMaximizar.BackColor = Color.FromArgb(0, 36, 72);
-            lblMaximizar.BackColor = Color.FromArgb(0, 36, 72);
+            pibMaximizar.BackColor = Color.FromArgb(0, 20, 50);
+            lblMaximizar.BackColor = Color.FromArgb(0, 20, 50);
         }
         //HOOVER CONTROLES DE TELA - MINIMIZAR
         private void pibMinimizar_MouseHover(object sender, EventArgs e)
         {
-            pibMinimizar.BackColor = Color.FromArgb(0, 36, 72);
-            lblMinimizar.BackColor = Color.FromArgb(0, 36, 72);
+            pibMinimizar.BackColor = Color.FromArgb(0, 20, 50);
+            lblMinimizar.BackColor = Color.FromArgb(0, 20, 50);
         }
         //HOOVER CONTROLES DE TELA - RESET DO ESTILO
         private void ResetBackground_MouseLeave(object sender, EventArgs e)
         {
-            pibFechar.BackColor = Color.FromArgb(0, 51, 102);
-            pibMaximizar.BackColor = Color.FromArgb(0, 51, 102);
-            pibMinimizar.BackColor = Color.FromArgb(0, 51, 102);
-            labelClose.BackColor = Color.FromArgb(0, 51, 102);
-            lblMaximizar.BackColor = Color.FromArgb(0, 51, 102);
-            lblMinimizar.BackColor = Color.FromArgb(0, 51, 102);
+            pibFechar.BackColor = Color.FromArgb(0, 36, 72);
+            pibMaximizar.BackColor = Color.FromArgb(0, 36, 72);
+            pibMinimizar.BackColor = Color.FromArgb(0, 36, 72);
+            labelClose.BackColor = Color.FromArgb(0, 36, 72);
+            lblMaximizar.BackColor = Color.FromArgb(0, 36, 72);
+            lblMinimizar.BackColor = Color.FromArgb(0, 36, 72);
         }  
     }
 }
