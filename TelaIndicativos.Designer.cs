@@ -29,28 +29,31 @@
         private void InitializeComponent()
         {
             this.pnlFiltros = new System.Windows.Forms.Panel();
-            this.cmbSetor = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbMaquina = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.pibFiltrar = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblLine = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmbMaquina = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.cmbSetor = new System.Windows.Forms.ComboBox();
             this.dateFinal = new System.Windows.Forms.DateTimePicker();
             this.dateInicial = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.roundedLabel7 = new Projeto_TCC.RoundedLabel();
             this.roundedLabel2 = new Projeto_TCC.RoundedLabel();
             this.roundedLabel1 = new Projeto_TCC.RoundedLabel();
             this.roundedLabel3 = new Projeto_TCC.RoundedLabel();
             this.pnlFiltros.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibFiltrar)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlFiltros
             // 
-            this.pnlFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.pnlFiltros.Controls.Add(this.label9);
-            this.pnlFiltros.Controls.Add(this.button1);
+            this.pnlFiltros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
+            this.pnlFiltros.Controls.Add(this.pibFiltrar);
+            this.pnlFiltros.Controls.Add(this.label3);
+            this.pnlFiltros.Controls.Add(this.lblLine);
             this.pnlFiltros.Controls.Add(this.label1);
             this.pnlFiltros.Controls.Add(this.cmbMaquina);
             this.pnlFiltros.Controls.Add(this.label6);
@@ -69,33 +72,47 @@
             this.pnlFiltros.Size = new System.Drawing.Size(1000, 150);
             this.pnlFiltros.TabIndex = 1;
             // 
-            // cmbSetor
+            // pibFiltrar
             // 
-            this.cmbSetor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmbSetor.BackColor = System.Drawing.Color.White;
-            this.cmbSetor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmbSetor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSetor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSetor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSetor.FormattingEnabled = true;
-            this.cmbSetor.Location = new System.Drawing.Point(50, 99);
-            this.cmbSetor.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbSetor.Name = "cmbSetor";
-            this.cmbSetor.Size = new System.Drawing.Size(180, 27);
-            this.cmbSetor.TabIndex = 31;
+            this.pibFiltrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pibFiltrar.Image = global::Projeto_TCC.Properties.Resources.icon_filtrar;
+            this.pibFiltrar.Location = new System.Drawing.Point(12, 6);
+            this.pibFiltrar.Name = "pibFiltrar";
+            this.pibFiltrar.Size = new System.Drawing.Size(35, 35);
+            this.pibFiltrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pibFiltrar.TabIndex = 38;
+            this.pibFiltrar.TabStop = false;
+            this.pibFiltrar.Click += new System.EventHandler(this.pibFiltrar_Click);
             // 
-            // label2
+            // label3
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(46, 65);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 19);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Setor";
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(0, 148);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(1000, 2);
+            this.label3.TabIndex = 37;
+            // 
+            // lblLine
+            // 
+            this.lblLine.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblLine.BackColor = System.Drawing.Color.White;
+            this.lblLine.Location = new System.Drawing.Point(0, 48);
+            this.lblLine.Name = "lblLine";
+            this.lblLine.Size = new System.Drawing.Size(1000, 2);
+            this.lblLine.TabIndex = 36;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(750, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 19);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Final:";
             // 
             // cmbMaquina
             // 
@@ -112,30 +129,6 @@
             this.cmbMaquina.Size = new System.Drawing.Size(180, 27);
             this.cmbMaquina.TabIndex = 28;
             // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(286, 65);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 19);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Máquina";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(750, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 19);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Final:";
-            // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -146,6 +139,21 @@
             this.label6.Size = new System.Drawing.Size(56, 19);
             this.label6.TabIndex = 20;
             this.label6.Text = "Início:";
+            // 
+            // cmbSetor
+            // 
+            this.cmbSetor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbSetor.BackColor = System.Drawing.Color.White;
+            this.cmbSetor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbSetor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSetor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbSetor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSetor.FormattingEnabled = true;
+            this.cmbSetor.Location = new System.Drawing.Point(50, 99);
+            this.cmbSetor.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbSetor.Name = "cmbSetor";
+            this.cmbSetor.Size = new System.Drawing.Size(180, 27);
+            this.cmbSetor.TabIndex = 31;
             // 
             // dateFinal
             // 
@@ -181,23 +189,31 @@
             this.dateInicial.TabIndex = 18;
             this.dateInicial.Value = new System.DateTime(2024, 11, 25, 0, 0, 0, 0);
             // 
-            // button1
+            // label7
             // 
-            this.button1.Location = new System.Drawing.Point(40, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(286, 65);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(74, 19);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "Máquina";
             // 
-            // label9
+            // label2
             // 
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(0, 48);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(1000, 2);
-            this.label9.TabIndex = 36;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(46, 65);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 19);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Setor";
             // 
             // roundedLabel7
             // 
@@ -259,8 +275,10 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TelaIndicativos";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.TelaIndicativos_Load);
             this.pnlFiltros.ResumeLayout(false);
             this.pnlFiltros.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pibFiltrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -279,7 +297,8 @@
         private System.Windows.Forms.DateTimePicker dateInicial;
         private RoundedLabel roundedLabel1;
         private RoundedLabel roundedLabel3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblLine;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pibFiltrar;
     }
 }

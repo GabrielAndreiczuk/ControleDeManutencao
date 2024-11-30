@@ -130,9 +130,6 @@
   <data name="user-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconeExcluir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconeExcluir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="19197945" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\19197945.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,8 +151,8 @@
   <data name="imagem-tela-login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imagem-tela-login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sucesso" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sucesso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconeExcluir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconeExcluir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imagem-cadastro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imagem-cadastro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,6 +175,9 @@
   <data name="password-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\password-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sucesso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sucesso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icone-minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone-minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -187,11 +187,17 @@
   <data name="icone-fechar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone-fechar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fecharPecas-icone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fecharPecas-icone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icone-recolher" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone-recolher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icone-historico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone-historico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-filtrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-filtrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icone-historico-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icone-historico-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -223,7 +229,7 @@
   <data name="icon-cargo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-cargo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fecharPecas-icone" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fecharPecas-icone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon-limpar-filtros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-limpar-filtros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

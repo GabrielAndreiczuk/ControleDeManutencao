@@ -17,18 +17,23 @@ namespace Projeto_TCC
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void TelaIndicativos_Load(object sender, EventArgs e)
+        {
+            pibFiltrar_Click(sender, EventArgs.Empty);
+        }
+
+        private void pibFiltrar_Click(object sender, EventArgs e)
         {
             if (pnlFiltros.Height == 150)
             {
                 foreach (Control control in pnlFiltros.Controls)
                 {
-                    if (!(control is Button))
+                    if (!(control is PictureBox) && (control != lblLine))
                     {
                         control.Visible = false;
                     }
                 }
-                pnlFiltros.Height = 50;
+                pnlFiltros.Height = 52;
             }
             else
             {
