@@ -27,15 +27,17 @@ namespace Projeto_TCC
 
         public TelaHome()
         {
-            InitializeComponent();                       
+            InitializeComponent();
+
+            //DEFINE A DATA INICIAL COMO O PRIMEIRO DIA DO MÊS ATUAL
+            dateInicial.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            dateInicial.MaxDate = DateTime.Now;
+            dateFinal.Value = DateTime.Now;
+            dateFinal.MaxDate = DateTime.Now;           
         }
 
         private void TelaHome_Load(object sender, EventArgs e)
-        {
-            //DEFINE A DATA INICIAL COMO O PRIMEIRO DIA DO MÊS ATUAL
-            dateInicial.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
-            dateFinal.MaxDate = DateTime.Now;
-            dateFinal.Value = DateTime.Now;
+        {          
 
             //CHAMA MÉTODO QUE TRÁS INFORMAÇÕES DO BANCO DE DADOS
             CarregarDados();
