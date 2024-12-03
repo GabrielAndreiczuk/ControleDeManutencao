@@ -50,6 +50,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.roundedButton1 = new Projeto_TCC.RoundedButton();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pieChart2 = new LiveCharts.WinForms.PieChart();
+            this.roundedPanel9 = new Projeto_TCC.RoundedPanel();
+            this.roundedPanel10 = new Projeto_TCC.RoundedPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.pieChart1 = new LiveCharts.WinForms.PieChart();
             this.roundedPanel7 = new Projeto_TCC.RoundedPanel();
@@ -64,16 +70,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.roundedPanel1 = new Projeto_TCC.RoundedPanel();
             this.roundedPanel8 = new Projeto_TCC.RoundedPanel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.pieChart2 = new LiveCharts.WinForms.PieChart();
-            this.roundedPanel9 = new Projeto_TCC.RoundedPanel();
-            this.roundedPanel10 = new Projeto_TCC.RoundedPanel();
             this.pnlFiltros.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pibFiltrar)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlFiltros
@@ -372,6 +374,85 @@
             this.roundedButton1.Text = "Aplicar filtros";
             this.roundedButton1.UseVisualStyleBackColor = false;
             // 
+            // label12
+            // 
+            this.label12.Location = new System.Drawing.Point(-3, 161);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(22, 575);
+            this.label12.TabIndex = 66;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label13);
+            this.panel3.Controls.Add(this.pieChart2);
+            this.panel3.Controls.Add(this.roundedPanel9);
+            this.panel3.Controls.Add(this.roundedPanel10);
+            this.panel3.Controls.Add(this.label11);
+            this.panel3.Controls.Add(this.pieChart1);
+            this.panel3.Controls.Add(this.roundedPanel7);
+            this.panel3.Controls.Add(this.roundedPanel6);
+            this.panel3.Controls.Add(this.roundedPanel4);
+            this.panel3.Controls.Add(this.roundedPanel5);
+            this.panel3.Controls.Add(this.label9);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.roundedPanel2);
+            this.panel3.Controls.Add(this.roundedPanel3);
+            this.panel3.Controls.Add(this.lblAberto);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.roundedPanel1);
+            this.panel3.Controls.Add(this.roundedPanel8);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 150);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(983, 586);
+            this.panel3.TabIndex = 67;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
+            this.label13.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(608, 276);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(265, 29);
+            this.label13.TabIndex = 87;
+            this.label13.Text = "Manutenções por tipo";
+            // 
+            // pieChart2
+            // 
+            this.pieChart2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pieChart2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
+            this.pieChart2.ForeColor = System.Drawing.Color.White;
+            this.pieChart2.Location = new System.Drawing.Point(534, 317);
+            this.pieChart2.Name = "pieChart2";
+            this.pieChart2.Size = new System.Drawing.Size(412, 237);
+            this.pieChart2.TabIndex = 86;
+            this.pieChart2.Text = "pieChart2";
+            // 
+            // roundedPanel9
+            // 
+            this.roundedPanel9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.roundedPanel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
+            this.roundedPanel9.ForeColor = System.Drawing.Color.White;
+            this.roundedPanel9.Location = new System.Drawing.Point(515, 263);
+            this.roundedPanel9.Name = "roundedPanel9";
+            this.roundedPanel9.Size = new System.Drawing.Size(450, 300);
+            this.roundedPanel9.TabIndex = 88;
+            this.roundedPanel9.Text = "roundedPanel9";
+            // 
+            // roundedPanel10
+            // 
+            this.roundedPanel10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.roundedPanel10.BackColor = System.Drawing.Color.Black;
+            this.roundedPanel10.ForeColor = System.Drawing.Color.White;
+            this.roundedPanel10.Location = new System.Drawing.Point(515, 263);
+            this.roundedPanel10.Name = "roundedPanel10";
+            this.roundedPanel10.Size = new System.Drawing.Size(453, 303);
+            this.roundedPanel10.TabIndex = 85;
+            this.roundedPanel10.Text = "roundedPanel10";
+            // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -379,10 +460,10 @@
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label11.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(123, 406);
+            this.label11.Location = new System.Drawing.Point(113, 276);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(265, 29);
-            this.label11.TabIndex = 63;
+            this.label11.TabIndex = 83;
             this.label11.Text = "Manutenções por tipo";
             // 
             // pieChart1
@@ -390,10 +471,10 @@
             this.pieChart1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pieChart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.pieChart1.ForeColor = System.Drawing.Color.White;
-            this.pieChart1.Location = new System.Drawing.Point(49, 447);
+            this.pieChart1.Location = new System.Drawing.Point(39, 317);
             this.pieChart1.Name = "pieChart1";
             this.pieChart1.Size = new System.Drawing.Size(412, 237);
-            this.pieChart1.TabIndex = 62;
+            this.pieChart1.TabIndex = 82;
             this.pieChart1.Text = "pieChart1";
             // 
             // roundedPanel7
@@ -401,10 +482,10 @@
             this.roundedPanel7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.roundedPanel7.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel7.Location = new System.Drawing.Point(30, 393);
+            this.roundedPanel7.Location = new System.Drawing.Point(20, 263);
             this.roundedPanel7.Name = "roundedPanel7";
             this.roundedPanel7.Size = new System.Drawing.Size(450, 300);
-            this.roundedPanel7.TabIndex = 64;
+            this.roundedPanel7.TabIndex = 84;
             this.roundedPanel7.Text = "roundedPanel7";
             // 
             // roundedPanel6
@@ -412,10 +493,10 @@
             this.roundedPanel6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel6.BackColor = System.Drawing.Color.Black;
             this.roundedPanel6.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel6.Location = new System.Drawing.Point(30, 393);
+            this.roundedPanel6.Location = new System.Drawing.Point(20, 263);
             this.roundedPanel6.Name = "roundedPanel6";
             this.roundedPanel6.Size = new System.Drawing.Size(453, 303);
-            this.roundedPanel6.TabIndex = 61;
+            this.roundedPanel6.TabIndex = 81;
             this.roundedPanel6.Text = "roundedPanel6";
             // 
             // roundedPanel4
@@ -423,10 +504,10 @@
             this.roundedPanel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.roundedPanel4.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel4.Location = new System.Drawing.Point(525, 178);
+            this.roundedPanel4.Location = new System.Drawing.Point(515, 34);
             this.roundedPanel4.Name = "roundedPanel4";
             this.roundedPanel4.Size = new System.Drawing.Size(450, 184);
-            this.roundedPanel4.TabIndex = 59;
+            this.roundedPanel4.TabIndex = 79;
             this.roundedPanel4.Text = "roundedPanel4";
             // 
             // roundedPanel5
@@ -434,10 +515,10 @@
             this.roundedPanel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel5.BackColor = System.Drawing.Color.Black;
             this.roundedPanel5.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel5.Location = new System.Drawing.Point(525, 178);
+            this.roundedPanel5.Location = new System.Drawing.Point(515, 34);
             this.roundedPanel5.Name = "roundedPanel5";
             this.roundedPanel5.Size = new System.Drawing.Size(453, 187);
-            this.roundedPanel5.TabIndex = 60;
+            this.roundedPanel5.TabIndex = 80;
             this.roundedPanel5.Text = "roundedPanel5";
             // 
             // label9
@@ -446,10 +527,10 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label9.Font = new System.Drawing.Font("Arial", 65.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(284, 233);
+            this.label9.Location = new System.Drawing.Point(279, 89);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(183, 100);
-            this.label9.TabIndex = 57;
+            this.label9.TabIndex = 77;
             this.label9.Text = "10";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -459,10 +540,10 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(349, 198);
+            this.label10.Location = new System.Drawing.Point(344, 54);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 19);
-            this.label10.TabIndex = 56;
+            this.label10.TabIndex = 76;
             this.label10.Text = "MTTF";
             // 
             // roundedPanel2
@@ -470,10 +551,10 @@
             this.roundedPanel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.roundedPanel2.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel2.Location = new System.Drawing.Point(275, 178);
+            this.roundedPanel2.Location = new System.Drawing.Point(270, 34);
             this.roundedPanel2.Name = "roundedPanel2";
             this.roundedPanel2.Size = new System.Drawing.Size(200, 184);
-            this.roundedPanel2.TabIndex = 55;
+            this.roundedPanel2.TabIndex = 75;
             this.roundedPanel2.Text = "roundedPanel2";
             // 
             // roundedPanel3
@@ -481,10 +562,10 @@
             this.roundedPanel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel3.BackColor = System.Drawing.Color.Black;
             this.roundedPanel3.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel3.Location = new System.Drawing.Point(275, 178);
+            this.roundedPanel3.Location = new System.Drawing.Point(270, 34);
             this.roundedPanel3.Name = "roundedPanel3";
             this.roundedPanel3.Size = new System.Drawing.Size(203, 187);
-            this.roundedPanel3.TabIndex = 58;
+            this.roundedPanel3.TabIndex = 78;
             this.roundedPanel3.Text = "roundedPanel3";
             // 
             // lblAberto
@@ -493,10 +574,10 @@
             this.lblAberto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.lblAberto.Font = new System.Drawing.Font("Arial", 65.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAberto.ForeColor = System.Drawing.Color.White;
-            this.lblAberto.Location = new System.Drawing.Point(34, 233);
+            this.lblAberto.Location = new System.Drawing.Point(29, 89);
             this.lblAberto.Name = "lblAberto";
             this.lblAberto.Size = new System.Drawing.Size(183, 100);
-            this.lblAberto.TabIndex = 53;
+            this.lblAberto.TabIndex = 73;
             this.lblAberto.Text = "10";
             this.lblAberto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -506,10 +587,10 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(98, 198);
+            this.label8.Location = new System.Drawing.Point(93, 54);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 19);
-            this.label8.TabIndex = 52;
+            this.label8.TabIndex = 72;
             this.label8.Text = "MTBF";
             // 
             // roundedPanel1
@@ -517,10 +598,10 @@
             this.roundedPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.roundedPanel1.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel1.Location = new System.Drawing.Point(25, 178);
+            this.roundedPanel1.Location = new System.Drawing.Point(20, 34);
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(200, 184);
-            this.roundedPanel1.TabIndex = 51;
+            this.roundedPanel1.TabIndex = 71;
             this.roundedPanel1.Text = "roundedPanel1";
             // 
             // roundedPanel8
@@ -528,64 +609,11 @@
             this.roundedPanel8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel8.BackColor = System.Drawing.Color.Black;
             this.roundedPanel8.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel8.Location = new System.Drawing.Point(25, 178);
+            this.roundedPanel8.Location = new System.Drawing.Point(20, 34);
             this.roundedPanel8.Name = "roundedPanel8";
             this.roundedPanel8.Size = new System.Drawing.Size(203, 187);
-            this.roundedPanel8.TabIndex = 54;
+            this.roundedPanel8.TabIndex = 74;
             this.roundedPanel8.Text = "roundedPanel8";
-            // 
-            // label12
-            // 
-            this.label12.Location = new System.Drawing.Point(-3, 161);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(22, 575);
-            this.label12.TabIndex = 66;
-            // 
-            // label13
-            // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
-            this.label13.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(618, 406);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(265, 29);
-            this.label13.TabIndex = 69;
-            this.label13.Text = "Manutenções por tipo";
-            // 
-            // pieChart2
-            // 
-            this.pieChart2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pieChart2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
-            this.pieChart2.ForeColor = System.Drawing.Color.White;
-            this.pieChart2.Location = new System.Drawing.Point(544, 447);
-            this.pieChart2.Name = "pieChart2";
-            this.pieChart2.Size = new System.Drawing.Size(412, 237);
-            this.pieChart2.TabIndex = 68;
-            this.pieChart2.Text = "pieChart2";
-            // 
-            // roundedPanel9
-            // 
-            this.roundedPanel9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.roundedPanel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
-            this.roundedPanel9.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel9.Location = new System.Drawing.Point(525, 393);
-            this.roundedPanel9.Name = "roundedPanel9";
-            this.roundedPanel9.Size = new System.Drawing.Size(450, 300);
-            this.roundedPanel9.TabIndex = 70;
-            this.roundedPanel9.Text = "roundedPanel9";
-            // 
-            // roundedPanel10
-            // 
-            this.roundedPanel10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.roundedPanel10.BackColor = System.Drawing.Color.Black;
-            this.roundedPanel10.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel10.Location = new System.Drawing.Point(525, 393);
-            this.roundedPanel10.Name = "roundedPanel10";
-            this.roundedPanel10.Size = new System.Drawing.Size(453, 303);
-            this.roundedPanel10.TabIndex = 67;
-            this.roundedPanel10.Text = "roundedPanel10";
             // 
             // TelaIndicativos
             // 
@@ -594,25 +622,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.pieChart2);
-            this.Controls.Add(this.roundedPanel9);
-            this.Controls.Add(this.roundedPanel10);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.pieChart1);
-            this.Controls.Add(this.roundedPanel7);
-            this.Controls.Add(this.roundedPanel6);
-            this.Controls.Add(this.roundedPanel4);
-            this.Controls.Add(this.roundedPanel5);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.roundedPanel2);
-            this.Controls.Add(this.roundedPanel3);
-            this.Controls.Add(this.lblAberto);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.roundedPanel1);
-            this.Controls.Add(this.roundedPanel8);
             this.Controls.Add(this.pnlFiltros);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -628,8 +639,9 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -656,6 +668,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private RoundedButton roundedButton1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label13;
+        private LiveCharts.WinForms.PieChart pieChart2;
+        private RoundedPanel roundedPanel9;
+        private RoundedPanel roundedPanel10;
         private System.Windows.Forms.Label label11;
         private LiveCharts.WinForms.PieChart pieChart1;
         private RoundedPanel roundedPanel7;
@@ -670,10 +688,5 @@
         private System.Windows.Forms.Label label8;
         private RoundedPanel roundedPanel1;
         private RoundedPanel roundedPanel8;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private LiveCharts.WinForms.PieChart pieChart2;
-        private RoundedPanel roundedPanel9;
-        private RoundedPanel roundedPanel10;
     }
 }
