@@ -203,6 +203,26 @@ namespace Projeto_TCC.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icone_editar {
+            get {
+                object obj = ResourceManager.GetObject("icone_editar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icone_editar_2 {
+            get {
+                object obj = ResourceManager.GetObject("icone_editar_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icone_fechar {
             get {
                 object obj = ResourceManager.GetObject("icone-fechar", resourceCulture);

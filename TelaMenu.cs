@@ -147,6 +147,17 @@ namespace Projeto_TCC
         {
             ActiveButton(sender);
             lblTittle.Text = "Configurações";
+
+            TelaMenu menu = Application.OpenForms["TelaMenu"] as TelaMenu;
+            menu.panelMenu.Controls.Clear();
+
+            TelaConfiguracao configuracao = new TelaConfiguracao();
+            configuracao.TopLevel = false;
+            configuracao.Dock = DockStyle.Fill;
+            configuracao.FormBorderStyle = FormBorderStyle.None;
+
+            menu.panelMenu.Controls.Add(configuracao);
+            configuracao.Show();
         }
         public void btnOrdensAberto_Click(object sender, EventArgs e)
         {

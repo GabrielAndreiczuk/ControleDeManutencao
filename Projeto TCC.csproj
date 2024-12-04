@@ -160,6 +160,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TelaConfiguracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaConfiguracao.Designer.cs">
+      <DependentUpon>TelaConfiguracao.cs</DependentUpon>
+    </Compile>
     <Compile Include="TelaHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +250,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="TelaConfiguracao.resx">
+      <DependentUpon>TelaConfiguracao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TelaHome.resx">
       <DependentUpon>TelaHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -436,6 +445,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon-limpar-filtros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone_editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone_editar_2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.2\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets" Condition="Exists('packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.2\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets')" />

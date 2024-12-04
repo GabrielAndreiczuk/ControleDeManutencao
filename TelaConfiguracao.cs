@@ -10,11 +10,19 @@ using System.Windows.Forms;
 
 namespace Projeto_TCC
 {
-    public partial class Form1 : Form
+    public partial class TelaConfiguracao : Form
     {
-        public Form1()
+        public TelaConfiguracao()
         {
             InitializeComponent();
+        }
+
+        private void pibEmail_Click(object sender, EventArgs e)
+        {
+            txtEmail.ReadOnly = false;
+            txtEmail.Focus();
+
+            btnConfirmar.Visible = true;
         }
     }
 }
