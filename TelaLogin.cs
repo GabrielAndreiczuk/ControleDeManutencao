@@ -72,8 +72,9 @@ namespace Projeto_TCC
                             bool login = false;
                             int id = 0;
                             string nome = "";
-                            string email;
+                            string email, setor = "", cargo = "";
                             string senha;
+
                             // PERCORRE CADA LINHA DE RESULTADOS RETORNADA PELA CONSULTA
                             while (reader.Read())
                             {
@@ -82,6 +83,8 @@ namespace Projeto_TCC
                                 nome = reader["Nome"].ToString();
                                 email = reader["Email"].ToString();
                                 senha = reader["Senha"].ToString();
+                                setor = reader["Setor"].ToString();
+                                cargo = reader["Cargo"].ToString();
 
                                 if (email == textBox1.Text && senha == textBox2.Text)
                                 {
@@ -95,6 +98,8 @@ namespace Projeto_TCC
                                 UsuarioSessao.UsuarioAtual = new Usuario();
                                 UsuarioSessao.UsuarioAtual.Nome = nome;
                                 UsuarioSessao.UsuarioAtual.ID = id;                                
+                                UsuarioSessao.UsuarioAtual.Setor = setor;                                
+                                UsuarioSessao.UsuarioAtual.Cargo = cargo;                                
 
                                 TelaInicial tela = new TelaInicial();
                                 tela.IniciarMenu();
