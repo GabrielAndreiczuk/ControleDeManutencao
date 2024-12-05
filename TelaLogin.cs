@@ -62,7 +62,7 @@ namespace Projeto_TCC
                     connection.Open();
 
                     // DEFINE A CONSULTA SQL PARA PEGAR TODOS OS REGISTROS DA TABELA 'CLIENTES'
-                    string selectQuery = "SELECT * FROM funcionario";
+                    string selectQuery = "SELECT * FROM view_funcionario";
 
                     using (MySqlCommand command = new MySqlCommand(selectQuery, connection))
                     {
@@ -72,7 +72,7 @@ namespace Projeto_TCC
                             bool login = false;
                             int id = 0;
                             string nome = "";
-                            string email, setor = "", cargo = "";
+                            string email = "", setor = "", cargo = "", contato = "";
                             string senha;
 
                             // PERCORRE CADA LINHA DE RESULTADOS RETORNADA PELA CONSULTA
@@ -85,6 +85,7 @@ namespace Projeto_TCC
                                 senha = reader["Senha"].ToString();
                                 setor = reader["Setor"].ToString();
                                 cargo = reader["Cargo"].ToString();
+                                contato = reader["Contato"].ToString();
 
                                 if (email == textBox1.Text && senha == textBox2.Text)
                                 {
@@ -98,8 +99,10 @@ namespace Projeto_TCC
                                 UsuarioSessao.UsuarioAtual = new Usuario();
                                 UsuarioSessao.UsuarioAtual.Nome = nome;
                                 UsuarioSessao.UsuarioAtual.ID = id;                                
+                                UsuarioSessao.UsuarioAtual.Email = email;                                
                                 UsuarioSessao.UsuarioAtual.Setor = setor;                                
                                 UsuarioSessao.UsuarioAtual.Cargo = cargo;                                
+                                UsuarioSessao.UsuarioAtual.Contato = contato;                                
 
                                 TelaInicial tela = new TelaInicial();
                                 tela.IniciarMenu();

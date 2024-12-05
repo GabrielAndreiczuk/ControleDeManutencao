@@ -25,6 +25,7 @@ namespace Projeto_TCC
             lblUsuario.Text = UsuarioSessao.UsuarioAtual.Nome;
             lblID.Text = $"ID: {UsuarioSessao.UsuarioAtual.ID}";
             txtEmail.Text = UsuarioSessao.UsuarioAtual.Email;
+            lblCargoUsuario.Text = UsuarioSessao.UsuarioAtual.Cargo;
             lblSetorUsuario.Text = UsuarioSessao.UsuarioAtual.Setor;
         }
 
@@ -52,6 +53,36 @@ namespace Projeto_TCC
             lblSetorTitulo.Visible = true;
 
             btnConfirmar.Visible = true;
+        }
+
+        private void pibContato_Click(object sender, EventArgs e)
+        {
+            txtContato.ReadOnly = false;
+            txtContato.Focus();
+
+            btnConfirmar.Visible = true;
+        }
+
+        private void ContactFormatting(object sender, EventArgs e)
+        {
+            //Remove qualquer formatação existente
+            string numero = txtContato.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "");
+            if (numero.Length > 2)
+            {
+                numero = "(" + numero.Substring(0, 2) + ") " + numero.Substring(2);
+            }
+            if (numero.Length > 10)
+            {
+                numero = numero.Substring(0, 10) + "-" + numero.Substring(10);
+            }
+            txtContato.Text = numero;
+            txtContato.SelectionStart = txtContato.Text.Length;
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            TelaMenu menu = new TelaMenu();
+            menu.Logout();
         }
     }
 }

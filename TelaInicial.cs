@@ -110,10 +110,21 @@ namespace Projeto_TCC
                 TelaInicial tela = Application.OpenForms["TelaInicial"] as TelaInicial;
                 tela.panelInfo.Controls.Clear();
 
-                TelaMenu menu = new TelaMenu();
                 tela.Hide();
-                menu.Closed += (s, args) => tela.Close();
-                menu.Show();
+
+                TelaMenu menu = Application.OpenForms["TelaMenu"] as TelaMenu;                
+
+                if (menu == null)
+                {
+                    menu = new TelaMenu();
+                    menu.Closed += (s, args) => tela.Close(); 
+                    menu.Show();
+                }
+                else
+                {
+                    menu.Show();
+                    menu.IniciarHome();
+                }               
             }
             catch (Exception ex)
             {

@@ -18,15 +18,6 @@ namespace Projeto_TCC
         {
             InitializeComponent();
 
-            try
-            {
-                lblTitulo.Text = $"Boa noite {UsuarioSessao.UsuarioAtual.Nome}";
-            }
-            catch (Exception ex)
-            {
-                lblTitulo.Text = $"Boa noite";
-            }
-
             this.Text = string.Empty;
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
@@ -34,6 +25,11 @@ namespace Projeto_TCC
 
         private void TelaMenu_Load(object sender, EventArgs e)
         {
+            IniciarHome();
+        }
+        public void IniciarHome()
+        {
+            lblTitulo.Text = $"Boa noite {UsuarioSessao.UsuarioAtual.Nome}";
             btnMenu_Click(btnMenu, EventArgs.Empty);
         }
 
@@ -174,6 +170,18 @@ namespace Projeto_TCC
 
             menu.panelMenu.Controls.Add(emAberto);
             emAberto.Show();
+        }
+
+        public void Logout()
+        {
+            TelaMenu tela = Application.OpenForms["TelaMenu"] as TelaMenu;
+            tela.panelMenu.Controls.Clear();
+
+            TelaInicial inicio = Application.OpenForms["TelaInicial"] as TelaInicial;
+            tela.Hide();
+            inicio.Closed += (s, args) => tela.Close();
+            inicio.Show(); 
+            inicio.IniciarLogin();            
         }
 
         //RECOLHER MENU LATERAL

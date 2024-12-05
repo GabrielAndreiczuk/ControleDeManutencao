@@ -14,6 +14,7 @@ namespace Projeto_TCC
         public string Senha { get; set; }
         public string Setor { get; set; }
         public string Cargo { get; set; }
+        public string Contato { get; set; }
     }
     public static class UsuarioSessao
     {
