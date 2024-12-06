@@ -125,7 +125,6 @@ namespace Projeto_TCC
             if (txtContato.Text.Length < 15)
             {
                 Alert("Prencha o campo de contato corretamente!", FormAlert.enmType.Warning);
-                txtContato.Focus();
                 return;
             }
 
@@ -163,6 +162,8 @@ namespace Projeto_TCC
 
                     //LIMPA DADOS DE SENHA DA CLASS USUÁRIO
                     UsuarioSessao.UsuarioAtual.Senha = "";
+                    
+                    UsuarioSessao.UsuarioAtual.Contato = contato;
 
                     //CRIAR UMA NOVA CONSULTA PARA RECEBER O ID DO USUÁRIO QUE ESTÁ SENDO CRIADO
                     string selectQuery = "SELECT ID_Funcionario FROM funcionario WHERE ID_Funcionario = (select max(ID_Funcionario) from funcionario)";
@@ -177,14 +178,17 @@ namespace Projeto_TCC
                             }
 
                             //DEFINE ID DO USUÁRIO LOGADO NO SISTEMA
-                            UsuarioSessao.UsuarioAtual.ID = id;
+                            UsuarioSessao.UsuarioAtual.ID = id;                            
 
                             Alert("Usuário cadastrado com sucesso!", FormAlert.enmType.Success);
 
                             TelaInicial tela = new TelaInicial();
                             tela.IniciarMenu();
                         }
-                    }    
+                    }
+
+                    UsuarioSessao.UsuarioAtual.Setor = cmbSetor.Text;
+                    UsuarioSessao.UsuarioAtual.Cargo = cmbCargo.Text;
                 }
                 catch (Exception ex)
                 {
