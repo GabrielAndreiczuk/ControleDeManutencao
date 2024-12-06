@@ -21,13 +21,18 @@ namespace Projeto_TCC
             InitializeComponent();            
         }
 
+        private void TelaLogin_Load(object sender, EventArgs e)
+        {
+            textBox1.Focus();
+        }
+
         //MÉTODO QUE INSTANCIA E CHAMA NOTIFICAÇÕES PERSONALIZADAS
         public void Alert(string msg, FormAlert.enmType type)
         {
             FormAlert frm = new FormAlert();
             frm.showAlert(msg, type);
         }
-
+        //MÉTODO QUE ALTERA A COR DO TEXTO DA LABEL CADASTRO
         private void lblCadastro_MouseHover(object sender, EventArgs e)
         {
             this.lblCadastro.Font = new Font(this.lblCadastro.Font, FontStyle.Italic | FontStyle.Bold);
@@ -39,14 +44,17 @@ namespace Projeto_TCC
             this.lblCadastro.Font = new Font(this.lblCadastro.Font, FontStyle.Italic);
             this.lblCadastro.ForeColor = Color.White;
         }
+        //MÉTODOS QUE DIRECIONA PARA A PÁGINA DE CADASTRO
         private void lblCadastro_Click(object sender, EventArgs e)
         {
             TelaInicial inicial = new TelaInicial();
             inicial.IniciarCadastro();
         }
 
+        //MÉTODO DO BOTÃO DE LOGIN
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            //VERIFICA SE TODOS OS CAMPOS ESTÃO PREENCHIDOS
             if (textBox1.Text == "" || textBox2.Text == "")
             {
                 Alert("Por favor, preencha todos os campos.", FormAlert.enmType.Warning);             
@@ -122,6 +130,6 @@ namespace Projeto_TCC
                     //MessageBox.Show($"Erro: {ex.Message}", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
+        }        
     }
 }

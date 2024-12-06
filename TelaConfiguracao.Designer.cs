@@ -42,16 +42,16 @@
             this.cmbSetor = new System.Windows.Forms.ComboBox();
             this.lblSetorTitulo = new System.Windows.Forms.Label();
             this.lblCargoTitulo = new System.Windows.Forms.Label();
-            this.lblCargo = new Projeto_TCC.RoundedLabel();
-            this.btnConfirmar = new Projeto_TCC.RoundedButton();
-            this.btnSair = new Projeto_TCC.RoundedButton();
-            this.lblSetor = new Projeto_TCC.RoundedLabel();
             this.cmbCargo = new System.Windows.Forms.ComboBox();
             this.lblID = new System.Windows.Forms.Label();
             this.txtContato = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pibContato = new System.Windows.Forms.PictureBox();
+            this.btnConfirmar = new Projeto_TCC.RoundedButton();
+            this.btnSair = new Projeto_TCC.RoundedButton();
+            this.lblSetor = new Projeto_TCC.RoundedLabel();
+            this.lblCargo = new Projeto_TCC.RoundedLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pibEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibCargo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibSetor)).BeginInit();
@@ -103,6 +103,7 @@
             this.txtEmail.Size = new System.Drawing.Size(257, 19);
             this.txtEmail.TabIndex = 4;
             this.txtEmail.Text = "gabriel@gmail.com";
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validacaoEmail);
             // 
             // lblContato
             // 
@@ -197,7 +198,7 @@
             this.cmbSetor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSetor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbSetor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSetor.ForeColor = System.Drawing.Color.White;
+            this.cmbSetor.ForeColor = System.Drawing.Color.Black;
             this.cmbSetor.FormattingEnabled = true;
             this.cmbSetor.Location = new System.Drawing.Point(265, 385);
             this.cmbSetor.Margin = new System.Windows.Forms.Padding(4);
@@ -231,62 +232,6 @@
             this.lblCargoTitulo.TabIndex = 42;
             this.lblCargoTitulo.Text = "Novo Cargo";
             this.lblCargoTitulo.Visible = false;
-            // 
-            // lblCargo
-            // 
-            this.lblCargo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCargo.BackColor = System.Drawing.Color.White;
-            this.lblCargo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargo.ForeColor = System.Drawing.Color.White;
-            this.lblCargo.Location = new System.Drawing.Point(25, 373);
-            this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(220, 50);
-            this.lblCargo.TabIndex = 35;
-            this.lblCargo.Text = "roundedLabel2";
-            this.lblCargo.Visible = false;
-            // 
-            // btnConfirmar
-            // 
-            this.btnConfirmar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
-            this.btnConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConfirmar.FlatAppearance.BorderSize = 0;
-            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmar.Location = new System.Drawing.Point(100, 475);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(300, 50);
-            this.btnConfirmar.TabIndex = 14;
-            this.btnConfirmar.Text = "Confirmar alterações";
-            this.btnConfirmar.UseVisualStyleBackColor = false;
-            this.btnConfirmar.Visible = false;
-            // 
-            // btnSair
-            // 
-            this.btnSair.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSair.FlatAppearance.BorderSize = 0;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.ForeColor = System.Drawing.Color.White;
-            this.btnSair.Location = new System.Drawing.Point(328, 24);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(100, 40);
-            this.btnSair.TabIndex = 3;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = false;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
-            // lblSetor
-            // 
-            this.lblSetor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblSetor.BackColor = System.Drawing.Color.White;
-            this.lblSetor.ForeColor = System.Drawing.Color.Black;
-            this.lblSetor.Location = new System.Drawing.Point(255, 373);
-            this.lblSetor.Name = "lblSetor";
-            this.lblSetor.Size = new System.Drawing.Size(220, 50);
-            this.lblSetor.TabIndex = 43;
-            this.lblSetor.Visible = false;
             // 
             // cmbCargo
             // 
@@ -326,6 +271,7 @@
             this.txtContato.TabIndex = 47;
             this.txtContato.Text = "(41) 99999-9999";
             this.txtContato.TextChanged += new System.EventHandler(this.ContactFormatting);
+            this.txtContato.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onlyDigit);
             // 
             // label4
             // 
@@ -363,6 +309,63 @@
             this.pibContato.TabIndex = 50;
             this.pibContato.TabStop = false;
             this.pibContato.Click += new System.EventHandler(this.pibContato_Click);
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(124)))), ((int)(((byte)(221)))));
+            this.btnConfirmar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfirmar.FlatAppearance.BorderSize = 0;
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmar.Location = new System.Drawing.Point(100, 475);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(300, 50);
+            this.btnConfirmar.TabIndex = 14;
+            this.btnConfirmar.Text = "Confirmar alterações";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Visible = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.ForeColor = System.Drawing.Color.White;
+            this.btnSair.Location = new System.Drawing.Point(328, 24);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(100, 40);
+            this.btnSair.TabIndex = 3;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // lblSetor
+            // 
+            this.lblSetor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblSetor.BackColor = System.Drawing.Color.White;
+            this.lblSetor.ForeColor = System.Drawing.Color.Black;
+            this.lblSetor.Location = new System.Drawing.Point(255, 373);
+            this.lblSetor.Name = "lblSetor";
+            this.lblSetor.Size = new System.Drawing.Size(220, 50);
+            this.lblSetor.TabIndex = 43;
+            this.lblSetor.Visible = false;
+            // 
+            // lblCargo
+            // 
+            this.lblCargo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCargo.BackColor = System.Drawing.Color.White;
+            this.lblCargo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.ForeColor = System.Drawing.Color.White;
+            this.lblCargo.Location = new System.Drawing.Point(25, 373);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(220, 50);
+            this.lblCargo.TabIndex = 35;
+            this.lblCargo.Text = "roundedLabel2";
+            this.lblCargo.Visible = false;
             // 
             // TelaConfiguracao
             // 
