@@ -33,7 +33,6 @@
             this.lblSenha = new System.Windows.Forms.Label();
             this.linePanel2 = new Projeto_TCC.LinePanel();
             this.linePanel1 = new Projeto_TCC.LinePanel();
-            this.btnCadastrar = new Projeto_TCC.RoundedButton();
             this.label1 = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -54,6 +53,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnCadastrar = new Projeto_TCC.RoundedButton();
+            this.roundedButton1 = new Projeto_TCC.RoundedButton();
             this.rjPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -71,7 +72,7 @@
             this.rjPanel21.Location = new System.Drawing.Point(0, 0);
             this.rjPanel21.Name = "rjPanel21";
             this.rjPanel21.Size = new System.Drawing.Size(500, 650);
-            this.rjPanel21.TabIndex = 6;
+            this.rjPanel21.TabIndex = 101;
             // 
             // rjPanel1
             // 
@@ -80,7 +81,6 @@
             this.rjPanel1.Controls.Add(this.lblSenha);
             this.rjPanel1.Controls.Add(this.linePanel2);
             this.rjPanel1.Controls.Add(this.linePanel1);
-            this.rjPanel1.Controls.Add(this.btnCadastrar);
             this.rjPanel1.Controls.Add(this.label1);
             this.rjPanel1.Controls.Add(this.lblLogin);
             this.rjPanel1.Controls.Add(this.label6);
@@ -97,7 +97,7 @@
             this.rjPanel1.Location = new System.Drawing.Point(500, 0);
             this.rjPanel1.Name = "rjPanel1";
             this.rjPanel1.Size = new System.Drawing.Size(500, 650);
-            this.rjPanel1.TabIndex = 5;
+            this.rjPanel1.TabIndex = 100;
             // 
             // lblSenha
             // 
@@ -124,20 +124,6 @@
             this.linePanel1.Name = "linePanel1";
             this.linePanel1.Size = new System.Drawing.Size(135, 12);
             this.linePanel1.TabIndex = 37;
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(75, 502);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(350, 50);
-            this.btnCadastrar.TabIndex = 23;
-            this.btnCadastrar.Text = "Cadastrar-se";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // label1
             // 
@@ -261,7 +247,7 @@
             this.txtNome.Location = new System.Drawing.Point(613, 170);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(306, 19);
-            this.txtNome.TabIndex = 24;
+            this.txtNome.TabIndex = 1;
             this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validacaoNome);
             // 
             // txtSenhaConfirm
@@ -274,7 +260,7 @@
             this.txtSenhaConfirm.Name = "txtSenhaConfirm";
             this.txtSenhaConfirm.PasswordChar = '●';
             this.txtSenhaConfirm.Size = new System.Drawing.Size(306, 23);
-            this.txtSenhaConfirm.TabIndex = 30;
+            this.txtSenhaConfirm.TabIndex = 4;
             this.txtSenhaConfirm.TextChanged += new System.EventHandler(this.checkPassword);
             // 
             // txtSenha
@@ -287,7 +273,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '●';
             this.txtSenha.Size = new System.Drawing.Size(306, 23);
-            this.txtSenha.TabIndex = 28;
+            this.txtSenha.TabIndex = 3;
             this.txtSenha.TextChanged += new System.EventHandler(this.checkPassword);
             // 
             // txtEmail
@@ -298,7 +284,7 @@
             this.txtEmail.Location = new System.Drawing.Point(613, 249);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(306, 19);
-            this.txtEmail.TabIndex = 26;
+            this.txtEmail.TabIndex = 2;
             this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.validacaoEmail);
             // 
             // pictureBox1
@@ -363,12 +349,40 @@
             this.label10.Text = "Insiria suas informações abaixo e crie uma conta";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.Location = new System.Drawing.Point(75, 502);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(350, 50);
+            this.btnCadastrar.TabIndex = 6;
+            this.btnCadastrar.Text = "Cadastrar-se";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // roundedButton1
+            // 
+            this.roundedButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
+            this.roundedButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundedButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButton1.ForeColor = System.Drawing.Color.White;
+            this.roundedButton1.Location = new System.Drawing.Point(575, 503);
+            this.roundedButton1.Name = "roundedButton1";
+            this.roundedButton1.Size = new System.Drawing.Size(350, 50);
+            this.roundedButton1.TabIndex = 5;
+            this.roundedButton1.Text = "Cadastrar-se";
+            this.roundedButton1.UseVisualStyleBackColor = false;
+            // 
             // TelaCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(1000, 650);
+            this.Controls.Add(this.roundedButton1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -405,7 +419,6 @@
         private System.Windows.Forms.Label lblSenha;
         private LinePanel linePanel2;
         private LinePanel linePanel1;
-        private RoundedButton btnCadastrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblLogin;
@@ -426,6 +439,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label10;
+        private RoundedButton btnCadastrar;
+        private RoundedButton roundedButton1;
     }
 }
 
