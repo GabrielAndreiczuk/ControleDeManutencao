@@ -38,6 +38,7 @@ namespace Projeto_TCC
             lblUsuario.Text = UsuarioSessao.UsuarioAtual.Nome;
             lblID.Text = $"ID: {UsuarioSessao.UsuarioAtual.ID}";
             txtEmail.Text = UsuarioSessao.UsuarioAtual.Email;
+            txtContato.Text = UsuarioSessao.UsuarioAtual.Contato;
             lblCargoUsuario.Text = UsuarioSessao.UsuarioAtual.Cargo;
             lblSetorUsuario.Text = UsuarioSessao.UsuarioAtual.Setor;
         }
@@ -88,23 +89,7 @@ namespace Projeto_TCC
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
-        {
-            
-            //VALIDAÇÃO VALORES DAS COMBOBOX
-            if (cmbSetor.SelectedIndex == 0)
-            {
-                Alert("Escolha uma opção de setor válida!", FormAlert.enmType.Warning);
-                return;
-            }
-            int setor = cmbSetor.SelectedIndex;
-            string updateSetor = "\"Setor\" = @setor";
-            if (cmbCargo.SelectedIndex == 0)
-            {
-                Alert("Escolha uma opção de cargo válida!", FormAlert.enmType.Warning);
-                return;
-            }
-            int cargo = cmbCargo.SelectedIndex;
-            string updateCargo = "\"Cargo\" = @cargo";
+        {                     
             //VALIDÃÇÃO TEXTBOX CONTATO
             if (txtContato.Text.Length < 15)
             {
@@ -112,8 +97,9 @@ namespace Projeto_TCC
                 txtContato.Focus();
                 return;
             }
-            string contato = txtContato.Text;
-            string updateContato = "\"Contato\" = @contato";
+
+            
+
             //VERFICAR SE O EMAIL ESTA NO FORMATO CORRETO
             string TesteEmail = txtEmail.Text;
             string pattern = @"^[^@\s]+@[^@\s]+\.(com)$";
@@ -125,29 +111,89 @@ namespace Projeto_TCC
                 Alert("Email no formato incorreto!", FormAlert.enmType.Warning);
                 return;
 
-            }
-            string email = txtEmail.Text;
-            string updateEmail = "\"Email\" = @email";
+            }          
+
 
             //CONEXÃO COM O BANCO DE DADOS
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 try
                 {
-                    connection.Open();                 
+                    connection.Open();               
 
-                    string updateQuery = "UPDATE funcionario SET Setor = @Setor, Cargo = @Cargo, Contato = @Contato, Email = @Email WHERE ID_Funcionario = @ID";
+                    //FAZ O UPDATE CASO UM SETOR DIFERENTE TENHA SIDO SELECIONADO
+                    if (cmbSetor.SelectedIndex != 0)
+                    {
+                        string query = "SELECT ID_Setor from setor Where Nome = @setor";
+                        int idSetor = 0;
+                        using (MySqlCommand command = new MySqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@setor", cmbSetor.Text);
+                            using (MySqlDataReader reader = command.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    idSetor = reader.GetInt32("ID_Setor");
+                                }
+                            }
+                        }
+                        query = "UPDATE funcionario set Setor = @setor WHERE ID_Funcionario = @ID";
+                        using (MySqlCommand command = new MySqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@setor",idSetor);
+                            command.Parameters.AddWithValue("@ID", UsuarioSessao.UsuarioAtual.ID);
+
+                            command.ExecuteNonQuery();
+                        }
+                        //ATUALIZA O DADO DA CLASSE
+                        UsuarioSessao.UsuarioAtual.Setor = cmbSetor.Text;
+                    }
+
+                    //FAZ O UPDATE CASO UM CARGO DIFERENTE TENHA SIDO SELECIONADO
+                    if (cmbCargo.SelectedIndex != 0)
+                    {
+                        string query = "SELECT ID_Cargo from cargo Where Nome = @cargo";
+                        int idCargo = 0;
+                        using (MySqlCommand command = new MySqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@cargo", cmbCargo.Text);
+                            using (MySqlDataReader reader = command.ExecuteReader())
+                            {
+                                if (reader.Read())
+                                {
+                                    idCargo = reader.GetInt32("ID_Cargo");
+                                }
+                            }
+                        }
+                        query = "UPDATE funcionario set Cargo = @cargo WHERE ID_Funcionario = @ID";
+                        using (MySqlCommand command = new MySqlCommand(query, connection))
+                        {
+                            command.Parameters.AddWithValue("@cargo", idCargo);
+                            command.Parameters.AddWithValue("@ID", UsuarioSessao.UsuarioAtual.ID);
+
+                            command.ExecuteNonQuery();
+                        }
+                        UsuarioSessao.UsuarioAtual.Cargo = cmbCargo.Text;
+                    }
+
+                    //ATUALIZA OS DADOS DE EMAIL E CONTATO DO FUNCIONARIO
+                    string updateQuery = "UPDATE funcionario SET  Contato = @Contato, Email = @Email WHERE ID_Funcionario = @ID";
+
+                    string contato = txtContato.Text;
+                    string email = txtEmail.Text;
 
                     using (MySqlCommand command = new MySqlCommand(updateQuery, connection))
                     {
-                        command.Parameters.AddWithValue("@Email", email);
-                        command.Parameters.AddWithValue("@Setor", setor);
-                        command.Parameters.AddWithValue("@Cargo", cargo);
                         command.Parameters.AddWithValue("@Contato", contato);
+                        command.Parameters.AddWithValue("@Email", email);                     
                         command.Parameters.AddWithValue("@ID", UsuarioSessao.UsuarioAtual.ID);
 
                         command.ExecuteNonQuery();
                     }
+
+                    UsuarioSessao.UsuarioAtual.Email = txtEmail.Text;
+                    UsuarioSessao.UsuarioAtual.Contato = txtContato.Text;
+
                     Alert("Seus dados foram atualizados!", FormAlert.enmType.Success);
                     CarregarDados();
                     resetTela();
