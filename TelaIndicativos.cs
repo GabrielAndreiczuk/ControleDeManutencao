@@ -21,21 +21,49 @@ namespace Projeto_TCC
 
             PreencherSetor();
 
-            //DEFINE A DATA INICIAL COMO O PRIMEIRO DIA DO MÊS ATUAL
-            dateInicial.MaxDate = DateTime.Now;
-            dateInicial.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
-            dateFinal.MaxDate = DateTime.Now;
-            dateFinal.Value = DateTime.Now;            
+            CarregarDados();          
         }
 
         private void TelaIndicativos_Load(object sender, EventArgs e)
         {
             Filtrar_Click(sender, EventArgs.Empty);
+            toolTip1.SetToolTip(pibMTBF, 
+            "MTBF é o tempo médio entre falhas de um equipamento ou sistema durante sua operação.\n" +
+            "Ele avalia a confiabilidade do ativo, indicando quanto tempo, em média, ele opera sem\n" +
+            "interrupções.");
+            toolTip1.SetToolTip(pibMTTR, 
+            "MTTR é o tempo médio necessário para reparar um equipamento ou sistema após uma falha.\n" +
+            "Ele mede a eficiência das equipes de manutenção em restaurar a funcionalidade normal,\n" +
+            "sendo um indicador chave na gestão de tempo de inatividade.");
         }
         public void Alert(string msg, FormAlert.enmType type)
         {
             FormAlert frm = new FormAlert();
             frm.showAlert(msg, type);
+        }
+
+        private void CarregarDados()
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = "";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Alert("Erro de conexão com o banco de dados!", FormAlert.enmType.Error);
+                    //MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void PreencherSetor()
@@ -110,22 +138,6 @@ namespace Projeto_TCC
             }
         }
 
-        private void dateInicial_ValueChanged(object sender, EventArgs e)
-        {
-            if (dateInicial.Value > dateFinal.Value)
-            {
-                dateFinal.Value = dateInicial.Value;
-            }
-        }
-        //VERIFICA SE A DATA FINAL SELECIONADA É MENOR QUE A DATA INICIAL
-        private void dateFinal_ValueChanged(object sender, EventArgs e)
-        {
-            if (dateInicial.Value > dateFinal.Value)
-            {
-                dateInicial.Value = dateFinal.Value;
-            }
-        }
-
         private void Filtrar_Click(object sender, EventArgs e)
         {
             if (pnlFiltros.Height == 150)
@@ -154,9 +166,61 @@ namespace Projeto_TCC
 
         }
 
-        private void contentPanel_Paint(object sender, PaintEventArgs e)
+        private void roundedButton1_Click(object sender, EventArgs e)
         {
+            string setor = cmbSetor.Text;
+            string maquina = cmbMaquina.Text;
 
+            
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    string query = "Select MTTR from MTTR where Setor = @setor AND Maquina = @maquina";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@setor", setor);
+                        command.Parameters.AddWithValue("@maquina", maquina);
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                TimeSpan tempo = (TimeSpan)reader["MTTR"];
+                                double hrs = tempo.Hours + (tempo.Days * 24);
+                                double min = tempo.Minutes;
+                                string mttr = $"{hrs+(min/60):F1}";
+                                lblMTTR.Text = mttr.ToString();
+                            }
+                        }
+                    }
+
+                    query = "Select MTBF from MTBF where Setor = @setor AND Maquina = @maquina";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@setor", setor);
+                        command.Parameters.AddWithValue("@maquina", maquina);
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                TimeSpan tempo = (TimeSpan)reader["MTBF"];
+                                double hrs = tempo.Hours + (tempo.Days * 24);
+                                double min = tempo.Minutes;
+                                string mtbf = $"{hrs + (min / 60):F1}";
+                                lblMTBF.Text = mtbf.ToString();
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Alert("Erro de conexão com o banco de dados!", FormAlert.enmType.Error);
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }    
 }

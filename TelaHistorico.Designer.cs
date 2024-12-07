@@ -99,7 +99,7 @@
             this.panDescricao.Name = "panDescricao";
             this.panDescricao.Size = new System.Drawing.Size(120, 511);
             this.panDescricao.TabIndex = 25;
-            this.panDescricao.Paint += new System.Windows.Forms.PaintEventHandler(this.panDescricao_Paint);
+            
             // 
             // label2
             // 
@@ -135,7 +135,7 @@
             this.panMaquina.Name = "panMaquina";
             this.panMaquina.Size = new System.Drawing.Size(130, 511);
             this.panMaquina.TabIndex = 24;
-            this.panMaquina.Paint += new System.Windows.Forms.PaintEventHandler(this.panMaquina_Paint);
+            
             // 
             // label4
             // 
@@ -171,7 +171,7 @@
             this.panSetor.Name = "panSetor";
             this.panSetor.Size = new System.Drawing.Size(130, 511);
             this.panSetor.TabIndex = 22;
-            this.panSetor.Paint += new System.Windows.Forms.PaintEventHandler(this.panSetor_Paint);
+            
             // 
             // label6
             // 
@@ -207,7 +207,7 @@
             this.panDuracao.Name = "panDuracao";
             this.panDuracao.Size = new System.Drawing.Size(100, 511);
             this.panDuracao.TabIndex = 21;
-            this.panDuracao.Paint += new System.Windows.Forms.PaintEventHandler(this.panDuracao_Paint);
+            
             // 
             // label8
             // 
@@ -243,7 +243,7 @@
             this.panTipo.Name = "panTipo";
             this.panTipo.Size = new System.Drawing.Size(100, 511);
             this.panTipo.TabIndex = 20;
-            this.panTipo.Paint += new System.Windows.Forms.PaintEventHandler(this.panTipo_Paint);
+            
             // 
             // label11
             // 
@@ -279,7 +279,7 @@
             this.panCusto.Name = "panCusto";
             this.panCusto.Size = new System.Drawing.Size(100, 511);
             this.panCusto.TabIndex = 19;
-            this.panCusto.Paint += new System.Windows.Forms.PaintEventHandler(this.panCusto_Paint);
+           
             // 
             // label13
             // 
@@ -348,7 +348,7 @@
             this.panResponsavel.Name = "panResponsavel";
             this.panResponsavel.Size = new System.Drawing.Size(120, 511);
             this.panResponsavel.TabIndex = 17;
-            this.panResponsavel.Paint += new System.Windows.Forms.PaintEventHandler(this.panResponsavel_Paint);
+            
             // 
             // label17
             // 
@@ -384,7 +384,7 @@
             this.panID.Name = "panID";
             this.panID.Size = new System.Drawing.Size(100, 511);
             this.panID.TabIndex = 9;
-            this.panID.Paint += new System.Windows.Forms.PaintEventHandler(this.panID_Paint);
+            
             // 
             // label9
             // 

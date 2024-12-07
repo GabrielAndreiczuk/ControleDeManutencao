@@ -452,6 +452,12 @@
   <ItemGroup>
     <None Include="Resources\icone_editar_2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone_duvida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icone_ajuda.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.2\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets" Condition="Exists('packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.2\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -193,9 +193,29 @@ namespace Projeto_TCC.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icone_ajuda {
+            get {
+                object obj = ResourceManager.GetObject("icone_ajuda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icone_configuracoes {
             get {
                 object obj = ResourceManager.GetObject("icone-configuracoes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icone_duvida {
+            get {
+                object obj = ResourceManager.GetObject("icone_duvida", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

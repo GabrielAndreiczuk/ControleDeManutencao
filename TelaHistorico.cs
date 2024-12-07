@@ -28,45 +28,6 @@ namespace Projeto_TCC
         //VARIÁVEIS GLOBAIS
         string id = "", descricao = "", maquina = "", setor = "", duracao = "", tipo = "", custo = "", responsavel = "";
 
-        private void panMaquina_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panSetor_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panDuracao_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panTipo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panCusto_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panResponsavel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panDescricao_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panID_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         string connectionString = "Server=localhost;Uid=root;Database=projeto;Port=3306";
 
