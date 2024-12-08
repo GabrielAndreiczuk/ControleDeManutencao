@@ -51,7 +51,8 @@ namespace Projeto_TCC
             "Ele mede a eficiência das equipes de manutenção em restaurar a funcionalidade normal,\n" +
             "sendo um indicador chave na gestão de tempo de inatividade.");
         }
-        
+
+        //MÉTODO QUE CARREGA DADOS PARA AS LISTAS        
         private void CarregarDados()
         {
             custos_mensais.Clear();
@@ -69,7 +70,7 @@ namespace Projeto_TCC
                             while (reader.Read())
                             {
                                 custos_mensais.Add(double.Parse(reader["Custo_Total"].ToString()));
-                            }                            
+                            }
                         }
                     }
 
@@ -98,6 +99,7 @@ namespace Projeto_TCC
                 }
             }
         }
+        //MÉTODO QUE FAZ A CRIAÇÃO DOS GRÁFICOS
         private void GerarGraficos()
         {
 
@@ -106,7 +108,8 @@ namespace Projeto_TCC
                 new LineSeries
                 {
                     Title = "Custo",
-                    Values = new ChartValues<double>(custos_mensais)
+                    Values = new ChartValues<double>(custos_mensais),
+                    Stroke = new SolidColorBrush(System.Windows.Media.Color.FromRgb(76, 175, 80)),
                 }
             };
             cartesianChart1.AxisX.Clear();
@@ -274,6 +277,7 @@ namespace Projeto_TCC
                             else
                             {
                                 Alert("Nenhum dado corresponde aos filtros aplicados!", FormAlert.enmType.Info);
+                                return;
                             }
                         }
                     }
@@ -295,6 +299,25 @@ namespace Projeto_TCC
                             }
                         }
                     }
+
+                    //CONSULTA DE CUSTO E TOTAL DE MANUTENÇÃO POR MÁQUINA
+                    query = "select sum(Custo) as Custo,count(*) as Total from view_manutencao where Máquina = @maquina";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        double custo = 0;
+                        int total = 0;
+                        command.Parameters.AddWithValue("@maquina", maquina);
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                custo = double.Parse(reader["Custo"].ToString());
+                                total = int.Parse(reader["Total"].ToString());
+                                label1.Text = maquina;
+                                label6.Text = $"O equipamento {maquina} teve um total de {total} manutenções com um custo de {custo:C}";
+                            }
+                        }                       
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -310,6 +333,8 @@ namespace Projeto_TCC
             lblMTTR.Text = "-";
             cmbSetor.SelectedIndex = 0;
             cmbMaquina.SelectedIndex = 0;
+            label1.Text = "...";
+            label6.Text= "Selecione uma máquina para mais detalhes...";
         }
     }    
 }
