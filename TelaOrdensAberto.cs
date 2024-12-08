@@ -15,6 +15,11 @@ namespace Projeto_TCC
 {
     public partial class TelaOrdensAberto : Form
     {
+        public void Alert(string msg, FormAlert.enmType type)
+        {
+            FormAlert frm = new FormAlert();
+            frm.showAlert(msg, type);
+        }
         public TelaOrdensAberto()
         {
             InitializeComponent();
@@ -238,31 +243,45 @@ namespace Projeto_TCC
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-            Button btnAtual = sender as Button;
-            btnAtual.BackColor = System.Drawing.Color.Yellow;
-            btnAtual.Text = "Concluir";
-            btnAtual.ForeColor = System.Drawing.Color.Black;
+            if (UsuarioSessao.Acesso() >= 2)
+            {
+                Button btnAtual = sender as Button;
+                btnAtual.BackColor = System.Drawing.Color.Yellow;
+                btnAtual.Text = "Concluir";
+                btnAtual.ForeColor = System.Drawing.Color.Black;
 
-            Label lblStatus = btnAtual.Tag as Label;
-            lblStatus.Text = "Em andamento";
-            lblStatus.ForeColor = System.Drawing.Color.Yellow;
-            int ID = lblStatus.TabIndex;
+                Label lblStatus = btnAtual.Tag as Label;
+                lblStatus.Text = "Em andamento";
+                lblStatus.ForeColor = System.Drawing.Color.Yellow;
+                int ID = lblStatus.TabIndex;
 
-            AtualizarStatus(ID,2);
+                AtualizarStatus(ID, 2);
 
-            btnAtual.Click += btnConcluir_Click;
+                btnAtual.Click += btnConcluir_Click;
+            }
+            else
+            {
+                Alert("Ação não autorizada!", FormAlert.enmType.Error);
+            }            
         }
         
         private void btnConcluir_Click(object sender, EventArgs e)
         {
-            Button btnAtual = sender as Button;
+            if (UsuarioSessao.Acesso() >= 2)
+            {
+                Button btnAtual = sender as Button;
 
-            Label lblStatus = btnAtual.Tag as Label;
+                Label lblStatus = btnAtual.Tag as Label;
 
-            int ID = lblStatus.TabIndex;
+                int ID = lblStatus.TabIndex;
 
-            TelaMenu tela = new TelaMenu();
-            tela.IniciarConclusaoOrdem(ID);
+                TelaMenu tela = new TelaMenu();
+                tela.IniciarConclusaoOrdem(ID);
+            }
+            else
+            {
+                Alert("Ação não autorizada!", FormAlert.enmType.Error);
+            }            
         }    
 
         private void AtualizarStatus(int id, int status)
