@@ -264,6 +264,16 @@ namespace Projeto_TCC
 
                         command.ExecuteNonQuery();
                     }
+
+                    updateQuery = "update manutencao set Custo = (hour(Duracao) * (select Valor_Hora from maquina where ID_Maquina = @Maquina)) where ID_Manutencao = @ID";
+
+                    using (MySqlCommand command = new MySqlCommand(updateQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@ID", id);
+                        command.Parameters.AddWithValue("@Maquina", Maquina);
+
+                        command.ExecuteNonQuery();
+                    }
                 }
                 catch (Exception ex)
                 {

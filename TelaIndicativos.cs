@@ -13,6 +13,13 @@ namespace Projeto_TCC
 {
     public partial class TelaIndicativos : Form
     {
+        //MÉTODO QUE CHAMA UMA NOTIFICAÇÃO DE ALERTA
+        public void Alert(string msg, FormAlert.enmType type)
+        {
+            FormAlert frm = new FormAlert();
+            frm.showAlert(msg, type);
+        }
+
         private string connectionString = "Server=localhost;Uid=root;Database=projeto;Port=3306;";
 
         public TelaIndicativos()
@@ -24,24 +31,20 @@ namespace Projeto_TCC
             CarregarDados();          
         }
 
+        //MÉTODO EXECUTADO NO CARREGAMENTO DA TELA
         private void TelaIndicativos_Load(object sender, EventArgs e)
         {
             Filtrar_Click(sender, EventArgs.Empty);
-            toolTip1.SetToolTip(pibMTBF, 
+            toolTip1.SetToolTip(pibMTBF,
             "MTBF é o tempo médio entre falhas de um equipamento ou sistema durante sua operação.\n" +
             "Ele avalia a confiabilidade do ativo, indicando quanto tempo, em média, ele opera sem\n" +
             "interrupções.");
-            toolTip1.SetToolTip(pibMTTR, 
+            toolTip1.SetToolTip(pibMTTR,
             "MTTR é o tempo médio necessário para reparar um equipamento ou sistema após uma falha.\n" +
             "Ele mede a eficiência das equipes de manutenção em restaurar a funcionalidade normal,\n" +
             "sendo um indicador chave na gestão de tempo de inatividade.");
         }
-        public void Alert(string msg, FormAlert.enmType type)
-        {
-            FormAlert frm = new FormAlert();
-            frm.showAlert(msg, type);
-        }
-
+        
         private void CarregarDados()
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -54,7 +57,7 @@ namespace Projeto_TCC
                     {
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
-                            
+
                         }
                     }
                 }
@@ -66,6 +69,7 @@ namespace Projeto_TCC
             }
         }
 
+        //MÉTODO QUE PREENCHE A COMBOBOX DE SETOR
         private void PreencherSetor()
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -96,12 +100,12 @@ namespace Projeto_TCC
                 }
             }
         }
-
+        //MÉTODO QUE VERIFICA O SETOR SELECIONADO
         private void cmbSetor_SelectedIndexChanged(object sender, EventArgs e)
         {
             PreencherMaquina(cmbSetor.SelectedIndex);
         }
-
+        //PREENCHE A COMBOBOX MÁQUINA CONFORME O SETOR ESCOLHIDO
         private void PreencherMaquina(int setor)
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -137,7 +141,7 @@ namespace Projeto_TCC
                 }
             }
         }
-
+        //CLIQUE DO BOTÃO DE FILTRO, RECOLHE E EXPANDE MENU DE SELEÇÃO
         private void Filtrar_Click(object sender, EventArgs e)
         {
             if (pnlFiltros.Height == 150)
@@ -161,17 +165,11 @@ namespace Projeto_TCC
             }
             
         }
-        private void LimparFiltros_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void roundedButton1_Click(object sender, EventArgs e)
+        //MÉTOD QUE APLICA FILTRO DE SELEÇÃO AOS CAMPOS DE MTTR E MTBF
+        private void btnFiltrar_Click(object sender, EventArgs e)
         {
             string setor = cmbSetor.Text;
             string maquina = cmbMaquina.Text;
-
-            
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
@@ -191,8 +189,12 @@ namespace Projeto_TCC
                                 TimeSpan tempo = (TimeSpan)reader["MTTR"];
                                 double hrs = tempo.Hours + (tempo.Days * 24);
                                 double min = tempo.Minutes;
-                                string mttr = $"{hrs+(min/60):F1}";
+                                string mttr = $"{hrs + (min / 60):F1}";
                                 lblMTTR.Text = mttr.ToString();
+                            }
+                            else
+                            {
+                                Alert("Nenhum dado corresponde aos filtros aplicados!", FormAlert.enmType.Info);
                             }
                         }
                     }
@@ -221,6 +223,14 @@ namespace Projeto_TCC
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+        //RESETA OS FILTROS SELECIONADOS
+        private void LimparFiltros_Click(object sender, EventArgs e)
+        {
+            lblMTBF.Text = "-";
+            lblMTTR.Text = "-";
+            cmbSetor.SelectedIndex = 0;
+            cmbMaquina.SelectedIndex = 0;
         }
     }    
 }
