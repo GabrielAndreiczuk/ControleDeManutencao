@@ -55,11 +55,9 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.pieChart2 = new LiveCharts.WinForms.PieChart();
             this.roundedPanel9 = new Projeto_TCC.RoundedPanel();
             this.roundedPanel10 = new Projeto_TCC.RoundedPanel();
             this.label11 = new System.Windows.Forms.Label();
-            this.pieChart1 = new LiveCharts.WinForms.PieChart();
             this.roundedPanel7 = new Projeto_TCC.RoundedPanel();
             this.roundedPanel6 = new Projeto_TCC.RoundedPanel();
             this.roundedPanel4 = new Projeto_TCC.RoundedPanel();
@@ -73,6 +71,8 @@
             this.roundedPanel1 = new Projeto_TCC.RoundedPanel();
             this.roundedPanel8 = new Projeto_TCC.RoundedPanel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
+            this.cartesianChart2 = new LiveCharts.WinForms.CartesianChart();
             this.pnlFiltros.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -301,6 +301,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.cartesianChart2);
+            this.panel3.Controls.Add(this.cartesianChart1);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.roundedPanel11);
             this.panel3.Controls.Add(this.roundedPanel12);
@@ -309,11 +311,9 @@
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.pieChart2);
             this.panel3.Controls.Add(this.roundedPanel9);
             this.panel3.Controls.Add(this.roundedPanel10);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.pieChart1);
             this.panel3.Controls.Add(this.roundedPanel7);
             this.panel3.Controls.Add(this.roundedPanel6);
             this.panel3.Controls.Add(this.roundedPanel4);
@@ -423,22 +423,11 @@
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label13.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(298, 376);
+            this.label13.Location = new System.Drawing.Point(255, 376);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(265, 29);
+            this.label13.Size = new System.Drawing.Size(351, 29);
             this.label13.TabIndex = 87;
-            this.label13.Text = "Manutenções por tipo";
-            // 
-            // pieChart2
-            // 
-            this.pieChart2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pieChart2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
-            this.pieChart2.ForeColor = System.Drawing.Color.White;
-            this.pieChart2.Location = new System.Drawing.Point(224, 417);
-            this.pieChart2.Name = "pieChart2";
-            this.pieChart2.Size = new System.Drawing.Size(412, 237);
-            this.pieChart2.TabIndex = 86;
-            this.pieChart2.Text = "pieChart2";
+            this.label13.Text = "Tempo médio de manutenção";
             // 
             // roundedPanel9
             // 
@@ -471,20 +460,9 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(298, 46);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(265, 29);
+            this.label11.Size = new System.Drawing.Size(264, 29);
             this.label11.TabIndex = 83;
-            this.label11.Text = "Manutenções por tipo";
-            // 
-            // pieChart1
-            // 
-            this.pieChart1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pieChart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
-            this.pieChart1.ForeColor = System.Drawing.Color.White;
-            this.pieChart1.Location = new System.Drawing.Point(224, 87);
-            this.pieChart1.Name = "pieChart1";
-            this.pieChart1.Size = new System.Drawing.Size(412, 237);
-            this.pieChart1.TabIndex = 82;
-            this.pieChart1.Text = "pieChart1";
+            this.label11.Text = "Custo de Manutenção";
             // 
             // roundedPanel7
             // 
@@ -628,6 +606,26 @@
             // 
             this.toolTip1.IsBalloon = true;
             // 
+            // cartesianChart1
+            // 
+            this.cartesianChart1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cartesianChart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
+            this.cartesianChart1.Location = new System.Drawing.Point(224, 87);
+            this.cartesianChart1.Name = "cartesianChart1";
+            this.cartesianChart1.Size = new System.Drawing.Size(412, 237);
+            this.cartesianChart1.TabIndex = 96;
+            this.cartesianChart1.Text = "cartesianChart1";
+            // 
+            // cartesianChart2
+            // 
+            this.cartesianChart2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cartesianChart2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
+            this.cartesianChart2.Location = new System.Drawing.Point(224, 417);
+            this.cartesianChart2.Name = "cartesianChart2";
+            this.cartesianChart2.Size = new System.Drawing.Size(412, 237);
+            this.cartesianChart2.TabIndex = 97;
+            this.cartesianChart2.Text = "cartesianChart2";
+            // 
             // TelaIndicativos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
@@ -680,11 +678,9 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label13;
-        private LiveCharts.WinForms.PieChart pieChart2;
         private RoundedPanel roundedPanel9;
         private RoundedPanel roundedPanel10;
         private System.Windows.Forms.Label label11;
-        private LiveCharts.WinForms.PieChart pieChart1;
         private RoundedPanel roundedPanel7;
         private RoundedPanel roundedPanel6;
         private RoundedPanel roundedPanel4;
@@ -705,5 +701,7 @@
         private RoundedPanel roundedPanel12;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
+        private LiveCharts.WinForms.CartesianChart cartesianChart1;
+        private LiveCharts.WinForms.CartesianChart cartesianChart2;
     }
 }

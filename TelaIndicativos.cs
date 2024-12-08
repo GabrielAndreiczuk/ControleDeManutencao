@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using LiveCharts;
+using LiveCharts.Wpf;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +10,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Windows.Media;
+using Axis = LiveCharts.Wpf.Axis;
 
 namespace Projeto_TCC
 {
@@ -21,6 +26,8 @@ namespace Projeto_TCC
         }
 
         private string connectionString = "Server=localhost;Uid=root;Database=projeto;Port=3306;";
+        private List<double> custos_mensais = new List<double>();
+        private List<double> tempo_medio = new List<double>();
 
         public TelaIndicativos()
         {
@@ -28,7 +35,7 @@ namespace Projeto_TCC
 
             PreencherSetor();
 
-            CarregarDados();          
+            CarregarDados();
         }
 
         //MÉTODO EXECUTADO NO CARREGAMENTO DA TELA
@@ -47,28 +54,100 @@ namespace Projeto_TCC
         
         private void CarregarDados()
         {
+            custos_mensais.Clear();
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
-                    string query = "";
+                    //CARREGAMENTO DE DADOS GRÁFICO CUSTOS
+                    string query = "select * from custos_mensais order by Mes";
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
-
+                            while (reader.Read())
+                            {
+                                custos_mensais.Add(double.Parse(reader["Custo_Total"].ToString()));
+                            }                            
                         }
                     }
+
+                    //CARREGAMENTO DE DADOS GRÁFICO TEMPO MÉDIO
+                    query = "select * from tempo_medio order by Mes";
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                TimeSpan tempo = (TimeSpan)reader["Tempo"];
+                                double hrs = tempo.Hours + (tempo.Days * 24);
+                                double min = tempo.Minutes;
+                                hrs += min;
+                                tempo_medio.Add(hrs);
+                            }
+                        }
+                    }
+                    GerarGraficos();
                 }
                 catch (Exception ex)
                 {
                     Alert("Erro de conexão com o banco de dados!", FormAlert.enmType.Error);
-                    //MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message);
                 }
             }
         }
+        private void GerarGraficos()
+        {
 
+            cartesianChart1.Series = new LiveCharts.SeriesCollection()
+            {
+                new LineSeries
+                {
+                    Title = "Custo",
+                    Values = new ChartValues<double>(custos_mensais)
+                }
+            };
+            cartesianChart1.AxisX.Clear();
+            cartesianChart1.AxisX.Add(new Axis
+            {
+                Labels = new[] {"set.", "out.", "nov.", "dez."},
+                LabelsRotation = 135,
+                Separator = new Separator { Step = 1, IsEnabled = true, StrokeThickness = 0.3 }
+
+            });
+            cartesianChart1.AxisY.Clear();
+            cartesianChart1.AxisY.Add(new Axis
+            {
+                MinValue = 0,
+                LabelFormatter = value => value.ToString("C") // Formatação para o eixo Y (exemplo: moeda)
+            });
+
+            //GERAÇÃO DO GRÁFICO DE TEMPO MÉDIO DE MANUTENÇÃO
+            cartesianChart2.Series = new LiveCharts.SeriesCollection()
+            {
+                new LineSeries
+                {
+                    Title = "Média",
+                    Values = new ChartValues<double>(tempo_medio)
+                }
+            };
+            cartesianChart2.AxisX.Clear();
+            cartesianChart2.AxisX.Add(new Axis
+            {
+                Labels = new[] { "set.", "out.", "nov.", "dez." },
+                LabelsRotation = 135,
+                Separator = new Separator { Step = 1, IsEnabled = true, StrokeThickness = 0.3 }
+
+            });
+            cartesianChart2.AxisY.Clear();
+            cartesianChart2.AxisY.Add(new Axis
+            {
+                LabelFormatter = value => $"{value} h",
+                MinValue = 0,
+            });
+        }
         //MÉTODO QUE PREENCHE A COMBOBOX DE SETOR
         private void PreencherSetor()
         {
