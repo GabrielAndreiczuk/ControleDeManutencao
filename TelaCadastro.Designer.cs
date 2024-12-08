@@ -40,11 +40,11 @@
             this.roundedButton1 = new Projeto_TCC.RoundedButton();
             this.rjPanel21 = new Projeto_TCC.RoundedLeftPanel();
             this.rjPanel1 = new Projeto_TCC.RoundedRightPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.lblSenha = new System.Windows.Forms.Label();
             this.linePanel2 = new Projeto_TCC.LinePanel();
             this.linePanel1 = new Projeto_TCC.LinePanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblLogin = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -184,6 +184,7 @@
             this.roundedButton1.TabIndex = 5;
             this.roundedButton1.Text = "Cadastrar-se";
             this.roundedButton1.UseVisualStyleBackColor = false;
+            this.roundedButton1.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // rjPanel21
             // 
@@ -222,32 +223,6 @@
             this.rjPanel1.Size = new System.Drawing.Size(500, 650);
             this.rjPanel1.TabIndex = 100;
             // 
-            // lblSenha
-            // 
-            this.lblSenha.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.ForeColor = System.Drawing.Color.Yellow;
-            this.lblSenha.Location = new System.Drawing.Point(142, 465);
-            this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(217, 16);
-            this.lblSenha.TabIndex = 39;
-            this.lblSenha.Text = "As senhas não coincidem!";
-            this.lblSenha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblSenha.Visible = false;
-            // 
-            // linePanel2
-            // 
-            this.linePanel2.Location = new System.Drawing.Point(263, 582);
-            this.linePanel2.Name = "linePanel2";
-            this.linePanel2.Size = new System.Drawing.Size(135, 12);
-            this.linePanel2.TabIndex = 38;
-            // 
-            // linePanel1
-            // 
-            this.linePanel1.Location = new System.Drawing.Point(103, 582);
-            this.linePanel1.Name = "linePanel1";
-            this.linePanel1.Size = new System.Drawing.Size(135, 12);
-            this.linePanel1.TabIndex = 37;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -273,6 +248,32 @@
             this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
             this.lblLogin.MouseEnter += new System.EventHandler(this.lblLogin_MouseEnter);
             this.lblLogin.MouseLeave += new System.EventHandler(this.lblLogin_MouseLeave);
+            // 
+            // lblSenha
+            // 
+            this.lblSenha.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.ForeColor = System.Drawing.Color.Yellow;
+            this.lblSenha.Location = new System.Drawing.Point(142, 465);
+            this.lblSenha.Name = "lblSenha";
+            this.lblSenha.Size = new System.Drawing.Size(217, 16);
+            this.lblSenha.TabIndex = 39;
+            this.lblSenha.Text = "As senhas não coincidem!";
+            this.lblSenha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSenha.Visible = false;
+            // 
+            // linePanel2
+            // 
+            this.linePanel2.Location = new System.Drawing.Point(263, 582);
+            this.linePanel2.Name = "linePanel2";
+            this.linePanel2.Size = new System.Drawing.Size(135, 12);
+            this.linePanel2.TabIndex = 38;
+            // 
+            // linePanel1
+            // 
+            this.linePanel1.Location = new System.Drawing.Point(103, 582);
+            this.linePanel1.Name = "linePanel1";
+            this.linePanel1.Size = new System.Drawing.Size(135, 12);
+            this.linePanel1.TabIndex = 37;
             // 
             // label6
             // 

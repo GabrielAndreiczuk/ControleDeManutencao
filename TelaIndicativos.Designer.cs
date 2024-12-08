@@ -47,6 +47,9 @@
             this.roundedLabel2 = new Projeto_TCC.RoundedLabel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.roundedPanel11 = new Projeto_TCC.RoundedPanel();
+            this.roundedPanel12 = new Projeto_TCC.RoundedPanel();
             this.pibMTTR = new System.Windows.Forms.PictureBox();
             this.pibMTBF = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -66,13 +69,10 @@
             this.roundedPanel2 = new Projeto_TCC.RoundedPanel();
             this.roundedPanel3 = new Projeto_TCC.RoundedPanel();
             this.lblMTBF = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.roundedPanel1 = new Projeto_TCC.RoundedPanel();
             this.roundedPanel8 = new Projeto_TCC.RoundedPanel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.roundedPanel11 = new Projeto_TCC.RoundedPanel();
-            this.roundedPanel12 = new Projeto_TCC.RoundedPanel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlFiltros.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -332,6 +332,40 @@
             this.panel3.Size = new System.Drawing.Size(1353, 683);
             this.panel3.TabIndex = 67;
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(733, 286);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(350, 19);
+            this.label1.TabIndex = 95;
+            this.label1.Text = "Selecione uma máquina para mais detalhes...";
+            // 
+            // roundedPanel11
+            // 
+            this.roundedPanel11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.roundedPanel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
+            this.roundedPanel11.ForeColor = System.Drawing.Color.White;
+            this.roundedPanel11.Location = new System.Drawing.Point(700, 479);
+            this.roundedPanel11.Name = "roundedPanel11";
+            this.roundedPanel11.Size = new System.Drawing.Size(450, 184);
+            this.roundedPanel11.TabIndex = 93;
+            this.roundedPanel11.Text = "roundedPanel11";
+            // 
+            // roundedPanel12
+            // 
+            this.roundedPanel12.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.roundedPanel12.BackColor = System.Drawing.Color.Black;
+            this.roundedPanel12.ForeColor = System.Drawing.Color.White;
+            this.roundedPanel12.Location = new System.Drawing.Point(700, 479);
+            this.roundedPanel12.Name = "roundedPanel12";
+            this.roundedPanel12.Size = new System.Drawing.Size(453, 187);
+            this.roundedPanel12.TabIndex = 94;
+            this.roundedPanel12.Text = "roundedPanel12";
+            // 
             // pibMTTR
             // 
             this.pibMTTR.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -556,6 +590,18 @@
             this.lblMTBF.Text = "-";
             this.lblMTBF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(773, 53);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 19);
+            this.label8.TabIndex = 72;
+            this.label8.Text = "MTBF";
+            // 
             // roundedPanel1
             // 
             this.roundedPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -581,52 +627,6 @@
             // toolTip1
             // 
             this.toolTip1.IsBalloon = true;
-            // 
-            // roundedPanel11
-            // 
-            this.roundedPanel11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.roundedPanel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
-            this.roundedPanel11.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel11.Location = new System.Drawing.Point(700, 479);
-            this.roundedPanel11.Name = "roundedPanel11";
-            this.roundedPanel11.Size = new System.Drawing.Size(450, 184);
-            this.roundedPanel11.TabIndex = 93;
-            this.roundedPanel11.Text = "roundedPanel11";
-            // 
-            // roundedPanel12
-            // 
-            this.roundedPanel12.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.roundedPanel12.BackColor = System.Drawing.Color.Black;
-            this.roundedPanel12.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel12.Location = new System.Drawing.Point(700, 479);
-            this.roundedPanel12.Name = "roundedPanel12";
-            this.roundedPanel12.Size = new System.Drawing.Size(453, 187);
-            this.roundedPanel12.TabIndex = 94;
-            this.roundedPanel12.Text = "roundedPanel12";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(773, 53);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 19);
-            this.label8.TabIndex = 72;
-            this.label8.Text = "MTBF";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(733, 286);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(350, 19);
-            this.label1.TabIndex = 95;
-            this.label1.Text = "Selecione uma máquina para mais detalhes...";
             // 
             // TelaIndicativos
             // 
