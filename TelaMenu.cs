@@ -13,6 +13,13 @@ namespace Projeto_TCC
 {
     public partial class TelaMenu : Form
     {
+        //MÉTODO QUE CHAMA UMA NOTIFICAÇÃO DE ALERTA
+        public void Alert(string msg, FormAlert.enmType type)
+        {
+            FormAlert frm = new FormAlert();
+            frm.showAlert(msg, type);
+        }
+
         //MÉTODO CONSTRUTOR
         public TelaMenu()
         {
@@ -93,19 +100,27 @@ namespace Projeto_TCC
 
         private void btnIndicativos_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender);
-            lblTittle.Text = "Consulta Indicativos";
+            if (UsuarioSessao.Acesso() >= 2)
+            {
+                ActiveButton(sender);
+                lblTittle.Text = "Consulta Indicativos";
 
-            TelaMenu menu = Application.OpenForms["TelaMenu"] as TelaMenu;
-            menu.panelMenu.Controls.Clear();
+                TelaMenu menu = Application.OpenForms["TelaMenu"] as TelaMenu;
+                menu.panelMenu.Controls.Clear();
 
-            TelaIndicativos indicativos = new TelaIndicativos ();
-            indicativos.TopLevel = false;
-            indicativos.Dock = DockStyle.Fill;
-            indicativos.FormBorderStyle = FormBorderStyle.None;
+                TelaIndicativos indicativos = new TelaIndicativos();
+                indicativos.TopLevel = false;
+                indicativos.Dock = DockStyle.Fill;
+                indicativos.FormBorderStyle = FormBorderStyle.None;
 
-            menu.panelMenu.Controls.Add(indicativos);
-            indicativos.Show();
+                menu.panelMenu.Controls.Add(indicativos);
+                indicativos.Show();
+            }
+            else
+            {
+                Alert("Acesso negado!", FormAlert.enmType.Error);
+            }
+                        
         }
         private void btnOrdem_Click(object sender, EventArgs e)
         {
@@ -125,19 +140,26 @@ namespace Projeto_TCC
         }
         private void btnHistorico_Click(object sender, EventArgs e)
         {
-            ActiveButton(sender);
-            lblTittle.Text = "Consulta Histórico";
+            if (UsuarioSessao.Acesso() >= 2)
+            {
+                ActiveButton(sender);
+                lblTittle.Text = "Consulta Histórico";
 
-            TelaMenu menu = Application.OpenForms["TelaMenu"] as TelaMenu;
-            menu.panelMenu.Controls.Clear();
+                TelaMenu menu = Application.OpenForms["TelaMenu"] as TelaMenu;
+                menu.panelMenu.Controls.Clear();
 
-            TelaHistorico historico = new TelaHistorico();
-            historico.TopLevel = false;
-            historico.Dock = DockStyle.Fill;
-            historico.FormBorderStyle = FormBorderStyle.None;
+                TelaHistorico historico = new TelaHistorico();
+                historico.TopLevel = false;
+                historico.Dock = DockStyle.Fill;
+                historico.FormBorderStyle = FormBorderStyle.None;
 
-            menu.panelMenu.Controls.Add(historico);
-            historico.Show();
+                menu.panelMenu.Controls.Add(historico);
+                historico.Show();
+            }
+            else
+            {
+                Alert("Acesso negado!", FormAlert.enmType.Error);
+            }
         }
         private void btnConfig_Click(object sender, EventArgs e)
         {

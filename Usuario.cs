@@ -19,6 +19,24 @@ namespace Projeto_TCC
     public static class UsuarioSessao
     {
         public static Usuario UsuarioAtual { get; set; }
-    }
 
+        public static int Acesso()
+        {
+            int acesso = 0;
+
+            if (UsuarioAtual.Cargo == "Diretor de Operações Industriais" ||
+                UsuarioAtual.Cargo == "Gerente Industrial" ||
+                UsuarioAtual.Cargo == "Manutentor Industrial")
+            {
+                acesso = 3;
+            }
+            else if (UsuarioAtual.Cargo == "Analista de Automação Industrial" ||
+                     UsuarioAtual.Cargo == "Manutentor Industrial")
+            {
+                acesso = 2;
+            }
+
+            return acesso;            
+        }
+    }
 }
