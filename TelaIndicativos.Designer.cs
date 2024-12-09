@@ -47,6 +47,11 @@
             this.roundedLabel2 = new Projeto_TCC.RoundedLabel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cartesianChart2 = new LiveCharts.WinForms.CartesianChart();
+            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.label1 = new System.Windows.Forms.Label();
             this.pibMTTR = new System.Windows.Forms.PictureBox();
             this.pibMTBF = new System.Windows.Forms.PictureBox();
@@ -69,11 +74,6 @@
             this.roundedPanel1 = new Projeto_TCC.RoundedPanel();
             this.roundedPanel8 = new Projeto_TCC.RoundedPanel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
-            this.cartesianChart2 = new LiveCharts.WinForms.CartesianChart();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.pnlFiltros.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -334,6 +334,61 @@
             this.panel3.Size = new System.Drawing.Size(1353, 683);
             this.panel3.TabIndex = 67;
             // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(219, 308);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(236, 29);
+            this.label16.TabIndex = 100;
+            this.label16.Text = "Informações Gerais";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(219, 27);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(315, 29);
+            this.label15.TabIndex = 99;
+            this.label15.Text = "Máquinas e equipamentos";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(735, 154);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(389, 87);
+            this.label6.TabIndex = 98;
+            this.label6.Text = "Selecione uma máquina para mais detalhes...";
+            // 
+            // cartesianChart2
+            // 
+            this.cartesianChart2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cartesianChart2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
+            this.cartesianChart2.Location = new System.Drawing.Point(224, 417);
+            this.cartesianChart2.Name = "cartesianChart2";
+            this.cartesianChart2.Size = new System.Drawing.Size(412, 237);
+            this.cartesianChart2.TabIndex = 97;
+            this.cartesianChart2.Text = "cartesianChart2";
+            // 
+            // cartesianChart1
+            // 
+            this.cartesianChart1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cartesianChart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
+            this.cartesianChart1.Location = new System.Drawing.Point(719, 417);
+            this.cartesianChart1.Name = "cartesianChart1";
+            this.cartesianChart1.Size = new System.Drawing.Size(412, 237);
+            this.cartesianChart1.TabIndex = 96;
+            this.cartesianChart1.Text = "cartesianChart1";
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -585,61 +640,6 @@
             // toolTip1
             // 
             this.toolTip1.IsBalloon = true;
-            // 
-            // cartesianChart1
-            // 
-            this.cartesianChart1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cartesianChart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
-            this.cartesianChart1.Location = new System.Drawing.Point(719, 417);
-            this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(412, 237);
-            this.cartesianChart1.TabIndex = 96;
-            this.cartesianChart1.Text = "cartesianChart1";
-            // 
-            // cartesianChart2
-            // 
-            this.cartesianChart2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cartesianChart2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
-            this.cartesianChart2.Location = new System.Drawing.Point(224, 417);
-            this.cartesianChart2.Name = "cartesianChart2";
-            this.cartesianChart2.Size = new System.Drawing.Size(412, 237);
-            this.cartesianChart2.TabIndex = 97;
-            this.cartesianChart2.Text = "cartesianChart2";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(735, 154);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(389, 87);
-            this.label6.TabIndex = 98;
-            this.label6.Text = "Selecione uma máquina para mais detalhes...";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(219, 27);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(315, 29);
-            this.label15.TabIndex = 99;
-            this.label15.Text = "Máquinas e equipamentos";
-            // 
-            // label16
-            // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(219, 308);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(236, 29);
-            this.label16.TabIndex = 100;
-            this.label16.Text = "Informações Gerais";
             // 
             // TelaIndicativos
             // 

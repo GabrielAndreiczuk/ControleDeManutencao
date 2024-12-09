@@ -248,16 +248,20 @@ namespace Projeto_TCC
                                                                 diferenca.Minutes,
                                                                 diferenca.Seconds);
 
-                    string updateQuery = "UPDATE manutencao SET Descricao_Conclusao = @Descricao, ID_Maquina = @Maquina, ID_Setor = @Setor, Data_Conclusao = @Data_Conclusao," +
-                                         "Duracao = @Duracao,Tipo = @Tipo,ID_Funcionario_Conclusao = @Responsavel, Status = 3 WHERE ID_Manutencao = @ID";
+                    //string updateQuery = "UPDATE manutencao SET Descricao_Conclusao = @Descricao, ID_Maquina = @Maquina, ID_Setor = @Setor, Data_Conclusao = @Data_Conclusao," +
+                    //                     "Duracao = @Duracao,Tipo = @Tipo,ID_Funcionario_Conclusao = @Responsavel, Status = 3 WHERE ID_Manutencao = @ID";
+                    string updateQuery = "UPDATE manutencao SET Descricao_Conclusao = @Descricao, Data_Conclusao = now()," +
+                                         "Duracao = TIMEDIFF(now(), @Data_Inicial),Tipo = @Tipo,ID_Funcionario_Conclusao = @Responsavel, Status = 3 WHERE ID_Manutencao = @ID";
+
 
                     using (MySqlCommand command = new MySqlCommand(updateQuery, connection))
                     {
                         command.Parameters.AddWithValue("@ID", id);
                         command.Parameters.AddWithValue("@Descricao", descricao);
-                        command.Parameters.AddWithValue("@Maquina", Maquina);
-                        command.Parameters.AddWithValue("@Setor", Setor);
-                        command.Parameters.AddWithValue("@Data_Conclusao", dataConclusao);
+                        //command.Parameters.AddWithValue("@Maquina", Maquina);
+                        //command.Parameters.AddWithValue("@Setor", Setor);
+                        //command.Parameters.AddWithValue("@Data_Conclusao", dataConclusao);
+                        command.Parameters.AddWithValue("@Data_Inicial", dataInicial);
                         command.Parameters.AddWithValue("@Duracao", duracaoFormatada);
                         command.Parameters.AddWithValue("@Tipo", tipo);
                         command.Parameters.AddWithValue("@Responsavel", UsuarioSessao.UsuarioAtual.ID);
