@@ -101,7 +101,7 @@
             this.pnlFiltros.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlFiltros.Location = new System.Drawing.Point(0, 0);
             this.pnlFiltros.Name = "pnlFiltros";
-            this.pnlFiltros.Size = new System.Drawing.Size(1353, 150);
+            this.pnlFiltros.Size = new System.Drawing.Size(1370, 150);
             this.pnlFiltros.TabIndex = 1;
             // 
             // btnFiltrar
@@ -112,7 +112,7 @@
             this.btnFiltrar.FlatAppearance.BorderSize = 0;
             this.btnFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFiltrar.ForeColor = System.Drawing.Color.White;
-            this.btnFiltrar.Location = new System.Drawing.Point(841, 87);
+            this.btnFiltrar.Location = new System.Drawing.Point(850, 87);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(150, 50);
             this.btnFiltrar.TabIndex = 42;
@@ -127,7 +127,7 @@
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel2.Location = new System.Drawing.Point(1153, 0);
+            this.panel2.Location = new System.Drawing.Point(1170, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 48);
             this.panel2.TabIndex = 41;
@@ -199,7 +199,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(0, 148);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1353, 2);
+            this.label3.Size = new System.Drawing.Size(1370, 2);
             this.label3.TabIndex = 37;
             // 
             // lblLine
@@ -209,7 +209,7 @@
             this.lblLine.BackColor = System.Drawing.Color.White;
             this.lblLine.Location = new System.Drawing.Point(0, 48);
             this.lblLine.Name = "lblLine";
-            this.lblLine.Size = new System.Drawing.Size(1353, 2);
+            this.lblLine.Size = new System.Drawing.Size(1370, 2);
             this.lblLine.TabIndex = 36;
             // 
             // cmbMaquina
@@ -221,7 +221,7 @@
             this.cmbMaquina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMaquina.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMaquina.FormattingEnabled = true;
-            this.cmbMaquina.Location = new System.Drawing.Point(598, 98);
+            this.cmbMaquina.Location = new System.Drawing.Point(607, 98);
             this.cmbMaquina.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMaquina.Name = "cmbMaquina";
             this.cmbMaquina.Size = new System.Drawing.Size(215, 27);
@@ -236,7 +236,7 @@
             this.cmbSetor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbSetor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSetor.FormattingEnabled = true;
-            this.cmbSetor.Location = new System.Drawing.Point(351, 99);
+            this.cmbSetor.Location = new System.Drawing.Point(360, 99);
             this.cmbSetor.Margin = new System.Windows.Forms.Padding(4);
             this.cmbSetor.Name = "cmbSetor";
             this.cmbSetor.Size = new System.Drawing.Size(215, 27);
@@ -249,7 +249,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(596, 65);
+            this.label7.Location = new System.Drawing.Point(605, 65);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 19);
@@ -262,7 +262,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(343, 65);
+            this.label2.Location = new System.Drawing.Point(352, 65);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 19);
@@ -275,7 +275,7 @@
             this.roundedLabel7.BackColor = System.Drawing.Color.White;
             this.roundedLabel7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedLabel7.ForeColor = System.Drawing.Color.White;
-            this.roundedLabel7.Location = new System.Drawing.Point(590, 87);
+            this.roundedLabel7.Location = new System.Drawing.Point(599, 87);
             this.roundedLabel7.Name = "roundedLabel7";
             this.roundedLabel7.Size = new System.Drawing.Size(230, 50);
             this.roundedLabel7.TabIndex = 29;
@@ -287,7 +287,7 @@
             this.roundedLabel2.BackColor = System.Drawing.Color.White;
             this.roundedLabel2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedLabel2.ForeColor = System.Drawing.Color.White;
-            this.roundedLabel2.Location = new System.Drawing.Point(343, 87);
+            this.roundedLabel2.Location = new System.Drawing.Point(352, 87);
             this.roundedLabel2.Name = "roundedLabel2";
             this.roundedLabel2.Size = new System.Drawing.Size(230, 50);
             this.roundedLabel2.TabIndex = 32;
@@ -331,7 +331,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 150);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1353, 683);
+            this.panel3.Size = new System.Drawing.Size(1370, 683);
             this.panel3.TabIndex = 67;
             // 
             // label16
@@ -340,7 +340,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(219, 308);
+            this.label16.Location = new System.Drawing.Point(228, 308);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(236, 29);
             this.label16.TabIndex = 100;
@@ -352,7 +352,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(219, 27);
+            this.label15.Location = new System.Drawing.Point(228, 27);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(315, 29);
             this.label15.TabIndex = 99;
@@ -363,7 +363,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(735, 154);
+            this.label6.Location = new System.Drawing.Point(744, 154);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(389, 87);
             this.label6.TabIndex = 98;
@@ -373,7 +373,7 @@
             // 
             this.cartesianChart2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cartesianChart2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
-            this.cartesianChart2.Location = new System.Drawing.Point(224, 417);
+            this.cartesianChart2.Location = new System.Drawing.Point(233, 417);
             this.cartesianChart2.Name = "cartesianChart2";
             this.cartesianChart2.Size = new System.Drawing.Size(412, 237);
             this.cartesianChart2.TabIndex = 97;
@@ -383,7 +383,7 @@
             // 
             this.cartesianChart1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cartesianChart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
-            this.cartesianChart1.Location = new System.Drawing.Point(719, 417);
+            this.cartesianChart1.Location = new System.Drawing.Point(728, 417);
             this.cartesianChart1.Name = "cartesianChart1";
             this.cartesianChart1.Size = new System.Drawing.Size(412, 237);
             this.cartesianChart1.TabIndex = 96;
@@ -395,7 +395,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(733, 113);
+            this.label1.Location = new System.Drawing.Point(742, 113);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(391, 28);
             this.label1.TabIndex = 95;
@@ -407,7 +407,7 @@
             this.pibMTTR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.pibMTTR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pibMTTR.Image = global::Projeto_TCC.Properties.Resources.icone_ajuda;
-            this.pibMTTR.Location = new System.Drawing.Point(586, 101);
+            this.pibMTTR.Location = new System.Drawing.Point(595, 101);
             this.pibMTTR.Name = "pibMTTR";
             this.pibMTTR.Size = new System.Drawing.Size(20, 20);
             this.pibMTTR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -420,7 +420,7 @@
             this.pibMTBF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.pibMTBF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pibMTBF.Image = global::Projeto_TCC.Properties.Resources.icone_ajuda;
-            this.pibMTBF.Location = new System.Drawing.Point(336, 101);
+            this.pibMTBF.Location = new System.Drawing.Point(345, 101);
             this.pibMTBF.Name = "pibMTBF";
             this.pibMTBF.Size = new System.Drawing.Size(20, 20);
             this.pibMTBF.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -433,7 +433,7 @@
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(279, 231);
+            this.label14.Location = new System.Drawing.Point(288, 231);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(55, 19);
             this.label14.TabIndex = 90;
@@ -445,7 +445,7 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(530, 231);
+            this.label9.Location = new System.Drawing.Point(539, 231);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 19);
             this.label9.TabIndex = 89;
@@ -458,7 +458,7 @@
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label13.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(255, 376);
+            this.label13.Location = new System.Drawing.Point(264, 376);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(351, 29);
             this.label13.TabIndex = 87;
@@ -469,7 +469,7 @@
             this.roundedPanel9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.roundedPanel9.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel9.Location = new System.Drawing.Point(205, 363);
+            this.roundedPanel9.Location = new System.Drawing.Point(214, 363);
             this.roundedPanel9.Name = "roundedPanel9";
             this.roundedPanel9.Size = new System.Drawing.Size(450, 300);
             this.roundedPanel9.TabIndex = 88;
@@ -480,7 +480,7 @@
             this.roundedPanel10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel10.BackColor = System.Drawing.Color.Black;
             this.roundedPanel10.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel10.Location = new System.Drawing.Point(205, 363);
+            this.roundedPanel10.Location = new System.Drawing.Point(214, 363);
             this.roundedPanel10.Name = "roundedPanel10";
             this.roundedPanel10.Size = new System.Drawing.Size(453, 303);
             this.roundedPanel10.TabIndex = 85;
@@ -493,7 +493,7 @@
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label11.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(793, 376);
+            this.label11.Location = new System.Drawing.Point(802, 376);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(264, 29);
             this.label11.TabIndex = 83;
@@ -504,7 +504,7 @@
             this.roundedPanel7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.roundedPanel7.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel7.Location = new System.Drawing.Point(700, 363);
+            this.roundedPanel7.Location = new System.Drawing.Point(709, 363);
             this.roundedPanel7.Name = "roundedPanel7";
             this.roundedPanel7.Size = new System.Drawing.Size(450, 300);
             this.roundedPanel7.TabIndex = 84;
@@ -515,7 +515,7 @@
             this.roundedPanel6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel6.BackColor = System.Drawing.Color.Black;
             this.roundedPanel6.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel6.Location = new System.Drawing.Point(700, 363);
+            this.roundedPanel6.Location = new System.Drawing.Point(709, 363);
             this.roundedPanel6.Name = "roundedPanel6";
             this.roundedPanel6.Size = new System.Drawing.Size(453, 303);
             this.roundedPanel6.TabIndex = 81;
@@ -526,7 +526,7 @@
             this.roundedPanel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.roundedPanel4.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel4.Location = new System.Drawing.Point(700, 82);
+            this.roundedPanel4.Location = new System.Drawing.Point(709, 82);
             this.roundedPanel4.Name = "roundedPanel4";
             this.roundedPanel4.Size = new System.Drawing.Size(450, 184);
             this.roundedPanel4.TabIndex = 79;
@@ -537,7 +537,7 @@
             this.roundedPanel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel5.BackColor = System.Drawing.Color.Black;
             this.roundedPanel5.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel5.Location = new System.Drawing.Point(700, 82);
+            this.roundedPanel5.Location = new System.Drawing.Point(709, 82);
             this.roundedPanel5.Name = "roundedPanel5";
             this.roundedPanel5.Size = new System.Drawing.Size(453, 187);
             this.roundedPanel5.TabIndex = 80;
@@ -549,7 +549,7 @@
             this.lblMTTR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.lblMTTR.Font = new System.Drawing.Font("Arial", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMTTR.ForeColor = System.Drawing.Color.White;
-            this.lblMTTR.Location = new System.Drawing.Point(457, 124);
+            this.lblMTTR.Location = new System.Drawing.Point(466, 124);
             this.lblMTTR.Name = "lblMTTR";
             this.lblMTTR.Size = new System.Drawing.Size(198, 100);
             this.lblMTTR.TabIndex = 77;
@@ -562,7 +562,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(530, 102);
+            this.label10.Location = new System.Drawing.Point(539, 102);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(54, 19);
             this.label10.TabIndex = 76;
@@ -573,7 +573,7 @@
             this.roundedPanel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.roundedPanel2.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel2.Location = new System.Drawing.Point(456, 82);
+            this.roundedPanel2.Location = new System.Drawing.Point(465, 82);
             this.roundedPanel2.Name = "roundedPanel2";
             this.roundedPanel2.Size = new System.Drawing.Size(200, 184);
             this.roundedPanel2.TabIndex = 75;
@@ -584,7 +584,7 @@
             this.roundedPanel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel3.BackColor = System.Drawing.Color.Black;
             this.roundedPanel3.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel3.Location = new System.Drawing.Point(456, 82);
+            this.roundedPanel3.Location = new System.Drawing.Point(465, 82);
             this.roundedPanel3.Name = "roundedPanel3";
             this.roundedPanel3.Size = new System.Drawing.Size(203, 187);
             this.roundedPanel3.TabIndex = 78;
@@ -596,7 +596,7 @@
             this.lblMTBF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.lblMTBF.Font = new System.Drawing.Font("Arial", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMTBF.ForeColor = System.Drawing.Color.White;
-            this.lblMTBF.Location = new System.Drawing.Point(207, 124);
+            this.lblMTBF.Location = new System.Drawing.Point(216, 124);
             this.lblMTBF.Name = "lblMTBF";
             this.lblMTBF.Size = new System.Drawing.Size(198, 100);
             this.lblMTBF.TabIndex = 73;
@@ -609,7 +609,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(279, 102);
+            this.label8.Location = new System.Drawing.Point(288, 102);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 19);
             this.label8.TabIndex = 72;
@@ -620,7 +620,7 @@
             this.roundedPanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(50)))));
             this.roundedPanel1.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel1.Location = new System.Drawing.Point(206, 82);
+            this.roundedPanel1.Location = new System.Drawing.Point(215, 82);
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(200, 184);
             this.roundedPanel1.TabIndex = 71;
@@ -631,7 +631,7 @@
             this.roundedPanel8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.roundedPanel8.BackColor = System.Drawing.Color.Black;
             this.roundedPanel8.ForeColor = System.Drawing.Color.White;
-            this.roundedPanel8.Location = new System.Drawing.Point(206, 82);
+            this.roundedPanel8.Location = new System.Drawing.Point(215, 82);
             this.roundedPanel8.Name = "roundedPanel8";
             this.roundedPanel8.Size = new System.Drawing.Size(203, 187);
             this.roundedPanel8.TabIndex = 74;
@@ -647,7 +647,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(36)))), ((int)(((byte)(72)))));
-            this.ClientSize = new System.Drawing.Size(1370, 600);
+            this.ClientSize = new System.Drawing.Size(1387, 600);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.pnlFiltros);

@@ -18,7 +18,7 @@ namespace Projeto_TCC
         {
             InitializeComponent();
 
-            this.Text = string.Empty;
+            //this.Text = string.Empty;
             this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
