@@ -198,6 +198,7 @@ namespace Projeto_TCC
             {
                 new ColumnSeries
                 {
+                    Title = "Manutenções",
                     Values = manutencaoSetor,
                     Fill = new SolidColorBrush(System.Windows.Media.Color.FromRgb(54, 124, 221))
                 }

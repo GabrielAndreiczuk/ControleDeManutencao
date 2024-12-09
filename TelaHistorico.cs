@@ -40,7 +40,7 @@ namespace Projeto_TCC
                 {
                     connection.Open();
 
-                    string selectQuery = "SELECT * from view_manutencao";
+                    string selectQuery = "SELECT * from view_manutencao order by Ordem desc";
 
                     int yOffset = 50;
 

@@ -109,7 +109,6 @@ namespace Projeto_TCC
                 {
                     Title = "Custo",
                     Values = new ChartValues<double>(custos_mensais),
-                    Stroke = new SolidColorBrush(System.Windows.Media.Color.FromRgb(76, 175, 80)),
                 }
             };
             cartesianChart1.AxisX.Clear();
